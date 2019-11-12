@@ -1,0 +1,54 @@
+<p>Adam Thiede<br />
+adamj@mailbox.org 360.448.0824</p>
+
+<p>Profile<br />
+I&rsquo;ve had extensive and thorough experience providing level IT support at scale. I have experience with a wide breadth of technologies, programming languages, and platforms. I&rsquo;m enthusiastic about working with people on smaller, focused teams. Personal efficiency is a skill I&rsquo;m constantly honing; I am diligent in prioritizing my many tasks and maintain a comprehensive to-do list. I am a motivated, hard worker, willing to help out anywhere needed. I'm excited to learn all I can in a new role and can fit anywhere in an IT department.</p>
+
+<p>Skills<br />
+ &bull; Windows and Linux servers and operating systems<br />
+ &bull; Data center hardware, storage, networking, power, and cooling<br />
+ &bull; Virtualization (VMware vSphere, ESXi, Hyper-V and KVM)<br />
+ &bull; Enterprise software deployment &ndash; SCCM/WSUS<br />
+ &bull; Oracle Database management<br />
+ &bull; DNS and Networking experience<br />
+ &bull; Automation with Bash and PowerShell scripting<br />
+ &bull; Microsoft Exhange<br />
+ &bull; Active Directory<br />
+ &bull; Backups<br />
+ &bull; Antivirus<br />
+ &bull; Containers</p>
+
+<p>Experience<br />
+System Administrator, Peak Reliability &ndash; August 2017 - December 2019<br />
+ &bull; Maintained on-premises data center hardware, cooling, and power<br />
+ &bull; Deployed software baselines and implemented infrastructure conversions<br />
+ &bull; Maintained backups, antivirus, email relays and DNS servers<br />
+ &bull; Load balancing and site-to-site failovers<br />
+ &bull; On-call responsibilities<br />
+ &bull; Single-handedly upgraded our Linux stack to a supported operating system release<br />
+ &bull; Rolled out our production environment's first Windows Server 2016 baseline</p>
+
+<p>System Engineer, Cerner Corporation &ndash; May 2015 - June 2017<br />
+ &bull; Advanced support and administration of several hospitals&rsquo; hosted healthcare systems<br />
+ &bull; Maintained Red Hat Linux servers, Windows Citrix Server farms<br />
+ &bull; Participated in large-scale disaster recovery tests<br />
+ &bull; Regular auditing of systems for performance, stability, and security<br />
+ &bull; Created and followed standard procedures and work plans</p>
+
+<p>HRIS Intern, Human Resources, JE Dunn Construction &ndash; May 2014-November 2015<br />
+ &bull; SQL and Tableau to generate repeatable reports for headcount, attrition, and in-house training<br />
+ &bull; QA-testing our benefits enrollment system<br />
+ &bull; Helped implement a brand-new on-boarding system<br />
+ &bull; Helpdesk role for incoming questions about systems<br />
+ &bull; Created Sharepoint site for benefits system</p>
+
+<p>Ministry Leader, Stewardship &amp; AV/Tech Teams, Benedictine College, &mdash; August 2013-May 2014<br />
+ &bull; Ran A/V and slideshow booth for prospective student visits<br />
+ &bull; Supported the technological requirements of College Ministry<br />
+ &bull; Automation through scripting<br />
+ &bull; Helpdesk role for College Ministry</p>
+
+<p>Education<br />
+CompTIA Linux+ Certification - Obtained November 2019<br />
+Benedictine College, Atchison, KS, Computer Science - Graduated May 2015<br />
+La Salle Catholic College Preparatory, Portland, Oregon - Graduated June 2011</p>
