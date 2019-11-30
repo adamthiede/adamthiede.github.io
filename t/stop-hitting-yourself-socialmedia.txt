@@ -1,0 +1,16 @@
+Response to <a href="https://fightthefuture.org/article/twitter-is-trying-to-erase-the-past/">this article</a> and its discussion <a href="https://news.ycombinator.com/item?id=20713886">here</a> on HN.
+
+So a closed platform, running proprietary systems, run by a corporate entity, with arbitrary terms of service, can do whatever they want to your account at any time? I'm shocked!
+
+Every time there's a new censorship or privacy scandal around these big companies, people seem to call for regulation. Why? They're companies whose platform you are voluntarily using, and you accept the terms of service when you use the platform. If you have a problem with these companies, vote with your actions and leave the platform. Either that, or create your own. At this point you don't have to since Mastodon instances are so plentiful, but a $5/mo VPS will host you and your friends just fine.
+
+People complain and whine about these silicon valley companies and "censorship", most frequently a bunch of senile luddites proud of their ignorance who are somehow in charge of everything, and I can't help but get so frustrated at how dumb they are. It's a PRIVATE COMPANY. They own the servers and the hard drives. They own the IP space and domain name. They can do WHATEVER THEY WANT. If you regulate them, you're just a whiny little baby who doesn't like the big bad man posting things you don't like on his website.
+
+My god, people, it's not that hard. Get your own website, write some freaking HTML (it's MARKUP language, not even programming, hardly complex) and host your own damn content. Put it on <a href="https://dat.foundation/">dat://</a> or something if you don't wanna participate in the MAN's Internet. God forbid you learn some basic, transferrable, useful life skills. If you want to use a hammer and nails you have to know where to put them and how not to hit yourself in the head with it. Stop hitting yourself in the head with these platforms. The Nanny State isn't going to save you from Mark Zuckerberg because that's not the government's job. Get your act together and do something about it.
+
+Good decentralized references:
+<a href="https://dat.foundation/">dat:// - a peer-to-peer protocol</a>
+<a href="https://github.com/warner/magic-wormhole">Magic Wormhole - sharing files</a>
+<a href="https://matrix.org/">Matrix.org - An open network for secure, decentralized communication</a>
+<a href="https://joinmastodon.org/">Mastodon - Decentralized Social Networking</a>
+<a href="https://n-o-d-e.net/">N O D E - a guy who blogs about this stuff</a>

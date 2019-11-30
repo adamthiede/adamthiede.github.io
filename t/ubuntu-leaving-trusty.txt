@@ -1,0 +1,50 @@
+Trusty Tahr, Ubuntu 14.04, ends support next month. Here's what I've learned from the upgrade process, and tips on going to the next release, 16.04 Xenial Xerus.
+
+First of all, for in-place upgrades, you need to go to 16.04 before you go to 18.04. That's the official in-place upgrade process, and it takes a little longer, but you're better off not trying to attach a disk and upgrade from there - it should be possible but you should go the supported way. 16.04 will be around for another two years, so if that's all you need, it's not a bad system to be on.
+
+-Server or Desktop?
+Let's agree a desktop is a non-critical user's terminal into network services. If your desktop computer (ATX motherboard in a normal consumer box) is running all the time and running high-uptime services, consider either a) transitioning that service to a server machine, or b) transitioning the box to a server role and using a different system as your desktop.
+Desktop systems are either a) laptops that can be offline for long periods of time or b) desk- or floor-based boxes that are not perfomring any critical services provided to other users. These systems should be upgraded fairly frequently to keep up with the latest security patches and technologies. User-operated machines have the largest attack surface (the user, and the keyboard/monitor/mouse) and are important to protect.
+All systems I run and administer at this point are on a later desktop OS. This was not an issue at this point.
+Servers - find out when an acceptable time exists to turn the server off and break the service for users. It would be ideal to either have a redundant system. If that is not possible, inform the users of a time you're going to take action, and do it. You can't put this off and they have to understand these things need to happen.
+
+-Pre-upgrade Steps
+Backup backup backup! Make sure you have copies of all the relevant data from the system easily and readily restorable. For virtual systems, copying the virtual hard drive while the virtual machine is off to a different location on the same host is a good option. Snapshots, provided your systems can work together well, are also a great idea. Win2008R2 does not snapshot Linux machines very well. The snapshots only re-merge while the machine is off, so take that into consideration. VMWare is more Linux-aware, and later versions of Hyper-V (2012R2 and 2016) are very Linux-friendly.
+If you cannot back up the system easily, and you don't necessarily know 100% of what is on it, copy /home, /etc, /opt, /var, and any directories that are common for your use case (i.e. if your organization places lots of custom scripts in /usr/local/bin, grab those). Tar them and copy to another machine. Your machine that you're performing the upgrade on is a good bet, if your connection is solid. Without grabbing the entire system, that should conain most of what you need.
+Take an output from the package manager (apt list --installed) and look at what package sources are enabled (save the files /etc/apt/sources.list and the directory /etc/apt/sources.list.d/). Go through the output and resolve any inconsistencies before you move on - i.e. if there are old, custom, local-installed packages, make sure you note that and attempt to find the .deb files.
+If you have redundancy, point any DNS aliases (box1.service.example.com) at your redundant system to it can take the load and your service doesn't break. That's always a bonus.
+Check network interfaces (ifconfig) and MAC addresses if you are rebuilding. Make sure to record that information before you move on.
+Check what's running in cron before you leave this old box too.
+
+-Rebuild or Upgrade?
+First, determine if your server performs a complex enough role that it needs to be rebuilt. Ubuntu's release upgrader is good enough to where it will ask you what to do with your old configs, but often for newer package versions, 
+If you are upgrading in-place: update to the latest version of the OS. apt update, apt upgrade, apt dist-upgrade, and apt autoremove. Reboot.
+The upgrader will bomb out if you don't have enough space in /boot. You can always find what older kernels are on your system (dpkg -l |grep ^linux-image) and remove what's taking up space. Usually, it's good practice to keep the last two or three known-good old kernels around post-upgrade. That being said, if you're running just fine for weeks on 4.4.0-134, you can throw caution to the wind and remove all but that.
+
+-The Upgrade
+Ubuntu documentation starts <a href="https://help.ubuntu.com/lts/serverguide/installing-upgrading.html">here</a>. Make sure to do your own research too.
+Upgrading is complicated but is mostly handled for you. After you've run through apt dist-upgrade and rebooted, run do-release-upgrade. If you have access to run the upgrade through the hypervisor console, that's helpful - reconnections are easier. If many people access the console on a regular basis, don't do this - you could get interrupted. If you're running over SSH, use Screen/Tmux/Byobu if you want. Easier to reconnect that way.
+It will ask you to restart services while running - that's fine; you've blocked out this time to break services anyway. It will show you what packages are being removed/kept/upgraded. This is helpful! Capture this output and save it for future reference, in case something goes wrong.
+The upgrade from here on out is simple. The questions you get are along the lines of "should I take the config that is from the new package, or keep your old config?". If you have customized configs for something (say vsftpd or apt or smtpd) you should have done research about new configs and compatibility with your customized config of an old version. Usually these are fine to keep the old ones (with your changes for your environment), but take care to watch after and make sure things don't break.
+After upgrading, several packages are listed for removal. That's fine - do that, and then let it reboot the system.
+Check to make sure everything's up and running. Tail the logs for your services, and check dmesg. All good? Yay! Nope? Fix it. If you can't fix it, revert. That's why we back up.
+
+-The Rebuild
+This is much simpler. Roll out a new machine over top of the old one. Set up its networking, install packages, copy over home directories and custom script files, write in your old configs (don't just drop them in there - you are usually better off adding the custom lines to the new configs in the new format).
+Right now, you have an opportunity to rebuild the system how you see fit. The less changes you make from stock, the easier you make it on yourself or anyone else in the future, so remember that and embrace minimal tweaking. On desktop systems, tweak away, but on servers, remember that you have to share the machine and that it must be easy to maintain by others.
+
+-My Experiences
+SMTPD
+This one was very standard. I upgrade 4 mail relays. They didn't require any manual after-the-fact tweaking post-upgrade and took 16.04 like a champ.
+apt-mirror
+I have an apt-mirror server to serve packages to other servers behind a firewall in an isolated environment. Getting this server upgraded was easy, and again, took no messing about. I had to add more disk space to the /var disk and extend it, becuase I was going to begin mirroring 16.04 as well. <a href="http://blog.ef.net/2012/10/26/unbutu-release-upgrade-with-local-apt-mirror.html">This blog post</a> helped me SO MUCH in getting this server ready to serve upgrades for other machines, though. It's impossible to run a do-release-upgrade normally if you can't hit archive.ubuntu.com, but if you mirror the right parts, in the right places, you can definitely do it right.
+Cacti
+HAHAHAHAAHA NO
+But seriously - cacti 0.8.8f, in 16.04, works fine with PHP5, but not with PHP7, which is the only PHP in 16.04. Also, RRDTool, the backbone for cacti, is upgraded to 1.5 in 16.04, but cacti 0.8.8f only supports RRDTool 1.4.
+This was a serious mess. We ended up installing an unsupported version of Cacti from some other Ubuntu version (0.8.8g, the last of the 0.8.8 versions) from the archive.ubuntu.org pool. It required a dep that we pulled from Bionic, but after apt local-installing those packages, Cacti now works fine. There were a few config changes, but that's mostly due to PHP7 changes that cacti's configs made. During the upgrade, these are pointed out, and when you tell it to take the new configs, it saves the old ones right next to them. You'll need to update the password in the config files for cacti post-upgrade, but it should all go smoothly. It was such a ridiculous mess of poorly configured packages and terrible interdependencies that we are going to move to 18.04 as soon as possible, even though that was not in the plan.
+bind9
+These worked fine, like smtpd. No changes necessary. The version of bind from Trusty to Xenial didn't change that much. If your setup is like mine - master/slave server - upgrade the slave first.
+
+Anyway, that's it for now. It's a really good process, but there are always custom setups to be considered, and that's mainly what I ran into.
+
+(<a href=https://web.archive.org/web/20180603095927/http://blog.ef.net/2012/10/26/unbutu-release-upgrade-with-local-apt-mirror.html>archive.org link</a> of the blog post in case it goes down)

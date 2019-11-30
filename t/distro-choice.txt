@@ -1,0 +1,23 @@
+Recently I have though about choice amongst GNU/Linux distributions, and which I should use. 
+
+Fedora is what I currently run on my desktop systems, and any (personal) server systems I run get the Debian treatment. Here is why. Fedora (desktop) first.
+
+Fedora is, from my perspective, leading the charge in making Linux on Laptops the best possible experience it can be. It's all about the little things.
+- They were first to the <a href="https://www.phoronix.com/scan.php?page=news_item&px=Fedora-28-Improve-Battery-Life">SATA power savings</a> that Ubuntu adopted in 19.04.
+- They are focusing on 'flicker-free boot', which basically means you won't see a bunch of resolution changes and brightness changes when you boot your system. Currently, my F29 laptop (UEFI boot) has this done perfectly. The initial startup logo (Dell) is shown, then the decryption screen, then the gdm3 login screen. No weird resolution changes, brightness steps, etc. It all feels very modern, native, and smooth. 
+- The decryption screen is very basic - gray background with a password prompt. Ubuntu's (and others) very clearly show the distro name and are very branded, or are just a basic console input. Fedora gets this little thing right!
+- Fingerprint readers as an authentication method work very well in Fedora, and did before anyone else got it right! The gmd3 login/lock screen activates multiple PAM stacks at once, allowing you to use your biometrics <i>or</i> your password, instead of locking out the password field until biometrics times out. I remember seeing this first in Fedora 25, and it was quite nice!
+
+Fedora has always felt very much like a system built for the user, to be a blank canvas on which you paint the picture. More or less branding-free, easy to set up and use, based on standards, and very stable. When I boot a Fedora system for the first time, it feels very much Mine.
+
+Plus, Fedora gets most every new package in their repositories, they keep their kernel near bleeding edge, and still manage to keep the system stable. It cured my distro-hopping, as it's the perfect balance between something rolling like Arch, and something more stable like an Ubuntu LTS.
+
+Speaking of - the majority tends toward Ubuntu, and I'm not very happy with it lately. They tweak upstream Gnome3 heavily, mostly to good effect, but the orange/purple color isn't really my style. There's no straightforward way to get back to default blue/gray Gnome3. It's all very heavily branded, and feels like I'm using a system that was build with one specific person's design sensibilities in mind, and not to be as get-out-of-the-way as possible. It feels like I'm using someone else's laptop all the time.
+
+Personally I always have enjoyed Debian - it does feel very lean, pure, and simple. It's the second oldest still-active Linux distribution (beat by a few months by Slackware), and it's obvious that longevity, stability, and security is a huge focus for them. Plus, the 'netinstall' ISO is very nice - it allows for a great deal of configuration and is very easy to use. That's why I use it on my headless systems. The older packages don't matter too much if I'm not using a GUI. As opposed to Ubuntu, it feels like you  start off very lean, and end up installing what you need. My first boot on every Ubuntu system always starts by removing the bloat.
+
+Ubuntu does very much feel 'freemium'. It has always felt more like a 'move fast and break things' OS, especially if you use a non-LTS release. A fresh install on my tester laptop (Thinkpad x220, not brand new and no weird hardware) always ends up throwing me quite a few "System problem detected" dialogs upon first boot. There are a lot of things installed and default-on that I don't need or want, for example unattended-upgrades on a laptop is kind of silly to me.
+
+Choice is always a good thing, and you get that in all these systems. But I'm always more inclined to belive that sane defaults, and picking something that's more sensible and friendly to most of the population, rather a select few, is a better idea. Offer your system as a choice, not as an inescapable default.  
+
+Not to say Ubuntu's a bad system by any means. It's my recommendation to anyone who's looking for a good first try at GNU/Linux systems. But not my prefernce. Figured I'd explain why.

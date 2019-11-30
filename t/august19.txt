@@ -1,0 +1,19 @@
+Oh dang, it's August and I've not really written anything meaningful. The previous post was written a while ago and it's not really something that's hard for me to write.
+
+At the beginning of the year I thought I was going to write a book. I wanted to. I still want to. I thought that I was going to be more successful with that. Like it would be easy, or something. There aren't any tricks, I just have to do it. I have to work hard at it. But work is work, and having the responsibilities I have now in my life have made the work a little less possible.
+
+Something simple to write on seems pretty nice right now, so here we go.
+
+Big news this past couple of weeks. <a href="https://tech.slashdot.org/story/19/08/03/0031206/did-whatsapp-backdoor-rumor-come-from-unanswered-questions--and-leap-of-faith-for-closed-source-encryption-products">Slashdot story</a>
+
+What you should know: Bruce Schnier is a big name in the security industry. He is highly trustworthy and quite respected. Facebook, a company notorious for distributing malware, getting children addicted to smartphones and social media, and destabilizing elections, owns WhatsApp, the largest messaging/video calling application, which is used by billions of people.
+
+What happened: Bruce Schnier's <a href="https://www.schneier.com/blog/archives/2019/08/more_on_backdoo.html">post here</a> explains most of it. Someone reported that Facebook was planning on adding a backdoor to WhatsApp. How does that fit with your idea of Facebook? Doesn't seem too far from the truth, right? Well, the article's sources are muddy and the report was apparently false.
+
+Here is where it gets interesting - the "public denial" of this statement was a single comment on the hacker news thread that had been submitted for Schnier's article. No press statement, no newsroom post - a lone dude commenting in a pseudonymous forum.
+
+Doesn't take much on anyone's part to look at Facebook and expect them to do this. But how did the author jump to this conclusion?
+
+It's not even that far of a leap. This is best part: <a href="https://www.facebook.com/notes/mark-zuckerberg/a-privacy-focused-vision-for-social-networking/10156700570096634/">this actual Facebook statement from founder Mark Zuckerberg</a> calls for continued investment in "[improving] our ability to identify and stop bad actors across our apps by detecting patterns of activity or through other means, even when we can't see the content of the messages".
+
+So yeah, the whole WhatsApp backdoor? No need to be scared for now, but who knows? It's proprietary software run by a surveillance company. You only have limited time before it hurts you.

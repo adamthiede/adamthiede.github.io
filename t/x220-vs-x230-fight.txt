@@ -1,0 +1,15 @@
+For the past 6 months I have been using a Thinkpad x230 (running <a href="https://github.com/merge/skulls">the Skulls distribution of Coreboot</a> for the BIOS) and it's been great. As a direct upgrade from my x220, it's fantastic - uses mostly the same internal components, has a better cooler, much better CPU/GPU, USB3 (my x220 is not the i7 variant with USB3), and even fits in the same dock. The day I got it, I flashed Skulls to it, then popped my SSD and Atheros wi-fi card in, and it worked the exact same as the x220.
+
+One thing continues to turn me off about the x230, and that's the keyboard. It's not like it's bad - it's still a best-in-class keyboard, has a backlight and the thinklight, and the trackpoint is also pretty good. But coming from an x220 and a Cherry MX desktop keyboard, it's a long step down. I missed the x220 keyboard too much. It's more solid and less wobbly, the mouse buttons are better, and the whole layout is much more desktop-like. It's THE top-tier laptop keyboard! Nothing even comes close to this model. (OK, my Dell Latitude E6500 comes close, but that thing's a beast and way too big to be used as a portable.)
+
+So now I'm back on the x220 and the x230 is sitting on the sidelines. There are various "x220 keyboard on x230" guides out there but the extra performance isn't critical for me, since I'm not running Gentoo or playing games.
+
+And since there aren't enough "x220 coreboot" articles out there, I guess I'll throw my hat into the ring. You'll probably find the others a little more useful, but I'll share my <a href="https://elagost.com/f/x220-coreboot-config">config file</a> at least. If you just want a ROM, <a href="https://elagost.com/f/x220-coreboot.rom">here is mine</a> (md5sum 697b97794f0ba326ada0ec4dbf879e20) that was built from that config on 2019-09-24. It has the nvramcui, which is useful for tuning options in the BIOS. It does not have VGA boot so you'll have to deal without that when booting things like Ubuntu (just use Debian instead!). The ME is pretty much destroyed in it - in this ROM it will never be able to fully activate - and the laptop runs fine. I've had mine configured this way for about 18 months now so there are no long term issues.
+
+Anyway, the x220 is a great machine. Without a doubt the best computer I've ever owned, even if far from the most powerful. Coreboot just makes it that much better. The x230 is also a great machine, but the beautiful keyboard (and the blue enter key!) keep me coming back to the x220 despite the clear drawbacks in other areas.
+
+My recommendations:
+
+If you're familiar with classic Thinkpads and like this layout, get the x220. Best and last of the good classic Thinkpads.
+
+If you're coming from a Dell or Macbook or something, literally anything will be an upgrade, so get the x230. The clear benefits of a better GPU and USB3 are hard to ignore. Might as well not ruin yourself on an ancient keyboard you'll never be able to walk away from.

@@ -1,0 +1,5 @@
+I run a website - this website - and the majority of the visiters are bots from China. That kind of sucks.
+
+Also, it's halfway through July and I've not even written anything. I've been trying to write stuff every month this year, just to satisfy my own curiosity or some sort of itch, but it's been a little disheartening to realize that 99% of the site's visitors are either a) me, testing, or b) Chinabots, trying whatever they can to break in and steal... what, exactly? There's nothing of value here.
+
+Anyway. Websites are hard, the Internet kind of sucks these days now that there are server farms of automated requests running weird PHP curl requests against every site in existence, trying to beat poor webmasters into submission. I'm tempted to take this thing down and just put it locally on my Pi or something.

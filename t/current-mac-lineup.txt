@@ -1,0 +1,37 @@
+I wrote the following to a family member who would like to purchase a new computer and prefers using macOS. She is a professional photographer and uses a computer for work. Convincing her to use GNU/Linux systems would be a win in the freedom dimension, but would also require re-learning 15 years of habits on her part, and she doesn't want to do that. She's busy.
+So, here you go. This is more computer ranting (which is why you come here, probably) and I just thought it deserved a spot on my site.
+
+Here's my opinion on the current Macintosh lineup, and what you should (and shouldn't) consider.
+
+First, though, a caution on the cheaper components and options.
+On laptops:
+A laptop may look like an integrated, portable, all-in-one solution, but I assure you it is not. 
+All these computers are expensive, but you pay twice for laptops - once when you buy, and again when they break. I would not recommend you buy a laptop, because they have been having reliability problems on these models for the last few years. The keyboards are very failure-prone and will not serve you well. If you're out of warranty, the keyboard takes a $700 full top-case replacement and you have to give up your computer for a week for this. None of the components are user-serviceable anymore, and you can't even remove the drive if the computer dies and rescue your files. To boot, the laptops don't even have SD card slots on them anymore. They look cool, but unless you're dedicated to keeping the machine incredibly clean, dust/crumb/dirt/hair free, you will get a keyboard that fails you and a machine you can't upgrade. They're disposable computers - if any part fails, you have to throw it out and get a new one.
+Further reading: <a href=https://theoutline.com/post/2402/the-new-macbook-keyboard-is-ruining-my-life> second article</a> and <a href=https://theoutline.com/post/6409/the-new-and-improved-macbook-keyboards-have-the-same-old-problems>Second article</a>
+
+On cheap storage (in any desktop computer):
+The "fusion drives" and "5400 RPM Hard Drive" options you may see when you're configuring things are ancient, failure-prone, slow, and cheap components. SSDs are blazing fast, resistant to wear, and incredibly futuristic. The spinning drives are very inexpensive, and the SSDs come at a huge price premium. But they will last and they stand the test of time. The spinning drives and the fusion drives are not something you should buy. A 512GB SSD, for you work, is a minimum. Don't skimp on this. You may not understand why you need something so expensive, but let me tell you, the comparison is startling and you will definitely feel the pain of not having one.
+
+Here are your desktop computer options, if you want to get a Macintosh.
+
+High end: Mac Mini.
+Apple's "bring your own screen" computer. More of a traditional desktop, this tiny little box sits on your desk and you plug your screen, keyboard, mouse, and accessories into it. It's historically been the lowest-cost entry point into the Mac lineup. They just updated it this year, so it's a good choice and has modern components that will last you for a while.
+The way you should configure it, for your workload (go to this page: https://www.apple.com/shop/buy-mac/mac-mini/3.0ghz-6-core-processor-with-turbo-boost-up-to-4.1ghz-256gb)
+Select the "3.0Ghz 6-core processor" and at the very least, the "512 GB SSD Storage" drive option. You end up with a $1300 computer that is somewhat user-serviceable in the future (I could add more memory later on), but you'll  still need to buy a screen that's good for photo editing, which will also cost about $500. Not the wisest choice, I think.
+
+Even more high end: iMac 4K (21.5" model)
+Go here: https://www.apple.com/shop/buy-mac/imac
+DO NOT be fooled by the $1099 option! (In its detail section, it says "1920-by-1080 sRGB display"; you want the 4K option)
+It's not what you want and has a much worse screen than the others. Trust me on this.
+Select the middle version, the one that starts at $1,299. Here's a quick link: https://www.apple.com/shop/buy-mac/imac/21.5-inch-3.0ghz-1tb
+In the "Storage" section in its configuration, bump it up to the max. Select the $400 512GB SSD. You will use it and it is a much better option. (Apple should be ashamed that they still sell spinning drives in these high-end machines. The Fusion Drive is a bad compromise and should be avoided, as stated above.) You end up with a $1700 desktop machine with a great 4K screen, but it's not very easy to service or upgrade.
+
+Super duper millionaire high end: iMac 5K (27" model)
+This is a beautiful computer, and if you configure it right, will last you for 7 years or so. https://www.apple.com/shop/buy-mac/imac/27-inch-3.4ghz-1tb
+Again, 512GB SSD on this one. That's really all you need to choose for upgrades. This one ends up being $2100, but you get the best screen on any computer, ever.
+
+If you consider these machines as an investment, they will last you a good while. They are very fast and perfectly usable.
+
+BUT!
+
+Apple computers are more expensive, price-to-performance, than the equivalent Windows machine. I could build a similar computer to a Mac for half the cost, but it wouldn't be as well-integrated, as pretty, or as compact as something like an iMac or Mac Mini. What you are paying for is the integration and physical design of the computer, macOS, and other Apple software. If you really enjoy using all the Apple software all that much, this is the price you have to pay. If you're willing to learn something new, I can build you a cheap computer and throw a great screen on it, and you can customize the parts for whatever you need. It will be less expensive but you can't put Apple software on a non-Apple computer. There is a certain amount of compromise with Apple stuff, and the compromise usually means you pay a ton of money for everything. You also have to understand that for the past half-dozen years, Apple has been making computers that are more focused on looking pretty and being thin than actually doing work or performing tasks that users need them to. They discontinued iPhoto and Aperture without equivalent replacements, they keep removing the headphone jack from things (iPads now don't have it), they are increasing the prices of their computers and phones beyond a reasonable degree, and in general making user-hostile choices in the name of design, thinness, and lightness, without any apparent concern for repairability, reliability, high-stress workloads, or "professional" users (despite naming all of their products "Pro"). I don't like what they're doing, but they've kind of forced your hand. If this is the way you want to do things, then these are the prices you have to pay.

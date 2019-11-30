@@ -1,0 +1,9 @@
+Privacy Policies are a bunch of terrible legal-speak that nobody likes reading. Your privacy policy should be as short as possible - <a href="https://elagost.com/p.html">my website's privacy policy</a> is just over 100 words.
+
+If your website collects more data than I do, you're being creepy. Stop it!
+
+But seriously - there are good reasons for collecting some data. Look at the <a href="https://ubuntu.com/desktop/statistics">data collected by the Ubuntu installer</a>. It's opt-in and it's really simple! Good job Ubuntu/Canonical.
+
+Data is great to have on your users so you know how to improve your product. But the json should be human-readable, the user should be able to see it, and they should not be opted-in by default - the default should be no collection, and a user can opt in. That's the only way to treat people like people.
+
+Humans are valuable and should be respected. They shouldn't feel violated or like they're trading their privacy for your service. You shouldn't share their information, if they give it to you (which they should do freely - don't log if they're not ok with it). Not saying you are obligated to provide a free service for no data, so make people pay with something else. Money's pretty good. Just treat people like people, respect them, and don't be a creepy.

@@ -1,0 +1,16 @@
+A family member recently asked me about an app they were using and whether it was trustworthy. Software is pretty scary these days, so here's how you deal with programs you don't trust, and how you learn how to trust people developing programs.
+
+Here is how you operate if you want to run what you believe is "sketchy" software.
+1) is it FSF-defined Free Software? If so it is probably safe.  https://www.fsf.org/about/what-is-free-software  If you can look at the code and contribute to it and talk to the developer, you're probably good.
+2) If not Free Software, is it at least Open Source ( https://www.gnu.org/philosophy/open-source-misses-the-point.html ), and is the source code at least available, and is it non-obfuscated? Can you build it yourself? Are the builds "reproducible", and do the binaries you obtain match the binaries you build?
+3) Can you run it in a sandboxed/containerized environment? If not, can you spare a separate machine to run it on? Running untrustworthy software containerized (Flatpak, snap, LXD, Docker, etc.) is better than not. Ideally, take a separate machine with no personal data on it, and run the software there. When I have a need to run any Windows program, which is usually non-free software, I run it on a separate physical machine that is not connected to any of my other systems or my network.
+
+Source Code : Compiled programs :: Ingredients : Meals
+
+When you eat, you should know what the ingredients are, and you should trust that the ingredient list at least matches the final meal, even if you can't tell from inspection. 
+
+If you have to ask if an app is safe, and if your investigation takes some digging, it's probably not safe. Most platforms offer robust permission controls, but you have to be careful about what permissions an app asks for. A flashlight app does not need access to your contacts for instance. Also, above all, keep your operating system up to date! Programs can exploit flaws in older versions of the OS, since the flaws are made public when updates are issued.
+
+It is very important you read those articles and understand them. You should then search for the source code of programs you are running. If the program you are running is not Free Software it is not trustworthy! You should tell those companies that you don't want their business because they don't respect you as a person. If you don't care enough to share your ingredient list, I won't eat your food!
+
+If one wants to use a computer (that means a cell phone, television, car, a smart speaker, Internet-connected thermostats and doorbells, etc.), one must absolutely understand the security and privacy implications of what they are doing. If not, ignorance makes it worse not only for the ignorer but also for the rest of the world.
