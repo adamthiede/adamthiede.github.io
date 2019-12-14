@@ -1,7 +1,0 @@
-I finally got the RSS feed working!
-
-It was a little bit of a mess to figure out, but the full generator script is linked from the homepage. <a href="https://elagost.com/f/rss.sh.txt">Also here it is if you're lazy.</a>
-
-There are some quirks to it, but I figured out how to encapsulate a description using the whole "CDATA" nonsense. HTML FTW. 
-
-The whole script is basically running as a cron job on the web server. It's not very clean, I don't think, but it gets the job done! The eventual plan would to have the input/output files passed as variables into the script, i.e. > rss.sh -d /files/to/watch/ -o rss.xml. That's future planning. For now I will celebrate because my script works well!
