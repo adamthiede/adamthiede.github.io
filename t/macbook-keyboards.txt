@@ -1,9 +1,0 @@
-There's been a lot going around for the past few years about MacBook {Pro,Air} keyboards and how awful they are. Saw something again today that made me put it in writing.
-
-I was a Mac enthusiast until it came time to swap my busted-up 2013 Macbook Air for something with more RAM. I actually went all in on Thinkpads+Linux because of the horror of those keyboards back in 2016. Since then Apple's seemed to be taking more than they're giving. Good riddance. Glad I left.
-
-Just like last time - stop hitting yourself! This company wants your money and nothing more. Just leave it and go for something that'll respect you as a person. Go with a used machine - a Dell Latitude or Lenovo Thinkpad (business laptops built to last) that can have all their parts replaced and have actual service manuals!
-
-And while you're at it, chuck Ubuntu on there or something. ElementaryOS is really pretty if you like mac stuff, and KDE Neon is super functional and customizable. 
-
-Open Source / Free Software at least isn't trying to hurt you. Maybe start there. It won't solve everything but it'll be pretty damn close.

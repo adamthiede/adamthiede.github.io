@@ -1,4 +1,4 @@
-Update to <a href="https://elagost.com/w.php?t=messaging-privacy.txt">this thing</a> because I have hooked another Windows/iPhone user on the Free Software drug/religion/cult.
+Update to <a href="https://adamthiede.com/blog.php?t=messaging-privacy.txt">this thing</a> because I have hooked another Windows/iPhone user on the Free Software drug/religion/cult.
 
 Chrome has a <a href="https://www.techsupportalert.com/content/stop-windows-10-recording-your-keystrokes-speech-and-handwriting.htm">built-in malware scanner</a> that scans your hard drive for malware that targets Chrome, and not much else. Chrome is proprietary software whose code you can't see. Chrome makes a ton of encrypted network requests that you can't see. Chrome is verifiably scanning and reading files on your hard drive and making lots of network requests.
 
