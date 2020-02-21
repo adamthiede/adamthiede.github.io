@@ -1,0 +1,31 @@
+html{
+	background:#222222;
+	color:#eeeeee;
+	font-family:Serif;
+	text-align:center;
+}
+a {
+	color:#eeeeee;
+	text-decoration:none;
+}
+.bar {
+	font-family:Sans-Serif;
+	font-weight:bold;
+	display:inline-block;
+	padding:5px;
+	border-radius:5px;
+	background:#414141;
+	text-align:center;
+	border-style:solid;
+	border-width:thin;
+	border-color:lightgray;
+}
+.tagline{
+	text-align:left;
+	max-width:1024px;
+	margin:0 auto;
+}
+.tagline a{
+	text-decoration:underline;
+}
+
