@@ -3,13 +3,104 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
 <channel>
-<title>Your RSS Feed Title</title>
-<description>A brief description of your RSS feed.</description>
+<title>Adam's Blog</title>
+<description>Writing by Adam.</description>
 <language>en-us</language>
-<link>http://yourwebsite.com/rss.xml</link>
-<atom:link href="http://yourwebsite.com/rss.xml" rel="self" type="application/rss+xml" />
+<link>http://adamthiede.com/rss.xml</link>
+<atom:link href="http://adamthiede.com/rss.xml" rel="self" type="application/rss+xml" />
 
 <!-- LB -->
+
+<item>
+<title>Amazon Story</title>
+<guid>https://adamthiede.com/blog.html#amazon-story</guid>
+<pubDate>Fri, 21 Feb 2020 05:55:48 -0800</pubDate>
+<description><![CDATA[
+The Amazon Story
+
+I tell this little tale to my friends and family about how I got wrapped up in the whole technological privacy movement. I cared a little bit before, but mostly only from a technical interest perspective. Now I'm concerned and draw a hard line on this stuff. Here's why!
+<a href="https://en.wikipedia.org/wiki/Amazon_Echo">This Wikipedia link</a> has pictures of most models of Echo and a more detailed and objective set of descriptions for each.
+
+<hr>
+
+2007 - Amazon launches the Kindle. This is widely seen as a good move. They still make these things and hardcore readers love them. I don't need to explain why Kindles (the e-paper black and white ones) are good.
+<br/>
+2011 - In Feburary, Borders, a popular bookstore chain, files for bankrupcy. Amazon's eaten their lunch.
+
+<br/>
+2011 - In September, Amazon launches the Kindle Fire, a tablet that's much cheaper (and smaller) than an iPad. Amazon markets it primarily as a way to read books (odd, given that half their Kindle marketing favorably compares the e-ink antiglare Kindle screen to the backlit LED glossy glare-prone tablet screens of the day) and it's a pretty good seller.
+<br/>
+Shortly before the launch of this tablet, Apple decides that Amazon's Kindle app can no longer link to their ebook store, making the iPad a much worse choice for Amazon purchasers. These tablets are also still made to this day, having gone through several iterations with various features - high quality HD displays, good speakers, different sizes and aspect ratios, and enormous bubbly silicone cases for child-proofing. They are still marketed as reading devices, though they can also perform the function of an Echo, and they make it very easy to buy Amazon stuff - their primary function.
+<br/>
+This was the beginning of Amazon's modern electronics manufaturing era. The Kindle still seems like a side business, but the "Fire" line and the Echos are more in line with Modern Amazon.
+
+<br/>
+<br/>
+2014 - The Echo launches. It is a large black paper-towel-sized tube that is plugged into a wall outlet, connected to WiFi, and listens for commands on its highly sensitive seven-microphone array. It's basically an Orwellian telescreen, and people paid $150 for the privilege of being spied on.
+People said, "Okay."
+<br/>
+Amazon said, "Okay!" 
+<br/>
+
+<br/>
+<br/>
+2016 - The Echo Dot launches. It's an Echo but much shorter (think hockey puck-sized), cheaper, and with a worse speaker. Amazon practically gives them away in frequent sales and bundles. They want one in every room in your house so you can always have a chance to ask Alexa (the name of the voice that talks from the tube/puck) to buy you paper towels or tell you how to make chicken soup.
+<br/>
+People said, "Okay."
+<br/>
+Amazon said, "Okay!"
+<br/>
+(At the same time, the "Amazon Tap", a battery-powered bluetooth speaker version of the Echo, launches. It's not nearly as popular, but now you can take your spyware on the go. It just wasn't as useful.)
+
+<br/>
+<br/>
+2017 - The Echo Look launches. It is an Echo (micrphones, wall power, WiFi) with a camera built in that Amazon tells you to place in your closet so it can watch you dress. It will offer outfit suggestions (and purchasing suggestions via Amazon.com) to complement your style. Most men are creeped out, because most men don't care about fasion. Women see a use for it.
+<br/>
+People said, "That's a little creepy, but okay."
+<br/>
+Amazon said, "Okay!"
+
+<br/>
+<br/>
+2017 - Also in 2017, the Echo Show launches. It is an echo, but with a 7" tablet screen and a webcam. It cannot be used as a tablet since it has no battery, and requires wall power. The headliner feature was "Drop In", which enabled Echo Show owners to video call each other, but it doesn't ring, it just automatically starts the call. You can "Drop In" to your friend's kitchen at any time. This insane behavior was default-on.
+<br/>
+People said, "That's super creepy, also why not just plug in your tablet and yell at it?" But it was still purchased and is a successful product.
+<br/>
+Amazon said, "Okay, we'll roll back the Drop In feature and turn it off by default."
+<br/>
+People accepted this and Amazon was not lynched that day.
+
+<br/>
+2017 - Amazon buys Whole Foods in June.
+
+<br/>
+2017 - The Echo Spot was released in September. It is a small sphere with the front chopped off and it looks like a tiny cute alarm clock. It is a miniature Echo Show, with a 2-inch screen that gets super dim. It is meant to be used as a bedside alarm clock, with a camera and microphones that you point at your bed.
+<br/>
+Surprisingly no one found issue with this.
+<br/>
+People said, "Okay."
+<br/>
+Amazon said, "Okay!"
+<br/>
+
+<br/>
+2017 - The nightmare never ends - in December 2017, Amazon partnered with various IOT Video Camera, Doorbell, and Door Lock manufacturers (several of which it later purchsed) to introduce Amazon Key, a service that lets Amazon delivery drivers open your door and throw your package inside your house.
+<br/>
+A service that lets Amazon delivery drivers (NOT background-checked US Postal Service/UPS/FedEx employees, but regular folks with a station wagon and a smartphone app) enter your home.
+<br/>
+People said, "Okay, hang on a second. This is SUPER creepy."
+<br/>
+Amazon said, "Yeah, I know. I heard you talking about it this morning on the Echo in the bathroom as I watched you put on those new boots from the Echo Look that you bought from the Amazon app while you were laying in bed last night - also watched that on your Echo Spot. You snore a lot. I'll show you a suggestion for breathe right strips next time you're in the app."
+<br/>
+
+<br/>
+Do you want any of this in your life? Other companies have only followed suit.
+<br/>
+I won't tell you what to do, but know that in 2014 when these things started happening, I had already made my decision.
+<br/>
+]]></description>
+</item>
+
 
 <item>
 <title>Windows Defender</title>
@@ -275,60 +366,6 @@ Whoops. I did a thing. I decided to give Arch a go.<br/><br/><br/>I've never ser
 
 
 
-<item>
-<title>Amazon Story</title>
-<guid>https://adamthiede.com/blog.html#amazon-story</guid>
-<pubDate>Fri, 21 Feb 2020 05:55:48 -0800</pubDate>
-<description><![CDATA[
-The Amazon Story
-
-I tell this little tale to my friends and family about how I got wrapped up in the whole technological privacy movement. I cared a little bit before, but mostly only from a technical interest perspective. Now I'm concerned and draw a hard line on this stuff. Here's why!
-<a href="https://en.wikipedia.org/wiki/Amazon_Echo">This Wikipedia link</a> has pictures of most models of Echo and a more detailed and objective set of descriptions for each.
-
-<hr>
-
-2007 - Amazon launches the Kindle. This is widely seen as a good move. They still make these things and hardcore readers love them. I don't need to explain why Kindles (the e-paper black and white ones) are good.
-
-2011 - In Feburary, Borders, a popular bookstore chain, files for bankrupcy. Amazon's eaten their lunch.
-
-2011 - In September, Amazon launches the Kindle Fire, a tablet that's much cheaper (and smaller) than an iPad. Amazon markets it primarily as a way to read books (odd, given that half their Kindle marketing favorably compares the e-ink antiglare Kindle screen to the backlit LED glossy glare-prone tablet screens of the day) and it's a pretty good seller.
-Shortly before the launch of this tablet, Apple decides that Amazon's Kindle app can no longer link to their ebook store, making the iPad a much worse choice for Amazon purchasers. These tablets are also still made to this day, having gone through several iterations with various features - high quality HD displays, good speakers, different sizes and aspect ratios, and enormous bubbly silicone cases for child-proofing. They are still marketed as reading devices, though they can also perform the function of an Echo, and they make it very easy to buy Amazon stuff - their primary function.
-This was the beginning of Amazon's modern electronics manufaturing era. The Kindle still seems like a side business, but the "Fire" line and the Echos are more in line with Modern Amazon.
-
-2014 - The Echo launches. It is a large black paper-towel-sized tube that is plugged into a wall outlet, connected to WiFi, and listens for commands on its highly sensitive seven-microphone array. It's basically an Orwellian telescreen, and people paid $150 for the privilege of being spied on.
-People said, "Okay."
-Amazon said, "Okay!" 
-
-2016 - The Echo Dot launches. It's an Echo but much shorter (think hockey puck-sized), cheaper, and with a worse speaker. Amazon practically gives them away in frequent sales and bundles. They want one in every room in your house so you can always have a chance to ask Alexa (the name of the voice that talks from the tube/puck) to buy you paper towels or tell you how to make chicken soup.
-People said, "Okay."
-Amazon said, "Okay!"
-(At the same time, the "Amazon Tap", a battery-powered bluetooth speaker version of the Echo, launches. It's not nearly as popular, but now you can take your spyware on the go. It just wasn't as useful.)
-
-2017 - The Echo Look launches. It is an Echo (micrphones, wall power, WiFi) with a camera built in that Amazon tells you to place in your closet so it can watch you dress. It will offer outfit suggestions (and purchasing suggestions via Amazon.com) to complement your style. Most men are creeped out, because most men don't care about fasion. Women see a use for it.
-People said, "That's a little creepy, but okay."
-Amazon said, "Okay!"
-
-2017 - Also in 2017, the Echo Show launches. It is an echo, but with a 7" tablet screen and a webcam. It cannot be used as a tablet since it has no battery, and requires wall power. The headliner feature was "Drop In", which enabled Echo Show owners to video call each other, but it doesn't ring, it just automatically starts the call. You can "Drop In" to your friend's kitchen at any time. This insane behavior was default-on.
-People said, "That's super creepy, also why not just plug in your tablet and yell at it?" But it was still purchased and is a successful product.
-Amazon said, "Okay, we'll roll back the Drop In feature and turn it off by default."
-People accepted this and Amazon was not lynched that day.
-
-2017 - Amazon buys Whole Foods in June.
-
-2017 - The Echo Spot was released in September. It is a small sphere with the front chopped off and it looks like a tiny cute alarm clock. It is a miniature Echo Show, with a 2-inch screen that gets super dim. It is meant to be used as a bedside alarm clock, with a camera and microphones that you point at your bed.
-Surprisingly no one found issue with this.
-People said, "Okay."
-Amazon said, "Okay!"
-
-2017 - The nightmare never ends - in December 2017, Amazon partnered with various IOT Video Camera, Doorbell, and Door Lock manufacturers (several of which it later purchsed) to introduce Amazon Key, a service that lets Amazon delivery drivers open your door and throw your package inside your house.
-A service that lets Amazon delivery drivers (NOT background-checked US Postal Service/UPS/FedEx employees, but regular folks with a station wagon and a smartphone app) enter your home.
-People said, "Okay, hang on a second. This is SUPER creepy."
-Amazon said, "Yeah, I know. I heard you talking about it this morning on the Echo in the bathroom as I watched you put on those new boots from the Echo Look that you bought from the Amazon app while you were laying in bed last night - also watched that on your Echo Spot. You snore a lot. I'll show you a suggestion for breathe right strips next time you're in the app."
-
-Do you want any of this in your life? Other companies have only followed suit.
-I won't tell you what to do, but know that in 2014 when these things started happening, I had already made my decision.
-]]></description>
-</item>
 
 
 <item>

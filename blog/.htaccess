@@ -1,6 +1,5 @@
 Options +Indexes
 AddDescription "My writing in 2020" "my-writing-in-2020.html" #Fri, 21 Feb 2020 05:51:56 -0800
-AddDescription "Amazon Story" "amazon-story.html" #Fri, 21 Feb 2020 05:55:48 -0800
 AddDescription "arch-linux-usage" "archlinuxusage.html" #Fri, 21 Feb 2020 05:59:29 -0800
 AddDescription "x220 vs x230" "x220-vs-x230.html" #Fri, 21 Feb 2020 06:03:12 -0800
 AddDescription "messaging privacy" "messaging-privacy.html" #Fri, 21 Feb 2020 06:04:28 -0800
@@ -18,3 +17,4 @@ AddDescription "simulation-theory" "simulationtheory.html"
 AddDescription "Simulation Theory" "simulation-theory.html" #Fri, 21 Feb 2020 06:56:47 -0800
 AddDescription "Ubuntu: Leaving Trusty" "ubuntu-leaving-trusty.html" #Fri, 21 Feb 2020 06:56:49 -0800
 AddDescription "Windows Defender" "windows-defender.html" #Fri, 21 Feb 2020 07:00:22 -0800
+AddDescription "Amazon Story" "amazon-story.html" #Fri, 21 Feb 2020 05:55:48 -0800
