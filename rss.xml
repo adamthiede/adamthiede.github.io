@@ -12,6 +12,61 @@
 <!-- LB -->
 
 <item>
+<title>Software Projects</title>
+<guid>https://adamthiede.com/blog.html#software-projects</guid>
+<pubDate>Sat, 22 Feb 2020 05:32:00 -0800</pubDate>
+<description><![CDATA[
+<br/>
+Recently I have been working on a few software projects. Here is a summary of them.
+<br/>
+<ul>
+	<li>
+		<a href="https://gitlab.com/elagost/alephone-marathon-launcher">AlephOne Marathon Launcher</a>: remember Bungie's Marathon games? There's an open-source continuation <a href="https://alephone.lhowon.org/">located here</a> but it requires the game to be run from the command line. Obviously I'm not terminal-averse, but this was fun to code. I also made a <a href="https://launchpad.net/~adamthiede/+archive/ubuntu/alephone">PPA</a> for Ubuntu 18.04.
+	</li>
+	<li>
+		<a href="https://github.com/elagost/Link-Saver">Link Saver</a>: ever used Instapaper or Pocket? Basically a bookmark saver but you paste the URL in the terminal. It can save an offline file too. Pretty basic so far but I made it for me to use.
+	</li>
+	<li>
+		<a href="https://gitlab.com/elagost/linux-2fa">2-factor Auth Anywhere</a>: A portable set of ImageMagick scripts that basically took oathtool and put it into a little .jpg. I was working within the constraints of a) the device in question not having a real physical keyboard and b) the screen being low-res and small. It was more or less a fun exercise but nothing to take too seriously.
+	</li>
+	<li>
+		<a href="https://gitlab.com/elagost/sfetch">sfetch</a>: a neofetch-like prompt that is MUCH smaller and lighter-weight. Made since I have a lot of systems I SSH into on a regular basis, and it's nice to have a little stats output right when I log in. As said in the repo, neofetch was too heavy for my poor-man's server fleet of raspberry pi zeros. This works better.
+	</li>
+</ul>
+<br/>
+Mostly these are self-serving things that I made just to have fun!
+<br/>
+]]></description>
+</item>
+
+
+<item>
+<title>Long-Term Goals</title>
+<guid>https://adamthiede.com/blog.html#longterm-goals</guid>
+<pubDate>Sat, 22 Feb 2020 05:14:34 -0800</pubDate>
+<description><![CDATA[
+We're all getting older. Me too - I got older again recently. What's the plan here?
+<br/>
+<br/>
+Most these days are just trying to make it through the day. Life's a chore and so much of it has to be spent on overhead, and at the end of it all, there's not much to show for it. So having a few things in mind to shoot for, to be always on the back burner, is critical - if you're not motivated and excited about making it through the day, what's the point?
+<br/>
+<br/>
+Here's a few of my back-burner perpetual goals:
+<br/>
+<ul>
+	<li>Always keep learning! If there's something that I encounter that I don't know, I'll take the time to learn it if it's going to be important. Even if it's not related to my work, it's more important to broaden my skillset. My wife teaches me various crocheting and sewing skills, I've forced myself to learn some networking principles, and I've been picking up a musical instrumet recently.</li>
+	<li>Constantly examine life for optimization. Even if I've been doing thigns a certain way for decades, if there's a better way that someone shows me, switch to that! In college I switched a few writing habits, and now I'm attempting to change up some driving habits to be safer on the road and put less wear on my vehicle.</li>
+	<li>Work outside the comfort zone. For me this primarliy means <i>talking to people</i> (oooo, scary!) and maintaining social relationships. I've historically been bad at this, so forcing myself to go have friends can be difficult, but it is ultimately rewarding, and the alternative is much worse!</li>
+</ul>
+<br/>
+My long-term plans are pretty hazy right now. I don't know what I'm going to be doing in two weeks and how things are going to end up. But as long as I keep learning, keep improving, and maintain my high-quality relationships with awesome people, I've got a feeling things are gonna work out great. Like my dad always used to say - "Attitude and Effort!"
+<br/>
+<br/>
+]]></description>
+</item>
+
+
+<item>
 <title>Amazon Story</title>
 <guid>https://adamthiede.com/blog.html#amazon-story</guid>
 <pubDate>Fri, 21 Feb 2020 05:55:48 -0800</pubDate>
