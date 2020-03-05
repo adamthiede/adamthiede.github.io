@@ -40,37 +40,6 @@ Special thanks to <a href="https://nm-projects.de/2017/08/flashing-coreboot-on-t
 ]]></description>
 </item>
 
-
-
-
-<item>
-<title>The Job Hunt</title>
-<guid>https://adamthiede.com/blog.html#the-job-hunt</guid>
-<pubDate>Sat, 22 Feb 2020 15:13:37 -0800</pubDate>
-<description><![CDATA[
-Job hunting is a mirthless, thankless, full-time occupation that is one of the most dehumanizing things I've ever experienced. Every couple years, I've had to dust off my resume, log back into LinkedIn, and figure out how I'm gonna keep paying rent.
-<br/>
-Thankfully, I'm almost done - I have a handsome offer from a highly successful company, and the entire process with this group have been treated like a real human. I'm excited to start soon! The following is a brief overview of how I've seen the process evolve over the last few years. A chronicle of my experiences so far is something I'd like to have for future reference so I'll write it here.
-<br/>
-	<p>
-		After four successful interviews, Company A offered me a job, which I accepted, then went on "holiday break". That was the last I heard of them. I was not able to get ahold of anyone after the break, even after leaving voicemails, multiple emails, and even escalations through external resources. It disaffected me toward Company A so much so that I don't really want anything to do with them or their products anymore (which I formerly used a great deal).
-	</p>
-	<p>
-		I applied for a Linux Sysadmin job at Company B, and the interview was 0% technical questions, and just a round-table of people reading off a list from HR. It was very weird. I had hoped to demonstrate technical knowledge, but was not given the chance. I did get offered the job, but the overall situation wasn't great, and I had to decline for multiple reasons. Two days after I declined it I got a call from the HR rep at 8PM on my cell phone, which I did not answer. No voicemail either. I'm not sure what happened.
-	</p>
-	<p>
-		Many positions have offered me roughly 50-60% of what I was making at my previous job, which was less than I made straight out of college, with very little experience, in Kansas City, in 2015. One potential employer essentially told me I wasn't good enough to take the job at his company since I hadn't done a very specific type of live email migration (I've built email servers but apparently that wasn't good enough for him), then told me my friend who makes $120k+ was not making over $80k, and then told me my wife, a stay-at-home mom, should get a job so his sister-in-law could take care of my child, so we could afford to take his pittance of a salary. Yikes.
-	</p>
-	<p>
-		Many recruiters have reached out to me with job offers several states away from where I live. Many have goaded me into taking jobs that would put me at a 2hr commute. I've been waiting on one specific company to get back to me since mid-december and it's the end of February. I call them every week and they say "we're still working on it". I've had to craft so many different buzzwordy bullshit versions of my resume since recruiters who can't read and can only use Ctrl+F will tell me "you don't have HyperV in your resume" and I have "virtualization" and "Hyper-V" right there.
-	</p>
-	<p>I've had to tell the same story several times a day for months on end, I've spent 90 minutes in the car to have a 15-minute meeting that could've been handled over Skype, I've spent days or weeks waiting for HR reps to answer basic questions about benefits and policies, and I've hardly left my cell phone (of which I am <a href="https://adamthiede.com/blog/ditch-your-cell-phone.html">Not A Fan</a>) away from me for more than a few minutes, countless other stressors. It's been exhausting. Some companies (like the one I'm joining) have made the interview and hiring process downright pleasant, and others have made it a nighmare hellscape such that I can't belive how anyone ever ended up getting past that process and finally working there. It's been crazy and horrible. I hope to not do it again for a long, long time.
-]]></description>
-</item>
-=======
->>>>>>> c05b92d51f26e2a83692dfef6715859f77451ebd
-
-
 <item>
 <title>Software Projects</title>
 <guid>https://adamthiede.com/blog.html#software-projects</guid>
