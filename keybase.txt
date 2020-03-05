@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/elagost
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://adamthiede.com
+  * I am elagost (https://keybase.io/elagost) on keybase.
+  * I have a public key ASA0hPH2Hks3_rPv1-HtiVujRMUq6QQ9POKamCorO3XkdQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203484f1f61e4b37feb3efd7e1ed895ba344c52ae9043d3ce29a982a2b3b75e4750a",
+      "host": "keybase.io",
+      "kid": "01203484f1f61e4b37feb3efd7e1ed895ba344c52ae9043d3ce29a982a2b3b75e4750a",
+      "uid": "40b8800cfd170467725c3ebf3e94eb19",
+      "username": "elagost"
+    },
+    "merkle_root": {
+      "ctime": 1583241134,
+      "hash": "f9499786dbc77aa239c74ec43de00674a3620175bb1651768ea4c5e4b06160172171b8cdd522f41445e4241dedbd2cec990f61eca716e122001699c649a2bc2e",
+      "hash_meta": "8dd4491a545c046b0af66f699e4873af305bda83e59fd3ad4e92a5189d0129ad",
+      "seqno": 14934700
+    },
+    "service": {
+      "entropy": "pLOZ7U485pCGBhXBeQ57xvzD",
+      "hostname": "adamthiede.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.2.0"
+  },
+  "ctime": 1583241143,
+  "expire_in": 504576000,
+  "prev": "ed7608485773f464eaecbd304cbb09536b87cbad36d5600c2724677e619886f7",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgNITx9h5LN/6z79fh7Ylbo0TFKukEPTzimpgqKzt15HUKp3BheWxvYWTESpcCBcQg7XYISFdz9GTq7L0wTLsJU2uHy6021WAMJyRnfmGYhvfEINfEt+ti6/8mGUj88weVmGSaXcJG4NHNrC+L2YoZfk+jAgHCo3NpZ8RAldrxGRprFYnqmoiccnJSubMygkdU4NtKNuvoJCvjvk1Zm1JgG/pBjyVM7lCME8caoeOXW+l13tkfHWReUcxYAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBpdjAOkA69Vqt4W1HF/eN9fLbE5uNMdFIUhoZ1dGEh6o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/elagost
+
+==================================================================

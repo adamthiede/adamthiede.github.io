@@ -1,2 +1,5 @@
 Options +Indexes
+<<<<<<< HEAD
 AddDescription "Coreboot on the T430" "coreboot-on-the-t430.html" #Wed, 04 Mar 2020 19:37:46 -0800
+=======
+>>>>>>> c05b92d51f26e2a83692dfef6715859f77451ebd
