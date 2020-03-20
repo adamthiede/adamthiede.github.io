@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Automate These Things</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>Automate These Things</h1>
+<small>[<a href='../blog.html#automate-these-things'>link</a>&mdash;<a href='automate-these-things.html'>standalone</a>]</small>
+<br>
+Friction in daily life is not good. Automation alleviates some friction, reducing stress, and creating more time for leisure and creativity. Many things can be automated. I have some opinions on what should ( and should not) be automated.
+<br>
+Here are a bunch of tasks where I've attmpted to reduce friction by automation.
+<ul>
+	<li>Phone, text, email, and other alerts. I've set up filters, rules, and alerts that only really ping me when I want to be pinged.</li>
+	<li>News. My RSS reader (liferea) refreshes when I open it every morning, and I maintain a set of curated and low-volume feeds. I don't get caught up in infinite scroll and only see what I want.</li>
+	<li>Operating system updates. Follow <a href="https://www.michelebologna.net/2019/automatic-or-unattended-upgrades-in-opensuse-centos-and-fedora-debian-and-ubuntu/">this guide</a> and it's pretty simple. On my servers, unattended-upgrades takes care of security updates, letting me choose when to apply the "regular" updates. My laptop running Fedora automatically downloads updates with dnf-automatic and lets me choose when to install them. Both OSs are very stable and haven't really ever broken irreparably on me, so I don't have to think about my computers much. Whenever they ask me to update, I do it, and it never takes more than 5 minutes and a normal reboot. </li>
+	<li>Backups. Once configured, backups should run forever and be reliable. I run Syncthing and Duplicity separately and back up to two locations. One is stored on a RAID, which is backed up to cold storage quarterly. My "cold storage" backups are not automated, but those I like to do on purpose, and they are stored in a secure location, locked up.</li>
+	<li>Software builds in testing/non-production environments. If you want testbox.local to have the latest version of your app every single day without you having to do it, Jenkins the heck out of it!</li>
+	<li>Monitoring and alerting. Cacti and Twilio make a great combo. Grafana and Nagios are also good monitoring applications.</li>
+	<li>OS installation. Chef, Ansible, JuJu, and Kickstart all provide GREAT ways to get a new box up and running without having to manually install software, partition your disk, or set up your network adapters.</li>
+</ul>
+Of course, automating things is almost as important as what NOT to automate. Some things need human intervention and oversight, for now.
+<ul>
+	<li>Physical security. This includes your garage door. For obvious reasons, this shouldn't be a system that's easily fooled into unlocking itself while you're not at home. Presence detection via Bluetooth is sketchy and spoofable. If someone hacks your AD Domain Controller, you don't want a badge auto-provisioned and mailed to an address, and you don't want all your worker's badges not working if you screw up and delete an OU.</li>
+	<li>Cooking. <a href="https://www.theverge.com/2019/8/14/20802774/june-smart-oven-remote-preheat-update-user-error/">Don't play with fire</a>, kids!</li>
+	<li>Major software or operating system upgrades. Don't let your computers surprise you with a broken NTP service or 100% CPU utilization while you're on vacation.</li>
+	<li>Environmental changes. At my last job we had several air handlers that would rotate every Wednesday at 9AM. This frequently caused problems and interrupted someone's work day. It should have been a monthly (if that) process that was performed manually. Heating and cooling should operate within thresholds, but not make drastic changes without alerting you. A blown sensor could result in a 125F server room and you're none the wiser.</li>
+</ul>
+Of course, this non-exhaustive list is just my opinion based on experience. There are probably good arguments, and I'd love to hear them.
+<br>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
