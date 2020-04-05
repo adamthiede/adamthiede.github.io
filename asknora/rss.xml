@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Ask Nora</title>
+<description>Ask Nora</description>
+<language>en-us</language>
+<link>http://adamthiede.com/asknora/rss.xml</link>
+<atom:link href="http://adamthiede.com/asknora/rss.xml" rel="self" type="application/rss+xml" />
+
+<item>
+<title>Episode 10: Market Investment</title>
+<guid>https://adamthiede.com/asknora/10_MarketInvestment.mp3</guid>
+<link>https://adamthiede.com/asknora/10_MarketInvestment.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/10_MarketInvestment.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>29 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 9: Tut Tut</title>
+<guid>https://adamthiede.com/asknora/9_TutTut.mp3</guid>
+<link>https://adamthiede.com/asknora/9_TutTut.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/9_TutTut.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>28 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 8: Pink Star</title>
+<guid>https://adamthiede.com/asknora/8_PinkStar.mp3</guid>
+<link>https://adamthiede.com/asknora/8_PinkStar.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/8_PinkStar.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>27 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 7: Sleepy Pheasant</title>
+<guid>https://adamthiede.com/asknora/7_SleepyPheasant.mp3</guid>
+<link>https://adamthiede.com/asknora/7_SleepyPheasant.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/7_SleepyPheasant.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>26 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 6: BayKen</title>
+<guid>https://adamthiede.com/asknora/6_BayKen.mp3</guid>
+<link>https://adamthiede.com/asknora/6_BayKen.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/6_BayKen.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>25 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 5: Two Moneys</title>
+<guid>https://adamthiede.com/asknora/5_TwoMoneys.mp3</guid>
+<link>https://adamthiede.com/asknora/5_TwoMoneys.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/5_TwoMoneys.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>24 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 4: Opossum Bird</title>
+<guid>https://adamthiede.com/asknora/4_OpossumBird.mp3</guid>
+<link>https://adamthiede.com/asknora/4_OpossumBird.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/4_OpossumBird.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>23 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 3: Coffee Economy</title>
+<guid>https://adamthiede.com/asknora/3_CoffeeEconomy.mp3</guid>
+<link>https://adamthiede.com/asknora/3_CoffeeEconomy.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/3_CoffeeEconomy.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>22 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+
+<item>
+<title>Episode 2: Mommy is Five</title>
+<guid>https://adamthiede.com/asknora/2_MommyIsFive.mp3</guid>
+<link>https://adamthiede.com/asknora/2_MommyIsFive.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/2_MommyIsFive.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>21 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 1: Two in the Macaroon</title>
+<guid>https://adamthiede.com/asknora/1_TwoInTheMacaroon.mp3</guid>
+<link>https://adamthiede.com/asknora/1_TwoInTheMacaroon.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/1_TwoInTheMacaroon.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>20 Mar 2020 14:00:00 -0700</pubDate>
+</item>
+
+</channel>
+</rss>
