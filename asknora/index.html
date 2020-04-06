@@ -5,18 +5,8 @@
 	<script>
 		function play(track){
 			var audio=document.getElementById("audiocontainer");
+			audio.style.display="block";
 			var asrc=document.getElementById("audiosrc");
-			//if(vidsrc.src === "https://elagost.com/v/Panama2018.mp4"){
-			//	console.log(vidsrc.src);
-			//	video.pause();
-			//	vidsrc.removeAttribute('src');
-			//	video.removeAttribute('src');
-			//	video.load();
-			//	vidsrc.src="https://elagost.com/v/Panama2018_720.mp4";
-			//	video.load();
-			//	console.log(vidsrc.src);
-			//	buttonid.innerHTML="Switch to 1080p";
-			//}
 			audio.pause();
 			asrc.removeAttribute('src');
 			audio.removeAttribute('src');
@@ -25,8 +15,7 @@
 			audio.load();
 			console.log(asrc.src);
 			audiotitle.innerHTML=track;
-			//video.pause();
-			
+			audio.play();
 		}
 	</script>
 	<style>
@@ -43,6 +32,7 @@
 	<body>
 		<H1><a href="https://adamthiede.com/asknora/index.html"> Ask Nora Podcast </a></H1>
 		<p><a href="https://adamthiede.com/asknora/rss.xml">Subscribe via RSS</a></p>	
+		<p>Click &#9654; to play in browser (requires JavaScript).<br/>Click episode title for direct link.</p>	
 		<ul class="tagline">
 			<li><a href=javascript:void(0) onclick=play("10_MarketInvestment.mp3")>&#9654;</a> <a href="10_MarketInvestment.mp3">Episode 10: Market Investment</a> </li>
 			<li><a href=javascript:void(0) onclick=play("9_TutTut.mp3")>&#9654;</a> <a href="9_TutTut.mp3">Episode 9: Tut Tut</a> </li>
@@ -59,7 +49,7 @@
 	</body>
 	<p>
 		<h3 id="audiotitle"></h3>
-		<audio controls id="audiocontainer">
+		<audio controls id="audiocontainer" style="display:none;">
 			<source id="audiosrc" src="10_MarketInvestment.mp3" type="audio/mpeg">
 			Your browser does not support the audio stream.
 		</audio>
