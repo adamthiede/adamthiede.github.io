@@ -6,6 +6,11 @@
 <title>Ask Nora</title>
 <description>Ask Nora</description>
 <language>en-us</language>
+<image>
+	<url>https://adamthiede.com/asknora/asknora.jpg</url>
+	<title>Ask Nora</title>
+	<link><![CDATA[https://adamthiede.com/asknora]]></link>
+</image>
 <link>http://adamthiede.com/asknora/rss.xml</link>
 <atom:link href="http://adamthiede.com/asknora/rss.xml" rel="self" type="application/rss+xml" />
 
