@@ -14,8 +14,20 @@
 			asrc.src=track;
 			audio.load();
 			console.log(asrc.src);
-			audiotitle.innerHTML=track;
+			var stoplink="<a href=javascript:void() onclick=removePlayer()>&#9209;<a>"
+			audiotitle.innerHTML=stoplink+track;
 			audio.play();
+		}
+		function removePlayer(){
+			var audio=document.getElementById("audiocontainer");
+			audio.style.display="block";
+			var asrc=document.getElementById("audiosrc");
+			audio.pause();
+			asrc.removeAttribute('src');
+			audio.removeAttribute('src');
+			audio.style.display="none";
+			var atitle=document.getElementById("audiotitle");
+			audiotitle.innerHTML="";
 		}
 	</script>
 	<style>
@@ -33,6 +45,14 @@
 		<H1><a href="https://adamthiede.com/asknora/index.html"> Ask Nora Podcast </a></H1>
 		<p><a style="text-decoration:underline;" href="https://adamthiede.com/asknora/rss.xml">Subscribe via RSS</a></p>	
 		<p>Click &#9654; to play in browser (requires JavaScript).<br/>Click episode title for direct link.</p>	
+		<div>
+		<p id="audiotitle"></p>
+		<audio controls id="audiocontainer" style="display:none;">
+			<source id="audiosrc" src="10_MarketInvestment.mp3" type="audio/mpeg">
+			Your browser does not support the audio stream.
+		</audio>
+
+		</div>
 		<ul class="tagline">
 			<li><a href=javascript:void(0) onclick=play("15_CheeselessCelebration.mp3")>&#9654;</a> <a href="15_CheeselessCelebration.mp3">Episode 15: Cheeseless Celebration</a> </li>
 			<li><a href=javascript:void(0) onclick=play("14_SomeHummus.mp3")>&#9654;</a> <a href="14_SomeHummus.mp3">Episode 14: Some Hummus</a> </li>
@@ -52,13 +72,5 @@
 		</ul>
 		<br/>
 	</body>
-	<p>
-		<h3 id="audiotitle"></h3>
-		<audio controls id="audiocontainer" style="display:none;">
-			<source id="audiosrc" src="10_MarketInvestment.mp3" type="audio/mpeg">
-			Your browser does not support the audio stream.
-		</audio>
-
-	</p>
-	<br/><br/>
+		<br/><br/>
 </html>
