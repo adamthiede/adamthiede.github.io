@@ -17,7 +17,7 @@
 <pubDate>Fri, 17 Apr 2020 14:38:40 -0700</pubDate>
 <description><![CDATA[
 <p>
-After years of crappy craigslist machines and dying batteries, I finally decided to purchase myself a new laptop. Not ebay-new, but <i>actually brand new</i>. I decided that since I was going to give money to a company, it should be a company that makes good things and cares about freedom. And, I couldn't buy a laptop and <i>not</i> have coreboot at this point.
+After years of crappy craigslist machines and dying batteries, I finally decided to purchase myself a new laptop. (Yes, I did get a new-to-me T430 a few months ago, but that was free, and the battery doesn't work). I decided that since I was going to give money to a company, it should be a company that makes good things and cares about freedom. And, I couldn't buy a laptop and <i>not</i> have coreboot at this point.
 </p>
 <p>
 I bought a <a href="https://web.archive.org/web/20200323184510/https://system76.com/laptops/lemur">System76 Lemur Pro</a>. It is a lightweight 14-inch black laptop that is about the same size as my 12-inch X230. It has 8GB of RAM (with an extra slot available), a 10th-gen i5 U-series CPU, an Intel AC Wi-Fi card, and 2 NVMe drive bays. The embedded controller (the chip that handles keyboard and touchpad events to name a few) and the BIOS are all open source. They use Coreboot with UEFI.
@@ -47,6 +47,8 @@ Overall, this is a <i>fantastic</i> laptop on which to run GNU/Linux. It was a b
 </p>
 ]]></description>
 </item>
+
+
 
 
 <item>
