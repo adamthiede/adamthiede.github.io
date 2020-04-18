@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>New Laptop</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>New Laptop</h1>
+<small>[<a href='../blog.html#new-laptop'>link</a>&mdash;<a href='new-laptop.html'>standalone</a>]</small>
+<p>
+After years of crappy craigslist machines and dying batteries, I finally decided to purchase myself a new laptop. (Yes, I did get a new-to-me T430 a few months ago, but that was free, and the battery doesn't work). I decided that since I was going to give money to a company, it should be a company that makes good things and cares about freedom. And, I couldn't buy a laptop and <i>not</i> have coreboot at this point.
+</p>
+<p>
+I bought a <a href="https://web.archive.org/web/20200323184510/https://system76.com/laptops/lemur">System76 Lemur Pro</a>. It is a lightweight 14-inch black laptop that is about the same size as my 12-inch X230. It has 8GB of RAM (with an extra slot available), a 10th-gen i5 U-series CPU, an Intel AC Wi-Fi card, and 2 NVMe drive bays. The embedded controller (the chip that handles keyboard and touchpad events to name a few) and the BIOS are all open source. They use Coreboot with UEFI.
+</p>
+<p>
+Details out of the way, here we go. First, I had to open it up and add my extra NVMe drive. There's 12 phillips screws on the bottom. No tricks, it just pops off. 12 screws is a lot but I won't be doing that often. Second, I plugged in its power adapter. There's a light next to the plug that glows orange when charging, and green when charged. It also blinks green when the laptop sleeps. It can also charge via USB-C.
+</p>
+<p>
+Opening the lid is not possible with one hand but the hinge is pleasant and the lid doesn't bounce much. The laptop has no logos internally, and the external logo is a sticker that I peeled off immediately, given it would probably have come off in my backpack. So, this is the matte-black no-branding laptop of my dreams.
+</p>
+<p>
+The display is the first thing anyone notices. The bezels are slim, there's a webcam/mics up top, and the display is a matte 1080p IPS panel. Perfect for the size. It's clear, sharp, and gets both really bright and dim.
+<p>
+The touchpad is a relatively decent touchpad. It tracks well and clicks from almost anywhere on the touchpad. It's almost as good as my 2012 Macbook. The keyboard is good, but has much less travel than I'm used to on a thinkpad or desktop mechanical keyboard. It's backlit with 5 levels of backlighting the lowest being very low, which is great. The keyboard does not have a caps lock indicator light, which is fine-ish (I either remap or don't use caps lock anyway).
+</p>
+<p>
+Given the port situation on many modern lapops I wasn't expecting Thinkpad-levels of connectivity, but it comes really close. No ethernet, but if you want that, System76 has a Galago Pro model for you. Otherwise the two models are quite similar (the Galago just has less battery and more ports).
+</p>
+<p>
+Pop!_OS, System76's operating system, is installed on the drive in OEM mode, and lets you install to the rest of the disk when you boot up. It thoughfully provides a recovery partition, so if you want to blow away your install and start fresh, you don't have to boot from USB. I first ran the installer in attempt to put it on the smaller, secondary disk, but it instead put it on the first disk (during install I selected the smaller one, but an 'lsblk' showed it had set up the install targets on the larger one). (Possibly human error?) I download the ISO from their site, installed it to my second 256GB disk, and on the main 500GB disk, I put Fedora (my OS of choice).
+</p>
+<p>
+Fedora works great on this machine. No complaints, no dmesg errors, no extra drivers, no weird fan noises. I run <a href="https://swaywm.org">the sway window manager</a> primarily (and GNOME3 when I need something more full-featured) - the only change over my previous install was I had to install the "light" package, which controls backlight a la xbacklight on xorg.
+</p>
+<p>
+Overall, this is a <i>fantastic</i> laptop on which to run GNU/Linux. It was a bit expensive, but I couldn't imagine putting money toward a better purpose - a small black brandless laptop running coreboot and Linux. Only thing it's missing is a trackpoint. It almost fills the Thinkpad-sized hole in my heart!
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
