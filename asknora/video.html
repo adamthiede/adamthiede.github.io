@@ -1,0 +1,57 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Ask Nora</title>
+	<!--link rel="stylesheet" type="text/css" href="https://adamthiede.com/webstyle.css" -->
+	<script>
+		function play(track){
+			var audio=document.getElementById("audiocontainer");
+			audio.style.display="block";
+			var asrc=document.getElementById("audiosrc");
+			audio.pause();
+			asrc.removeAttribute('src');
+			audio.removeAttribute('src');
+			audio.load();
+			asrc.src=track;
+			audio.load();
+			console.log(asrc.src);
+			var stoplink="<a href=javascript:void() onclick=removePlayer()>&#9209;<a>";
+			audiotitle.innerHTML=stoplink+track;
+			audio.play();
+		}
+		function removePlayer(){
+			var audio=document.getElementById("audiocontainer");
+			audio.style.display="block";
+			var asrc=document.getElementById("audiosrc");
+			audio.pause();
+			asrc.removeAttribute('src');
+			audio.removeAttribute('src');
+			audio.style.display="none";
+			var atitle=document.getElementById("audiotitle");
+			audiotitle.innerHTML="";
+		}
+	</script>
+	<style>
+		html{
+			color:#000000;
+			background:#ffbfd7;
+			font-family:sans-serif;
+		}
+		a{
+			text-decoration:none;
+			color:#000000;
+		}	
+	</style>
+	<body>
+		<H1><a href="https://adamthiede.com/asknora/index.html"> Ask Nora Podcast - Extra Video </a></H1>
+		<div id="wholevid">
+		<p id="videotitle"</p>
+		<video controls id="videocontainer" style="max-width:1024px;width:100% !important; height:auto !important;object-fit:contain;">
+			<source id="vidsrc" src="NoraMakesHamburgersShort.m4v" type="video/mp4">
+			Your browser does not support the video stream.
+		</video>
+		<h3>Nora Makes Hamburgers</h3>
+		</div>
+		<br/>
+	</body>
+		<br/><br/>
+</html>
