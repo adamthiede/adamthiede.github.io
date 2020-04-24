@@ -15,6 +15,15 @@
 <atom:link href="http://adamthiede.com/asknora/rss.xml" rel="self" type="application/rss+xml" />
 
 <item>
+<title>Episode 17: Hot Dog Flowers</title>
+<guid>https://adamthiede.com/asknora/17_HotDogFlowers.mp3</guid>
+<link>https://adamthiede.com/asknora/17_HotDogFlowers.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/17_HotDogFlowers.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>20 Apr 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
 <title>Episode 16: Pengy</title>
 <guid>https://adamthiede.com/asknora/16_Pengy.mp3</guid>
 <link>https://adamthiede.com/asknora/16_Pengy.mp3</link>
