@@ -14,11 +14,57 @@
 <link>http://adamthiede.com/asknora/rss.xml</link>
 <atom:link href="http://adamthiede.com/asknora/rss.xml" rel="self" type="application/rss+xml" />
 
+
 <item>
-<title>Episode 17: Hot Dog Flowers</title>
-<guid>https://adamthiede.com/asknora/17_HotDogFlowers.mp3</guid>
-<link>https://adamthiede.com/asknora/17_HotDogFlowers.mp3</link>
-<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/17_HotDogFlowers.mp3" />
+<title>Episode 22: Hot Dog Flowers</title>
+<guid>https://adamthiede.com/asknora/22_HotDogFlowers.mp3</guid>
+<link>https://adamthiede.com/asknora/22_HotDogFlowers.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/22_HotDogFlowers.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>12 May 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 21: Pinky and Sky</title>
+<guid>https://adamthiede.com/asknora/21_Pinky and Sky.mp3</guid>
+<link>https://adamthiede.com/asknora/21_Pinky and Sky.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/21_PinkyandSky.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>11 May 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 20: Cows and Candles</title>
+<guid>https://adamthiede.com/asknora/20_Cows and Candles.mp3</guid>
+<link>https://adamthiede.com/asknora/20_Cows and Candles.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/20_CowsandCandles.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>10 May 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 19: Coffee For Dads</title>
+<guid>https://adamthiede.com/asknora/19_Coffee For Dads.mp3</guid>
+<link>https://adamthiede.com/asknora/19_Coffee For Dads.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/19_CoffeeForDads.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>24 Apr 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 18: Baby Deer</title>
+<guid>https://adamthiede.com/asknora/18_BabyDeer.mp3</guid>
+<link>https://adamthiede.com/asknora/18_BabyDeer.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/18_BabyDeer.mp3" />
+<description><![CDATA[]]></description>
+<pubDate>23 Apr 2020 14:00:00 -0700</pubDate>
+</item>
+
+<item>
+<title>Episode 17: Our First Guest</title>
+<guid>https://adamthiede.com/asknora/17_OurFirstGuest.mp3</guid>
+<link>https://adamthiede.com/asknora/17_OurFirstGuest.mp3</link>
+<enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/17_OurFirstGuest.mp3" />
 <description><![CDATA[]]></description>
 <pubDate>20 Apr 2020 14:00:00 -0700</pubDate>
 </item>
@@ -91,7 +137,7 @@
 </item>
 
 <item>
-<title>Episode 9: Tut Tut</title>
+<title>Episode 09: Tut Tut</title>
 <guid>https://adamthiede.com/asknora/9_TutTut.mp3</guid>
 <link>https://adamthiede.com/asknora/9_TutTut.mp3</link>
 <enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/9_TutTut.mp3" />
@@ -100,7 +146,7 @@
 </item>
 
 <item>
-<title>Episode 8: Pink Star</title>
+<title>Episode 08: Pink Star</title>
 <guid>https://adamthiede.com/asknora/8_PinkStar.mp3</guid>
 <link>https://adamthiede.com/asknora/8_PinkStar.mp3</link>
 <enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/8_PinkStar.mp3" />
@@ -109,7 +155,7 @@
 </item>
 
 <item>
-<title>Episode 7: Sleepy Pheasant</title>
+<title>Episode 07: Sleepy Pheasant</title>
 <guid>https://adamthiede.com/asknora/7_SleepyPheasant.mp3</guid>
 <link>https://adamthiede.com/asknora/7_SleepyPheasant.mp3</link>
 <enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/7_SleepyPheasant.mp3" />
@@ -118,7 +164,7 @@
 </item>
 
 <item>
-<title>Episode 6: BayKen</title>
+<title>Episode 06: BayKen</title>
 <guid>https://adamthiede.com/asknora/6_BayKen.mp3</guid>
 <link>https://adamthiede.com/asknora/6_BayKen.mp3</link>
 <enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/6_BayKen.mp3" />
@@ -127,7 +173,7 @@
 </item>
 
 <item>
-<title>Episode 5: Two Moneys</title>
+<title>Episode 05: Two Moneys</title>
 <guid>https://adamthiede.com/asknora/5_TwoMoneys.mp3</guid>
 <link>https://adamthiede.com/asknora/5_TwoMoneys.mp3</link>
 <enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/5_TwoMoneys.mp3" />
@@ -136,7 +182,7 @@
 </item>
 
 <item>
-<title>Episode 4: Opossum Bird</title>
+<title>Episode 04: Opossum Bird</title>
 <guid>https://adamthiede.com/asknora/4_OpossumBird.mp3</guid>
 <link>https://adamthiede.com/asknora/4_OpossumBird.mp3</link>
 <enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/4_OpossumBird.mp3" />
@@ -145,7 +191,7 @@
 </item>
 
 <item>
-<title>Episode 3: Coffee Economy</title>
+<title>Episode 03: Coffee Economy</title>
 <guid>https://adamthiede.com/asknora/3_CoffeeEconomy.mp3</guid>
 <link>https://adamthiede.com/asknora/3_CoffeeEconomy.mp3</link>
 <enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/3_CoffeeEconomy.mp3" />
@@ -155,7 +201,7 @@
 
 
 <item>
-<title>Episode 2: Mommy is Five</title>
+<title>Episode 02: Mommy is Five</title>
 <guid>https://adamthiede.com/asknora/2_MommyIsFive.mp3</guid>
 <link>https://adamthiede.com/asknora/2_MommyIsFive.mp3</link>
 <enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/2_MommyIsFive.mp3" />
@@ -164,7 +210,7 @@
 </item>
 
 <item>
-<title>Episode 1: Two in the Macaroon</title>
+<title>Episode 01: Two in the Macaroon</title>
 <guid>https://adamthiede.com/asknora/1_TwoInTheMacaroon.mp3</guid>
 <link>https://adamthiede.com/asknora/1_TwoInTheMacaroon.mp3</link>
 <enclosure type="audio/mpeg" url="https://adamthiede.com/asknora/1_TwoInTheMacaroon.mp3" />
