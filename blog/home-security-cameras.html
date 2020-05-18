@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Home Security Cameras</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>Home Security Cameras</h1>
+<small>[<a href='../blog.html#home-security-cameras'>link</a>&mdash;<a href='home-security-cameras.html'>standalone</a>]</small>
+<p>
+There's two ways to do video monitoring of your home and its surroundings: the easy way, and the right way. I'll explain a) why you should care, b) why the easy way isn't actually that easy, and c) how to achieve both setups. Really, you should do this reasearch for yourself, since these things change all the time, and everyone has different requirements. A setup like this is going to require that you do some work and use your brain. It's going to be a learning experience, and possibly frustrating. At the end you'll get something really good out of it, and the knowledge you gain along the way will help you be a more valuable resource to yourself and others in the future. <a href="https://podcast.asknoahshow.com/156">This podcast episode</a> is a bit of required listening if you're interested in these products/solutions.
+</p>
+<p>
+First, you need to ask yourself a few questions.
+<ul>
+	<li>Do you need constant, real-time video of your home (inside/out) accessible wherever you are, especially outside the home?</li>
+	<li>Do you care who has access to that data? Would it make you sad to know that a bunch of people you don't know/trust could access your footage?</li>
+	<li>Do you want historical data? Would you like to look back at old footage? How far back do you want to go? 30 days? Is 7 days good enough?</li>
+	<li>Are you willing to learn, and put some time and effort into setting this up correctly, or do you just want someone else to handle it?</li>
+</ul>
+If you are more or less apathetic to those points, and it doesn't really matter, then get a Nest/Ring/Arlo setup. It's cheap, you'll be surveilled by the government, police, contractors for Google/Amazon, but whatever, you don't care, right? Stop reading right here. (These are bad systems. They grant other people control over your surveillance, and they make you dependent on their whims. Don't make these products things that you depend on.)
+</p>
+<p>
+First off, if you want cameras to record videos, cameras themeselves can't store and transmit video. The cameras need to connect back to a computer that can store, analyze, and transmit the video. If you want this to be an even remotely good experience, you need to buy something with an ethernet port and a set of big hard drives. To start out, go for a Synology. I have one. They're great products, easy to set up, and easy to keep secure. You can connect any type of ONVIF camera to them, the low-end ones even have powerful CPUs to transcode/transmit all that video, and you can also use spare old smartphones as surveillance cameras. Awesome! <a href="https://www.amazon.com/Synology-Network-Recorder-NVR1218-Diskless/dp/B075MVPNKF/ref=sr_1_2?dchild=1&keywords=synology+nvr1218&qid=1589824860&s=electronics&sr=1-2">This NS1218</a> is a decent start if you just want the cheapest good option. If you want something that's a better long-term option, buy the bigger version, the <a href="https://www.amazon.com/dp/B075N1Z9LT/ref=emc_b_5_i?th=1">DS918+</a>. It is much more expensive, but will last longer, and will afford you more fault tolerance.
+</p>
+<p>
+Now you have your computer. But it needs storage. For drives, buy some Seagate IronWolf NAS drives. 2TB is good enough if you don't need massive capacity, but 4TB is a great sweet spot (and that's when you get drives with bigger caches, anyway). Price accordingly.
+</p>
+<p>
+Next, you need cameras! What type of cameras should you get? Cameras that support the ONVIF standard are the best things to buy, since they're interopreable with any system you could use. You want to buy PoE cameras (power over ethernet) and wire them to a PoE switch. This is the best way to ensure high availability and a consistent connection. Anything connected over Wi-Fi is going to be slower, have higher latency, be more effected by external forces (storms, cars parked in the driveway, people standing in from of the camera) and it will also degrade the performance of your home network. (and vice versa - if you're streaming 4K video your cameras are going to crap out)
+</p>
+<p>
+Obviously you could use any RTSP/ONVIF camera, but what is out there? The best stuff is Axis gear, but it's very expensive. Ubiquiti's UniFi cameras are also great, but aren't as customizable. If you want something cheap, go with Wyze cams. You can <a href="https://support.wyzecam.com/hc/en-us/articles/360026245231-Wyze-Cam-RTSP">manually flash RTSP firmware</a> and get them going, which is a good cheap option. They connect over Wi-Fi which is also less than idea.
+</p>
+<p>
+With all your pieces together, you'll have to install Synology's surveillance station on your NAS, and get your cameras plugged in. If you want fault tolerance, set up RAID, and get a UPS. You can get a cheap little APC desktop UPS, plug in your PoE Switch and NVR, and you'll be good to go if there's a power blip. The switch will power back on when it gets power, and the Synology can be configured to start up after it loses power.
+</p>
+<p>
+Now here's the hard part - networking setup. Ideally, you'd have 3 vlans, minimum - the cameras will be on a camera-only vlan, with no internet access, client isolation, and no access to anything else. The only thing they'll be able to do is access one port on your server vlan, where your NVR lives. Then you can have a third vlan which is your "regular computer" vlan, where your desktop/laptops live. That can connect into the server vlan, but the server vlan can't get to the computers (unless you need it to for some reason). Then, you have a VPN server in your server vlan (whether that's built in on the synology or on a separate server, your choice), and that is your only external hole. This is a reasonably secure setup that isolates things that might be untrustworthy from the rest of your secure zones. 
+</p>
+<p>
+Anyway, these are just my thoughts I wrote down to think about this stuff myself. Haven't bought or used any of these so I can't say myself what's the best. This is just my afternoon's research.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
