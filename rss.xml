@@ -17,7 +17,7 @@
 <pubDate>Sat, 23 May 2020 16:09:37 -0700</pubDate>
 <description><![CDATA[
 <p>
-In modern times, people communicate with each other via smartphones, mostly. Whether it's WhatsApp, iMessage, Matrix, email, Signal, or even SMS and phone calls, most people use a smartphone. That means I have to use a smartphone to receive communications from these smartphone-owners, as well. But I don't want to. Opting out of the smartphone would also mean opting into communication surveillance (and lower quality communication overall), and I do not want that. 
+In modern times, people communicate with each other via smartphones, mostly. Whether it's WhatsApp, iMessage, Matrix, email, Signal, or even SMS and phone calls, most people use a smartphone. That means I have to use a smartphone to receive communications from these smartphone-owners, as well. On smartphones we have the ability to choose secure communication. However, I do not want a smartphone, and all the baggage that comes with a full smartphone operating system. But opting out of the smartphone would also mean opting into communication surveillance (and lower quality communication overall), and I do not want that, either. 
 </p>
 <p>
 There are non-smart-phones ("dumb" phones, as they're called now) that are intelligently designed and fairly non-creepy, like the <a href="https://www.thelightphone.com/products">Light Phone</a> and <a href="https://www.punkt.ch/en/products/mp02-4g-mobile-phone/">Punkt MP02</a>, but those for some reason don't put security - or, if your family/friends only use some smartphone app, communication at all - on their list. Also, these devices with their basic SMS/phone call only communication are bizarrely expensive.
@@ -53,6 +53,8 @@ This is an opinionated device, with very little functionality, made specifically
 Yes, I'm aware of the <a href="https://www.pine64.org/pinephone/">PinePhone</a>. It gets pretty close, but it's enormous and more functional than I'd like. The device I'm proposing is much stricter and more opinionated than that.</p>
 ]]></description>
 </item>
+
+
 
 
 <item>
