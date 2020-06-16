@@ -12,6 +12,25 @@
 <!-- LB -->
 
 <item>
+<title>Like It's The 2000s</title>
+<guid>https://adamthiede.com/blog.html#like-its-the-2000s</guid>
+<pubDate>Mon, 15 Jun 2020 19:29:06 -0700</pubDate>
+<description><![CDATA[
+<p>
+Short post.
+</p>
+<p>
+I'm hosting a website on a tiny little shared virtual system. I'm troubleshooting SELinux rules. I'm spending evenings with IRC. I bought a book on Python and am churning through it. My computer's running Linux and It's interesting, rather than boring. I'm administering Linux systems at work. In genereal, computers are cool again.</p>
+<p>
+For me, it's like the mid-2000s all over again! :)
+</p>
+<p>
+(yes, this may seem played out and silly to you, but I'm having a lot of fun. I'm motivated to do cool stuff again.)
+]]></description>
+</item>
+
+
+<item>
 <title>Web Server Video Streaming</title>
 <guid>https://adamthiede.com/blog.html#web-server-video-streaming</guid>
 <pubDate>Mon, 15 Jun 2020 19:14:11 -0700</pubDate>
