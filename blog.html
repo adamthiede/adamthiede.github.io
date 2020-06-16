@@ -12,6 +12,26 @@
 
 <!-- LB -->
 <div class='entry'>
+<h2 id='web-server-video-streaming'>Web Server Video Streaming</h2>
+<small>[<a href='#web-server-video-streaming'>link</a>&mdash;<a href='blog/web-server-video-streaming.html'>standalone</a>]</small>
+<p>
+Recently I've been serving a lot of web video. We've been producing some silly little videos here at the Thiede household and want a way to share them with people. We're comfortable with them being semi-public (semi, since my website is so poorly SEO optimized that myspace results show up in search before my website) and don't want to have to send them via shared Dropbox links or stuff like that. That's more complicated than we'd like. YouTube is automatically out because it's so incredibly terrible, and I'd have to be a fool to put stuff up there these days.
+</p>
+<p>
+So I started hosting video on my website, in a <i>secret place</i> that isn't linked, you have to know where to go. There are a few things we had to do before getting video to play back in a browser. What's important is the mechanics of how you serve the video, what you serve, and what your expected load is. Ask yourself a few questions before doing this. <br>&nbsp;&nbsp;&nbsp;(This kinda assumes the webserver in question is as low-end as possible, be it a Raspberry Pi zero on a home WiFi network, or a $2.50/mo VPS or something.)
+<ul>
+	<li>What type of video? High-res/high-quality long video, or a short home video where resolution and quality aren't important? Whatever the case, Handbrake has a "web optimized" flag that can be set while encoding the video. It will enable the video to be more easily streamed (for the computers involved) from the beginning without caching the whole thing. It's a very good option, and Handbrake is Free Software. Just do it!</li>
+	<li>How many people will be watching this at once? How likely is it that multiple people will be streaming at the same time, and can your webserver handle that? Fast disks are nice to have, so any other services the webserver is providing don't get interrupted - i.e. if it's used as an irc bouncer or game server, SSDs will help large file reads not constrain the other services.</li>
+	<li>Is there a bandwith cap? Video is pretty bandwith heavy. Most personal webservers tend to be pretty tiny, since it's a system role that doesn't require much resources. Tiny VPSs usually have bandwith caps. Do some quick math and make sure that serving the videos multiple times won't blow through that.</li>
+	<li>Video encoding formats are another consideration - MP4 and webm formats are supported pretty much everywhere. For wider compatibility, h264 still wins over h265. If lower bandwith is a higher priority than wider compatibility, h265 will work great on new-ish devices and save bandwith and storage too.</li>
+	<li>Finally</li>
+</ul>
+</p>
+<p>
+All in all, streaming 3 separate copies of the video didn't take a larege toll on my 1-core 1GB RAM VPS. It was hardly even a load test! The biggest bottleneck was the disk, and I could invest in a VPS with SSD infrastructure if I wanted more speed that way. I even made a little piece JS to switch quality on the fly. Plus, doing it yourself is much more fun. Hack on!</a>
+<small>Mon, 15 Jun 2020 19:14:11 -0700</small>
+</div>
+<div class='entry'>
 <h2 id='children-and-modern-media'>Children and Modern Media</h2>
 <small>[<a href='#children-and-modern-media'>link</a>&mdash;<a href='blog/children-and-modern-media.html'>standalone</a>]</small>
 <p>
