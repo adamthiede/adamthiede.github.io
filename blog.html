@@ -12,6 +12,52 @@
 
 <!-- LB -->
 <div class='entry'>
+<h2 id='openbsd-webserver-setup'>OpenBSD Webserver Setup</h2>
+<small>[<a href='#openbsd-webserver-setup'>link</a>&mdash;<a href='blog/openbsd-webserver-setup.html'>standalone</a>]</small>
+<p>I'm migrating my web stuff to OpenBSD, because it's fun.</p>
+                <p>
+                Here's what I did to get this webserver up and running:
+                <ol>
+                        <li>Signed up for Vultr, got an OpenBSD VPS running with my SSH key. Vultr defaults to pw login, so I edited /etc/sshd_config and set root login to Prohibit-Password.</li>
+                        <li>Did the regular post-install things: syspatch, pkg_add -u, fw_update</li>
+                        <li>Set up a user and doas, so I could run stuff as my own user. Then set ssh to not enable root login at all.</li>
+                        <li>rcctl enable httpd, edited the /etc/httpd.conf to set up multiple websites in the webroot. Example below. (It looks terrible since I don't really care too much about converting the file to be formatted correctly in HTML)</li>
+                        <li>Just to test having multiple sites, and video streaming, on the same system, I put a second webroot in there too.</li>
+                        <li>Installed letsencrypt's certbot with pkg_add -i certbot</li>
+                        <li>Ran "certbot certonly --webroot" from <a href="https://certbot.eff.org/lets-encrypt/opbsd6-apache">cerbot's openbsd page</a> and got a certificate</li>
+                        <li>Plugged the certificate and key into my httpd.conf as show below</li>
+                        <li>Restarted httpd, put the cron job in as recommended, and now I wait for it to break!</li>
+                </ol>
+                </p>
+                <span style="font-family:monospace;page-break-inside:avoid;display:block;">
+                        <br>ext_ip="140.82.47.211"
+                        <br>server "default" {
+                        <br>    listen on $ext_ip port 80
+                        <br>}
+                        <br>
+                        <br>server "openbsd.elagost.com" {
+                        <br>    #alias "openbsd.elagost.com"
+                        <br>    listen on $ext_ip port 80
+                        <br>    listen on $ext_ip tls port 443
+                        <br>    tls {
+                        <br>            certificate "/etc/letsencrypt/live/openbsd.elagost.com/fullchain.pem"
+                        <br>            key "/etc/letsencrypt/live/openbsd.elagost.com/privkey.pem"
+                        <br>    }
+                        <br>    root "/htdocs/openbsd.elagost.com"
+                        <br>}
+                        <br>
+                        <br>server "spice.elagost.com" {
+                        <br>    #alias "spice.elagost.com"
+                        <br>    listen on $ext_ip port 80
+                        <br>    root "/htdocs/spice.elagost.com"
+                        <br>}
+                </span>
+<p>
+Overall this should be a pretty simple system to maintain. Vultr was the cheapest VPS provider I could find that offered OpenBSD. Current hosting provider doesn't provide it.
+</p>
+<small>Thu, 25 Jun 2020 09:53:35 -0700</small>
+</div>
+<div class='entry'>
 <h2 id='like-its-the-2000s'>Like It's The 2000s</h2>
 <small>[<a href='#like-its-the-2000s'>link</a>&mdash;<a href='blog/like-its-the-2000s.html'>standalone</a>]</small>
 <p>
