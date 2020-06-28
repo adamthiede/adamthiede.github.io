@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>SwayWM on openSUSE Tumbleweed is Easy</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>SwayWM on openSUSE Tumbleweed is Easy</h1>
+<small>[<a href='../blog.html#swaywm-on-opensuse-tumbleweed-is-easy'>link</a>&mdash;<a href='swaywm-on-opensuse-tumbleweed-is-easy.html'>standalone</a>]</small>
+<p>
+My personal favorite way to interact with the windows on my computer is <a href="swaywm.org">the Sway window manager</a>. Drew's video on the swaywm.org site explains the concept of sway and tiling window managers better than I can here. I use it instead of i3 because 1) it does compositing and I have no screen tearing, and 2) window movements with Super+mouse work very well.
+</p>
+<p>
+The common problem with tiling window managers is the default config. Sway's is unopinionated and bare, and doesn't provide a bunch of functionality out of the box. Plus, default keybinds for a terminal and launcher are both for Xorg programs, not wayland-native replacements. On many GNU/Linux distributions, sway is shipped default, if at all. However, openSUSE just changed that! They include a fantastic swaywm config by default:
+<br><img src="../Files/openSUSE_sway.png"></img>
+It includes wofi (wayland rofi), alacritty, waybar, and sets up swayidle/swaylock automatically. Great stuff!
+</p>
+<p>
+In order to obtain this, just go through the openSUSE tumbleweed install as normal, but select a few things different than the default install.
+</p>
+<p>
+<br><img src="../Files/loaderbar.png"></img>
+Boot the openSUSE network installer from a flash drive or in a VM. I'm doing it in a VM for screenshots. Select the "Generic Desktop" system.
+<br><img src="../Files/generic.png"></img>
+</p>
+<p>
+Walk through the rest of the installer (partitioning, users, timezone) as you see fit.
+<br><img src="../Files/software_selections.png"></img>
+</p>
+<p>
+When you get here, STOP, and click on the teal "Software" word. It'll bring you to the software selecitons page. Select Sway, and then scroll down and select "Enhanced Base System" as well, for regular extra goodies. You'll probably miss something without it, and it can't hurt.
+<br><img src="../Files/select_sway.png"></img>
+<br><img src="../Files/select_enhanced.png"></img>
+</p>
+<p>
+Also, unless you know you want it, scroll down on the Installation Settings page before installing and select "Switch to NetworkManager". It's more standard and easy to use. If you've used Linux before you'll be used to it.
+<br><img src="../Files/switchtonm.png"></img>
+</p>
+<hr>
+<p>
+And there you go. You'll have an excellent sway desktop on a solid rolling release with great defaults. This does not include a web browser, mail client, or display manager - when you first boot the system, you'll have to login to the console, and just run 'sway' on the console. Next, to enable sway to start by default on the console, run this in a terminal:
+<blockquote style="font-family:Monospace">
+	echo '[ $(tty) == "/dev/tty1" ] &amp;&amp; exec sway' &gt;&gt; ~/.profile
+</blockquote>
+Have fun with your silly meme tiling window manager! I've grown to love them over the years, and maybe this will help you.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
