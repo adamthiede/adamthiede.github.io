@@ -25,7 +25,7 @@ img {
 }
 </style>
 <p>
-My personal favorite way to interact with the windows on my computer is <a href="swaywm.org">the Sway window manager</a>. Drew's video on the swaywm.org site explains the concept of sway and tiling window managers better than I can here. I use it instead of i3 because 1) it does compositing and I have no screen tearing, and 2) window movements with Super+mouse work very well.
+My personal favorite way to interact with the windows on my computer is <a href="https://swaywm.org">the Sway window manager</a>. Drew's video on the swaywm.org site explains the concept of sway and tiling window managers better than I can here. I use it instead of i3 because 1) it does compositing and I have no screen tearing, and 2) window movements with Super+mouse work very well.
 </p>
 <p>
 The common problem with tiling window managers is the default config. Sway's is unopinionated and bare, and doesn't provide a bunch of functionality out of the box. Plus, default keybinds for a terminal and launcher are both for Xorg programs, not wayland-native replacements. On many GNU/Linux distributions, sway is shipped default, if at all. However, openSUSE just changed that! They include a fantastic swaywm config by default:
@@ -63,6 +63,8 @@ Have fun with your silly meme tiling window manager! I've grown to love them ove
 </p>
 ]]></description>
 </item>
+
+
 
 
 
