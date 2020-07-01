@@ -34,8 +34,13 @@ Running default is important to me. My vimrc is less than 50 lines, and I use th
 <p>
 If you’re only editing on the desktop, use TextMate or Gedit or VSCode or whatever. They work great. But in my workflow I value consistency, and I frequently edit on systems I can’t customize, so why not get comfortable with the tool that I know is going to be everywhere?
 </p>
+<p>
+My vimrc is <a href="https://adamthiede.com/Files/vimrc">here</a> for the curious.
+</p>
 ]]></description>
 </item>
+
+
 
 
 <item>
