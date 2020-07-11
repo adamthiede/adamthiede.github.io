@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>RPM Packaging</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>RPM Packaging</h1>
+<small>[<a href='../blog.html#rpm-packaging'>link</a>&mdash;<a href='rpm-packaging.html'>standalone</a>]</small>
+<p>
+RPM packaging is pretty easy on Fedora. I took my silly little <a href="gitlab.com/elagost/alephone-marathon-launcher">game launcher project</a> and added a spec file, basically ripped off the main project's spec file, and ran a couple commands from <a href="https://docs.fedoraproject.org/en-US/quick-docs/creating-rpm-packages/index.html">Fedora's excellent guide</a> for packaging.
+</p>
+<p>
+The difference between Fedora's COPR system and Ubuntu's PPA system (and their respective packaging formats) is incredible. Ubuntu's was a huge barrier to entry, but Fedora's was much simpler.
+</p>
+<p>
+For creating a .deb and a PPA, I had to download hundreds of megabytes of packages, create a bunch of directories in a very specific format, handcraft half a dozen text files (most of which should've been tool-created) and invoke several arcane spells that had hardly any useful output when they failed. It took me a while to get it right. At the end of it all I only had a single package for Ubuntu 18.04, x86_64. I don't see myself going back to update it for 20.04, since the process was punishing.
+</p>
+<p>
+For RPM packaging, I downloaded a tarball into a directory, crafted a spec file, and ran a single command. If something failed, it would output useful info, and I'd correct errors, recreate the tarball, then run the single packaging command again. Easy enough. And with Copr, I was surprised at how easy that was, too. I forked the project to my own gitlab repo, made some edits, pointed Copr to that git repo, told it where the spec file lived, and submitted it for building. I selected current versions of Fedora, and Copr just built it. It was as easy as building in Jenkins. Probably one of the easiest pieces in the software building pipeline I have worked with so far. It built for multiple Fedora versions at once without anything more than a checkbox. I could've also selected Maegia, CentOS and openSUSE too! I don't have to manage keys or local build systems - everything happens in Copr.
+</p>
+<p>
+If you're thinking about packaging software for RPM-based Linux, I highly recommend Copr and Fedora's build tools. Can't recommend PPAs at all though - they're hard to work with, and the're going the way of the dodo, according to Canonical; snaps are the future. I've not created one but apparently they're fairly simple, so I'll have to get an Ubuntu VM going and try it out. Maybe I'll post about it here later. (There's an RSS feed. You know what to do.) See you in IRC!
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
