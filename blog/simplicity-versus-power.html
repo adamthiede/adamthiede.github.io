@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Simplicity Versus Power</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>Simplicity Versus Power</h1>
+<small>[<a href='../blog.html#simplicity-versus-power'>link</a>&mdash;<a href='simplicity-versus-power.html'>standalone</a>]</small>
+<p>
+I've been working with <a href="https://spacewalkproject.github.io/">Spacewalk</a> at work recently. It's a powerful but user-friendly system for managing software in an organization for other Linux servers - think of it as analogous to WSUS for Windows. Spacewalk can do quite a bit, and is nice for organizations that need reproducibility in all their systems.
+</p>
+<p>
+Working with these systems, I frequently grow frustrated with how the system tries to simplify its interface for usability, but that introduces cruft and bloat. Spacewalk requires a database, has a web interface, takes over the package repositories for a RHEL-like system so you can't use other repos, and requires root even to search for packages on subscribed systems. Its complexity is far-reaching and kind of invasive.
+</p>
+<p>
+On the other hand, <a href="https://gitlab.com/elagost/apt-mirror-scripts">working with apt-mirror</a> is a much simpler task. Set aside for a second that Ubuntu and Debian aren't really as enterprise-production-ready as RHEL. The difference in architecture is drastic. You need to install one package, that's really just a perl script, and place a bunch of scripts and cron jobs on the server. Even something like an Arch Linux mirror is pretty simple to set up. (who would've thought?)
+</p>
+<p>
+Back in Spacewalk land, I've been dealing with some errors that don't seem to be documented, shouldn't be happening, and would be easy to work around were spacewalk just a bunch of shell scripts. I'm sure a database is less prone to screw-ups (I had my fair share of corruption with apt-mirror) but the differences are negligible.
+</p>
+<p>
+Complexity is great when you absolutely do need it, but most of the time, the Unix Philosophy prevails - slap together an interoperable collection of scripts out of a few small tools, and you end up with a system that's easier to understand, maintain, and debug from a new user's perspective. And yeah, shell scripts are slow compared to C code, but in the end, you save everyone else's time by making something that's easier to understand, modify, and redistribute.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
