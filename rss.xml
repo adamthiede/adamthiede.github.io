@@ -12,6 +12,39 @@
 <!-- LB -->
 
 <item>
+<title>New PC Build</title>
+<guid>https://adamthiede.com/blog.html#new-pc-build</guid>
+<pubDate>Tue, 11 Aug 2020 06:41:32 -0700</pubDate>
+<description><![CDATA[
+<p>
+For the past three years I've been trying to band-aid my wife's computer issues by slapping in spare parts and doing tiny upgrades here and there - add another SSD, add more RAM, tweak some software, etc. None of this has solved the problem of her bringing about the heat death of the universe from the corner of our shared office room.
+</p>
+<p>
+Earlier this year I finally got a new laptop after limping along with a 7-year-old machine for a while. She's not in as bad of shape (her current machine is a Core i7-4790) but she's topped out on upgrades. Her rig is a prebuilt with a limited power supply that's topped out on RAM. The machine is great otherwise, but she uses the machine like the Linux kernel manages memory: anything unused is wasted! She edits videos in kdenlive and frequently maxes out CPU usage. Renders take hours. The SATA SSD doesn't provide the access times she needs for large files. The system has crashed multiple times due to lack of RAM, and I actually increased the swap space out of desperation a while back.
+</p>
+<p>
+So we've got an upgrade on our hands. Here are the parts:
+<ul>
+	<li>CPU: Ryzen 3700X. Basically the best bang-for-your-buck CPU, and we're doubling thread count. Also it consumes less power than the current CPU.</li>
+	<li>RAM: 32GB (2x16) DDR4. This way I can buy the same kit again in if she eats all this up.</li>
+	<li>Storage: a 1TB Samsung EVO nvme drive. We'll use her existing SSD for a scratch drive or something, and I've got a few 3TB HDDs I can chuck in there and make a btrfs mirror to back up to.</li>
+	<li>Motherboard: An Asus B550 board, with reportedly great power delivery, which is going to be important. It has a 2.5G Ethernet card by realtek, for which I have to hand-compile drivers, but it's not bad.</li>
+	<li>PSU: EVGA 750W fully modular PSU. I've never used a fully modular PSU before and it's pretty sweet. It has an eco/quiet mode so the fan won't turn on until 50% load.</li>
+	<li>Case: Phantex Enthoo Pro. It's a little old, but a great case, with lots of options, and multiple 5.25" bays! You know how hard it is to find a decent modern case with CD drive bays? Critically this case has a front 200mm fan, so it can move lots of air quietly.</li>
+	<li>GPU: RX 5500 XT. I contemplated an older RX 580, but it's less efficent. It would have been less expensive to reuse the existing Nvidia card, which is not terrible, but Linux's amdgpu is pretty mature and I'm sick of having to use DKMS just to get the privilege of using Nvidia's proprietary (ugh) driver.</li>
+</ul>
+</p>
+<p>
+The build process was super simple, as most of them are these days. Verified the parts were working out of the box, stuck everything together, did a BIOS update, and installed Fedora. I'm increibly impressed with how easy it was, with only the Ethernet driver requiring manual intervention. (Doing some research, it's on its way into the Kernel anyway - this is just th perpetual curse of running Linux on brand-new hardware.)
+</p>
+<p>
+One super silly thing to note - this is the only PC I've ever owned that did not max all its cores when ripping a DVD in HandBrake, or rendering a video in Kdenlive.It's nice to finally have a machine with a little headroom.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Good Beers</title>
 <guid>https://adamthiede.com/blog.html#good-beers</guid>
 <pubDate>Wed, 20 May 2020 19:49:28 -0700</pubDate>
