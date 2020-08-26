@@ -5,7 +5,7 @@ html{
 	text-align:center;
 }
 a {
-	color:#eeeeee;
+	color:lightblue;
 	text-decoration:none;
 }
 .bar {
@@ -28,4 +28,7 @@ a {
 .tagline a{
 	text-decoration:underline;
 }
-
+.callout {
+    font-weight:bold;
+    color:yellow !important;
+}
