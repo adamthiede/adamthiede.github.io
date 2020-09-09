@@ -12,7 +12,7 @@
 <!-- LB -->
 
 <item>
-<title></title>
+<title>Containers</title>
 <guid>https://adamthiede.com/blog.html#containers</guid>
 <pubDate>Tue, 08 Sep 2020 19:07:52 -0700</pubDate>
 <description><![CDATA[
@@ -42,6 +42,8 @@ Containers are a great way to run applications. Try it out! Just make sure to ma
 </p>
 ]]></description>
 </item>
+
+
 
 
 <item>
