@@ -9,7 +9,8 @@ a {
 	text-decoration:none;
 }
 .bar {
-	font-family:Sans-Serif;
+	font-family:Serif;
+    font-size:11pt;
 	font-weight:bold;
 	display:inline-block;
 	padding:5px;
@@ -18,7 +19,7 @@ a {
 	text-align:center;
 	border-style:solid;
 	border-width:thin;
-	border-color:lightgray;
+	border-color:#646464;
 }
 .tagline{
 	text-align:left;
@@ -26,6 +27,14 @@ a {
 	margin:0 auto;
 }
 .tagline a{
+	text-decoration:underline;
+}
+.homepage{
+    text-align:left;
+    max-width:768px;
+    margin:0 auto;
+}
+.homepage a{
 	text-decoration:underline;
 }
 .callout {

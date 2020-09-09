@@ -12,6 +12,39 @@
 <!-- LB -->
 
 <item>
+<title></title>
+<guid>https://adamthiede.com/blog.html#containers</guid>
+<pubDate>Tue, 08 Sep 2020 19:07:52 -0700</pubDate>
+<description><![CDATA[
+<p>
+Let's talk about containers. I've been Docker-izing a number of my resources lately, especially in the wake of my latest Raspberry Pi microSD card death.
+</p>
+<p>
+Virtual Machines are an obvious improvement over bare metal. You get a full OS inside your hypervisor and all the advantages, but you also get scalable hardware resources, the ability to oversubscribe, super fast reboots, incredibly portability, and generally lower power consumption and cost. Virtualization is a huge win.
+</p>
+<p>
+In my opinion, containers are a logical abstraction of where virtualiztion went first. Where VMs remove the overhead of hardware, containers remove the overhead of a full OS. You use the host's kernel, and you don't worry as much about the administration of the actual underlying OS, since the application is isolated. Yes, you obviously still have to run your host OS on a computer with an operating system, but you only need one of those for this to work.
+</p>
+<p>
+With containers, you're able to keep all your resources on the host OS with volumes, map it to whichever port you want, and keep your application nicely contained and packaged inside of what's <i>basically</i> a chroot with slightly more advanced privilege separation (as far as I understand it). You get the advantage of using the host OS's filesystem (including mapped shares or RAID), but your application's dependencies don't muck up your host OS.
+</p>
+<p>
+The best thing about containers is their ability to be reproduced via scripting. You can build containers with automation tools, back them up, send them around, break them and rebuild them. It enables portability, which leads to less vendor lock-in with operating systems or cloud providers. Open standards are great!
+</p>
+<p>
+Sometimes, containers try and behave like virtual machines. It's a little weird. Canonical's LXD and Fedora's Toolboxes are both examples of this - using standard container technologies, but using them for more permanent systems. They kinda bridge the gap between VM and ephemeral containers. I'm not sure what to think about these - on the one hand, I like them, since a laptop with 8GB RAM can't run a ton of virtual machines, but containers are much lighter. On the other hand, it seems wrong to use a technology designed for disposability to store anything permanent in.
+</p>
+<p>
+The main sore spot for me is updating containers. There's no way, as far as I know, to just tell a container to stop, use the latest image, then restart. You have to export it, destroy it, possibly delete the image it was based on, so you can't go back from that point, pull the image <i>again></i>, then recreate the container and hope it works. A ridiculous scenario that should be solved by running something like `docker refresh`.
+</p>
+<p>
+Containers are a great way to run applications. Try it out! Just make sure to make adequate backups of them when you have to do updates and play around a lot before getting serious. There's a lot of strange behavior that's default. 
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Raspberry Pis and SD Cards</title>
 <guid>https://adamthiede.com/blog.html#raspberry-pis-and-sd-cards</guid>
 <pubDate>Thu, 03 Sep 2020 19:27:45 -0700</pubDate>

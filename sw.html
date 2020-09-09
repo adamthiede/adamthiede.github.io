@@ -47,7 +47,7 @@
                 <span class=callout>Python:</span> a fun language to learn. Good defaults, fast enough, portable.
             </li>
             <li>
-                <span class=callout><a href="https://adamthiede.com/blog/why-i-use-vim-on-the-desktop.html">Vim</a></span> is an extensible text editor that will be your favorite program if you use text files a lot. My website is text files. My notes are text files. Code is text files. Configuration and logs are text files. Vim <i>all</i> the things!
+                <span class=callout>Vim</span> is an <a href="https://adamthiede.com/blog/why-i-use-vim-on-the-desktop.html">extensible and standard text editor</a> that will be your favorite program if you use text files a lot. My website is text files. My notes are text files. Code is text files. Configuration and logs are text files. Vim <i>all</i> the things!
             </li>
             <li>
                 <span class=callout>Tmux</span> is a window manager for the shell, or screen++. It <a href="https://nickjanetakis.com/blog/using-tmux-sessions-windows-panes-and-vim-buffers-together">can be used with vim</a> or with <a href="https://leanpub.com/the-tao-of-tmux/read">practically anything, and for any reason</a>. I put it everywhere because you will always find a reason to use it. Honorable mention: <a href="https://byobu.org/">byobu</a>, which is the Ubuntu-fication of screen and tmux.
@@ -55,10 +55,17 @@
             <li>
                 <span class=callout>Photopea</span> I've not used for a number of years (GIMP is good enough for anyone) but it's a fully functional photoshop clone <a href="https://www.photopea.com/">in the browser</a> for free.
             </li>
+            <li>
+                <span class=callout>Podman</span> is an <a href="https://podman.io/">excellent container management tool</a> that is compatible with Docker, runs daemonless, and is the way that RHEL8 and Fedora manage containers. There's also a great interface for it in...
+            </li>
+            <li>
+                <span class=callout>Cockpit</span>! Web administration tech has been around for a while but <a href="https://cockpit-project.org/">cockpit is just the best</a>. Runs on darn near every Linux OS, frequently updated, and can do basically everything you'll need to do on a server - networking, firewall, software configuration, SELinux, VMs, and even a built in terminal. Solid, reliable, and always getting better.
+
+            </li>
         </ul>
         <br/>
         <h3 class="tagline">Software I Recommend Not Using</h3>
-		<p class="tagline">I have either used this extensively or very little, and recommend avoiding it.</p>
+		<p class="tagline">I have either used this extensively or very little, and recommend avoiding it. They usually have cascading and far-reaching negative effects.</p>
         <ul class="tagline">
             <li>
                 Appliance and <a href="https://drewdevault.com/2020/06/26/Vendor-purpose-OS.html">"vendor-purpose"</a> operating systems. They trick you into doing the wrong thing.
@@ -68,6 +75,9 @@
             </li>
             <li>
                 Programming language-specific package managers, like NPM or Pip or Go's get. They encourage dependence and weakness. There is rarely any appropriate occasion for their use. They make using the software nearly impossible, especially if they don't have a strong Internet connection, or dependencies change. 
+            </li>
+            <li>
+                Software that encourages vendor or OS lock-in, especially to non-free operating systems. Example: iMessage and Facetime are great examples of technologies that are only available if you buy a specific piece of appliance hardware and run a specific non-free OS. I've also in the past used my NAS's built-in software, but since it was not transparent and portable to another brand of NAS (or a standard operating system) I switched to more standardized software in containers instead.
             </li>
         </ul>
 
