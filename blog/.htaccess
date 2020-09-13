@@ -15,9 +15,7 @@ AddDescription "Like It's The 2000s" "like-its-the-2000s.html" #Mon, 15 Jun 2020
 AddDescription "OpenBSD Webserver Setup" "openbsd-webserver-setup.html" #Thu, 25 Jun 2020 09:53:35 -0700
 AddDescription "SwayWM on openSUSE Tumbleweed is Easy" "swaywm-on-opensuse-tumbleweed-is-easy.html" #Sun, 28 Jun 2020 07:24:38 -0700
 AddDescription "Why I Use Vim On The Desktop" "why-i-use-vim-on-the-desktop.html" #Wed, 01 Jul 2020 06:19:27 -0700
-AddDescription "Fireworks" "fireworks.html" #Sun, 05 Jul 2020 05:54:10 -0700
 AddDescription "RPM Packaging" "rpm-packaging.html" #Sat, 11 Jul 2020 07:22:31 -0700
-AddDescription "Great Movie" "great-movie.html" #Sun, 26 Jul 2020 05:17:30 -0700
 AddDescription "Simplicity Versus Power" "simplicity-versus-power.html" #Fri, 31 Jul 2020 16:15:52 -0700
 AddDescription "Good Beers" "good-beers.html" #Wed, 20 May 2020 19:49:28 -0700
 AddDescription "New PC Build" "new-pc-build.html" #Tue, 11 Aug 2020 06:41:32 -0700
@@ -25,3 +23,4 @@ AddDescription "Building Businesses on Proprietary Platforms" "building-business
 AddDescription "Raspberry Pis and SD Cards" "raspberry-pis-and-sd-cards.html" #Thu, 03 Sep 2020 19:27:45 -0700
 AddDescription "Docker" "docker.html"
 AddDescription "" "containers.html" #Tue, 08 Sep 2020 19:07:52 -0700
+AddDescription "Obligatory 'Current Year Bad' Post" "obligatory-current-year-bad-post.html"
