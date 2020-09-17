@@ -1,7 +1,7 @@
 #!/bin/bash
-name="Luke Smith"
+name="Adam Thiede"
 webdir="$PWD"
-website="https://lukesmith.xyz/" # Keep a trailing slash.
+website="https://adamthiede.com/" # Keep a trailing slash.
 css="../style.css"
 blogfile="blog.html"
 #blogfile="$(date +%Y).html"

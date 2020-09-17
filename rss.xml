@@ -12,6 +12,42 @@
 <!-- LB -->
 
 <item>
+<title>Give Me The Easy Button</title>
+<guid>https://adamthiede.com/blog.html#give-me-the-easy-button</guid>
+<pubDate>Wed, 16 Sep 2020 20:25:28 -0700</pubDate>
+<description><![CDATA[
+<p>
+As someone who takes pride in his craft - someone who has a deep understanding of a specific discipline - I dislike "Easy Buttons". They teach people the wrong things and encourage laziness. No one should be prevented from expanding their knowledge, and a low entry point is great to encourage new learners, but it should be treated as exactly that - an entry point.
+</p>
+<p>
+My first experiences with Docker/containers were on the command line, and it was a little hard to figure out. However, the Cockpit project has a great graphical interface for containers, and it was what really helped me understand their purpose, basic functionality, and what could be accomplished. A friendly GUI is a great introduction to the power of a tool and an answer to the question, "why should I use this thing?"
+The GUI also <i>still made me use containers</i>! It didn't just do everything for me - I still had to figure out volumes and ports and other nuances.
+</p>
+<p>
+An Easy Button would not do this. An Easy Button would be a big 'ol webpage that says, "want this software? Run my script in your terminal and it's done!" and only works on a specific old version of Ubuntu or something. This sort of thing drives me crazy. I get that people work hard on making bootstrapping scripts, and they're great for personal use, but this doesn't help other people. It turns their systems into appliances that they neither know how to use or fix. It propogates the mythos that computers are unknowable and obscure. It lowers the opinions people have of skilled craftsmen - if I can build Ikea furniture, surely carpenters and mechanical engineers don't have that hard of a job!
+</p>
+<p>
+This post was prompted by a question I saw online - it went something like "how do I secure these five Ubuntu servers? Also I only have twenty minutes." They were sufficiently excoriated in the answers. I can tell they're probably a frequent user of Easy Buttons. They're assuming that a lifelong career can be distilled down to tweaking a few settings in five minutes. No mention of what software they're running, what infrastructure, why this is the case, just mentioning that existing tutorials on system setup don't suit them because they're either too long, or different ones contain slightly different information, and they can't be bothered to suss out the reasons why.
+</p>
+<p>
+The way I'd answer the question - because of course I want to - is as follows.
+<ul>
+    <li>Secure the infrastructure. Put a firewall around them, separate them on different networks if need be. Host-based firewalls are nice, but less useful than proper infrastructure.</li>
+    <li>Invest time in configuration management. At the very least, use another system as a webserver from which you can pull a bootstrapping script. It should be easy to re-deploy these systems, especially if they're identical. </li>
+    <li>Understand vendor recommended best practices. Often the software you install will have documentation that describes how to best secure the thing and performance tweaks you can perform. </li>
+    <li>Make minimal changes. Most systems these days are "secure by default" - that is, most server operating systems out of the box are a pretty good starting point, and if you have to ask what to do, you've got a high chance of really fouling it up. </li>
+    <li>Document your setup!</li>
+    <li>Hire a professional (email me!) to test your system. If you can't do that (you're probably doomed) you can always ask the community. If it's publicly replicable, rent a $5 Linode box, lay down your configs (with names and stuff anonymized, of course), and ask someone else to hammer on it and see if it passes their test. Many people will be willing to do this for free - post in a forum or ask on IRC. </li>
+</ul>
+</p>
+<p>
+This line of work is hard and ever-changing. The barrier to entry can be pretty high. But it's important to understand that building hastily rarely produces good fruits. Take your time. Be precise. An understanding client will know it's more important to get it right than get it right now.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Containers</title>
 <guid>https://adamthiede.com/blog.html#containers</guid>
 <pubDate>Tue, 08 Sep 2020 19:07:52 -0700</pubDate>
