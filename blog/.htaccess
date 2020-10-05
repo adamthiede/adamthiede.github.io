@@ -23,5 +23,6 @@ AddDescription "Building Businesses on Proprietary Platforms" "building-business
 AddDescription "Raspberry Pis and SD Cards" "raspberry-pis-and-sd-cards.html" #Thu, 03 Sep 2020 19:27:45 -0700
 AddDescription "Docker" "docker.html"
 AddDescription "" "containers.html" #Tue, 08 Sep 2020 19:07:52 -0700
-AddDescription "Obligatory 'Current Year Bad' Post" "obligatory-current-year-bad-post.html"
 AddDescription "Give Me The Easy Button" "give-me-the-easy-button.html" #Wed, 16 Sep 2020 20:25:28 -0700
+AddDescription "Compartmentalization and Devices" "compartmentalization-and-devices.html"
+AddDescription "The Best Things We Get" "the-best-things-we-get.html" #Sun, 04 Oct 2020 19:15:19 -0700
