@@ -29,6 +29,15 @@ a {
 .tagline a{
 	text-decoration:underline;
 }
+.normal{
+	text-align:left;
+	max-width:1280px;
+	margin:0 auto;
+}
+.normal a{
+	text-decoration:underline;
+    color:yellow;
+}
 .homepage{
     text-align:left;
     max-width:768px;
@@ -40,4 +49,12 @@ a {
 .callout {
     font-weight:bold;
     color:yellow !important;
+}
+table, th, td, tr {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 4px;
+}
+img {
+    max-width:100%;
 }

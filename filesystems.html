@@ -1,0 +1,68 @@
+<html>
+<!--
+5 June 1989 Tiananmen Square Tank Man
+动态网自由门 天安門 天安门 法輪功 李洪志 Free Tibet 六四天安門事件 The Tiananmen Square protests of 1989 天安門大屠殺 The Tiananmen Square Massacre 反右派鬥爭 The Anti-Rightist Struggle 大躍進政策 The Great Leap Forward 文化大革命 The Great Proletarian Cultural Revolution 人權 Human Rights 民運 Democratization 自由 Freedom 獨立 Independence 多黨制 Multi-party system 台灣 臺灣 Taiwan Formosa 中華民國 Republic of China 西藏 土伯特 唐古特 Tibet 達賴喇嘛 Dalai Lama 法輪功 Falun Dafa 新疆維吾爾自治區 The Xinjiang Uyghur Autonomous Region 諾貝爾和平獎 Nobel Peace Prize 劉暁波 Liu Xiaobo 民主 言論 思想 反共 反革命 抗議 運動 騷亂 暴亂 騷擾 擾亂 抗暴 平反 維權 示威游行 李洪志 法輪大法 大法弟子 強制斷種 強制堕胎 民族淨化 人體實驗 肅清 胡耀邦 趙紫陽 魏京生 王丹 還政於民 和平演變 激流中國 北京之春 大紀元時報 九評論共産黨 獨裁 專制 壓制 統一 監視 鎮壓 迫害 侵略 掠奪 破壞 拷問 屠殺 活摘器官 誘拐 買賣人口 遊進 走私 毒品 賣淫 春畫 賭博 六合彩 天安門 天安门 法輪功 李洪志 Winnie the Pooh 劉曉波动态网自由门 Wuhan Flu 武汉流感.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Adam Thiede's Personal Website</title>
+	<link rel="stylesheet" type="text/css" href="webstyle.css">
+	<body>
+		<H1><a href="https://adamthiede.com"> Adam Thiede </a></H1>
+		
+		<div class="bar"><a href="mailto:me@adamthiede.com">Email</a></div>
+		<!-- <div class="bar"><a href="./resume.html">Resume</a></div>
+		<div class="bar"><a target="_blank" href="https://www.linkedin.com/in/adamthiede">LinkedIn</a></div> -->
+		<div class="bar"><a href="./faq.html">About Me</a></div>
+		<div class="bar"><a href="./blog.html">Blog</a></div>
+		<div class="bar"><a href="./sw.html">Software</a></div>
+		<br/><br/>
+
+        <h3 class="tagline">A Beginner's Guide to Filesystem Format Interoperability</h3>
+        <p class="tagline">Ever stick a USB or SD card into a computer and it tells you it can't read it? Here's why, and how to avoid that in the future.</p>
+        <p class="tagline">Key points: By "Linux" and "BSD" I mean mainline Kernel support, and not <a href="https://en.wikipedia.org/wiki/Filesystem_in_Userspace"></a>FUSE. In popular Linux Operating Systems like Ubuntu, Fedora, Debian, and Arch, FUSE programs for NTFS and exFAT are either pre-installed or in the repositories and easy to install. macOS can use FUSE as well to achieve foreign filesystem support. </p>
+        <p class="tagline"><a href="checkdisks.html">How to figure out what filesystem a disk is formatted in</a></p>
+        <hr/>
+        <table class="normal">
+            <tr>
+                <th>Filesystem Format</th><th>Operating System Usability</th><th>Built-In Encryption</th><th>Notes</th>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/File_Allocation_Table#Final_FAT16">FAT (8, 12, 16)</a></td><td>Windows, macOS, Linux, BSDs</td><td>No</td><td>Works everywhere, common format for old DOS disks, but FAT32's a better choice most of the time. Can't store single files larger than 4GB or recognize disks larger than 2TB. If you have a 3TB disk formatted FAT, you only get to use the first 2TB of it.</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/File_Allocation_Table#FAT32">FAT (FAT32)</a></td><td>Windows, macOS, Linux, BSDs</td><td>No</td><td>Like FAT but better. Common format for EFI partitions. Has the limitations of FAT32 but can have longer path names (more nested directories). You're better off using exFAT unless you know you need FAT32.</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/ExFAT">exFAT</a></td><td>Windows, macOS, Linux</td><td>No</td><td>Usually, the default format for SD cards and other small portable flash media. Works natively in Linux since early 2020, so if you have a Linux distribution with Kernel &gt;=5.4, you should have it. If your Linux system is older you may have to use some other tools. Usable in FreeBSD with FUSE.</td>
+            </tr>
+            <tr>
+                <td><a href="https://wiki.archlinux.org/index.php/NTFS-3G">NTFS</a></td><td>Windows, macOS</td><td>Yes</td><td>Standard format for Microsoft Windows disks. Read-only on macOS, and requires some extra programs to work on Linux. Ubuntu has them by default. Cannot write to a hibernated or improperly shutdown NTFS disk in non-Windows implementations of NTFS. Bitlocker encrypted drives can be read by dislocker.</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/HFS_Plus">HFS/HFS+</a></td><td>macOS</td><td>Yes</td><td>Old standard format for macOS disks. Time Machine backup disks are still HFS+, and non-SSD disks (Fusion and old spinning disks) can default to it as well. Linux can read/write with FUSE, but it cannot read encrypted HFS+ disks. Time Machine will prompt you to encrypt backup disks, and encryption in macOS is heavily suggested, so it's somewhat likely your disks are encrypted.</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/APFS">APFS</a></td><td>macOS</td><td>Yes</td><td>New/current standard format for macOS disks. Linux has read-only support with apfs-fuse, but encrypted disks can be read.</td>
+            </tr>
+            <tr>
+                <td><a href="https://ext4.wiki.kernel.org/index.php/Main_Page">Ext2, Ext3, Ext4</a></td><td>Linux</td><td>No</td><td>Highly standardized Linux filesystem format. Unencrypted disks can be read on macOS via <a href="https://osxfuse.github.io/">FUSE for macOS</a>. Microsoft (as of late 2020) is working on a way to read Linux filesystems from WSL.</td>
+            </tr>
+            <tr>
+                <td><a href="https://xfs.wiki.kernel.org/">XFS</a></td><td>Linux</td><td>No</td><td>High-performance Linux filesystem usually used in servers and workstations.</td>
+            </tr>
+            <tr>
+                <td><a href="https://openzfs.org/wiki/Main_Page">ZFS</a></td><td>BSD</td><td>Yes</td><td>More than a filesystem - volume and disk manager, RAID, data integrity, all industrial-grade. Requires some setup and usually kernel modules to use on non BSD systems, but highly usable on Linux. You should only use this if you're a seasoned storage admin. You can't just yank a disk and put it on a different system. If you have more than four disks in a single system and they won't ever leave, consider using this.</td>
+            </tr>
+            <tr>
+                <td><a href="https://btrfs.wiki.kernel.org/index.php/Main_Page">BTRFS</a></td><td>Linux</td><td>Yes</td><td>A large-scale volume management system like ZFS, but built-in to the Linux kernel.</td>
+            </tr>
+            <tr>
+                <td>Others</td><td>-</td><td>-</td><td>JFS, F2FS, UFS, ReiserFS, FFS, and FFS2 are all use-case specific, pretty niche, and generally won't be encountered by non-experts. If you must read one of these formats, try it on Linux, FreeBSD, and OpenBSD in that order.</td>
+            </tr>
+        </table>
+        <hr/>
+
+	</body>
+	<br/><br/>
+	<!--<div class="bar"><a href="./help.html">Need Computer Help?</a></div></br></br>-->
+</html>
