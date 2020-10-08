@@ -18,9 +18,11 @@
 		<br/><br/>
 
         <h3 class="tagline">A Beginner's Guide to Filesystem Format Interoperability</h3>
+        <br/>
         <p class="tagline">Ever stick a USB or SD card into a computer and it tells you it can't read it? Here's why, and how to avoid that in the future.</p>
-        <p class="tagline">Key points: By "Linux" and "BSD" I mean mainline Kernel support, and not <a href="https://en.wikipedia.org/wiki/Filesystem_in_Userspace"></a>FUSE. In popular Linux Operating Systems like Ubuntu, Fedora, Debian, and Arch, FUSE programs for NTFS and exFAT are either pre-installed or in the repositories and easy to install. macOS can use FUSE as well to achieve foreign filesystem support. </p>
-        <p class="tagline"><a href="checkdisks.html">How to figure out what filesystem a disk is formatted in</a></p>
+        <p class="tagline"><b>Why does this matter?</b> If you're going to bring your flash drive to a hotel or office computer to print something, you better be sure it can read it. If your MacBook dies and your only backup is on a disk that your old Windows machine can't read, or you're having trouble reading your camera's SD card on your computer, you'll wish you would have thought of this beforehand.</p>
+        <p class="tagline"><b>Key points and caveats:</b> By "Linux" and "BSD" I mean mainline Kernel support, and not <a href="https://en.wikipedia.org/wiki/Filesystem_in_Userspace">FUSE (Filesystem in Userspace)</a>, a common way to achieve foreign filesystem support in Linux/Unix systems. Popular Linux Operating Systems like Ubuntu, Fedora, and Debian pre-install or provide packages for FUSE programs for NTFS and exFAT. <a href="https://osxfuse.github.io/"> macOS also has a version of FUSE.</a></p>
+        <p class="tagline"><a href="checkdisks.html">Click here for instructions on figuring out what filesystem a disk is formatted in.</a></p>
         <hr/>
         <table class="normal">
             <tr>
@@ -30,7 +32,7 @@
                 <td><a href="https://en.wikipedia.org/wiki/File_Allocation_Table#Final_FAT16">FAT (8, 12, 16)</a></td><td>Windows, macOS, Linux, BSDs</td><td>No</td><td>Works everywhere, common format for old DOS disks, but FAT32's a better choice most of the time. Can't store single files larger than 4GB or recognize disks larger than 2TB. If you have a 3TB disk formatted FAT, you only get to use the first 2TB of it.</td>
             </tr>
             <tr>
-                <td><a href="https://en.wikipedia.org/wiki/File_Allocation_Table#FAT32">FAT (FAT32)</a></td><td>Windows, macOS, Linux, BSDs</td><td>No</td><td>Like FAT but better. Common format for EFI partitions. Has the limitations of FAT32 but can have longer path names (more nested directories). You're better off using exFAT unless you know you need FAT32.</td>
+                <td><a href="https://en.wikipedia.org/wiki/File_Allocation_Table#FAT32">FAT32</a></td><td>Windows, macOS, Linux, BSDs</td><td>No</td><td>Like FAT but better. Common format for EFI partitions. Has the limitations of FAT32 but can have longer path names (more nested directories). You're better off using exFAT unless you know you need FAT32.</td>
             </tr>
             <tr>
                 <td><a href="https://en.wikipedia.org/wiki/ExFAT">exFAT</a></td><td>Windows, macOS, Linux</td><td>No</td><td>Usually, the default format for SD cards and other small portable flash media. Works natively in Linux since early 2020, so if you have a Linux distribution with Kernel &gt;=5.4, you should have it. If your Linux system is older you may have to use some other tools. Usable in FreeBSD with FUSE.</td>
@@ -39,13 +41,16 @@
                 <td><a href="https://wiki.archlinux.org/index.php/NTFS-3G">NTFS</a></td><td>Windows, macOS</td><td>Yes</td><td>Standard format for Microsoft Windows disks. Read-only on macOS, and requires some extra programs to work on Linux. Ubuntu has them by default. Cannot write to a hibernated or improperly shutdown NTFS disk in non-Windows implementations of NTFS. Bitlocker encrypted drives can be read by dislocker.</td>
             </tr>
             <tr>
-                <td><a href="https://en.wikipedia.org/wiki/HFS_Plus">HFS/HFS+</a></td><td>macOS</td><td>Yes</td><td>Old standard format for macOS disks. Time Machine backup disks are still HFS+, and non-SSD disks (Fusion and old spinning disks) can default to it as well. Linux can read/write with FUSE, but it cannot read encrypted HFS+ disks. Time Machine will prompt you to encrypt backup disks, and encryption in macOS is heavily suggested, so it's somewhat likely your disks are encrypted.</td>
+                <td><a href="https://docs.microsoft.com/en-us/windows-server/storage/refs/refs-overview">ReFS</a></td><td>Windows</td><td>Yes</td><td>Microsoft's possible eventual successor to NTFS, ReFS is typically only found on Windows Server. Any version of Windows should be able to read it, but only Server/Enterprise can create ReFS disks. A Linux driver exists, but it's a proprietary paid product. Encrypts with BitLocker.</td>
+            </tr>
+            <tr>
+                <td><a href="https://en.wikipedia.org/wiki/HFS_Plus">HFS/HFS+</a></td><td>macOS</td><td>Yes</td><td>Old standard format for macOS disks. Also called "Mac OS Extended (Journaled)". Time Machine backup disks are still HFS+, and non-SSD disks (Fusion and old spinning disks) can default to it as well. Linux can read/write with FUSE, but it cannot read encrypted HFS+ disks. Time Machine will prompt you to encrypt backup disks, and encryption in macOS is heavily suggested, so it's somewhat likely your disks are encrypted.</td>
             </tr>
             <tr>
                 <td><a href="https://en.wikipedia.org/wiki/APFS">APFS</a></td><td>macOS</td><td>Yes</td><td>New/current standard format for macOS disks. Linux has read-only support with apfs-fuse, but encrypted disks can be read.</td>
             </tr>
             <tr>
-                <td><a href="https://ext4.wiki.kernel.org/index.php/Main_Page">Ext2, Ext3, Ext4</a></td><td>Linux</td><td>No</td><td>Highly standardized Linux filesystem format. Unencrypted disks can be read on macOS via <a href="https://osxfuse.github.io/">FUSE for macOS</a>. Microsoft (as of late 2020) is working on a way to read Linux filesystems from WSL.</td>
+                <td><a href="https://ext4.wiki.kernel.org/index.php/Main_Page">Ext2, Ext3, Ext4</a></td><td>Linux</td><td>No</td><td>Highly standardized Linux filesystem format. Unencrypted disks can be read on macOS via FUSE for macOS. Microsoft (as of late 2020) is working on a way to read Linux filesystems from WSL.</td>
             </tr>
             <tr>
                 <td><a href="https://xfs.wiki.kernel.org/">XFS</a></td><td>Linux</td><td>No</td><td>High-performance Linux filesystem usually used in servers and workstations.</td>
