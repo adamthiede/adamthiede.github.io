@@ -19,9 +19,8 @@
 
         <h3 class="tagline">A Beginner's Guide to Filesystem Format Interoperability</h3>
         <br/>
-        <p class="tagline">Ever stick a USB or SD card into a computer and it tells you it can't read it? Here's why, and how to avoid that in the future.</p>
+        <p class="tagline">Ever stick a USB drive or SD card into a computer and it tells you it must be formatted to be used, even though you know your important data is on there? Here's why, and how to avoid that in the future.</p>
         <p class="tagline"><b>Why does this matter?</b> If you're going to bring your flash drive to a hotel or office computer to print something, you better be sure it can read it. If your MacBook dies and your only backup is on a disk that your old Windows machine can't read, or you're having trouble reading your camera's SD card on your computer, you'll wish you would have thought of this beforehand.</p>
-        <p class="tagline"><b>Key points and caveats:</b> By "Linux" and "BSD" I mean mainline Kernel support, and not <a href="https://en.wikipedia.org/wiki/Filesystem_in_Userspace">FUSE (Filesystem in Userspace)</a>, a common way to achieve foreign filesystem support in Linux/Unix systems. Popular Linux Operating Systems like Ubuntu, Fedora, and Debian pre-install or provide packages for FUSE programs for NTFS and exFAT. <a href="https://osxfuse.github.io/"> macOS also has a version of FUSE.</a></p>
         <p class="tagline"><a href="checkdisks.html">Click here for instructions on figuring out what filesystem a disk is formatted in.</a></p>
         <hr/>
         <table class="normal">
@@ -59,14 +58,23 @@
                 <td><a href="https://openzfs.org/wiki/Main_Page">ZFS</a></td><td>BSD</td><td>Yes</td><td>More than a filesystem - volume and disk manager, RAID, data integrity, all industrial-grade. Requires some setup and usually kernel modules to use on non BSD systems, but highly usable on Linux. You should only use this if you're a seasoned storage admin. You can't just yank a disk and put it on a different system. If you have more than four disks in a single system and they won't ever leave, consider using this.</td>
             </tr>
             <tr>
-                <td><a href="https://btrfs.wiki.kernel.org/index.php/Main_Page">BTRFS</a></td><td>Linux</td><td>Yes</td><td>A large-scale volume management system like ZFS, but built-in to the Linux kernel.</td>
+                <td><a href="https://btrfs.wiki.kernel.org/index.php/Main_Page">Btrfs</a></td><td>Linux</td><td>No</td><td>A large-scale volume management system like ZFS, but built-in to the Linux kernel. Encryption support is planned. Can be used like a "regular" filesystem as well.</td>
             </tr>
             <tr>
                 <td>Others</td><td>-</td><td>-</td><td>JFS, F2FS, UFS, ReiserFS, FFS, and FFS2 are all use-case specific, pretty niche, and generally won't be encountered by non-experts. If you must read one of these formats, try it on Linux, FreeBSD, and OpenBSD in that order.</td>
             </tr>
         </table>
         <hr/>
-
+        <p class="tagline"><b>Key points and caveats:</b> By "Linux" and "BSD" I mean mainline Kernel support, and not <a href="https://en.wikipedia.org/wiki/Filesystem_in_Userspace">FUSE (Filesystem in Userspace)</a>, a common way to achieve foreign filesystem support in Linux/Unix systems. Popular Linux Operating Systems like Ubuntu, Fedora, and Debian pre-install or provide packages for FUSE programs for NTFS and exFAT. <a href="https://osxfuse.github.io/"> macOS also has a version of FUSE.</a></p>
+        <br/>
+        <p class="tagline">
+        <b>Volume Management/Software RAID:</b> LUKS/dm-crypt, lvm, mdadm, Windows Storage Spaces, and other software volume management is not covered above. (ZFS and Btrfs also are filesystem formats, so they're a special case.) Usually, a more "normal" filesystem is layered on top of these virtual volumes. A common setup for encryption on Linux is <a href="https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS">LVM on LUKS</a>. It consists of a LUKS-encrypted partition, layers LVM on that to split the partition into multiple logical volumes, and formats those logical volumes with another filesystem format, usually Ext4 or XFS.
+        </p>
+        <br/>
+        <p class=tagline>
+            <b>Encryption in Linux:</b> As mentioned above, LUKS volumes are usually paird with other systems, and can be transparently integrated into most drives. LUKS-encrypted USB disks with Ext4 on top are easy to create in a GUI on desktop Linux.
+        </p>
+        <br/>
 	</body>
 	<br/><br/>
 	<!--<div class="bar"><a href="./help.html">Need Computer Help?</a></div></br></br>-->

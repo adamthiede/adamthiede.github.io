@@ -12,6 +12,20 @@
 <!-- LB -->
 
 <item>
+<title>Filesystem Format Interoperability Guide</title>
+<guid>https://adamthiede.com/blog.html#filesystem-format-interoperability-guide</guid>
+<pubDate>Wed, 07 Oct 2020 19:21:31 -0700</pubDate>
+<description><![CDATA[
+<p>I've recently published <a href=filesystems.html>a guide of filesystem support, and why it matters</a>. Be mindful of your disk formats!
+</p>
+<p>
+It'll evolve, so if there are questions or issues, please email me. Feel free to send it around if you think it might be helpful.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>The Best Things We Get</title>
 <guid>https://adamthiede.com/blog.html#the-best-things-we-get</guid>
 <pubDate>Sun, 04 Oct 2020 19:15:19 -0700</pubDate>
