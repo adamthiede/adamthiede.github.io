@@ -12,6 +12,32 @@
 
 <!-- LB -->
 <div class='entry'>
+<h2 id='usb-type-c-on-everything'>USB Type C On Everything</h2>
+<small>[<a href='#usb-type-c-on-everything'>link</a>&mdash;<a href='blog/usb-type-c-on-everything.html'>standalone</a>]</small>
+<p>
+Back in the ye olde days of 2015, a new connector technology took the world by storm - USB Type C. It first appeared on smartphones as a replacement to the ubiquitous micro-USB charging port, then other little gadgets, then full-on laptops. Later, Thunderbolt 3 brought PCIe expansion through that same port, and we other things like DisplayPort Alternate Mode, USB-C headphone adapters, an official Power Delivery spec, and <a href="https://en.wikipedia.org/wiki/USB_3.0#USB_3.1">different variants of the USB 3 standard</a> muddied the waters even further. Is this all starting to sound like it's more trouble than it's worth, just for a connector that's reversible? Well buckle up, we're not even to the good part!
+</p>
+<p>
+Early adopters of USB-C should remember the name of Google engineer Benson Leung. In 2016, Benson's laptop (charging over USB-C) was fried by a low-budget cable. He discovered, as we now know years later, that the power deliver standard and alternate modes must be implemented correctly, not only in the charger, but also the cable and the device with the port. Benson didn't want others to suffer the same disaster that befell his laptop, so <a href="https://www.androidpolice.com/2016/02/02/google-engineer-benson-leung-finds-a-usb-type-c-cable-that-isnt-just-dangerous-on-paper-it-allegedly-fried-his-hardware/">he set about investigating the problem</a>.
+</p>
+<p>
+Another small issue has to do with cable labeling - if you have a cable with a Type-C connector, what sort of data is that cable capable of carrying? Can it deliver enough power to charge a laptop? Does it operate at USB 3.1 Gen 1 speed, USB 3.1 Gen 2 speed, or one of the USB 3.2 speeds (Gen 1x1, 2x1, 1x2, or 2x2)? Can it do DisplayPort Alternate Mode? Is it a Thunderbolt cable?
+</p>
+<p>
+The continuous issues with USB-C have me pining for the simplicity of microUSB we all took for granted. I've slowly been making the transition, but even newer, higher-quality gadgets like the <a href="https://old.reddit.com/r/NintendoSwitch/comments/87vmud/the_switch_is_not_usbc_compliant_and_overdraws/">Nintendo Switch</a> and <a href="https://arstechnica.com/gadgets/2019/07/raspberry-pi-4-uses-incorrect-usb-c-design-wont-work-with-some-chargers/">Raspberry Pi 4</a> have had issues correctly implementing USB-C, and this should be highly concerning. If they can't get it right, who can?
+</p>
+<p>
+The mitigation strategy for USB-C is to only buy verifiably tested and recommended gear - the third-party chargers I use are <a href="https://www.nytimes.com/wirecutter/reviews/best-usb-c-macbook-and-laptop-chargers/">Wirecutter-recommended</a>, but in most cases if I can afford it, I just use the charger that came with the device, and that mostly negates the universality of USB-C. The Switch lives in its dock, and the Raspberry Pi obviously doesn't really move from its spot where it's plugged in to the wall.
+</p>
+<p>
+All that being said, the benefits of USB-C are quite attractive. Both my personal System76 laptop and work-issued Mac can charge from the same cable, and use the same single cable to connect to my keyboard, monitor, and mouse. On the other side of the desk, I have another USB-C cable to charge the "inactive" laptop - it also works on both systems. I can leave the house with my gadgets in tow, and only need two cables to charge everything. Along with that, the cables are much lighter and smaller than typical laptop power cables of yesteryear.
+</p>
+<p>
+It will be years before USB-C is reliable and simple enough to fully embrace and not have to worry about - I'm still wary of charging my tiny running mp3 player on the 65W laptop power brick - but it's getting there. Over the last several years things have only become <i>more</i> complicated, as far as standards go, but most reputable manufacturers are specifying what their cables, hubs, dongles, and docks can support, and they work reliably with most gadgets and operating systems. It's a huge gain for portability, standardization, and interoperability, and it decreases vendor lock-in. I think it's the right way forward, even if it's not perfect yet.
+</p>
+<small>Mon, 12 Oct 2020 18:34:23 -0700</small>
+</div>
+<div class='entry'>
 <h2 id='filesystem-format-interoperability-guide'>Filesystem Format Interoperability Guide</h2>
 <small>[<a href='#filesystem-format-interoperability-guide'>link</a>&mdash;<a href='blog/filesystem-format-interoperability-guide.html'>standalone</a>]</small>
 <p>I've recently published <a href=filesystems.html>a guide of filesystem support, and why it matters</a>. Be mindful of your disk formats!
