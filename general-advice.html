@@ -1,0 +1,107 @@
+<html>
+<!--
+5 June 1989 Tiananmen Square Tank Man
+动态网自由门 天安門 天安门 法輪功 李洪志 Free Tibet 六四天安門事件 The Tiananmen Square protests of 1989 天安門大屠殺 The Tiananmen Square Massacre 反右派鬥爭 The Anti-Rightist Struggle 大躍進政策 The Great Leap Forward 文化大革命 The Great Proletarian Cultural Revolution 人權 Human Rights 民運 Democratization 自由 Freedom 獨立 Independence 多黨制 Multi-party system 台灣 臺灣 Taiwan Formosa 中華民國 Republic of China 西藏 土伯特 唐古特 Tibet 達賴喇嘛 Dalai Lama 法輪功 Falun Dafa 新疆維吾爾自治區 The Xinjiang Uyghur Autonomous Region 諾貝爾和平獎 Nobel Peace Prize 劉暁波 Liu Xiaobo 民主 言論 思想 反共 反革命 抗議 運動 騷亂 暴亂 騷擾 擾亂 抗暴 平反 維權 示威游行 李洪志 法輪大法 大法弟子 強制斷種 強制堕胎 民族淨化 人體實驗 肅清 胡耀邦 趙紫陽 魏京生 王丹 還政於民 和平演變 激流中國 北京之春 大紀元時報 九評論共産黨 獨裁 專制 壓制 統一 監視 鎮壓 迫害 侵略 掠奪 破壞 拷問 屠殺 活摘器官 誘拐 買賣人口 遊進 走私 毒品 賣淫 春畫 賭博 六合彩 天安門 天安门 法輪功 李洪志 Winnie the Pooh 劉曉波动态网自由门 Wuhan Flu 武汉流感.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>User-Friendly InfoSec Advice</title>
+	<link rel="stylesheet" type="text/css" href="webstyle.css">
+	<body>
+		<H1><a href="https://adamthiede.com"> Adam Thiede </a></H1>
+		
+		<div class="bar"><a href="mailto:me@adamthiede.com">Email</a></div>
+		<!-- <div class="bar"><a href="./resume.html">Resume</a></div>
+		<div class="bar"><a target="_blank" href="https://www.linkedin.com/in/adamthiede">LinkedIn</a></div> -->
+		<div class="bar"><a href="./faq.html">About Me</a></div>
+		<div class="bar"><a href="./blog.html">Blog</a></div>
+		<div class="bar"><a href="./sw.html">Software</a></div>
+		<div class="bar"><a href="./articles.html">Articles</a></div>
+		<br/><br/>
+        <div class=tagline>
+            <h2>General User-Friendly Information Security Advice</h3>
+            <p>Hello there! You have a computer or two, and you want reasonable, understandable advice to make it and your activity on it more secure? This is a good starting point.</p>
+            <p>The basics of Information Security:<ul>
+                <li>Confidentiality - information is only accessible by those authorized.</li>
+                <li>Integrity - information is accurate, complete, and not changed by the computer system on which it resides.</li>
+                <li>Availability - information is available easily when needed and expected.</li>
+            </ul></p>
+            <p>Fundamentally, security is about <i>control</i>. You need to have as much control over your computing environment as you possibly can - networking, software, hardware, even physical access. The more variables you add in, the less likely you are to have control over your data. So the goal is to keep things <i>simple</i>, but not quick. This cannot be done in 20 minutes. If I link to something, it's usually to explain jargon, so I highly recommend you read it until you have a decent understanding.</p>
+            <p>This guide assumes you're using Windows and unable to use anything else. It is written largely with the needs of a specific person in mind, so it may not apply to you.</p>
+            <ul>
+                <li><a href="#Compartmentalization">Compartmentalization</a></li>
+                <li><a href="#Software">Software</a></li>
+                <li><a href="#Web">Web Browsing</a></li>
+                <li><a href="#Passwords">Passwords</a></li>
+                <li><a href="#Smartphones">Smartphones</a></li>
+                <li><a href="#Cloud">Cloud Services</a></li>
+                <li><a href="#IOT">Other Smart Devices (IoT)</a></li>
+                <li><a href="#Tinfoil">Paranoia</a></li>
+            </ul>
+            <h3 id=Compartmentalization>Compartmentalization</h3>
+            <h4>Separate Computer</h4>
+            <p>Ideally, you have two separate computers that are never on your network at the same time - one is your personal computer that runs your secure suite of trustworthy programs and is as locked down as you can make it. It has personal data. The other is completely untrusted, you don't log into any personal accounts, and you don't care what happens to the data on it. A good way to maintain this compartmentalization is a to use a guest wi-fi network on your untrusted device. If you cannot control your own network, also try shutting down the personal system before turning on the untrusted system, or unplugging your personal desktop's ethernet cable while your untrusted device is on the wi-fi. The untrustworthy system should not know of the existence of the trustworthy one, and there should be no chance of them "talking" on the network.</p>
+            <p>Your secondary system can be an inexpensive used laptop. Many are available for $200 or less somewhere like Craigslist or eBay. In 2020, a Thinkpad X250 or T450 is still a reasonably performant laptop and they're relatively inexpensive.</p>
+
+            <h4>Virtual Computer</h4>
+            <p>If you don't have or cannot obtain a second computer, you can have another computer as an application inside your computer via a program called <a href="https://www.virtualbox.org/">VirtualBox</a>. VirtualBox is a program that can run multiple full operating systems on <a href="https://www.ibm.com/cloud/learn/virtual-machines">Virtual Machines</a> like a program on your computer. Go through the <a href="https://www.howtogeek.com/442609/confirmed-windows-10-setup-now-prevents-local-account-creation/">offline install of Windows</a> again, but this time in VirtualBox. This virtual computer will be your "sandbox".</p>
+
+            <p>Virtual Machines use Virtual Hard Drives, and with that comes the concept of "snapshots". You can save the state of the virtual machine at any point in time, continue working, and if you decide to revert your changes, you can from any point in the future. When you complete the install and do all the updates, <a href="https://www.howtogeek.com/150258/how-to-save-time-by-using-snapshots-in-virtualbox/">create a snapshot</a>. It will be the "base" state. From here, any time you need to do something like open a questionable file, visit a sketchy website, or run a program that isn't trustworthy, you do it from within the virtual machine, and revert to the snapshot when you finish, to completely erase the evidence, or ill effects of any damage. If it's a program that requires access to a hardware device (say, iTunes for syncing an iPod) you can "pass through" the USB devices to the virtual machine.</p>
+            <p>The super-advanced way to do real compartmentalization is <a href="https://www.qubes-os.org/">Qubes</a>. It's what Edward Snowden uses. For most people, it's overkill on security and not usable enough.</a>
+
+            <h3 id="Software">Software</h3>
+            <p>Keeping a system secure means keeping bad or mysterious software off of it. Start with a clean, offline installation of your operating system; Windows especially - it tries to trick you into using a Microsoft account, and that is not what you want. Before connecting the system to the Internet, remove all the pre-bundled software, and let the system sit for a while with task manager open, until usage settles down. Windows' first boot runs a bunch of background tasks.</p>
+            <p>If you're security-conscious, there are <i>very few</i> programs you should install over the base system. The basics you install should be either replacing base programs with something lighter-weight and open-source (Firefox and SumatraPDF), or adding necessary functionality (7-zip and VLC). A good set of basics for Windows can be installed <a href="https://ninite.com/7zip-firefox-gimp-libreoffice-sumatrapdf-vlc/">via Ninite</a>, an automated batched program installer. Don't install Chrome - that is explained later.</p>
+            <p>On macOS, Firefox and VLC should be all you need.</p>
+            <p>The untrustworthy system should be the home for mystery-meat software - programs that are not Open Source. If your primary use case for your computer requires more powerful hardware (professional creative work, engineering, industrial applications, playing video games, running network services) then consider making the secure system a cheaper used laptop. The programs used in these industries - Autodesk, Adobe, and pretty much all video games - typically require invasive access and cannot be considered trustworthy.</p>
+
+            <h3 id="Web">Web Browsing</h3>
+            <p>Modern computing is done mostly through the browser. It is necessary to keep your browser secure and up to date. Sadly, the safest browsers to use are the mainstream ones, so pick between Firefox, Chromium, or Brave. Do not use smaller hobby projects like Waterfox or Pale Moon as they do not get timely security updates. Do not use Chrome. It cannot be treated as secure as it is not Open Source. Chromium, the open source project on which Chrome is based, is difficult to obtain and usually doesn't update itself on Windows or Mac, so don't use it unless you keep up with releases and update it yourself.</p>
+            <p>Browsing the web in the modern world is not an activity that is secure by default. The reason most technical users block ads is not because they are opposed to seeing the ads - ads these days include embedded programs that track your browsing and behavior around the Internet, and can compromise security even on reputable pages, like big mainstream news sites.</p>
+            <p>Good browser add-ons, in order of importance, are below.             <ul>
+                <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a>, and not "uBlock" (a knockoff that does not keep you safe). In uBlock Origin's settings, enable as many of the filter lists as you feel comfortable. The default set is fine, but more is better.</li>
+                <li><a href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere">HTTPS Everywhere</a> encrypts all eligible sites and warns you when visiting an unencrypted non-HTTPS site. (Keep in mind HTTPS does not mean "trustworthy", it just means the page you see is verifiably the same page that the website put up, and there is no "man in the middle". Bad actors can have HTTPS too.)</li>
+                <li><a href="https://addons.mozilla.org/en-US/firefox/addon/clearurls/">Clean URLs</a> strips tracking content appended to URLs and generally makes links more shareable.</li>
+                <li><a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-possum">Privacy Possum</a> attempts to break commercial tracking and ad requests. Generally a good thing to have but not necessary.</li>
+            </ul>
+            Generally running with these on all the time will not break any websites. If sites do break, or ask you to turn off your adblocker, disabling JavaScript on those sites with uBlock Origin will fix that issue. In Firefox, make sure the uBlock Origin add-on is enabled when in Private Mode as well. More advanced users can try out the venerable <a href="https://addons.mozilla.org/en-US/firefox/addon/noscript">NoScript</a> which disables JavaScript (programs) from running in your browser. While the above add-ons will not break the functionality of websites, NoScript will. You've been warned.
+            </p>
+            <p>Make liberal use of Private Browsing/Incognito Mode - it is useful for keeping sessions separate. Clear cookies and browsing data regularly. History is useful to have around, but cache, cookies, and active logins can be cleared frequently.</p> 
+
+            <h3 id=Passwords>Passwords</h3>
+            <p>Use an open-source password manager for storing passwords, like <a href="https://keepassxc.org/">KeePassXC</a>, a fully offline file-based password manager, or <a href="https://bitwarden.com/">Bitwarden</a>, a hosted, Internet-accessible password manager. This is non-negotiable, as proprietary solutions, especially cloud-based solutions like LastPass or 1Password, cannot be verifiably secure or private. To maintain security, your passwords must be accessible only to those trusted with the information they unlock.</p>
+            <p>Lock the password database with a strong passphrase. The only passwords you should remember are the three separate passphrases to decrypt your operating system's boot disk, log into your user account, and unlock your password manager. They should all be different. </p>
+            <p>Use different randomly generated passwords, or <a href="https://en.wikipedia.org/wiki/Diceware">diceware</a> passphrases, for every single online account you wish to keep secure. KeePassXC and Bitwarden can generate these for you.</p>
+            <p>Use <a href="https://www.pcmag.com/how-to/two-factor-authentication-who-has-it-and-how-to-set-it-up">two-factor authentication</a> (2FA) for every account. Text-message based 2FA is not secure and should not be used. KeePassXC can also generate 2FA codes. Smartphone apps can be used to generate 2FA code as as well, but these are less trustworthy systems.</p>
+            <p>
+            
+            <h3 id="Smartphones">Smartphones</h3>
+            <p>Whether Android or iOS, fundamentally, these devices cannot be controlled. They are automatically updated by the carriers, notable bad actors, and the user is given so little access to the system such that appropriate lockdown cannot be done. While iPhones sit in a much better position than Android devices, both are systems that should not be considered trustworthy.</p>
+            <p>However, people like to talk on the phone. People like to use messaging apps. In order to do this securely, you'll likely have to change your behavior regarding your smartphone. Here are a few general tips.</p>
+            <p><ul>
+                <li>Only buy smartphones from notable good manufacturers that have a history of supporting devices with prompt security patches for a long time. This essentially means only buy Apple iPhones or Google Pixel devices. Samsung's Galaxy S and Galaxy Note lines are runners-up. Buying last year's model refurbished is a good option to save a buck.</li>
+                <li>Download as few third-party apps as possible. Whatever you do download should be verifiably open source. Smartphone apps (especially on Android) can escape their sandbox and steal your data, or trick you into doing things you should not. Most people should only have one or two apps aside from what is pre-installed. At any given time, your smartphone's data should be an acceptable loss.</li>
+                <li>Use the phone as little as possible. Smartphones can usually share their data connection via USB or Wi-Fi to a real computer. You are better off bringing a secured laptop with you and tethering it from your smartphone for mobile computing.</li>
+                <li>Messaging apps that require a cell phone number should be carefully vetted. If you are being targeted, it is trivially easy for an adversary to steal your phone number and pretend to be you, so make sure to use something like Signal that has registration lock. Use services where you sign up with a username and password.</li>
+                <li>Don't use social media or email on the phone, and don't log into accounts unless they require the phone app as a companion (i.e. Signal). Don't put your password manager on the phone either.</li>
+                <li>Turn the phone off and leave it in another room away from your secure computer when it's not being used.</li>
+            </ul>
+            </p>
+            <p>Written out, these guidelines are simple enough, but likely requires a massive change in your behavior. However, examine the list and think about how close it is to your life pre-smartphone. Probably pretty close, right? It all boils down to "just use the phone as a communication tool, not a computer".</p>
+            
+            <h3 id=Cloud>Cloud Services</h3>
+            <p>Cloud services like Apple iCloud, Microsoft's OneDrive, and Dropbox should be avoided in their default configurations. The way they usually work, you upload visible data to them so that you can use it on-the-go. This enables the service provider to view the data you put on their service, and this is not secure. For the security-minded individual, data should be <a href="https://www.techspot.com/guides/2069-how-to-encrypt-windows/">fully encrypted</a> with a key controlled by you, and only then should the encrypted data be sent to cloud services.</p>
+            <p>Services like <a href="https://www.tarsnap.com/">Tarsnap</a> do this automatically with an open-source client program, thereby proving themselves trustworthy.</p>
+            <p>Good tools to encrypt data, as mentioned in the article linked above, are 7-zip, <a href="https://www.veracrypt.fr/code/VeraCrypt/">VeraCrypt</a>, and Microsoft's BitLocker. If you are using Windows 10 Home, you should upgrade to Windows 10 Pro to use encryption features. Microsoft does not allow Home users to be secure.</p>
+
+            <h3 id=IOT>Other Smart Devices (IoT)</h3>
+            <p>Remember, the "S" in "IoT" stands for Security.</p>
+            <p>Internet of Things gadgets are generally a bad idea. There are small exceptions - mainly, the IoT gadget must be capable of operating without an Internet connection, offer a setting to enable this mode, respect that setting, and not make an attempt to send any data to the Internet. No known IoT gadget in existence works this way, so do not buy IoT gadgets unless you are a network administrator that can properly restrict them on a separate network zone.</p>
+            <p>Generally, if it is not a computer that you cannot secure, you should not trust it on your network or in your home. This includes networked appliances, like washers, generators, and refrigerators; "assistant" type devices, like Amazon's Echo or Apple's Homepod; and anything else that requires a smartphone app, a Bluetooth connection, or a Wi-Fi connection to function properly.</p>
+            <p>If it must communicate with the Internet and another insecure computer to function, it is bad news!</p>
+            <p>Compartmentalization is king, though - if you must use IoT gadgets for whatever reason, have them on a guest Wi-Fi network, and use a secondary smartphone as the IoT App device. Do not use it for personal usage.</p>
+
+            <h3 id=Tinfoil>Paranoia</h3>
+            <p>Is this not enough?</p>
+        </div>
+    </body>
+</html>
