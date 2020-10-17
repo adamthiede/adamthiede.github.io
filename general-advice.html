@@ -35,7 +35,10 @@
                 <li><a href="#Smartphones">Smartphones</a></li>
                 <li><a href="#Cloud">Cloud Services</a></li>
                 <li><a href="#IOT">Other Smart Devices (IoT)</a></li>
+                <li><a href="#etc">Etc</a></li>
                 <li><a href="#Tinfoil">Paranoia</a></li>
+                <li><a href="#End">The End</a></li>
+                <li><a href="#References">References</a></li>
             </ul>
             <h3 id=Compartmentalization>Compartmentalization</h3>
             <h4>Separate Computer</h4>
@@ -89,19 +92,44 @@
             <p>Written out, these guidelines are simple enough, but likely requires a massive change in your behavior. However, examine the list and think about how close it is to your life pre-smartphone. Probably pretty close, right? It all boils down to "just use the phone as a communication tool, not a computer".</p>
             
             <h3 id=Cloud>Cloud Services</h3>
-            <p>Cloud services like Apple iCloud, Microsoft's OneDrive, and Dropbox should be avoided in their default configurations. The way they usually work, you upload visible data to them so that you can use it on-the-go. This enables the service provider to view the data you put on their service, and this is not secure. For the security-minded individual, data should be <a href="https://www.techspot.com/guides/2069-how-to-encrypt-windows/">fully encrypted</a> with a key controlled by you, and only then should the encrypted data be sent to cloud services.</p>
+            <p>Cloud services like Apple iCloud, Microsoft's OneDrive, and Dropbox should not be used the way they are intended. Normally, the user uploads visible, unencrypted "cleartext" data to the cloud, either to use on other devices or to have a backup. This enables the service provider to view the data put on their service, and this is not secure. For the security-minded individual, data should be <a href="https://www.techspot.com/guides/2069-how-to-encrypt-windows/">fully encrypted</a> with a key controlled by you, and only then should the encrypted data be sent to cloud services.</p>
+            <p>Obviously, the automatic backup and content upload (iCloud/Google Photos, iCloud/Google Drive, etc.) pushed on users by mobile operating systems should be disabled as well. Every "cloud" option should be off.</a>
             <p>Services like <a href="https://www.tarsnap.com/">Tarsnap</a> do this automatically with an open-source client program, thereby proving themselves trustworthy.</p>
             <p>Good tools to encrypt data, as mentioned in the article linked above, are 7-zip, <a href="https://www.veracrypt.fr/code/VeraCrypt/">VeraCrypt</a>, and Microsoft's BitLocker. If you are using Windows 10 Home, you should upgrade to Windows 10 Pro to use encryption features. Microsoft does not allow Home users to be secure.</p>
+            <p>If data just needs to be synchronized between a few endpoints, <a href="https://syncthing.net/">Syncthing</a> is an end-to-end synchronization program that only sends data between your devices without involving external servers.</a>
 
             <h3 id=IOT>Other Smart Devices (IoT)</h3>
             <p>Remember, the "S" in "IoT" stands for Security.</p>
             <p>Internet of Things gadgets are generally a bad idea. There are small exceptions - mainly, the IoT gadget must be capable of operating without an Internet connection, offer a setting to enable this mode, respect that setting, and not make an attempt to send any data to the Internet. No known IoT gadget in existence works this way, so do not buy IoT gadgets unless you are a network administrator that can properly restrict them on a separate network zone.</p>
-            <p>Generally, if it is not a computer that you cannot secure, you should not trust it on your network or in your home. This includes networked appliances, like washers, generators, and refrigerators; "assistant" type devices, like Amazon's Echo or Apple's Homepod; and anything else that requires a smartphone app, a Bluetooth connection, or a Wi-Fi connection to function properly.</p>
-            <p>If it must communicate with the Internet and another insecure computer to function, it is bad news!</p>
+            <p>Generally, if it is not a computer that you cannot secure, you should not trust it on your network or in your home. This includes networked appliances, like microwaves, thermostats, and refrigerators; "assistant" type devices, like Amazon's Echo or Apple's Homepod; and anything else that requires a smartphone app, a Bluetooth connection, or a Wi-Fi connection to function properly.</p>
+            <p>The more "appliance" computers you have on your network, the greater chance one of them has a vulnerability that enables bad actors to invade and compromise the network.</p>
             <p>Compartmentalization is king, though - if you must use IoT gadgets for whatever reason, have them on a guest Wi-Fi network, and use a secondary smartphone as the IoT App device. Do not use it for personal usage.</p>
+
+            <h3 id=etc>Etc</h3>
+            <p><a href="https://www.youtube.com/watch?v=WVDQEoe6ZWY">Avoid VPNs</a>, because you likely don't need it. It is not a good security countermeasure. Privacy, it likely does help a little bit, but not enough to matter for most people.</p>
+            <p>Avoid any "Windows 10 De-bloating" or "Disable Windows 10 Updates" or "Disable Microsoft Telemetry" guides. Most make use of third-party proprietary tools that break the security of Windows in exchange for nothing meaningful. If you don't like Windows spying on you, don't use Windows.</p>
+            <p>This goes without saying - do your updates, and don't delay them. Pick a point every week to <i>manually</i> do updates. This way you'll never be surprised.</p>
+            <p>Keep backups on encrypted media.</p>
+            <p>Avoid registry cleaners, program uninstallers, other utilities.</p>
+            <p>Antivirus is mostly bad, so just use the built-in Windows Defender. If you need something more robust, Malwarebytes is good because it respects the settings you set.</p>
 
             <h3 id=Tinfoil>Paranoia</h3>
             <p>Is this not enough?</p>
+            <p>Instead of Windows, use an encrypted install of Debian, Fedora, Qubes, or OpenBSD as your operating system. Better yet, do not install an operating system on your internal disk, and use Tails on an <a href="https://apricorn.com/">encrypted USB thumb drive</a> that you keep with you at all times.</p>
+            <p>Only use Open Source/Free Software whose source code you have inspected. Only use secure, encrypted, third-party-audited protocols.</p>
+            <p>Only keep sensitive data on a completely offline PC. Only transfer data to and from the system by burning a CD or DVD. The <a href="https://web.archive.org/web/20200129195140/https://minifree.org/product/security-mods/">security enhancements done by minifree</a> (sadly now defunct) provide a great set of guidelines for more adventurous users. USB as a protocol is too dangerous - fill those USB ports with hot glue or de-solder them from the motherboard.</p>
+
+            <h3 id=End>The End...</h3>
+            <p>Hopefully this guide provides a good set of tools to assist you in keeping your digital life little more secure. You don't have to implement every single step in this guide to achieve decent security, but what you should now have is a setup that was better than before. Once you've learned to live without the convenience that you get from an insecure setup, come back here, and try to add another later to your armor. Seek out other resources as well, since I don't have the answers to everything.</p>
+            <p>So, while I may have nothing left to say here, this is just the beginning for you.</p>
+
+            <h3 id=References>References</h3>
+            <p><ul>
+                <li><a href="https://decentsecurity.com/">Decent Security</a></li>
+                <li><a href="https://github.com/mayfrost/guides/blob/master/CHECKLIST.md">github/mayfrost/guides</a></li>
+                <li><a href="https://ssd.eff.org/">EFF Surveillance Self-Defence</a></li>
+                <li><a href="https://notthebe.ee/Creating-your-own-OpenVPN-server.html">How To Make Your Own VPN</a></li>
+            </ul></p>
         </div>
     </body>
 </html>
