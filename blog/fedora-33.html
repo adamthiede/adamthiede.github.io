@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Fedora 33</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>Fedora 33</h1>
+<small>[<a href='../blog.html#fedora-33'>link</a>&mdash;<a href='fedora-33.html'>standalone</a>]</small>
+<p>My OS of choice, most days, is Fedora. It's the best of both worlds of a static and rolling release model - rolling kernels and firmware for up-to-date hardware support, but static, stable releases of major versions of software like Gnome and Libreoffice. Minimal vendor customization in exactly the right places, for the future of the Linux desktop, first. I like what it does for me, and how it does it. It's the least bothersome I think and OS could be. Every six months, with each new Fedora release, I either upgrade or reinstall on the new release of Fedora. This release, I've been running the beta on my test system and homelab server for a while, so I haven't had any reason to hold of installing it on day one - it's been stable, solid, and bug-free for my use case for a long time.</p>
+
+<p>Fedora 33 has a lot of big changes that nobody hopefully ever sees: the default disk layout changed to Btrfs (instead of ext4 on LVM), traditional swap has been traded for ZRAM, and systemd-resolved now handles DNS resolution for NetworkManager. Of these, only ZRAM applies to servers, so admins are in the clear from most new features. Upgraders don't get their filesystem converted, either, so most users won't experience the brunt of the new features.</p>
+
+<p>The install is the same as it ever was - quick, easy, and without issue. Restoring my files from a backup was just as easy, and now I'm writing this on Fedora 33. I installed the stuff I use, and got back to work. From install to full productivity took about an hour. The changes mostly don't effect my day-to-day usage, because if I wanted to manually partition my drives, or mess with my resolv.conf, I would probably stick with a more stable release, like Debian or CentOS, where I would install or upgrade once every 2 to 3 years. All I can tell with this release is that I have more things to learn (Btrfs stuff) and more free space. Both of those are good things.</p>
+
+<p>It struck me this time around that Fedora's becoming more like macOS. This is a compliment - I use a Macbook every day for work, and while it's not perfect, it's far from terrible, too. The desktop experience is efficient, stable, and just the right amount of customizable, and has been for a long time. In 2013 macOS introduced memory compression. It helped out my 4GB RAM Macbook quite a bit. They've since switched to a more advanced filesystem with subvolumes, snapshotting, and other features that Btrfs and ZFS have had for years as well. macOS also prioritizes appearance and user experience, and Fedora's going the same way. Fedora recently enabled an OOM Killer - a daemon that kills programs to save your desktop experience, in FC32. A release or 2 before that they focused on "flicker-free boot" and started using the vendor logo in the splash screen on UEFI-booting systems. It seems like Fedora consistently tries to one-up their last release on the functionality of the user experience, and I appreciate that. I see a lot of similarities between the two. (And a lot of differences, but that's pretty obvious.)</p>
+
+<p>All in all, this has been a fun release cycle. Testing weeks were fun, IRC is always lively on release day, and it's good to see the best keep getting better, and not slowing down.</p>
+
+<p>A few other nice things to note: they switched to nano as the default editor, but since I already have "export EDITOR=vim" in my .bashrc, I didn't notice. gnome-terminal also has a few lovely new color schemes (GNOME Dark and GNOME Light), and they look much nicer than the standard xterm and tango setup that's been there for a few years. Gnome 3.38 continues to be Gnome, and Sway continues to be the best WM ever.</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
