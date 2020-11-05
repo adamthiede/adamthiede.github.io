@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>PinePhone Operating Systems</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>PinePhone Operating Systems</h1>
+<small>[<a href='../blog.html#pinephone-operating-systems'>link</a>&mdash;<a href='pinephone-operating-systems.html'>standalone</a>]</small>
+<p>The coolest computer I've seen in a long, long time is the <a href="https://www.pine64.org/pinephone/">Pine64 PinePhone</a>. It offers the true dream of convergence - you bring this phone with you and it's your mobile computer, where you can use a full Linux system on the go, and when you get backi to your desk, you set it in a dock, where it charges, but also connects to a monitor, keyboard, and mouse, and it displays a full desktop environment on the external display.</p>
+<p>Right now, the end user experience of the PinePhone kinda sucks. It's slow, gets hot, and the battery doesn't last for very long. But as a proof-of-concept, it is the single most important smartphone ever: A real Linux computer, with (mostly) mainline support, that can run a variety of different operating systems without a lot of tweaking. The experience between operating systems also varies greatly.</p>
+<p>Most OSs are on <a href="https://wiki.pine64.org/index.php?title=PinePhone_Software_Releases">Pine64's list of software releases</a>. Check out that list for the latest. I've tried the following so far:
+<ul>
+    <li>postmarketOS: Probably the most complete and reliable experience. You build the image yourself on your computer with pmbootstrap, their custom script, but fear not - it's really easy. <a href="https://wiki.postmarketos.org/wiki/PINE64_PinePhone_(pine64-pinephone)">The instructions are here.</a> I say it's the most complete because you can customize the username, hostname, extra packages, and optionally use full disk encryption. However, Alpine Linux is not my favorite OS - apk, openrc, and busybox are all much less familiar and friendly than apt, systemd, and the GNU coreutils. Flatpak doesn't really work, and gammastep isn't in the repos. The performance is solid, though, and it had convergence before anyone else. I think the other OSs are just copying this kernel build.</li>
+    <li>Arch Linux ARM is fast and smooth. As a base image, it's great, but I'd have to build a lot on it to make it usable. There is basically nothing on the base system, and is very much in prototype stage. It seems to be largely the work of one individual.</li>
+    <li>Manjaro ARM is a great option. Most software works without tweaks, the repo is huge, and they release images frequently. Unlike postmarketOS, in order to use it, you have to flash the image to your SD card, use the 'manjaro' user, and you have to layer packages on after the fact. There's no installer, where you can customize the system as it's applied to the device. It is pretty solid, though, convergence works well, and people are actively working on it. It is quite a bit slower and heavier than the other options, though.</li>  
+    <li>Mobian is Mobile Debian. It is my favorite of the images I've tried. It is not the fastest to boot, but it runs the quickest and seems like it's the best for battery life and temperatures. No idea how they're tweaking the system, but it's amazing. It's distributed via flashable images too, though - no option to use a custom user or set up encrypted partitions. It seems like the project is also a one-person deal, too. However, new images are released and deployed nightly, so that's neat. CI/CD gives me a lot of confidence it will live for a while.</li>
+</ul>
+</p>
+<p>While I plan to try out some other OSs (There are builds of Fedora, Sailfish, UBports, and even Gentoo) these are the main ones that seem worth using. I'd rather see the whole community rally behind one, than have fragmented development - if postmarketOS's stability could be combined with Mobian's software availability, that'd be ideal! Long term, postmarketOS does seem like the one to go with. I'll just have to figure out the packaging situation in Alpine.</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
