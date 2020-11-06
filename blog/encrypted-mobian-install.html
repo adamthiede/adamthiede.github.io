@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Encrypted Mobian Install</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>Encrypted Mobian Install</h1>
+<small>[<a href='../blog.html#encrypted-mobian-install'>link</a>&mdash;<a href='encrypted-mobian-install.html'>standalone</a>]</small>
+<p>The only shortcoming of Mobian is it doesn't allow for FDE out of the box like postmarketOS does. Here's some theoretical instructions to get it working.</p>
+<p>Two tips - 'df -Th' and 'lsblk' will be your friends - the former shows mounted filesystems, and the latter shows block device layout. Neither is destructive.</p>
+<p>
+Use the following to mount, setup, and get appropriate data into the partitions:
+<ul>
+    <li><a href="https://wiki.mobian-project.org/doku.php?id=security">The Mobian Wiki</a> has some general steps for encryption. They're mostly correct. I'm going to kinda rewrite them below.</li>
+    <li>Obtain 2 copies of the same <a href="https://images.mobian-project.org/pinephone/">mobian image</a>. I've renamed mine to 'mobian_source.img' and 'mobian_target.img'</li>
+    <li>Run <span class=mono>sudo losetup --partscan /dev/loop1 mobian_source.img</span> and <span class=mono>sudo losetup --partscan /dev/loop2 mobian_target.img</span>. You will have two loop devices based on the images and they should both have two partitions - their /boot and root partitions.</li>
+    <li>From here on out, just become root via 'sudo su' or however you like.</li>
+    <li>Make two directories in /mnt - 'source' and 'target'. Mount the source image's root partition (loop1p2) at /mnt/source, and its boot partition at /mnt/source/boot. Don't mount the target yet.</li>
+    <li>Encrypt the target's root partition. This is a destructive command. Run <span class=mono>sudo cryptsetup luksFormat /dev/loop2p2</span> and provide your encryption password twice.</li>
+    <li>To mount the encrypted partition, run the following commands: <span class=mono>cryptsetup luksOpen /dev/loop2p2 pine; mkfs.ext4 /dev/mapper/pine; mount /dev/mapper/pine /mnt/target; mount /dev/loop2p1 /mnt/target/boot</span>. This opens the encrypted LUKS container and sets up a device mapper for it with the name 'pine', enabling us to format and mount it that way.</li>
+    <li>Right now, the target root partition is completely empty. Run the following to sync the source image's stuff to the target image: <span class=mono>rsync -aAH /mnt/source/* /mnt/target/ ; ls /mnt/source; ls /mnt/target</span> . Make sure you sanity-check with the ls commands that everything copied correctly.</li>
+</ul>
+</p>
+<p>From here on out, things become a little more complicated. Although this is Debian, the <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation#Copy_DNS_info">Gentoo handbook's installation guide</a> has a fantstic list of what to mount and how to work in a chroot without any fancy tools (looking at you, arch-chroot).</p>
+<p>If you're running this on your x86(_64) computer, you will need qemu-user-mode emulation, but don't fret. It's super easy. Use your package manager to install 'binfmt-support' and 'qemu-user-static' (or whatever your distro calls it - check <a href="https://pkgs.org">pkgs.org</a>). You should have a binary in /usr/bin/ called qemu-aarch64-static or something like that. Copy it to /mnt/target/. That's it!</p>
+<p>Copy your resolv.conf to the chroot, or at least edit one in place. Most people will just need one line: 'nameserver 192.168.1.1'.</p>
+<p>Bind the partitions to your chroot:
+<span class=mono>
+    <ul>
+        <li>mount --types proc /proc /mnt/target/proc</li>
+        <li>mount --rbind /dev /mnt/target/dev</li>
+        <li>mount --rbind /sys /mnt/target/sys</li>
+    </ul>
+</span>
+Then, chroot:</br>chroot /mnt/target
+</p>
+<p>
+Next, you'll need to download a file - the 'osk-sdl' keyboard package - from <a href="https://gitlab.com/Jarrah/osk-sdl-mobian/-/releases">this releases page</a>. It's a precompiled .deb for arm64. Since you're now root inside your image, you can just wget the latest release and then run <span class=mono>apt install ./osk-sdk_arm64.deb -y</span> to install the package. You WILL need to remove the cryptsetup-initramfs package, if the , so 'apt remove' it.</p>
+<p>Run <span class=mono>update-initramfs -u</span>, and then edit /etc/default/u-boot with an editor (vim/nano). You will need to replace the U_BOOT_PARAMETERS with this line:<br/><span class=mono>U_BOOT_PARAMETERS="osk-sdl-root=/dev/mmcblk0p2 osk-sdl-root-name=pine root=/dev/mapper/pine console=ttyS0,115200 consoleblank=0 loglevel=7 rw plymouth.ignore-serial-consoles vt.global_cursor_default=0"</span></p>
+<p>
+This will instruct the bootloader, u-boot, to use osk-sdl during the boot process. Next run <span class=mono>u-boot-update</span> for u-boot to regenerate its config file from the one you just edited. The config file lives in /boot/extlinux/extlinux.conf for mobian. Make sure you also edit this file and ensure that the 'append' line does not begin with 'root=UUID....'. If so, just that section, and make sure osk-sdl's entries are first. Mine looks like this:<br/>
+<span class=mono>	append osk-sdl-root=/dev/mmcblk0p2 osk-sdl-root-name=pine root=/dev/mapper/pine console=ttyS0,115200 consoleblank=0 loglevel=7 rw plymouth.ignore-serial-consoles vt.global_cursor_default=0</span><br/>
+</p>
+<p>
+That should be it, mostly. Exit the chroot with 'exit', as usual. You're back on your system. Then, run <span class=mono>umount -Rl /mnt/target; cryptsetup luksClose /dev/loop2p2</span> to unmount the chroot and image's loopbacks. Run <span class=mono>losetup -d /dev/loop1;losetup -d /dev/loop2</span> to close the images. Your image 'mobian_target.img' should now contain all your changes. Wicked!</p>
+<p>
+Once you boot the system, it will have a kinda bad keyboard that offers no hinting that will ask for the password you entered in the 'cryptsetup luksFormat' above. Enter it there, and once you boot up you will need to resize the filesystem.</p>
+<p>On the pinephone itself (or ssh'd in, that's much easier) run cfdisk on your partition. The auto resize during first boot doesn't work on this setup. Increase the size to whatever you want (on internal storage, probably about 14GB) and then reboot. Back in your system, run <span class=mono>resize2fs /dev/mapper/pine</span> and it should expand your system to the size of the partition.</p>
+<h4>You're done! Enjoy your encrypted PinePhone Mobian install!</h4>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
