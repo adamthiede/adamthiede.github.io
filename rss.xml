@@ -12,6 +12,27 @@
 <!-- LB -->
 
 <item>
+<title>Recent Writing</title>
+<guid>https://adamthiede.com/blog.html#recent-writing</guid>
+<pubDate>Fri, 11 Dec 2020 17:59:02 -0800</pubDate>
+<description><![CDATA[
+<p>
+Recently, I've been spending my writing time on some <a href="https://adamthiede.com/articles.html">articles</a> that are, as the page says, long-term reference pages that don't really belong on a blog.
+</p>
+<p>
+It's been fun to write things that have a longer, more cohesive theme, as opposed to just my regular rambling here. You're encouraged to read and share the articles. I've been putting quite a lot of thought into them and believe they will truly help people with tough questions or confusing processes.
+</p>
+<p>
+The <a href="https://adamthiede.com/open-source-government.html">government proposal article</a> does deserve some explanation though. It is <i>very</i> far left, very much off the deep end, and absolutely something that should not be attempted. But much like the Free Software purists like Richard Stallman, the extreme position needs to exist, so the rest of us have something to shoot for. Although I won't get all the way there any time soon - my laptop still runs some binary firmware to get parts of it to work right and I have to carry an iPhone when I'm on-call for work - it doesn't mean I stop trying, or give up. Every once in a while, I'm able to replace something proprietary with something more free. It's the small steps, over a long period of time, that eventually result in major change. Even though it's not flashy and exciting, it's still progress.
+</p>
+<p>
+Anyway, each of the articles are about what the little description exists, so check 'em out if you're interested. And happy <a href="https://adventofcode.com">Advent</a>.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Working From Home</title>
 <guid>https://adamthiede.com/blog.html#working-from-home</guid>
 <pubDate>Sat, 28 Nov 2020 19:00:50 -0800</pubDate>
