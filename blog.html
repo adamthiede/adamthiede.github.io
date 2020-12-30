@@ -12,6 +12,49 @@
 
 <!-- LB -->
 <div class='entry'>
+<h2 id='permissive-licenses'>Permissive Licenses</h2>
+<small>[<a href='#permissive-licenses'>link</a>&mdash;<a href='blog/permissive-licenses.html'>standalone</a>]</small>
+<h4>Or, Why BSD Isn't Better</h4>
+<p>
+The BSDs are the most technically interesting operating systems on the market today. They are in many ways superior to Linux (and obviously Windows). OpenBSD goes all in on security and produces high quality independent products that other operating systems rely on - OpenSSH, LibreSSL, httpd, and pf, to name a few. NetBSD can run on every computer, ever. FreeBSD provides sane package management with system/package separation, a stable core, and truly futuristic features for admins, like boot environments and native ZFS support.
+</p>
+<p>
+Linux is making attempts to emerge on the desktop scene, having already dominated the server market. The past decade has been very good to Linux: in addition to smaller boutique vendors, high profile PC makers Dell and Lenovo now sell laptops with Linux preinstalled. Red Hat was acquired by IBM for 34 Billion dollars. While all this is going on, the experience of downloading, installing, and using desktop Linux is getting better as well. It's incredibly easy, stable, and there are many choices.
+</p>
+<p>
+BSD, on the other hand, has been floundering. Trident switched to Linux, TrueNAS is releasing Linux builds, a few desktop BSD distributions like FuryBSD and TrueOS have fallen by the wayside. Basically the only user-friendly desktop BSD OS is GhostBSD. OpenBSD's installer does let you get a graphical environment without much fuss, but it needs a <i>lot</i> of tuning before it's usable. Most BSDs don't have support for anything beyond Bluetooth 1.1 (if they have it at all) and WiFi is limited to 802.11N speeds. Hardware support for BSDs is worse than Linux for most systems, they get worse performanc (and battery life on laptops) than Linux, and support for popular applications is spotty at best. You can get desktops like GNOME and KDE on the BSDs, but the versions are often months or years behind Linux, since they have to spend all their time patching out things like dbus and systemd support (not necessarily the fault of the BSDs).
+</p>
+<p>
+I'd love to use OpenBSD on my laptop, but GPU support is barely there, packages lag behind on security updates, Bluetooth support doesn't exist, and basic things like audio over HDMI and WiFi are completely non-functional. So if the BSDs are technically better, why do they lag behind in hardware support, software support, and desktop support? Why do the BSDs today seem like the Linux of 10 years ago? Why aren't they on top, if they're better than Linux?
+</p>
+<h4>Licensing.</h4>
+<p>
+When you hear about licensing differences, specifically GPL vs "Permissive" licenses (MIT/BSD 3-clause) you often hear about it from the BSD folks. The people who are fans of permissive licenses like to talk about how restrictive and anti-freedom the GPL is. You don't often hear about this from the Linux people - the pool is pretty diluted these days, so Linux folks tend to be more of the "Open Source" rather than hardline "Free Software" type. But the BSD people are always quick to tell you the GPL doesn't offer true freedom, since it restricts what you can do with the code.
+</p>
+<p>
+I say, "Good!" The GPL is the correct model of how software should be developed anyway. If you're going to bother to release sources, you should ensure that someone can't take the code and repackage it as a proprietary system. The BSDs have had this problem for years - macOS, Sony's PlayStation operating systems, and Nintendo's Switch operating system are three great examples of how FreeBSD can be a highly performant operating system with great hardware support, but since the changes are all proprietary, FreeBSD doesn't benefit from these companies using it. They could be a completely custom homegrown operating system for all FreeBSD cares - it matters the same to FreeBSD. FreeBSD is doing the work for free, giving it away, and companies are profiting from it.
+</p>
+<p>
+The reason Linux has so many large companies contributing back to the kernel is beacuse it benefits them to do so, and because they're forced to. It's a snowball effect. The viral nature of the GPL means that code based on GPL projects <i>also</i> has to be shared in the same way. It's a self-propagating license enforced by the legal system that ensures the Linux kernel doesn't get replaced by a proprietary version of itself. Let's say Microsoft downloaded Linux, dramatically improved it in-house with its leagues of developers fueled by Microsoft's infinite money, and released it as a closed-source product called "Winux". There are cases in which proprietary operating systems can be better - Apple's macOS does provide a beautifully seamless level of integration with other Apple platforms. It's a well-developed and comfortable ecosystem, but it's also spying on you and actively prevents you from doing what you want with the sofware and hardware.
+</p>
+<p>
+BSD's permissive strategy ensures the freedom of the code - the inanimate bytes that make up the software. Why would we need to grant freedom to <i>code</i>? Why do we care? We need the freedom to be in the hands of the developers, administrators, and users that interact with the code. They're the important part of the equation here. Open Source should exist for the benefit of the user, not for companies who want to take it, modify it, and use all that goodwill and free work to spy on and harm people through proprietary products.
+</p>
+<p>
+The fundamental reason the BSDs present a weaker <i>actual</i> offering, despite having stronger technical merits, is that they're giving away their code for free without an assurance of freedom. They are banking on the good will of the giant companies that take their software and make it meaningfully better. Think of how amazing FreeBSD would be if it had the mobile power management of the Nintendo Switch softare, the graphical capabilites of a PlayStation, and the smooth user experience of macOS. They wrote code and didn't license it restrictively enough, so now giant companies use it to make money, restrict use freedom, and prey on the ignorant.
+</p>
+<p>
+Consistency between setups between server and desktop is important - Linus Torvalds says it's why ARM servers haven't taken off. I don't want to build for multiple different OSs or remember how to manage both. And if I can't use BSD on the desktop, its usefulness as a server OS for me decreases as well. I run Fedora on the desktop because I run RHEL servers at work, and the similarity means anything I learn on one translates to the other.
+</p>
+<p>
+I want to love the BSDs. For a server OS, they're amazing. This website runs OpenBSD and I've tried very hard to get it working on my laptops to moderate success. While both Linux and BSD keep getting better and better, the BSDs still lag behind quite far on the desktop. The stability can't be beat - you can run a mostly-stock BSD server for years and years, get great security updates, and have a very consistent, unsurprising experience. But it only gets it half right, and it's never going to advance if people can just take it with no promise of contribution. There are a bunch of private forks, all doing their own thing.
+</p>
+<p>
+But hey, at least the <i>code</i> is free to do what it wants. I'm sure the bytes (and Apple, Microsoft, IBM, Intel, and whoever else uses the code) really appreciate it.
+</p>
+<small>Wed, 30 Dec 2020 06:24:34 -0800</small>
+</div>
+<div class='entry'>
 <h2 id='recent-writing'>Recent Writing</h2>
 <small>[<a href='#recent-writing'>link</a>&mdash;<a href='blog/recent-writing.html'>standalone</a>]</small>
 <p>
