@@ -12,6 +12,26 @@
 
 <!-- LB -->
 <div class='entry'>
+<h2 id='pointlessness-of-appliance-computer-hacking'>Pointlessness of Appliance Computer Hacking</h2>
+<small>[<a href='#pointlessness-of-appliance-computer-hacking'>link</a>&mdash;<a href='blog/pointlessness-of-appliance-computer-hacking.html'>standalone</a>]</small>
+<p>
+It's come to my attention recently that Nintendo stalks people distributing console hackware and tries to bully them into to sign an NDA. Stories on this also tend to bring up relevant history, like iPhone jailbreaking and PS3 OtherOS/Linux. Each time something technically interesting happens with these otherwise boring appliance computers, the manufacturer or legal entity involved in making money off of them screams "piracy!!!" and tries to sue the pants off the 19-year-old who is tinkering with a toy in his basement and telling his friends about it on the Internet.
+</p>
+
+<p>
+As much as game game console hax was how a lot of us got interested in "computer stuff" early in our lives, shouldn't we, as adults, now understand that throwing time and effort at modifying appliance hardware is kind of a fool's errand? Recently there's been some effort involved in porting Linux to the Apple M1 chip - a proprietary custom Apple-designed ARM SoC that seems very cool but lacks support for a real operating system yet. This is effort in the wrong direction. It is not a thing we should support. We also don't want to encourage people to buy hardware with the promise of future software support. There are many examples of the software not being delivered. 
+</p>
+
+<p>
+The manufacturers of appliance computers always look to close the holes that hackers use to have fun and tinker. Every iPhone update closes off the previous jailbreaks. The Nintendo Switch had a flaw in the hardware so they released new versions and don't sell the old one anymore. Some consoles like the Xbox even have a limited number of <a href="https://electronics.stackexchange.com/questions/8440/what-is-an-efuse">hardware "efuse" devices</a> that are burned out by a software update, ensuring you can't roll back to a previous version. These companies really don't like people tinkering with stuff that they bought! Even if it's well within your right to talk about cool software you wrote, the companies are going to try and make your life miserable if you do. Even if you do manage to create and distribute a good hack for an Xbox or something, chances are you won't be able to play online with your buddies since you can't update your console's software, you might get banned, you may not be able to buy new games, and you may not even be able to play games you've already bought! Congratulations, your Xbox is now a brick.
+</p>
+
+<p>
+So, while modding the Switch to run Linux might be a cool trick, aren't we better off investing time in making open ecosystems better, not heading down a dead end, playing cat-and-mouse, getting applicances to do things they're not supposed to? As soon as you release any info about running Linux on the M1 or PS3 or Switch, the manufacturer will close that loophole, burn the efuse, and you can't ever do it again. Wasted effort. Instead, what about getting Linux to work on a RISC-V system? That's where we should be heading, instead of proprietary hardware run by litigious companies that don't want us anyway.
+</p>
+<small>Wed, 30 Dec 2020 07:28:30 -0800</small>
+</div>
+<div class='entry'>
 <h2 id='permissive-licenses'>Permissive Licenses</h2>
 <small>[<a href='#permissive-licenses'>link</a>&mdash;<a href='blog/permissive-licenses.html'>standalone</a>]</small>
 <h4>Or, Why BSD Isn't Better</h4>
@@ -35,7 +55,7 @@ When you hear about licensing differences, specifically GPL vs "Permissive" lice
 I say, "Good!" The GPL is the correct model of how software should be developed anyway. If you're going to bother to release sources, you should ensure that someone can't take the code and repackage it as a proprietary system. The BSDs have had this problem for years - macOS, Sony's PlayStation operating systems, and Nintendo's Switch operating system are three great examples of how FreeBSD can be a highly performant operating system with great hardware support, but since the changes are all proprietary, FreeBSD doesn't benefit from these companies using it. They could be a completely custom homegrown operating system for all FreeBSD cares - it matters the same to FreeBSD. FreeBSD is doing the work for free, giving it away, and companies are profiting from it.
 </p>
 <p>
-The reason Linux has so many large companies contributing back to the kernel is beacuse it benefits them to do so, and because they're forced to. It's a snowball effect. The viral nature of the GPL means that code based on GPL projects <i>also</i> has to be shared in the same way. It's a self-propagating license enforced by the legal system that ensures the Linux kernel doesn't get replaced by a proprietary version of itself. Let's say Microsoft downloaded Linux, dramatically improved it in-house with its leagues of developers fueled by Microsoft's infinite money, and released it as a closed-source product called "Winux". There are cases in which proprietary operating systems can be better - Apple's macOS does provide a beautifully seamless level of integration with other Apple platforms. It's a well-developed and comfortable ecosystem, but it's also spying on you and actively prevents you from doing what you want with the sofware and hardware.
+The reason Linux has so many large companies contributing back to the kernel is beacuse it benefits them to do so, and because they're forced to. It's a snowball effect. The viral nature of the GPL means that code based on GPL projects <i>also</i> has to be shared in the same way. It's a self-propagating license enforced by the legal system that ensures the Linux kernel doesn't get replaced by a proprietary version of itself. If Linux was permissively licensed, it would get eaten very quickly by a large company who liked it - say Microsoft looks at Linux, dramatically improved it in-house with its leagues of developers fueled by Microsoft's infinite money, and released it as a closed-source product called "Winux". Why would any normal user use Linux then, when they could use the better version? (It's the same reason people still use Windows - it's what's already there.)
 </p>
 <p>
 BSD's permissive strategy ensures the freedom of the code - the inanimate bytes that make up the software. Why would we need to grant freedom to <i>code</i>? Why do we care? We need the freedom to be in the hands of the developers, administrators, and users that interact with the code. They're the important part of the equation here. Open Source should exist for the benefit of the user, not for companies who want to take it, modify it, and use all that goodwill and free work to spy on and harm people through proprietary products.
@@ -47,12 +67,12 @@ The fundamental reason the BSDs present a weaker <i>actual</i> offering, despite
 Consistency between setups between server and desktop is important - Linus Torvalds says it's why ARM servers haven't taken off. I don't want to build for multiple different OSs or remember how to manage both. And if I can't use BSD on the desktop, its usefulness as a server OS for me decreases as well. I run Fedora on the desktop because I run RHEL servers at work, and the similarity means anything I learn on one translates to the other.
 </p>
 <p>
-I want to love the BSDs. For a server OS, they're amazing. This website runs OpenBSD and I've tried very hard to get it working on my laptops to moderate success. While both Linux and BSD keep getting better and better, the BSDs still lag behind quite far on the desktop. The stability can't be beat - you can run a mostly-stock BSD server for years and years, get great security updates, and have a very consistent, unsurprising experience. But it only gets it half right, and it's never going to advance if people can just take it with no promise of contribution. There are a bunch of private forks, all doing their own thing.
+I want to love the BSDs. For a server OS, they're amazing. This website ran on OpenBSD for all of 2020, and I've tried very hard to get it working on my laptops to moderate success. While both Linux and BSD keep getting better and better, the BSDs still lag behind quite far on the desktop. The stability can't be beat - you can run a mostly-stock BSD server for years and years, get great security updates, and have a very consistent, unsurprising experience. But it only gets it half right, and it's never going to advance if people can just take it with no promise of contribution. There are a bunch of private forks, all doing their own thing.
 </p>
 <p>
 But hey, at least the <i>code</i> is free to do what it wants. I'm sure the bytes (and Apple, Microsoft, IBM, Intel, and whoever else uses the code) really appreciate it.
 </p>
-<small>Wed, 30 Dec 2020 06:24:34 -0800</small>
+<small>Wed, 30 Dec 2020 07:00:54 -0800</small>
 </div>
 <div class='entry'>
 <h2 id='recent-writing'>Recent Writing</h2>
