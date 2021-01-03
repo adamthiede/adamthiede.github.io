@@ -1,0 +1,1112 @@
+<html>
+<head>
+<title>Adam's Blog</title>
+<meta charset="utf-8"/>
+<link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+
+<body>
+<h1><a href="https://adamthiede.com/">Adam</a>'s Blog</h1>
+<p><a href="https://adamthiede.com/blogindex.html">Index</a> - a compact list</p>
+<p><a href="https://adamthiede.com/rss.xml">RSS</a> feed | Powered by <a href="http://github.com/lukesmithxyz/lb">LB</a> by Luke Smith</p>
+
+<!-- LB -->
+<div class='entry'>
+<h2 id='pointlessness-of-appliance-computer-hacking'>Pointlessness of Appliance Computer Hacking</h2>
+<small>[<a href='#pointlessness-of-appliance-computer-hacking'>link</a>&mdash;<a href='blog/pointlessness-of-appliance-computer-hacking.html'>standalone</a>]</small>
+<p>
+It's come to my attention recently that Nintendo stalks people distributing console hackware and tries to bully them into to sign an NDA. Stories on this also tend to bring up relevant history, like iPhone jailbreaking and PS3 OtherOS/Linux. Each time something technically interesting happens with these otherwise boring appliance computers, the manufacturer or legal entity involved in making money off of them screams "piracy!!!" and tries to sue the pants off the 19-year-old who is tinkering with a toy in his basement and telling his friends about it on the Internet.
+</p>
+
+<p>
+As much as game game console hax was how a lot of us got interested in "computer stuff" early in our lives, shouldn't we, as adults, now understand that throwing time and effort at modifying appliance hardware is kind of a fool's errand? Recently there's been some effort involved in porting Linux to the Apple M1 chip - a proprietary custom Apple-designed ARM SoC that seems very cool but lacks support for a real operating system yet. This is effort in the wrong direction. It is not a thing we should support. We also don't want to encourage people to buy hardware with the promise of future software support. There are many examples of the software not being delivered. 
+</p>
+
+<p>
+The manufacturers of appliance computers always look to close the holes that hackers use to have fun and tinker. Every iPhone update closes off the previous jailbreaks. The Nintendo Switch had a flaw in the hardware so they released new versions and don't sell the old one anymore. Some consoles like the Xbox even have a limited number of <a href="https://electronics.stackexchange.com/questions/8440/what-is-an-efuse">hardware "efuse" devices</a> that are burned out by a software update, ensuring you can't roll back to a previous version. These companies really don't like people tinkering with stuff that they bought! Even if it's well within your right to talk about cool software you wrote, the companies are going to try and make your life miserable if you do. Even if you do manage to create and distribute a good hack for an Xbox or something, chances are you won't be able to play online with your buddies since you can't update your console's software, you might get banned, you may not be able to buy new games, and you may not even be able to play games you've already bought! Congratulations, your Xbox is now a brick.
+</p>
+
+<p>
+So, while modding the Switch to run Linux might be a cool trick, aren't we better off investing time in making open ecosystems better, not heading down a dead end, playing cat-and-mouse, getting applicances to do things they're not supposed to? As soon as you release any info about running Linux on the M1 or PS3 or Switch, the manufacturer will close that loophole, burn the efuse, and you can't ever do it again. Wasted effort. Instead, what about getting Linux to work on a RISC-V system? That's where we should be heading, instead of proprietary hardware run by litigious companies that don't want us anyway.
+</p>
+<small>Wed, 30 Dec 2020 07:28:30 -0800</small>
+</div>
+<div class='entry'>
+<h2 id='permissive-licenses'>Permissive Licenses</h2>
+<small>[<a href='#permissive-licenses'>link</a>&mdash;<a href='blog/permissive-licenses.html'>standalone</a>]</small>
+<h4>Or, Why BSD Isn't Better</h4>
+<p>
+The BSDs are the most technically interesting operating systems on the market today. They are in many ways superior to Linux (and obviously Windows). OpenBSD goes all in on security and produces high quality independent products that other operating systems rely on - OpenSSH, LibreSSL, httpd, and pf, to name a few. NetBSD can run on every computer, ever. FreeBSD provides sane package management with system/package separation, a stable core, and truly futuristic features for admins, like boot environments and native ZFS support.
+</p>
+<p>
+Linux is making attempts to emerge on the desktop scene, having already dominated the server market. The past decade has been very good to Linux: in addition to smaller boutique vendors, high profile PC makers Dell and Lenovo now sell laptops with Linux preinstalled. Red Hat was acquired by IBM for 34 Billion dollars. While all this is going on, the experience of downloading, installing, and using desktop Linux is getting better as well. It's incredibly easy, stable, and there are many choices.
+</p>
+<p>
+BSD, on the other hand, has been floundering. Trident switched to Linux, TrueNAS is releasing Linux builds, a few desktop BSD distributions like FuryBSD and TrueOS have fallen by the wayside. Basically the only user-friendly desktop BSD OS is GhostBSD. OpenBSD's installer does let you get a graphical environment without much fuss, but it needs a <i>lot</i> of tuning before it's usable. Most BSDs don't have support for anything beyond Bluetooth 1.1 (if they have it at all) and WiFi is limited to 802.11N speeds. Hardware support for BSDs is worse than Linux for most systems, they get worse performanc (and battery life on laptops) than Linux, and support for popular applications is spotty at best. You can get desktops like GNOME and KDE on the BSDs, but the versions are often months or years behind Linux, since they have to spend all their time patching out things like dbus and systemd support (not necessarily the fault of the BSDs).
+</p>
+<p>
+I'd love to use OpenBSD on my laptop, but GPU support is barely there, packages lag behind on security updates, Bluetooth support doesn't exist, and basic things like audio over HDMI and WiFi are completely non-functional. So if the BSDs are technically better, why do they lag behind in hardware support, software support, and desktop support? Why do the BSDs today seem like the Linux of 10 years ago? Why aren't they on top, if they're better than Linux?
+</p>
+<h4>Licensing.</h4>
+<p>
+When you hear about licensing differences, specifically GPL vs "Permissive" licenses (MIT/BSD 3-clause) you often hear about it from the BSD folks. The people who are fans of permissive licenses like to talk about how restrictive and anti-freedom the GPL is. You don't often hear about this from the Linux people - the pool is pretty diluted these days, so Linux folks tend to be more of the "Open Source" rather than hardline "Free Software" type. But the BSD people are always quick to tell you the GPL doesn't offer true freedom, since it restricts what you can do with the code.
+</p>
+<p>
+I say, "Good!" The GPL is the correct model of how software should be developed anyway. If you're going to bother to release sources, you should ensure that someone can't take the code and repackage it as a proprietary system. The BSDs have had this problem for years - macOS, Sony's PlayStation operating systems, and Nintendo's Switch operating system are three great examples of how FreeBSD can be a highly performant operating system with great hardware support, but since the changes are all proprietary, FreeBSD doesn't benefit from these companies using it. They could be a completely custom homegrown operating system for all FreeBSD cares - it matters the same to FreeBSD. FreeBSD is doing the work for free, giving it away, and companies are profiting from it.
+</p>
+<p>
+The reason Linux has so many large companies contributing back to the kernel is beacuse it benefits them to do so, and because they're forced to. It's a snowball effect. The viral nature of the GPL means that code based on GPL projects <i>also</i> has to be shared in the same way. It's a self-propagating license enforced by the legal system that ensures the Linux kernel doesn't get replaced by a proprietary version of itself. If Linux was permissively licensed, it would get eaten very quickly by a large company who liked it - say Microsoft looks at Linux, dramatically improved it in-house with its leagues of developers fueled by Microsoft's infinite money, and released it as a closed-source product called "Winux". Why would any normal user use Linux then, when they could use the better version? (It's the same reason people still use Windows - it's what's already there.)
+</p>
+<p>
+BSD's permissive strategy ensures the freedom of the code - the inanimate bytes that make up the software. Why would we need to grant freedom to <i>code</i>? Why do we care? We need the freedom to be in the hands of the developers, administrators, and users that interact with the code. They're the important part of the equation here. Open Source should exist for the benefit of the user, not for companies who want to take it, modify it, and use all that goodwill and free work to spy on and harm people through proprietary products.
+</p>
+<p>
+The fundamental reason the BSDs present a weaker <i>actual</i> offering, despite having stronger technical merits, is that they're giving away their code for free without an assurance of freedom. They are banking on the good will of the giant companies that take their software and make it meaningfully better. Think of how amazing FreeBSD would be if it had the mobile power management of the Nintendo Switch softare, the graphical capabilites of a PlayStation, and the smooth user experience of macOS. They wrote code and didn't license it restrictively enough, so now giant companies use it to make money, restrict use freedom, and prey on the ignorant.
+</p>
+<p>
+Consistency between setups between server and desktop is important - Linus Torvalds says it's why ARM servers haven't taken off. I don't want to build for multiple different OSs or remember how to manage both. And if I can't use BSD on the desktop, its usefulness as a server OS for me decreases as well. I run Fedora on the desktop because I run RHEL servers at work, and the similarity means anything I learn on one translates to the other.
+</p>
+<p>
+I want to love the BSDs. For a server OS, they're amazing. This website ran on OpenBSD for all of 2020, and I've tried very hard to get it working on my laptops to moderate success. While both Linux and BSD keep getting better and better, the BSDs still lag behind quite far on the desktop. The stability can't be beat - you can run a mostly-stock BSD server for years and years, get great security updates, and have a very consistent, unsurprising experience. But it only gets it half right, and it's never going to advance if people can just take it with no promise of contribution. There are a bunch of private forks, all doing their own thing.
+</p>
+<p>
+But hey, at least the <i>code</i> is free to do what it wants. I'm sure the bytes (and Apple, Microsoft, IBM, Intel, and whoever else uses the code) really appreciate it.
+</p>
+<small>Wed, 30 Dec 2020 07:00:54 -0800</small>
+</div>
+<div class='entry'>
+<h2 id='recent-writing'>Recent Writing</h2>
+<small>[<a href='#recent-writing'>link</a>&mdash;<a href='blog/recent-writing.html'>standalone</a>]</small>
+<p>
+Recently, I've been spending my writing time on some <a href="https://adamthiede.com/articles.html">articles</a> that are, as the page says, long-term reference pages that don't really belong on a blog.
+</p>
+<p>
+It's been fun to write things that have a longer, more cohesive theme, as opposed to just my regular rambling here. You're encouraged to read and share the articles. I've been putting quite a lot of thought into them and believe they will truly help people with tough questions or confusing processes.
+</p>
+<p>
+The <a href="https://adamthiede.com/open-source-government.html">government proposal article</a> does deserve some explanation though. It is <i>very</i> far left, very much off the deep end, and absolutely something that should not be attempted. But much like the Free Software purists like Richard Stallman, the extreme position needs to exist, so the rest of us have something to shoot for. Although I won't get all the way there any time soon - my laptop still runs some binary firmware to get parts of it to work right and I have to carry an iPhone when I'm on-call for work - it doesn't mean I stop trying, or give up. Every once in a while, I'm able to replace something proprietary with something more free. It's the small steps, over a long period of time, that eventually result in major change. Even though it's not flashy and exciting, it's still progress.
+</p>
+<p>
+Anyway, each of the articles are about what the little description exists, so check 'em out if you're interested. And happy <a href="https://adventofcode.com">Advent</a>.
+</p>
+<small>Fri, 11 Dec 2020 17:59:02 -0800</small>
+</div>
+<div class='entry'>
+<h2 id='working-from-home'>Working From Home</h2>
+<small>[<a href='#working-from-home'>link</a>&mdash;<a href='blog/working-from-home.html'>standalone</a>]</small>
+<p>
+While I've done my fair share of remote work in the past, working full-time from home is a new experience for me. I'm fortunate that my field makes remote work very easy. Even so, it can also put a lot of strain and confusion on a family's home life. Through trial and error I've found out what works and what doesn't. These are my findings.
+</p>
+<p>
+As with everything, compartmentalization is critical. Space, time, and equipment are my most critical components.
+</p>
+
+<p>
+Though this should go without saying, don't use your personal computer or phone for work. Unless you own the company and are making those decisions for yourself, your employer should be paying for your computer and phone if they expect you to use them for work. If you use your personal systems for work you won't ever get any down-time. Trying to watch Netflix? Here comes a Slack message. Playing some phone games? There's a flurry of work emails. (Also, don't install any corporate management spyware on your personal systems.)
+</p>
+
+<p>
+Commuting to an office can feel different from working at home because of the initialization time. You get dressed and presentable, gather your things, get in a car and drive to work. (Remember driving? I kinda forgot how!) All these various tasks may not seem like much, but they're getting you into the work mindset. You're preparing for your day. When you work from home, the initialization time is zero - you roll out of bed, bleary-eyed, un-caffeinated, and pajama-clad, and you can start work. This is a bad habit to get into. I make sure to get up with ample time before my work day starts, so I can exercise, shower, and get some coffee before starting my work day.
+</p>
+
+<p>
+When you work from home, don't just wear sweat pants and a t-shirt. Wear the same thing you'd normally wear to the office (maybe minus the shoes and tie) so that your body still feels like it's working. I used to keep a pair of work shoes in the office - that's now a separate pair of slippers under my desk. The small act of getting dressed in work clothes - and changing out at the end of the day - will help you keep your work and personal mindsets separated. It's a physical way of telling yourself, "I'm on the clock now, time to get working!"
+</p>
+
+<p>
+It's also important to compartmentalize the time you spend. Begin and end your work day on a schedule, and set up some automation to help - I have a simple digital alarm clock that goes off a few minutes before work every morning, signaling to me to start my transition. When you take breaks, walk away from your work area. Set your status to "Away" or "Lunch" in your chat program, so that people know you're not at your workstation. Make sure you take adequate time for breaks.
+</p>
+
+<p>
+Your workplace should ideally be isolated and comfortable. Your desk <i>cannot</i> be your bed, the kids' play room, or your wife's sewing area. Try and set aside a location where you do only work. If you can't have a dedicated space for it, then a shared space is fine, as long as you are able to make a clear transition at the end of the day. My first attempt at this was putting a tiny separate desk in my closet, hooking up some spare equipment to my work computer, and leaving it there. For isolation, it worked great - the desk was in the closet, so I could close it! Critically, though, it was incredibly uncomfortable and made work a lot less enjoyable. I was staring at the wall in the closet! It left me feeling drained and gave me headaches.
+</p>
+
+<p>
+I bought some more equipment, moved my desk so I look out the window, and now I have docking station that works with both my work laptop and personal laptop. While I still end up using the same desk setup for both work and play, it doesn't bother me that much, since the work and personal computers are totally different environments. If your work is portable, try moving around to different places and see how it feels in each location. Working on the back porch in the spring or fall is quite lovely. It's important to keep morale up, and just being able to stare out a window while pausing for a thought is one of those small victories.
+</p>
+
+<p>
+Most people have been FaceTiming for long enough that this is common sense, but I made some initial mistakes here. It's in your best interest to protect the privacy of your home, and to not display anything controversial or distracting in your video conferences. When using webcams, make sure your backdrop is a low-activity, neutral area, and doesn't feature things like violent movie posters, frequent changes in light level, or a frazzled wife chasing a naked baby. Webcam covers are great for preventing accidental activation.
+</p>
+
+<p>
+Most offices will provide you with some good equipment - pens, notebooks, headsets, chairs... you likely won't have these items in the same quantity or quality at home. With my first few paychecks I got a better mouse, monitor, and headset. This drastically improved my ergonomic experience working at my desk all day, and helped me out in my frequent hours-long screen-share meetings. A comfy headset with a good microphone is a must if you're using it all day. You can usually get your employer to foot the bill for this sort of thing if it's standard equipment necessary for your position.
+</p>
+
+<p>
+Activity is as important as comfort. Remember to get up and stay active - alarms will help here, too. A pull-up bar in your door frame, a walk around the block, or a small set of five-pound dumbbells will keep your blood flowing. Adjustable desks are expensive, but worth the cost if you're now home-bound full-time.
+</p>
+
+<p>
+It all comes down to the same basic rules that also apply to being in the office: show up on time, prepared, and get your work done. If you can manage that without yelling at your family or tearing your hair out, you're doing great!
+</p>
+<small>Sat, 28 Nov 2020 19:27:19 -0800</small>
+</div>
+<div class='entry'>
+<h2 id='breaking-out'>Breaking Out</h2>
+<small>[<a href='#breaking-out'>link</a>&mdash;<a href='blog/breaking-out.html'>standalone</a>]</small>
+<p>
+Written for reference, for a family member.
+</p>
+<p>
+Simple steps, to follow in order, to break free of the shackles of social media:
+</p>
+<p>
+<ul>
+    <li>Make your last post on your account. Write something like "Social media is a not a good way to spend time, and I've had enough. My phone number is X, my email address is Y, and you can contact me through those if you want to talk. I encourage you all to join me, and we can create a group email list or group chat on Signal."</li>
+    <li>Change the passwords to something really long and random, like "p-mSM^n19CFCXD#JLpGzsY%gcU". Optionally, have a trusted friend change the passwords for you, so you can't log in.</li>
+    <li>Delete the apps, if you have them on your phone. Selectively delete them from your browser history or your bookmarks. Log out of all active sessions.</li>
+    <li>Wait a month or three. See how you feel.</li>
+    <li>During this time, read a book, write a journal, or make a website. Contemplate how you feel.</li>
+    <li>Write down a list of things you might need to log back into your account for - if you've signed up for any services with the "Sign In with Facebook" button, you'll need to reconfigure those.</li>
+    <li>Log back into the accounts and delete them after an appropriate amount of time has passed.</li>
+    <li>Remember - if a person will only talk to you on social media, and not via personal messages, email, phone calls, or the real world, they're not your friend, and you're better off not wasting time with them.</li>
+</ul>
+I sincerely hope this helps you free your mind and love yourself.
+</p>
+<small>Fri, 20 Nov 2020 15:22:02 -0800</small>
+</div>
+<div class='entry'>
+<h2 id='encrypted-mobian-install'>Encrypted Mobian Install</h2>
+<small>[<a href='#encrypted-mobian-install'>link</a>&mdash;<a href='blog/encrypted-mobian-install.html'>standalone</a>]</small>
+<p>The only shortcoming of Mobian is it doesn't allow for FDE out of the box like postmarketOS does. Here's some theoretical instructions to get it working.</p>
+<p>Two tips - 'df -Th' and 'lsblk' will be your friends - the former shows mounted filesystems, and the latter shows block device layout. Neither is destructive.</p>
+<p>
+Use the following to mount, setup, and get appropriate data into the partitions:
+<ul>
+    <li><a href="https://wiki.mobian-project.org/doku.php?id=security">The Mobian Wiki</a> has some general steps for encryption. They're mostly correct. I'm going to kinda rewrite them below.</li>
+    <li>Obtain 2 copies of the same <a href="https://images.mobian-project.org/pinephone/">mobian image</a>. I've renamed mine to 'mobian_source.img' and 'mobian_target.img'</li>
+    <li>Run <span class=mono>sudo losetup --partscan /dev/loop1 mobian_source.img</span> and <span class=mono>sudo losetup --partscan /dev/loop2 mobian_target.img</span>. You will have two loop devices based on the images and they should both have two partitions - their /boot and root partitions.</li>
+    <li>From here on out, just become root via 'sudo su' or however you like.</li>
+    <li>Make two directories in /mnt - 'source' and 'target'. Mount the source image's root partition (loop1p2) at /mnt/source, and its boot partition at /mnt/source/boot. Don't mount the target yet.</li>
+    <li>Encrypt the target's root partition. This is a destructive command. Run <span class=mono>sudo cryptsetup luksFormat /dev/loop2p2</span> and provide your encryption password twice.</li>
+    <li>To mount the encrypted partition, run the following commands: <span class=mono>cryptsetup luksOpen /dev/loop2p2 pine; mkfs.ext4 /dev/mapper/pine; mount /dev/mapper/pine /mnt/target; mount /dev/loop2p1 /mnt/target/boot</span>. This opens the encrypted LUKS container and sets up a device mapper for it with the name 'pine', enabling us to format and mount it that way.</li>
+    <li>Right now, the target root partition is completely empty. Run the following to sync the source image's stuff to the target image: <span class=mono>rsync -aAH /mnt/source/* /mnt/target/ ; ls /mnt/source; ls /mnt/target</span> . Make sure you sanity-check with the ls commands that everything copied correctly.</li>
+</ul>
+</p>
+<p>From here on out, things become a little more complicated. Although this is Debian, the <a href="https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation#Copy_DNS_info">Gentoo handbook's installation guide</a> has a fantstic list of what to mount and how to work in a chroot without any fancy tools (looking at you, arch-chroot).</p>
+<p>If you're running this on your x86(_64) computer, you will need qemu-user-mode emulation, but don't fret. It's super easy. Use your package manager to install 'binfmt-support' and 'qemu-user-static' (or whatever your distro calls it - check <a href="https://pkgs.org">pkgs.org</a>). You should have a binary in /usr/bin/ called qemu-aarch64-static or something like that. Copy it to /mnt/target/. That's it!</p>
+<p>Copy your resolv.conf to the chroot, or at least edit one in place. Most people will just need one line: 'nameserver 192.168.1.1'.</p>
+<p>Bind the partitions to your chroot:
+<span class=mono>
+    <ul>
+        <li>mount --types proc /proc /mnt/target/proc</li>
+        <li>mount --rbind /dev /mnt/target/dev</li>
+        <li>mount --rbind /sys /mnt/target/sys</li>
+    </ul>
+</span>
+Then, chroot:</br>chroot /mnt/target
+</p>
+<p>
+Next, you'll need to download a file - the 'osk-sdl' keyboard package - from <a href="https://gitlab.com/Jarrah/osk-sdl-mobian/-/releases">this releases page</a>. It's a precompiled .deb for arm64. Since you're now root inside your image, you can just wget the latest release and then run <span class=mono>apt install ./osk-sdk_arm64.deb -y</span> to install the package. You WILL need to remove the cryptsetup-initramfs package, if the , so 'apt remove' it.</p>
+<p>Run <span class=mono>update-initramfs -u</span>, and then edit /etc/default/u-boot with an editor (vim/nano). You will need to replace the U_BOOT_PARAMETERS with this line:<br/><span class=mono>U_BOOT_PARAMETERS="osk-sdl-root=/dev/mmcblk0p2 osk-sdl-root-name=pine root=/dev/mapper/pine console=ttyS0,115200 consoleblank=0 loglevel=7 rw plymouth.ignore-serial-consoles vt.global_cursor_default=0"</span></p>
+<p>
+This will instruct the bootloader, u-boot, to use osk-sdl during the boot process. Next run <span class=mono>u-boot-update</span> for u-boot to regenerate its config file from the one you just edited. The config file lives in /boot/extlinux/extlinux.conf for mobian. Make sure you also edit this file and ensure that the 'append' line does not begin with 'root=UUID....'. If so, just that section, and make sure osk-sdl's entries are first. Mine looks like this:<br/>
+<span class=mono>	append osk-sdl-root=/dev/mmcblk0p2 osk-sdl-root-name=pine root=/dev/mapper/pine console=ttyS0,115200 consoleblank=0 loglevel=7 rw plymouth.ignore-serial-consoles vt.global_cursor_default=0</span><br/>
+</p>
+<p>
+That should be it, mostly. Exit the chroot with 'exit', as usual. You're back on your system. Then, run <span class=mono>umount -Rl /mnt/target; cryptsetup luksClose /dev/loop2p2</span> to unmount the chroot and image's loopbacks. Run <span class=mono>losetup -d /dev/loop1;losetup -d /dev/loop2</span> to close the images. Your image 'mobian_target.img' should now contain all your changes. Wicked!</p>
+<p>
+Once you boot the system, it will have a kinda bad keyboard that offers no hinting that will ask for the password you entered in the 'cryptsetup luksFormat' above. Enter it there, and once you boot up you will need to resize the filesystem.</p>
+<p>On the pinephone itself (or ssh'd in, that's much easier) run cfdisk on your partition. The auto resize during first boot doesn't work on this setup. Increase the size to whatever you want (on internal storage, probably about 14GB) and then reboot. Back in your system, run <span class=mono>resize2fs /dev/mapper/pine</span> and it should expand your system to the size of the partition.</p>
+<h4>You're done! Enjoy your encrypted PinePhone Mobian install!</h4>
+<small>Fri, 06 Nov 2020 08:19:10 -0800</small>
+</div>
+<div class='entry'>
+<h2 id='pinephone-operating-systems'>PinePhone Operating Systems</h2>
+<small>[<a href='#pinephone-operating-systems'>link</a>&mdash;<a href='blog/pinephone-operating-systems.html'>standalone</a>]</small>
+<p>The coolest computer I've seen in a long, long time is the <a href="https://www.pine64.org/pinephone/">Pine64 PinePhone</a>. It offers the true dream of convergence - you bring this phone with you and it's your mobile computer, where you can use a full Linux system on the go, and when you get backi to your desk, you set it in a dock, where it charges, but also connects to a monitor, keyboard, and mouse, and it displays a full desktop environment on the external display.</p>
+<p>Right now, the end user experience of the PinePhone kinda sucks. It's slow, gets hot, and the battery doesn't last for very long. But as a proof-of-concept, it is the single most important smartphone ever: A real Linux computer, with (mostly) mainline support, that can run a variety of different operating systems without a lot of tweaking. The experience between operating systems also varies greatly.</p>
+<p>Most OSs are on <a href="https://wiki.pine64.org/index.php?title=PinePhone_Software_Releases">Pine64's list of software releases</a>. Check out that list for the latest. I've tried the following so far:
+<ul>
+    <li>postmarketOS: Probably the most complete and reliable experience. You build the image yourself on your computer with pmbootstrap, their custom script, but fear not - it's really easy. <a href="https://wiki.postmarketos.org/wiki/PINE64_PinePhone_(pine64-pinephone)">The instructions are here.</a> I say it's the most complete because you can customize the username, hostname, extra packages, and optionally use full disk encryption. However, Alpine Linux is not my favorite OS - apk, openrc, and busybox are all much less familiar and friendly than apt, systemd, and the GNU coreutils. Flatpak doesn't really work, and gammastep isn't in the repos. The performance is solid, though, and it had convergence before anyone else. I think the other OSs are just copying this kernel build.</li>
+    <li>Arch Linux ARM is fast and smooth. As a base image, it's great, but I'd have to build a lot on it to make it usable. There is basically nothing on the base system, and is very much in prototype stage. It seems to be largely the work of one individual.</li>
+    <li>Manjaro ARM is a great option. Most software works without tweaks, the repo is huge, and they release images frequently. Unlike postmarketOS, in order to use it, you have to flash the image to your SD card, use the 'manjaro' user, and you have to layer packages on after the fact. There's no installer, where you can customize the system as it's applied to the device. It is pretty solid, though, convergence works well, and people are actively working on it. It is quite a bit slower and heavier than the other options, though.</li>  
+    <li>Mobian is Mobile Debian. It is my favorite of the images I've tried. It is not the fastest to boot, but it runs the quickest and seems like it's the best for battery life and temperatures. No idea how they're tweaking the system, but it's amazing. It's distributed via flashable images too, though - no option to use a custom user or set up encrypted partitions. It seems like the project is also a one-person deal, too. However, new images are released and deployed nightly, so that's neat. CI/CD gives me a lot of confidence it will live for a while.</li>
+</ul>
+</p>
+<p>While I plan to try out some other OSs (There are builds of Fedora, Sailfish, UBports, and even Gentoo) these are the main ones that seem worth using. I'd rather see the whole community rally behind one, than have fragmented development - if postmarketOS's stability could be combined with Mobian's software availability, that'd be ideal! Long term, postmarketOS does seem like the one to go with. I'll just have to figure out the packaging situation in Alpine.</p>
+<small>Wed, 04 Nov 2020 20:15:28 -0800</small>
+</div>
+<div class='entry'>
+<h2 id='fedora-33'>Fedora 33</h2>
+<small>[<a href='#fedora-33'>link</a>&mdash;<a href='blog/fedora-33.html'>standalone</a>]</small>
+<p>My OS of choice, most days, is Fedora. It's the best of both worlds of a static and rolling release model - rolling kernels and firmware for up-to-date hardware support, but static, stable releases of major versions of software like Gnome and Libreoffice. Minimal vendor customization in exactly the right places, for the future of the Linux desktop, first. I like what it does for me, and how it does it. It's the least bothersome I think and OS could be. Every six months, with each new Fedora release, I either upgrade or reinstall on the new release of Fedora. This release, I've been running the beta on my test system and homelab server for a while, so I haven't had any reason to hold of installing it on day one - it's been stable, solid, and bug-free for my use case for a long time.</p>
+
+<p>Fedora 33 has a lot of big changes that nobody hopefully ever sees: the default disk layout changed to Btrfs (instead of ext4 on LVM), traditional swap has been traded for ZRAM, and systemd-resolved now handles DNS resolution for NetworkManager. Of these, only ZRAM applies to servers, so admins are in the clear from most new features. Upgraders don't get their filesystem converted, either, so most users won't experience the brunt of the new features.</p>
+
+<p>The install is the same as it ever was - quick, easy, and without issue. Restoring my files from a backup was just as easy, and now I'm writing this on Fedora 33. I installed the stuff I use, and got back to work. From install to full productivity took about an hour. The changes mostly don't effect my day-to-day usage, because if I wanted to manually partition my drives, or mess with my resolv.conf, I would probably stick with a more stable release, like Debian or CentOS, where I would install or upgrade once every 2 to 3 years. All I can tell with this release is that I have more things to learn (Btrfs stuff) and more free space. Both of those are good things.</p>
+
+<p>It struck me this time around that Fedora's becoming more like macOS. This is a compliment - I use a Macbook every day for work, and while it's not perfect, it's far from terrible, too. The desktop experience is efficient, stable, and just the right amount of customizable, and has been for a long time. In 2013 macOS introduced memory compression. It helped out my 4GB RAM Macbook quite a bit. They've since switched to a more advanced filesystem with subvolumes, snapshotting, and other features that Btrfs and ZFS have had for years as well. macOS also prioritizes appearance and user experience, and Fedora's going the same way. Fedora recently enabled an OOM Killer - a daemon that kills programs to save your desktop experience, in FC32. A release or 2 before that they focused on "flicker-free boot" and started using the vendor logo in the splash screen on UEFI-booting systems. It seems like Fedora consistently tries to one-up their last release on the functionality of the user experience, and I appreciate that. I see a lot of similarities between the two. (And a lot of differences, but that's pretty obvious.)</p>
+
+<p>All in all, this has been a fun release cycle. Testing weeks were fun, IRC is always lively on release day, and it's good to see the best keep getting better, and not slowing down.</p>
+
+<p>A few other nice things to note: they switched to nano as the default editor, but since I already have "export EDITOR=vim" in my .bashrc, I didn't notice. gnome-terminal also has a few lovely new color schemes (GNOME Dark and GNOME Light), and they look much nicer than the standard xterm and tango setup that's been there for a few years. Gnome 3.38 continues to be Gnome, and Sway continues to be the best WM ever.</p>
+<small>Tue, 27 Oct 2020 19:05:40 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='usb-type-c-on-everything'>USB Type C On Everything</h2>
+<small>[<a href='#usb-type-c-on-everything'>link</a>&mdash;<a href='blog/usb-type-c-on-everything.html'>standalone</a>]</small>
+<p>
+Back in the ye olde days of 2015, a new connector technology took the world by storm - USB Type C. It first appeared on smartphones as a replacement to the ubiquitous micro-USB charging port, then other little gadgets, then full-on laptops. Later, Thunderbolt 3 brought PCIe expansion through that same port, and we other things like DisplayPort Alternate Mode, USB-C headphone adapters, an official Power Delivery spec, and <a href="https://en.wikipedia.org/wiki/USB_3.0#USB_3.1">different variants of the USB 3 standard</a> muddied the waters even further. Is this all starting to sound like it's more trouble than it's worth, just for a connector that's reversible? Well buckle up, we're not even to the good part!
+</p>
+<p>
+Early adopters of USB-C should remember the name of Google engineer Benson Leung. In 2016, Benson's laptop (charging over USB-C) was fried by a low-budget cable. He discovered, as we now know years later, that the power deliver standard and alternate modes must be implemented correctly, not only in the charger, but also the cable and the device with the port. Benson didn't want others to suffer the same disaster that befell his laptop, so <a href="https://www.androidpolice.com/2016/02/02/google-engineer-benson-leung-finds-a-usb-type-c-cable-that-isnt-just-dangerous-on-paper-it-allegedly-fried-his-hardware/">he set about investigating the problem</a>.
+</p>
+<p>
+Another small issue has to do with cable labeling - if you have a cable with a Type-C connector, what sort of data is that cable capable of carrying? Can it deliver enough power to charge a laptop? Does it operate at USB 3.1 Gen 1 speed, USB 3.1 Gen 2 speed, or one of the USB 3.2 speeds (Gen 1x1, 2x1, 1x2, or 2x2)? Can it do DisplayPort Alternate Mode? Is it a Thunderbolt cable?
+</p>
+<p>
+The continuous issues with USB-C have me pining for the simplicity of microUSB we all took for granted. I've slowly been making the transition, but even newer, higher-quality gadgets like the <a href="https://old.reddit.com/r/NintendoSwitch/comments/87vmud/the_switch_is_not_usbc_compliant_and_overdraws/">Nintendo Switch</a> and <a href="https://arstechnica.com/gadgets/2019/07/raspberry-pi-4-uses-incorrect-usb-c-design-wont-work-with-some-chargers/">Raspberry Pi 4</a> have had issues correctly implementing USB-C, and this should be highly concerning. If they can't get it right, who can?
+</p>
+<p>
+The mitigation strategy for USB-C is to only buy verifiably tested and recommended gear - the third-party chargers I use are <a href="https://www.nytimes.com/wirecutter/reviews/best-usb-c-macbook-and-laptop-chargers/">Wirecutter-recommended</a>, but in most cases if I can afford it, I just use the charger that came with the device, and that mostly negates the universality of USB-C. The Switch lives in its dock, and the Raspberry Pi obviously doesn't really move from its spot where it's plugged in to the wall.
+</p>
+<p>
+All that being said, the benefits of USB-C are quite attractive. Both my personal System76 laptop and work-issued Mac can charge from the same cable, and use the same single cable to connect to my keyboard, monitor, and mouse. On the other side of the desk, I have another USB-C cable to charge the "inactive" laptop - it also works on both systems. I can leave the house with my gadgets in tow, and only need two cables to charge everything. Along with that, the cables are much lighter and smaller than typical laptop power cables of yesteryear.
+</p>
+<p>
+It will be years before USB-C is reliable and simple enough to fully embrace and not have to worry about - I'm still wary of charging my tiny running mp3 player on the 65W laptop power brick - but it's getting there. Over the last several years things have only become <i>more</i> complicated, as far as standards go, but most reputable manufacturers are specifying what their cables, hubs, dongles, and docks can support, and they work reliably with most gadgets and operating systems. It's a huge gain for portability, standardization, and interoperability, and it decreases vendor lock-in. I think it's the right way forward, even if it's not perfect yet.
+</p>
+<small>Mon, 12 Oct 2020 18:34:23 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='filesystem-format-interoperability-guide'>Filesystem Format Interoperability Guide</h2>
+<small>[<a href='#filesystem-format-interoperability-guide'>link</a>&mdash;<a href='blog/filesystem-format-interoperability-guide.html'>standalone</a>]</small>
+<p>I've recently published <a href=filesystems.html>a guide of filesystem support, and why it matters</a>. Be mindful of your disk formats!
+</p>
+<p>
+It'll evolve, so if there are questions or issues, please email me. Feel free to send it around if you think it might be helpful.
+</p>
+<small>Wed, 07 Oct 2020 19:21:31 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='the-best-things-we-get'>The Best Things We Get</h2>
+<small>[<a href='#the-best-things-we-get'>link</a>&mdash;<a href='blog/the-best-things-we-get.html'>standalone</a>]</small>
+<p>
+When our retired Italian neighbor up the street graces our dinner table with his homemade spaghetti, it's basically the only thing we eat until it's gone. We eat cold spaghetti for breakfast. I'm racing my wife to the fridge at noon to see who can get the first crack at the foil-clad ceramic treasure chest.
+</p>
+<p>
+Occasionally I'm reminded that the best things we get aren't things we can buy, or things that we can do for ourselves. The best days of the past six months I remember are times when my family was together, when I was out in nature with my best friends, and when I'm sharing something I know with others. The times that it <i>really hits me</i> are usually food-based - taste is a dramatic sense to me, maybe because my diet is so boring most of the time.
+</p>
+<p>
+The best things we get come from when others do things with and for us. For me the big part is the sense of gratitutde and love that I get from knowing that someone though of me and my family, and went out of their way to do something kind for us, like inviting us to stay for a weekend, or bringing us a meal, or giving us a specific thing that we didn't even know we needed.
+</p>
+<p>
+Friends are great, and especially this year it's been great to have interaction with friends. They light up our lives in ways we can't ourselves. Whoever you are reading this, you're probably a friend. Thanks for being in my life!
+</p>
+<small>Sun, 04 Oct 2020 19:15:19 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='give-me-the-easy-button'>Give Me The Easy Button</h2>
+<small>[<a href='#give-me-the-easy-button'>link</a>&mdash;<a href='blog/give-me-the-easy-button.html'>standalone</a>]</small>
+<p>
+As someone who takes pride in his craft - someone who has a deep understanding of a specific discipline - I dislike "Easy Buttons". They teach people the wrong things and encourage laziness. No one should be prevented from expanding their knowledge, and a low entry point is great to encourage new learners, but it should be treated as exactly that - an entry point.
+</p>
+<p>
+My first experiences with Docker/containers were on the command line, and it was a little hard to figure out. However, the Cockpit project has a great graphical interface for containers, and it was what really helped me understand their purpose, basic functionality, and what could be accomplished. A friendly GUI is a great introduction to the power of a tool and an answer to the question, "why should I use this thing?"
+The GUI also <i>still made me use containers</i>! It didn't just do everything for me - I still had to figure out volumes and ports and other nuances.
+</p>
+<p>
+An Easy Button would not do this. An Easy Button would be a big 'ol webpage that says, "want this software? Run my script in your terminal and it's done!" and only works on a specific old version of Ubuntu or something. This sort of thing drives me crazy. I get that people work hard on making bootstrapping scripts, and they're great for personal use, but this doesn't help other people. It turns their systems into appliances that they neither know how to use or fix. It propogates the mythos that computers are unknowable and obscure. It lowers the opinions people have of skilled craftsmen - if I can build Ikea furniture, surely carpenters and mechanical engineers don't have that hard of a job!
+</p>
+<p>
+This post was prompted by a question I saw online - it went something like "how do I secure these five Ubuntu servers? Also I only have twenty minutes." They were sufficiently excoriated in the answers. I can tell they're probably a frequent user of Easy Buttons. They're assuming that a lifelong career can be distilled down to tweaking a few settings in five minutes. No mention of what software they're running, what infrastructure, why this is the case, just mentioning that existing tutorials on system setup don't suit them because they're either too long, or different ones contain slightly different information, and they can't be bothered to suss out the reasons why.
+</p>
+<p>
+The way I'd answer the question - because of course I want to - is as follows.
+<ul>
+    <li>Secure the infrastructure. Put a firewall around them, separate them on different networks if need be. Host-based firewalls are nice, but less useful than proper infrastructure.</li>
+    <li>Invest time in configuration management. At the very least, use another system as a webserver from which you can pull a bootstrapping script. It should be easy to re-deploy these systems, especially if they're identical. </li>
+    <li>Understand vendor recommended best practices. Often the software you install will have documentation that describes how to best secure the thing and performance tweaks you can perform. </li>
+    <li>Make minimal changes. Most systems these days are "secure by default" - that is, most server operating systems out of the box are a pretty good starting point, and if you have to ask what to do, you've got a high chance of really fouling it up. </li>
+    <li>Document your setup!</li>
+    <li>Hire a professional (email me!) to test your system. If you can't do that (you're probably doomed) you can always ask the community. If it's publicly replicable, rent a $5 Linode box, lay down your configs (with names and stuff anonymized, of course), and ask someone else to hammer on it and see if it passes their test. Many people will be willing to do this for free - post in a forum or ask on IRC. </li>
+</ul>
+</p>
+<p>
+This line of work is hard and ever-changing. The barrier to entry can be pretty high. But it's important to understand that building hastily rarely produces good fruits. Take your time. Be precise. An understanding client will know it's more important to get it right than get it right now.
+</p>
+<small>Wed, 16 Sep 2020 20:25:28 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='containers'>Containers</h2>
+<small>[<a href='#containers'>link</a>&mdash;<a href='blog/containers.html'>standalone</a>]</small>
+<p>
+Let's talk about containers. I've been Docker-izing a number of my resources lately, especially in the wake of my latest Raspberry Pi microSD card death.
+</p>
+<p>
+Virtual Machines are an obvious improvement over bare metal. You get a full OS inside your hypervisor and all the advantages, but you also get scalable hardware resources, the ability to oversubscribe, super fast reboots, incredibly portability, and generally lower power consumption and cost. Virtualization is a huge win.
+</p>
+<p>
+In my opinion, containers are a logical abstraction of where virtualiztion went first. Where VMs remove the overhead of hardware, containers remove the overhead of a full OS. You use the host's kernel, and you don't worry as much about the administration of the actual underlying OS, since the application is isolated. Yes, you obviously still have to run your host OS on a computer with an operating system, but you only need one of those for this to work.
+</p>
+<p>
+With containers, you're able to keep all your resources on the host OS with volumes, map it to whichever port you want, and keep your application nicely contained and packaged inside of what's <i>basically</i> a chroot with slightly more advanced privilege separation (as far as I understand it). You get the advantage of using the host OS's filesystem (including mapped shares or RAID), but your application's dependencies don't muck up your host OS.
+</p>
+<p>
+The best thing about containers is their ability to be reproduced via scripting. You can build containers with automation tools, back them up, send them around, break them and rebuild them. It enables portability, which leads to less vendor lock-in with operating systems or cloud providers. Open standards are great!
+</p>
+<p>
+Sometimes, containers try and behave like virtual machines. It's a little weird. Canonical's LXD and Fedora's Toolboxes are both examples of this - using standard container technologies, but using them for more permanent systems. They kinda bridge the gap between VM and ephemeral containers. I'm not sure what to think about these - on the one hand, I like them, since a laptop with 8GB RAM can't run a ton of virtual machines, but containers are much lighter. On the other hand, it seems wrong to use a technology designed for disposability to store anything permanent in.
+</p>
+<p>
+The main sore spot for me is updating containers. There's no way, as far as I know, to just tell a container to stop, use the latest image, then restart. You have to export it, destroy it, possibly delete the image it was based on, so you can't go back from that point, pull the image <i>again></i>, then recreate the container and hope it works. A ridiculous scenario that should be solved by running something like `docker refresh`.
+</p>
+<p>
+Containers are a great way to run applications. Try it out! Just make sure to make adequate backups of them when you have to do updates and play around a lot before getting serious. There's a lot of strange behavior that's default. 
+</p>
+<small>Tue, 08 Sep 2020 19:13:19 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='raspberry-pis-and-sd-cards'>Raspberry Pis and SD Cards</h2>
+<small>[<a href='#raspberry-pis-and-sd-cards'>link</a>&mdash;<a href='blog/raspberry-pis-and-sd-cards.html'>standalone</a>]</small>
+<p>
+For proabably the fourth time in five years, my Raspberry Pi computer has destroyed another microSD card.
+</p>
+
+<p>
+This happens so infrequently (about every 18 months) that I'm willing to mostly overlook it, but the problem is it always surprises me. I have a high-minded idea that every month I'm going to take my SD card out on a weekend, image it, and keep a few backups, but it ends up being about once every six months, and usually the card dies at the end of those months. Frustrating!
+</p>
+
+<p>
+So, since I have a NAS, I've been slowly moving the Pi's functionality into Docker containers on the NAS. The storage there is slow but reliable, and it'll send me an email if a disk fails. Plus, these drives will likely have a much longer lifespan than a microSD card, given they're NAS-grade hard drives. Most of what I did on the Pi was not services that required a lot of horsepower anyway, and since the NAS as a celeron and 6 GB of RAM, it's able to run Pi-Hole, Syncthing, and a few others <i>much</i> faster than the Pi itself did.
+</p>
+
+<p>
+It makes me sad though, because I love the Pi family, and I wish there was a better way to have it not kill storage so frequently. I've looked into using a flash drive or USB hard drive as external storage, but that just seems like kicking dead whales down the beach. In the end, maybe the Pi's better off doing simple stuff (like the one running the "can you wake up your parents yet" light in my daughter's room) rather than trying to make it a decent server. The Pi's served me faithfully for years, but now that I have a real server, it just doesn't compare.
+</p>
+<small>Thu, 03 Sep 2020 19:27:45 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='building-businesses-on-proprietary-platforms'>Building Businesses on Proprietary Platforms</h2>
+<small>[<a href='#building-businesses-on-proprietary-platforms'>link</a>&mdash;<a href='blog/building-businesses-on-proprietary-platforms.html'>standalone</a>]</small>
+<p>
+With the impending ban of Chinese spyware platforms TikTok and WeChat hanging over our heads in the US, I've been reading a bit about how the users on these platforms are lamenting the loss of their preferred social media site, as well as potential advertising/brand deals. I've got thoughts about building a business on a platform you don't control. (TL;DR: it's a stupid idea)
+</p>
+<p>
+A few things must be addressed first though - if the United States is a free-as-in-freedom country, which it purportedly is, then our government can't feasibly ban a media platform. They'd have to convince every ISP to not route traffic outside the US's borders, effectively isolating us from the wider Internet (or, convince every other country to cut ties with China, but that far less likely). VPNs are stupid-easy to employ these days, and if those are banned, then we have cloud hosting, proxies, and Tor. There's no way that something that's basically just a single website can really be banned, especially if it's hosted outside the US. It's probably already functional as a Progressive Web App anyway, so it's not like removing the app from the platforms' stores will do anything meaningful.
+<br>
+Secondly, as much as this is a laughably unenforceable proposition (just like anything corona related), the US government can't <i>not</i> do it. The duty of our leaders it to protect us from threats, foreign and domestic, visible and invisible, and this is one of those <a href="https://www.youtube.com/watch?v=HGKnLXiFgDA">fairly obvious</a> threats to the freedom and liberty of Americans. This has been a long time coming, too; <a href="https://www.military.com/daily-news/2019/12/30/army-follows-pentagon-guidance-bans-chinese-owned-tiktok-app.html">the US Army already banned it last year</a>.
+</p>
+<p>
+Given all that, does it really matter if TikTok gets banned? People will still find ways to use it, and like MySpace before it, if it truly dies, users will move. These days, as far as I'm aware, people use Facebook less and less, and have migrated over to things like Instagram, Snapchat, and TikTok. Instagram's cloning TikTok's features - just move there. Or, even better, don't use a platform controlled by a third party in the first place.
+</p>
+<p>
+Proprietary platforms like TikTok, WeChat, Instagram, and YouTube are usually about just one or two things - making money, and spying on their users. They go hand in hand - the data gathered from the spying is valuable to advertisers, and that's where it gets sold. They don't care about you or your content - it's not a platform for "creators", it's just spyware. And you want your livelihood to depend on this? You're way better off de-coupling as many things as possible, and having each individual layer of your Internet presence attached to each other with open standards, not proprietary platforms.
+</p>
+<p>
+The Sisyphean task of constantly trying to figure out what unwritten rules you have to follow this week to be on these platforms is, it seems, all people talk about. If they're not helping you (and they're not, really) then leave! Build your own thing. Mastodon's source code exists. People got along just fine in the days before social media. Businesses rose and fell, and weren't beholden to the crack of the not-woke-enough whip, or the you-can't-blame-China ban-hammer.
+</p>
+<p>
+Speaking of China - why would anyone want to give them any business, revenue, or anything positive at all these days? Living conditions are so bad that they created a global pandemic, they create tech products with backdoors, they're an economic powerhouse only because they treat their citizens so poorly, and they're actively interested in the destruction of free society. Of course Chinese citizens are wonderful and lovely human beings and deserve much better than they're getting, but the Chinese Government (and by extension, any company based in China, like ByteDance or Huawei or Lenovo) should not be trusted! Apathy about privacy and security is not ok. The bad guys offer some really delicious poisoned apples, but part of living a virtuous life is not enabling bad people to do bad things, even if it requires a small sacrifice on our part.
+</p>
+<p>
+Building businesses on proprietary platforms that you do not control means that you do not control your own business, and you do not have direct access to "your" customers. Especially if the owners of the platform on which you build have a known track record of screwing the little guy, arbitrarily changing the rules, and enthusiastically bowing to the wishes of one specific government. You want as few uncontrollable factors as possible to be able to turn off the lights over night. And if one of those factors is pettiness among governments, or the banning of your platform because it's <i>actual spyware</i>, then, well, you've made some poor decisions. Next time, choose independence!
+</p>
+<p>
+P.S. Don't help the bad guys - it makes things a little less convenient, but overall, your life (and the lives of future generations) will be better.
+</p>
+<small>Mon, 17 Aug 2020 19:29:45 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='new-pc-build'>New PC Build</h2>
+<small>[<a href='#new-pc-build'>link</a>&mdash;<a href='blog/new-pc-build.html'>standalone</a>]</small>
+<p>
+For the past three years I've been trying to band-aid my wife's computer issues by slapping in spare parts and doing tiny upgrades here and there - add another SSD, add more RAM, tweak some software, etc. None of this has solved the problem of her bringing about the heat death of the universe from the corner of our shared office room.
+</p>
+<p>
+Earlier this year I finally got a new laptop after limping along with a 7-year-old machine for a while. She's not in as bad of shape (her current machine is a Core i7-4790) but she's topped out on upgrades. Her rig is a prebuilt with a limited power supply that's topped out on RAM. The machine is great otherwise, but she uses the machine like the Linux kernel manages memory: anything unused is wasted! She edits videos in kdenlive and frequently maxes out CPU usage. Renders take hours. The SATA SSD doesn't provide the access times she needs for large files. The system has crashed multiple times due to lack of RAM, and I actually increased the swap space out of desperation a while back.
+</p>
+<p>
+So we've got an upgrade on our hands. Here are the parts:
+<ul>
+	<li>CPU: Ryzen 3700X. Basically the best bang-for-your-buck CPU, and we're doubling thread count. Also it consumes less power than the current CPU.</li>
+	<li>RAM: 32GB (2x16) DDR4. This way I can buy the same kit again in if she eats all this up.</li>
+	<li>Storage: a 1TB Samsung EVO nvme drive. We'll use her existing SSD for a scratch drive or something, and I've got a few 3TB HDDs I can chuck in there and make a btrfs mirror to back up to.</li>
+	<li>Motherboard: An Asus B550 board, with reportedly great power delivery, which is going to be important. It has a 2.5G Ethernet card by realtek, for which I have to hand-compile drivers, but it's not bad.</li>
+	<li>PSU: EVGA 750W fully modular PSU. I've never used a fully modular PSU before and it's pretty sweet. It has an eco/quiet mode so the fan won't turn on until 50% load.</li>
+	<li>Case: Phantex Enthoo Pro. It's a little old, but a great case, with lots of options, and multiple 5.25" bays! You know how hard it is to find a decent modern case with CD drive bays? Critically this case has a front 200mm fan, so it can move lots of air quietly.</li>
+	<li>GPU: RX 5500 XT. I contemplated an older RX 580, but it's less efficent. It would have been less expensive to reuse the existing Nvidia card, which is not terrible, but Linux's amdgpu is pretty mature and I'm sick of having to use DKMS just to get the privilege of using Nvidia's proprietary (ugh) driver.</li>
+</ul>
+</p>
+<p>
+The build process was super simple, as most of them are these days. Verified the parts were working out of the box, stuck everything together, did a BIOS update, and installed Fedora. I'm increibly impressed with how easy it was, with only the Ethernet driver requiring manual intervention. (Doing some research, it's on its way into the Kernel anyway - this is just th perpetual curse of running Linux on brand-new hardware.)
+</p>
+<p>
+One super silly thing to note - this is the only PC I've ever owned that did not max all its cores when ripping a DVD in HandBrake, or rendering a video in Kdenlive.It's nice to finally have a machine with a little headroom.
+</p>
+<small>Tue, 11 Aug 2020 06:41:32 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='good-beers'>Good Beers</h2>
+<small>[<a href='#good-beers'>link</a>&mdash;<a href='blog/good-beers.html'>standalone</a>]</small>
+<p>
+Here's some good beer's I'd recommend, and the time of year in which they should be consumed. I don't like drinking dark beer in the spring or summer time, since to me, it feels like something you should have with a stew by the fire in winter. Just like hot coffee isn't great on a summer afternoon (cold brew for that!) and a milkshake might not be a great time on a cold day, different flavors of beer should only be quaffed when it's their perfect time of year. Of course, this is all my opinion, and you may have different taste from me. This list will be updated as I try new things.
+</p>
+<p>
+<ul>
+	<li>
+		Guinness - not a great beer, but the Best Beer. Drinkable in any season, but preferable fall/winter. Nice and smooth, a classic dark beer. Not very complex.
+	</li>
+	<li>
+		Sierra Nevada Hazy Little Thing - a fantastic go-to spring or summer beer, as is any hazy IPA. Sweet and fruity, simple, and just all around lovely.
+	</li>
+	<li>
+		Backwoods Pecan Pie Porter - Possibly my favorite "weird flavors" beer. Very nice flavor for before/after a cold night walk. Great in October..
+	</li>
+	<li>
+		Blue Moon - surprisingly I just had one of these a few weeks ago. I don't often go for non "craft" beers, but I had one after a run in the sun, and it was fantastic.
+	</li>
+	<li>
+		Deschutes Hand Up - Feels like a mix between an IPA and something a little more full-bodied and flavorful, like and ale. I've only had a few but something I'm warming to. 6/10, only because it's got a higher ABV than it has any right to. Good all year.
+	</li>
+	<li>
+		Leinenkugel Summer Shandy - This or its grapefruit variant are some of my wife's favorites. Low ABV since it's basically half juice. Not really good any time but Summer time, and especially fantastic after a run, or while sitting on the porch in the sun.
+	</li>
+	<li>
+		Left Hand Milk Stout - Nitro or GTFO! This is like a Guinness++. Nothing worse and everything's better. I restrict stouts to winter but with this one it's hard.
+	</li>
+	<li>
+		Arrogant Bastard - You probably wouldn't like it anyways, but it's worth a shot. It's a strong, tall boy. Fall.
+	</li>
+	<li>
+		Rogue Voodoo Doughnut - Had this one years ago, and I still remember it fondly. It was weird (of course it was) and I like weird, but it was a little too much for me. Probably don't drink it during a Kansas summer. That's likely what ruined it.
+	</li>
+	<li>
+		Riverbend Life's a Peach And Then You Die - it's a Peach Milkshake IPA. It's thick, cloudy, sweet, but not overly cider-y, still very beer-y. Delicous. Spring &amp; summer. Possibly the one on this list I'm most fond of, mostly because my wife likes them too. Typically she likes ciders but this one's a great middle ground.
+	</li>
+
+
+</ul>
+</p>
+<small>Thu, 06 Aug 2020 10:59:18 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='simplicity-versus-power'>Simplicity Versus Power</h2>
+<small>[<a href='#simplicity-versus-power'>link</a>&mdash;<a href='blog/simplicity-versus-power.html'>standalone</a>]</small>
+<p>
+I've been working with <a href="https://spacewalkproject.github.io/">Spacewalk</a> at work recently. It's a powerful but user-friendly system for managing software in an organization for other Linux servers - think of it as analogous to WSUS for Windows. Spacewalk can do quite a bit, and is nice for organizations that need reproducibility in all their systems.
+</p>
+<p>
+Working with these systems, I frequently grow frustrated with how the system tries to simplify its interface for usability, but that introduces cruft and bloat. Spacewalk requires a database, has a web interface, takes over the package repositories for a RHEL-like system so you can't use other repos, and requires root even to search for packages on subscribed systems. Its complexity is far-reaching and kind of invasive.
+</p>
+<p>
+On the other hand, <a href="https://gitlab.com/elagost/apt-mirror-scripts">working with apt-mirror</a> is a much simpler task. Set aside for a second that Ubuntu and Debian aren't really as enterprise-production-ready as RHEL. The difference in architecture is drastic. You need to install one package, that's really just a perl script, and place a bunch of scripts and cron jobs on the server. Even something like an Arch Linux mirror is pretty simple to set up. (who would've thought?)
+</p>
+<p>
+Back in Spacewalk land, I've been dealing with some errors that don't seem to be documented, shouldn't be happening, and would be easy to work around were spacewalk just a bunch of shell scripts. I'm sure a database is less prone to screw-ups (I had my fair share of corruption with apt-mirror) but the differences are negligible.
+</p>
+<p>
+Complexity is great when you absolutely do need it, but most of the time, the Unix Philosophy prevails - slap together an interoperable collection of scripts out of a few small tools, and you end up with a system that's easier to understand, maintain, and debug from a new user's perspective. And yeah, shell scripts are slow compared to C code, but in the end, you save everyone else's time by making something that's easier to understand, modify, and redistribute.
+</p>
+<small>Fri, 31 Jul 2020 16:15:52 -0700</small>
+</div>
+
+<div class='entry'>
+<h2 id='rpm-packaging'>RPM Packaging</h2>
+<small>[<a href='#rpm-packaging'>link</a>&mdash;<a href='blog/rpm-packaging.html'>standalone</a>]</small>
+<p>
+RPM packaging is pretty easy on Fedora. I took my silly little <a href="gitlab.com/elagost/alephone-marathon-launcher">game launcher project</a> and added a spec file, basically ripped off the main project's spec file, and ran a couple commands from <a href="https://docs.fedoraproject.org/en-US/quick-docs/creating-rpm-packages/index.html">Fedora's excellent guide</a> for packaging. It, and the main game engine, live in <a href="https://copr.fedorainfracloud.org/coprs/adamthiede/alephone/">my Copr repository</a>.
+</p>
+<p>
+The difference between Fedora's COPR system and Ubuntu's PPA system (and their respective packaging formats) is incredible. Ubuntu's was a huge barrier to entry, but Fedora's was much simpler.
+</p>
+<p>
+For creating a .deb and a PPA, I had to download hundreds of megabytes of packages, create a bunch of directories in a very specific format, handcraft half a dozen text files (most of which should've been tool-created) and invoke several arcane spells that had hardly any useful output when they failed. It took me a while to get it right. At the end of it all I only had a single package for Ubuntu 18.04, x86_64. I don't see myself going back to update it for 20.04, since the process was punishing.
+</p>
+<p>
+For RPM packaging, I downloaded a tarball into a directory, crafted a spec file, and ran a single command. If something failed, it would output useful info, and I'd correct errors, recreate the tarball, then run the single packaging command again. Easy enough. And with Copr, I was surprised at how easy that was, too. I forked the project to my own gitlab repo, made some edits, pointed Copr to that git repo, told it where the spec file lived, and submitted it for building. I selected current versions of Fedora, and Copr just built it. It was as easy as building in Jenkins. Probably one of the easiest pieces in the software building pipeline I have worked with so far. It built for multiple Fedora versions at once without anything more than a checkbox. I could've also selected Maegia, CentOS and openSUSE too! I don't have to manage keys or local build systems - everything happens in Copr.
+</p>
+<p>
+If you're thinking about packaging software for RPM-based Linux, I highly recommend Copr and Fedora's build tools. Can't recommend PPAs at all though - they're hard to work with, and the're going the way of the dodo, according to Canonical; snaps are the future. I've not created one but apparently they're fairly simple, so I'll have to get an Ubuntu VM going and try it out. Maybe I'll post about it here later. (There's an RSS feed. You know what to do.) See you in IRC!
+</p>
+<small>Sat, 11 Jul 2020 07:25:47 -0700</small>
+</div>
+
+<div class='entry'>
+<h2 id='why-i-use-vim-on-the-desktop'>Why I Use Vim On The Desktop</h2>
+<small>[<a href='#why-i-use-vim-on-the-desktop'>link</a>&mdash;<a href='blog/why-i-use-vim-on-the-desktop.html'>standalone</a>]</small>
+<p>
+Vim is popular because it’s always where you need it. I use it because I’ve never found a place where Vim wasn’t there first or incredibly easy to install.
+</p>
+<p>
+I would argue that Vim is best used as close to default as possible, with as few plugins as possible. Most of the quick one-off edits I need to do happen on remote servers. Since they’re cattle, not pets, we keep the images as default as possible. On most modern Linux systems, Vi(m) is present, and the default. On the desktop, I do a lot of interacting with git repos, and the best way to do that is in the terminal. Editing files in the same window I’m managing files and repos in is quicker and more ergonomic for me.
+</p>
+<p>
+When I git commit, Vim is there. When I visudo, Vim is there. Any remote system I need to make a quick change on, Vim is there. When I pull down an Alpine Linux container or spin up an OpenBSD server I can be sure that Vi will be there, and Vim will be installable from repos, if not present already.
+</p>
+<p>
+So why not use it for editing on my desktop as well? It’s certainly as extensible and powerful as Atom/TextMate/VSCode. There’s no end to the functionality, too; I pick up new features a couple times a year and add those to my tool belt. I remember a lot of keyboard shortcuts and movements for Vim, and the “Vim modes” in these other editors always ends up being half baked to the point of uselessness, so I go back to Vim.
+</p>
+<p>
+Running default is important to me. My vimrc is less than 50 lines, and I use three plugins. They assist with writing prose and don’t hinder me by not being there on servers.
+</p>
+<p>
+If you’re only editing on the desktop, use TextMate or Gedit or VSCode or whatever. They work great. But in my workflow I value consistency, and I frequently edit on systems I can’t customize, so why not get comfortable with the tool that I know is going to be everywhere?
+</p>
+<p>
+My vimrc is <a href="https://adamthiede.com/Files/vimrc">here</a> for the curious.
+</p>
+<small>Wed, 01 Jul 2020 06:22:10 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='swaywm-on-opensuse-tumbleweed-is-easy'>SwayWM on openSUSE Tumbleweed is Easy</h2>
+<small>[<a href='#swaywm-on-opensuse-tumbleweed-is-easy'>link</a>&mdash;<a href='blog/swaywm-on-opensuse-tumbleweed-is-easy.html'>standalone</a>]</small>
+<style>
+img {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:90%;
+}
+</style>
+<p>
+My personal favorite way to interact with the windows on my computer is <a href="https://swaywm.org">the Sway window manager</a>. Drew's video on the swaywm.org site explains the concept of sway and tiling window managers better than I can here. I use it instead of i3 because 1) it does compositing and I have no screen tearing, and 2) window movements with Super+mouse work very well.
+</p>
+<p>
+The common problem with tiling window managers is the default config. Sway's is unopinionated and bare, and doesn't provide a bunch of functionality out of the box. Plus, default keybinds for a terminal and launcher are both for Xorg programs, not wayland-native replacements. On many GNU/Linux distributions, sway is shipped default, if at all. However, openSUSE just changed that! They include a fantastic swaywm config by default:
+<br><img src="../Files/openSUSE_sway.png"></img><br>
+It includes wofi (wayland rofi), alacritty, waybar, and sets up swayidle/swaylock automatically. Great stuff!
+</p>
+<p>
+In order to obtain this, just go through the openSUSE tumbleweed install as normal, but select a few things different than the default install.
+</p>
+<p>
+<br><img src="../Files/loaderbar.png"></img><br>
+Boot the openSUSE network installer from a flash drive or in a VM. I'm doing it in a VM for screenshots. Select the "Generic Desktop" system.
+<br><img src="../Files/generic.png"></img><br>
+</p>
+<p>
+Walk through the rest of the installer (partitioning, users, timezone) as you see fit.
+<br><img src="../Files/software_selections.png"></img><br>
+</p>
+<p>
+When you get here, STOP, and click on the teal "Software" word. It'll bring you to the software selecitons page. Select Sway, and then scroll down and select "Enhanced Base System" as well, for regular extra goodies. You'll probably miss something without it, and it can't hurt.
+<br><img src="../Files/select_sway.png"></img><br>
+<br><img src="../Files/select_enhanced.png"></img><br>
+</p>
+<p>
+Also, unless you know you want it, scroll down on the Installation Settings page before installing and select "Switch to NetworkManager". It's more standard and easy to use. If you've used Linux before you'll be used to it.
+<br><img src="../Files/switchtonm.png"></img><br>
+</p>
+<hr>
+<p>
+And there you go. You'll have an excellent sway desktop on a solid rolling release with great defaults. This does not include a web browser, mail client, or display manager - when you first boot the system, you'll have to login to the console, and just run 'sway' on the console. Next, to enable sway to start by default on the console, run this in a terminal:
+<blockquote style="font-family:Monospace">
+	echo '[ $(tty) == "/dev/tty1" ] &amp;&amp; exec sway' &gt;&gt; ~/.profile
+</blockquote>
+Have fun with your silly meme tiling window manager! I've grown to love them over the years, and maybe this will help you.
+</p>
+<small>Sun, 28 Jun 2020 15:32:45 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='openbsd-webserver-setup'>OpenBSD Webserver Setup</h2>
+<small>[<a href='#openbsd-webserver-setup'>link</a>&mdash;<a href='blog/openbsd-webserver-setup.html'>standalone</a>]</small>
+<p>I'm migrating my web stuff to OpenBSD, because it's fun.</p>
+                <p>
+                Here's what I did to get this webserver up and running:
+                <ol>
+                        <li>Signed up for Vultr, got an OpenBSD VPS running with my SSH key. Vultr defaults to pw login, so I edited /etc/sshd_config and set root login to Prohibit-Password.</li>
+                        <li>Did the regular post-install things: syspatch, pkg_add -u, fw_update</li>
+                        <li>Set up a user and doas, so I could run stuff as my own user. Then set ssh to not enable root login at all.</li>
+                        <li>rcctl enable httpd, edited the /etc/httpd.conf to set up multiple websites in the webroot. Example below. (It looks terrible since I don't really care too much about converting the file to be formatted correctly in HTML)</li>
+                        <li>Just to test having multiple sites, and video streaming, on the same system, I put a second webroot in there too.</li>
+                        <li>Installed letsencrypt's certbot with pkg_add -i certbot</li>
+                        <li>Ran "certbot certonly --webroot" from <a href="https://certbot.eff.org/lets-encrypt/opbsd6-apache">cerbot's openbsd page</a> and got a certificate</li>
+                        <li>Plugged the certificate and key into my httpd.conf as show below</li>
+                        <li>Restarted httpd, put the cron job in as recommended, and now I wait for it to break!</li>
+                </ol>
+                </p>
+                <span style="font-family:monospace;page-break-inside:avoid;display:block;">
+                        <br>ext_ip="140.82.47.211"
+                        <br>server "default" {
+                        <br>    listen on $ext_ip port 80
+                        <br>}
+                        <br>
+                        <br>server "openbsd.elagost.com" {
+                        <br>    #alias "openbsd.elagost.com"
+                        <br>    listen on $ext_ip port 80
+                        <br>    listen on $ext_ip tls port 443
+                        <br>    tls {
+                        <br>            certificate "/etc/letsencrypt/live/openbsd.elagost.com/fullchain.pem"
+                        <br>            key "/etc/letsencrypt/live/openbsd.elagost.com/privkey.pem"
+                        <br>    }
+                        <br>    root "/htdocs/openbsd.elagost.com"
+                        <br>}
+                        <br>
+                        <br>server "spice.elagost.com" {
+                        <br>    #alias "spice.elagost.com"
+                        <br>    listen on $ext_ip port 80
+                        <br>    root "/htdocs/spice.elagost.com"
+                        <br>}
+                </span>
+<p>
+Overall this should be a pretty simple system to maintain. Vultr was the cheapest VPS provider I could find that offered OpenBSD. Current hosting provider doesn't provide it.
+</p>
+<small>Thu, 25 Jun 2020 09:53:35 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='like-its-the-2000s'>Like It's The 2000s</h2>
+<small>[<a href='#like-its-the-2000s'>link</a>&mdash;<a href='blog/like-its-the-2000s.html'>standalone</a>]</small>
+<p>
+Short post.
+</p>
+<p>
+I'm hosting a website on a tiny little shared virtual system. I'm troubleshooting SELinux rules. I'm spending evenings with IRC. I bought a book on Python and am churning through it. My computer's running Linux and It's interesting, rather than boring. I'm administering Linux systems at work. In genereal, computers are cool again.</p>
+<p>
+For me, it's like the mid-2000s all over again! :)
+</p>
+<p>
+(yes, this may seem played out and silly to you, but I'm having a lot of fun. I'm motivated to do cool stuff again.)
+</p>
+<small>Mon, 15 Jun 2020 19:29:06 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='web-server-video-streaming'>Web Server Video Streaming</h2>
+<small>[<a href='#web-server-video-streaming'>link</a>&mdash;<a href='blog/web-server-video-streaming.html'>standalone</a>]</small>
+<p>
+Recently I've been serving a lot of web video. We've been producing some silly little videos here at the Thiede household and want a way to share them with people. We're comfortable with them being semi-public (semi, since my website is so poorly SEO optimized that myspace results show up in search before my website) and don't want to have to send them via shared Dropbox links or stuff like that. That's more complicated than we'd like. YouTube is automatically out because it's so incredibly terrible, and I'd have to be a fool to put stuff up there these days.
+</p>
+<p>
+So I started hosting video on my website, in a <i>secret place</i> that isn't linked, you have to know where to go. There are a few things we had to do before getting video to play back in a browser. What's important is the mechanics of how you serve the video, what you serve, and what your expected load is. Ask yourself a few questions before doing this. <br>&nbsp;&nbsp;&nbsp;(This kinda assumes the webserver in question is as low-end as possible, be it a Raspberry Pi zero on a home WiFi network, or a $2.50/mo VPS or something.)
+<ul>
+	<li>What type of video? High-res/high-quality long video, or a short home video where resolution and quality aren't important? Whatever the case, Handbrake has a "web optimized" flag that can be set while encoding the video. It will enable the video to be more easily streamed (for the computers involved) from the beginning without caching the whole thing. It's a very good option, and Handbrake is Free Software. Just do it!</li>
+	<li>How many people will be watching this at once? How likely is it that multiple people will be streaming at the same time, and can your webserver handle that? Fast disks are nice to have, so any other services the webserver is providing don't get interrupted - i.e. if it's used as an irc bouncer or game server, SSDs will help large file reads not constrain the other services.</li>
+	<li>Is there a bandwith cap? Video is pretty bandwith heavy. Most personal webservers tend to be pretty tiny, since it's a system role that doesn't require much resources. Tiny VPSs usually have bandwith caps. Do some quick math and make sure that serving the videos multiple times won't blow through that.</li>
+	<li>Video encoding formats are another consideration - MP4 and webm formats are supported pretty much everywhere. For wider compatibility, h264 still wins over h265. If lower bandwith is a higher priority than wider compatibility, h265 will work great on new-ish devices and save bandwith and storage too.</li>
+	<li>Finally</li>
+</ul>
+</p>
+<p>
+All in all, streaming 3 separate copies of the video didn't take a larege toll on my 1-core 1GB RAM VPS. It was hardly even a load test! The biggest bottleneck was the disk, and I could invest in a VPS with SSD infrastructure if I wanted more speed that way. I even made a little piece JS to switch quality on the fly. Plus, doing it yourself is much more fun. Hack on!</a>
+<small>Mon, 15 Jun 2020 19:14:11 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='children-and-modern-media'>Children and Modern Media</h2>
+<small>[<a href='#children-and-modern-media'>link</a>&mdash;<a href='blog/children-and-modern-media.html'>standalone</a>]</small>
+<p>
+Let's start here from the assumption that the majority of modern media aimed at children - television, video games, movies, books (in some cases) - is mostly bad. The quality of children's media is overall fairly low to begin with, since they don't have higher standards created by greater experience and more nuanced though. Truthfully, no adult consumes children's media after their teenage years, but most adults would consider going back to music, movies and books that they first encountered as a teenager, since the audiences are much closer in maturity level. Since the introduction of YouTube and automatic computer-generated content, the standards have gone down even futher.
+</p>
+<p>
+When the standards for children's media are "the child must like it, and the parents must consent to buy it", it's already a pretty low bar. But when you remove the need for parental consent, and you remove any other limits to publication, like "must be on a DVD in a store", or "must be broadcast on television", the standard slides even futher. Kids will watch anything, and if you give them the most uncanny valley AI-generated 90-second clip uploaded to YouTube from a server farm in Belarus, you're gonna get kids that will watch anything.
+</p>
+<p>
+When a parent hands a kid a smartphone or tablet, or any content-consuming device, they may belive that telling the kid "don't do X" will prevent them from doing X. They may be a little more technically inclined and set up things like Apple's Screen Time restrictions, and have faith in that. But kids are hackers. They will find a dozen ways around any roadblocks you set up, and before you know it your 4 year old is using your smartphone to watch unsavory Internet content without that was supposed to be blocked.
+<br>Bottom Line - <b>don't hand a kid a computer with unfettered Internet access!</b><br>
+</p>
+<p>
+My primary fear about this whole thing is that while we're doing a decent job of it, 90% of these parents who are unaware of the ins and outs of the whole YouTube platform, or who just don't understand computers and networks, let their kids gaze at their smartphones all day with no thought to the long term effects. Then their kids who are 3 and have already seen Frozen seven times before breakfast will shame my kid when what we've been doing is the correct thing. And now I've got to explain to my kid for the tenth time this week that these smartphone things are <b>bad</b>, but who's she going to want to fit in with - her dad, or the other kids?
+</p>
+<p>
+Parenting, I'm coming to realize, is frustrating because doing the right thing can be <b>incredibly hard</b>, and the wrong thing, the thing that'll get you a few more minutes of relaxation and peace, is easy. It's like a slot machine, or an addictive drug - it's easy to just keep doing it because you've been doing it, but very difficult to quit. Sometimes initially it'll seem unhealthy to quit. Things will get worse before they get better. And I'm no paragon of fatherhood either - I've done a pretty lousy job so far, I think. But I try my hardest <s>every</s>most days, and I attempt to learn when I'm doing something wrong. What I do will have lasting effects on my child, and mistakes haunt me, as they should. But hey, at least I'm not gonna get the computer stuff wrong.
+</p>
+<small>Tue, 02 Jun 2020 12:40:27 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='everything-is-a-million-miles-deep'>Everything Is A Million Miles Deep</h2>
+<small>[<a href='#everything-is-a-million-miles-deep'>link</a>&mdash;<a href='blog/everything-is-a-million-miles-deep.html'>standalone</a>]</small>
+<p>
+Everything is a million miles deep. There is no end to how far down the stack someone's preferences go, and people have opinions about every little thing.
+</p>
+<p>
+Somewhere out there, in a thread in a forum in an obscure corner of the Internet, their are a couple dozen real individuals passionately banging out paragraph after paragraph on the most unimportant attribute of something you and I don't even think about. Could be the different types of glass used in old milk bottles. The shape of the rungs of a ladder of one model of Ikea bed no longer sold. The ink on the side of a specific model of car tire. Colors of tile grout.
+</p>
+<p>
+Anything and everything is fair game. Because people so individual, so unique, there is no limit to the depth of their fascination with trivialities. One of my favorite examples is <a href="https://lkml.org/lkml/2020/5/29/1038">this LKML thread discussing terminal column width and code styling</a>.
+</p>
+<p>
+Many people's preferences stop at operating system - Linux, BSD, or macOS? After that, you can discuss BSD flavor/Linux distribution. Then desktop environment/window manager. People normally have preferences regarding GNOME/KDE. Even then, yet further down the stack, is your choice of terminal emulator - the default GNOME Terminal/Konsole, xterm, terminator, or alacritty? Next, vim or emacs?
+</p>
+<p>
+This discussion goes down further than that. After all those choices have been made, they discuss the width to which they should expand their terminal. 80, 90, or 100 characters? And there's hundreds, if not thousands, of words being written on the subject right now, by dozens of individuals with opinions, passions, and experience with a thing most people have <i>never even thought about</i>.
+</p>
+<p>
+Humans are fascinating.
+</p>
+<small>Fri, 29 May 2020 16:52:15 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='secure-non-smart-phone'>Secure Non Smart Phone</h2>
+<small>[<a href='#secure-non-smart-phone'>link</a>&mdash;<a href='blog/secure-non-smart-phone.html'>standalone</a>]</small>
+<p>
+In modern times, people communicate with each other via smartphones, mostly. Whether it's WhatsApp, iMessage, Matrix, email, Signal, or even SMS and phone calls, most people use a smartphone. That means I have to use a smartphone to receive communications from these smartphone-owners, as well. On smartphones we have the ability to choose secure communication. However, I do not want a smartphone, and all the baggage that comes with a full smartphone operating system. But opting out of the smartphone would also mean opting into communication surveillance (and lower quality communication overall), and I do not want that, either. 
+</p>
+<p>
+There are non-smart-phones ("dumb" phones, as they're called now) that are intelligently designed and fairly non-creepy, like the <a href="https://www.thelightphone.com/products">Light Phone</a> and <a href="https://www.punkt.ch/en/products/mp02-4g-mobile-phone/">Punkt MP02</a>, but those for some reason don't put security - or, if your family/friends only use some smartphone app, communication at all - on their list. Also, these devices with their basic SMS/phone call only communication are bizarrely expensive.
+<p>
+Smartphones are bad. That's something we can all agree on here. But the <i>need</i> for smartphones these days cannot be understated. Personally, I feel trapped in the walled garden full of parking apps, 2-factor authenticator apps, communication apps, apps necessary for work - and I'd guess most other people do too.
+</p>
+<hr>
+<p>
+I propose a tool that is a communication device that puts security and privacy first, but is also <i>not</i> a smartphone. The communicator should look and act like a smartphone, but have only a small set of pared-down first-party programs that facilitate total replacement of a smartphone. It will have nothing extraneous and only support four core functions:
+<ol>
+	<li>Messaging. This encompasses voice calls, video calls, and text-based messages. It will integrate with Signal, Tox, Matrix, or whatever is deemed the best most friendly but also secure way to communicate. It should have robust APIs and support integrations from external services, so you can get non-human alerts. This is helpful for people in my line of work.</li>
+	<li>Notes. People frequently have need to jot down a quick note. This program will store plain-text files in a folder and will be visible over USB. Encryption would be considered here.</li>
+	<li>Settings. Of course you need a way to set up accounts, connect to networks, change accessibility preferences, set up a mobile hotspot, view data usage, and manage the darn thing. Updates for core software will be handled from here as well.</li>
+	<li>Maps. One of the more common smartphone features people rely upon and would miss is a maps program. The maps program would allow offline navigation, encouraging local storage of map areas, and possibly integrate with ride-hailing services.</li>
+</ol>
+Functions not included in this device would be things like a music player, camera, web browser, video player, app store, and other features best left to other, larger devices.
+</p>
+<p>
+Speaking of physical characteristics, here are the main goals for the communicator's physical shape:
+<ul>
+	<li>Small size. Most phones these days are ridiculously huge. This should be iPhone 4S size, about. Since touch screens are less expensive than buttons (and allow for greater modularity) this would not have a physical tactile keyboard.</li>
+	<li>Removable, replaceable parts. The communicator's battery should be easily accessible. It should have an easily swappable SIM card (or two), and optionally a microSD card slot for storage of larger maps, or mass storage accessible via MTP.</li>
+	<li>Headphone jack with TRRS support. It's nice to walk around hands-free with a headset while taking a call, instead of performing neck-gymnastics or constantly switching hands. The communicator should be able to take advantage of modern headphones with in-line mics.</li>
+	<li>Standard connectivity. It should use modern WiFi and cellular radios, replaceable as new tech comes out. As many parts as possible should be pogo-pin connected to the mainboard, to facilitate easy removal. The charger should be USB-C or micro-USB, and that should be a choice users can make to suit their needs. The battery should be something that already exists and can be easily sourced, like an existing smartphone battery, or a BL-5C battery.</li>
+</ul>
+All in all, I'm not a manufacturer or a materials scientist. A device like this would be fantastic, and would be my ideal handheld communicator. Minimal required functionality, a true off switch, inexpensive upgrades or part replacements, and obviously 100% open source hardware and software.
+</p>
+<p>
+This is an opinionated device, with very little functionality, made specifically for a small subset of people who have a complicated love/hate relationship with technology like mine. I don't expect it ever to happen, but it's nice to put into words. A man can dream, right?
+</p>
+<hr>
+<p>
+Yes, I'm aware of the <a href="https://www.pine64.org/pinephone/">PinePhone</a>. It gets pretty close, but it's enormous and more functional than I'd like. The device I'm proposing is much stricter and more opinionated than that.</p>
+<small>Sat, 23 May 2020 16:15:55 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='home-surveillance-tier-list'>Home Surveillance Tier List</h2>
+<small>[<a href='#home-surveillance-tier-list'>link</a>&mdash;<a href='blog/home-surveillance-tier-list.html'>standalone</a>]</small>
+<p>
+So you want home security cameras? We'll start off with the easy/flaming garbage/entry level, then go all the way to Ultimate Ascendent Gamer God-Tier.
+</p>
+
+<p>
+Easy/Flaming Garbage:
+<ul>
+<li>
+Nest/Ring/Arlo - basically self-surveillance. THEY should be paying YOU for this. Don't buy. The police can access this stuff whenever they want, and even if you like the police, this is bad. Also you pay a monthly fee.
+</li>
+<li>
+Hikvision - a company sponsored and staffed by the Chinese government. Even though they're technically and physically good, it's like allowing the Chinese government into your home, email, banking, and private thoughs. There's a reason they cost 1/3 the price of something good.
+</li>
+</ul>
+</p>
+
+<p>
+"I did slightly more research than clicking on an ad" tier:
+<ul><li>Wyze cameras - they're ok. Still pretty creepy spyware, but at least it's not going directly to big tech. The low cost and free monitoring makes it at least worth considering.
+</li></ul>
+</p>
+
+<p>
+1337 Hackerman tier:
+<ul> <li>Raspberry Pi + Open Source solutions - Shinobi, ZoneMinder, Blue Iris, etc. are all pretty fun little hacks to run on a low cost credit card sized computer. These solutions cost next to nothing, and are highly modular. Add whatever cameras you like! You can even combine them with high tier stuff like Axis cameras, or low tier stuff like Wyze cameras (with the RTSP firmware).
+</li></ul>
+</p>
+
+<p>
+"I have more money than sense" Tier:
+<ul><li>Ubiquiti UniFi cameras - good stuff. They don't operate with other systems, you have to buy all their stuff, they send loads of telementry you can't turn off, but this is very high quality gear that will last for decades. Real businesses deploy this stuff. Ubiquiti is good. If you like Apple products and don't like learning, buy these.
+</li></ul>
+</p>
+
+<p>
+Ultimate Ascendent Super-Saiyan God Tier:
+<ul><li>Build your own NVR setup with A NAS/home server and RTSP/ONVIF cameras - you care about this stuff. It matters to you. You have 8 disks in RAID, offsite backups, a UPS, a PoE Switch, and 17 Axis cameras bolted to your house. You run OpenBSD on your desktop.
+</li></ul>
+</p>
+<p>
+This list is a joke.
+</p>
+<small>Mon, 18 May 2020 13:46:12 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='home-security-cameras'>Home Security Cameras</h2>
+<small>[<a href='#home-security-cameras'>link</a>&mdash;<a href='blog/home-security-cameras.html'>standalone</a>]</small>
+<p>
+There's two ways to do video monitoring of your home and its surroundings: the easy way, and the right way. I'll explain a) why you should care, b) why the easy way isn't actually that easy, and c) how to achieve both setups. Really, you should do this reasearch for yourself, since these things change all the time, and everyone has different requirements. A setup like this is going to require that you do some work and use your brain. It's going to be a learning experience, and possibly frustrating. At the end you'll get something really good out of it, and the knowledge you gain along the way will help you be a more valuable resource to yourself and others in the future. <a href="https://podcast.asknoahshow.com/156">This podcast episode</a> is a bit of required listening if you're interested in these products/solutions.
+</p>
+<p>
+First, you need to ask yourself a few questions.
+<ul>
+	<li>Do you need constant, real-time video of your home (inside/out) accessible wherever you are, especially outside the home?</li>
+	<li>Do you care who has access to that data? Would it make you sad to know that a bunch of people you don't know/trust could access your footage?</li>
+	<li>Do you want historical data? Would you like to look back at old footage? How far back do you want to go? 30 days? Is 7 days good enough?</li>
+	<li>Are you willing to learn, and put some time and effort into setting this up correctly, or do you just want someone else to handle it?</li>
+</ul>
+If you are more or less apathetic to those points, and it doesn't really matter, then get a Nest/Ring/Arlo setup. It's cheap, you'll be surveilled by the government, police, contractors for Google/Amazon, but whatever, you don't care, right? Stop reading right here. (These are bad systems. They grant other people control over your surveillance, and they make you dependent on their whims. Don't make these products things that you depend on.)
+</p>
+<p>
+First off, if you want cameras to record videos, cameras themeselves can't store and transmit video. The cameras need to connect back to a computer that can store, analyze, and transmit the video. If you want this to be an even remotely good experience, you need to buy something with an ethernet port and a set of big hard drives. To start out, go for a Synology. I have one. They're great products, easy to set up, and easy to keep secure. You can connect any type of ONVIF camera to them, the low-end ones even have powerful CPUs to transcode/transmit all that video, and you can also use spare old smartphones as surveillance cameras. Awesome! <a href="https://www.amazon.com/Synology-Network-Recorder-NVR1218-Diskless/dp/B075MVPNKF/ref=sr_1_2?dchild=1&keywords=synology+nvr1218&qid=1589824860&s=electronics&sr=1-2">This NS1218</a> is a decent start if you just want the cheapest good option. If you want something that's a better long-term option, buy the bigger version, the <a href="https://www.amazon.com/dp/B075N1Z9LT/ref=emc_b_5_i?th=1">DS918+</a>. It is much more expensive, but will last longer, and will afford you more fault tolerance.
+</p>
+<p>
+Now you have your computer. But it needs storage. For drives, buy some Seagate IronWolf NAS drives. 2TB is good enough if you don't need massive capacity, but 4TB is a great sweet spot (and that's when you get drives with bigger caches, anyway). Price accordingly.
+</p>
+<p>
+Next, you need cameras! What type of cameras should you get? Cameras that support the ONVIF standard are the best things to buy, since they're interopreable with any system you could use. You want to buy PoE cameras (power over ethernet) and wire them to a PoE switch. This is the best way to ensure high availability and a consistent connection. Anything connected over Wi-Fi is going to be slower, have higher latency, be more effected by external forces (storms, cars parked in the driveway, people standing in from of the camera) and it will also degrade the performance of your home network. (and vice versa - if you're streaming 4K video your cameras are going to crap out)
+</p>
+<p>
+Obviously you could use any RTSP/ONVIF camera, but what is out there? The best stuff is Axis gear, but it's very expensive. Ubiquiti's UniFi cameras are also great, but aren't as customizable. If you want something cheap, go with Wyze cams. You can <a href="https://support.wyzecam.com/hc/en-us/articles/360026245231-Wyze-Cam-RTSP">manually flash RTSP firmware</a> and get them going, which is a good cheap option. They connect over Wi-Fi which is also less than idea.
+</p>
+<p>
+With all your pieces together, you'll have to install Synology's surveillance station on your NAS, and get your cameras plugged in. If you want fault tolerance, set up RAID, and get a UPS. You can get a cheap little APC desktop UPS, plug in your PoE Switch and NVR, and you'll be good to go if there's a power blip. The switch will power back on when it gets power, and the Synology can be configured to start up after it loses power.
+</p>
+<p>
+Now here's the hard part - networking setup. Ideally, you'd have 3 vlans, minimum - the cameras will be on a camera-only vlan, with no internet access, client isolation, and no access to anything else. The only thing they'll be able to do is access one port on your server vlan, where your NVR lives. Then you can have a third vlan which is your "regular computer" vlan, where your desktop/laptops live. That can connect into the server vlan, but the server vlan can't get to the computers (unless you need it to for some reason). Then, you have a VPN server in your server vlan (whether that's built in on the synology or on a separate server, your choice), and that is your only external hole. This is a reasonably secure setup that isolates things that might be untrustworthy from the rest of your secure zones. 
+</p>
+<p>
+Anyway, these are just my thoughts I wrote down to think about this stuff myself. Haven't bought or used any of these so I can't say myself what's the best. This is just my afternoon's research.
+</p>
+<small>Mon, 18 May 2020 13:33:30 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='how-to-disable-all-windows-10-builtin-ads'>How To Disable All Windows 10 Built-In Ads</h2>
+<small>[<a href='#how-to-disable-all-windows-10-builtin-ads'>link</a>&mdash;<a href='blog/how-to-disable-all-windows-10-builtin-ads.html'>standalone</a>]</small>
+<p>
+<a href=https://www.faqforge.com/windows/windows-10/how-to-disable-all-of-the-built-in-windows-10-ads/">This article</a> caught my attention recently.
+</p>
+<p>
+These always make me laugh. This is valid until a) they add more ad locations, b) they don't turn the settings back on automatically, c) they don't cripple the experience in other ways, require more interaction. It's always a race against how horribly Microsoft can cripple Windows, and if you can keep up with it via changing settings every week, fighting against dark patterns, or registry hacks.
+</p>
+<p>
+Here's my 1 step list to get rid of ads in Windows:
+</p>
+<p>
+1. Install GNU/Linux.
+</p>
+<p>
+At this point nobody that's not an enterprise really needs Windows. GNU/Linux is very good and will probably work better for all but a small minority of computer users.
+</p><p>
+The common excuses people give are
+<ol>
+	<li>I need X specific program</li>
+	<li>I play video games</li>
+	<li>I don't want to learn something new/put in any effort/use my brain at all</li>
+</ol>
+</p>
+<p>
+You can use all but the most niche software on GNU/Linux, or there's an appropriate alternative for it. (Yes, that <i>does</i> mean use GIMP instead of Photoshop. If it has problems, <i>you</i> can fix them, or report them to the developers. That's how Open Source Software works.)
+</p>
+<p>
+Most video games are playable via Steam+Proton, that is, you install Steam, check one box in Steam settings, and install your games. If they aren't, then play them on a console, or don't play them. You don't need to play video games. There also exist a bunch of open source games you can play. Might as well try out Xonotic, 0AD, Minetest, or even Roguelikes (nethack, crawl, rogue).
+</p>
+<p>
+And finally if you are so opposed to freedom and just really want to keep the shackles on, I can't help you. Everything in life requires learning, and if you won't take the time to learn something incredibly valuable, go jump in a lake.
+</p>
+<small>Sun, 10 May 2020 04:50:33 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='port-forwarding-and-dependencies'>Port Forwarding and Dependencies</h2>
+<small>[<a href='#port-forwarding-and-dependencies'>link</a>&mdash;<a href='blog/port-forwarding-and-dependencies.html'>standalone</a>]</small>
+<p>
+Time for a tale of mystery and horror. Every so often my parents call me about computer/network/services problems, and I always solve them free of charge since because they dealt with me for 18+ years, and also I love them and stuff.
+</p>
+<p>
+My dad has this thing in his house that's an internet-connected box that controls physical things in his house (so, already a bad idea; we've all seen that episode of Mr. Robot). It's got a bunch of outputs - CEC, IR, (and RS232 and Ethernet, neither used at this point) that control the entertainment center stuff and switch between inputs. He and my mom can control it on the iPad (which is what he likes). There's also a big physical remote with BlackBerry-style wheel and back button on it, which is AWESOME. Anyhow, the computer box portion of it broke.
+</p>
+<p>
+So this internet connected mystery computer that has unlimited access to his home network (even though I gave him a guest network with isolation!) needs to get an update from the manufacturer to re-enable iPad control because that was the part that broke. So he calls the technicians and they say they can do it via teamviewer, since it's corona time, and nobody wants visitors. He calls me today, frantically asking for the admin password for his router (which I mysteriously have, and he even more mysteriously does not) so he can give it to a technician. I obviously tell him no.
+</p>
+<p>
+But then he explains that the technician is going to remote into his mac, change his router settings to set up two port forwards into this mystery box, and then he'll update it from outside.
+</p>
+<p>
+Anyway, my dad conferences me in with this guy, and since I can't drop everything and offer my dad a better solution in the next 20 minutes, I guess this thing has to happen. I insist the technician remove the port forwards after he is done with them, since there's little else I can do.  He agrees. My dad already has his grill, doorbell, ancient home security system, Christmas lights, generator, and cooking temperature probes on his home network, so it's a lost cause at this point. I'll struggle against it when I have more time.
+</p>
+<p>
+While we're on the call, the technician causally mentions that most of the time, they don't have to have port forwards, because they usually put VPN servers in these boxes. "One button, and then bang, I'm in your home network!" Excuse me?! This box doesn't need to be Internet connected or even network connected - it's just an IR repeater - but yet, here we are.
+</p>
+<p>
+Anyway, moral of the story - given the <i>least charitable explanation</i>, how comfortable are you with the stuff in your home? You should <b>strive for less dependence on technology</b>, especially technology of the mysterious kind. If you don't know how it works and you can't repeat it, don't use it! If you can't service it yourself, and it's a proprietary box that has full access to something you'd be hesitant to give an adversary full access to, don't use it! If facts presented as writ make the thing sound creepy, it probably is. And if it's a lynchpin of your home networking or entertainment setup, you're dependent on it.
+</p>
+<p>
+I strive to remove these things from my life while others these days try to add them in - and I'm supposed to be the "tech guy". Strange times we live in.
+</p>
+<p>
+P.S. Also, if you must compromise your family's safety, make sure it's at least for something cool. This ain't it, chief.
+</p>
+<small>Thu, 07 May 2020 06:27:28 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='ubuntu-derivatives'>Ubuntu Derivatives</h2>
+<small>[<a href='#ubuntu-derivatives'>link</a>&mdash;<a href='blog/ubuntu-derivatives.html'>standalone</a>]</small>
+<p>
+A heavy criticism of a the dozens/hundreds of Ubuntu-based distros is that they're just "Ubuntu + a custom PPA", or even worse, just "Ubuntu + custom wallpapers". There are certainly distributions out there like that (which no one should be running), but I belive more often than not the larger ones do provide some real value and differentiate themeselves from Ubuntu proper.
+</p>
+<p>
+To be clear, lots of the Ubuntu-based systems really <i>are</i> just Ubuntu + a custom ppa, or a tweaked Ubuntu full of someone else's software. But a real stand-out derivative isn't just something you could get better in one of the official flavors - usually the group behind it writes their own software, makes their own applications, or tweak the kernel in their own way for better hardware support. Unlike the lesser derivatives, they don't just pile other peoples' stuff on Ubuntu and call it good.
+</p>
+<p>
+Which of the high-profile Ubuntu-based distros out there <i>don't</i> add something significant to Ubuntu? Let's take a look at the more popular ones and see if they can differentiate. I exclude the offical flavors from this for obvious reasons.
+</p>
+<ul>
+	<li>Linux Mint provides Cinnamon, their own desktop environment. They provide Timeshift, a very good backup program, and some great GUIs for doing complex packaging things that you can usually only do in the command line in Ubuntu. It's based on only Ubuntu's LTS, but they also maintain a Debian-based version. Not only that, they also partner with hardware vendors and make the MintBox, a fantastic computer. I think they're on 3, now. They've been doing this for years. These are significant additions.</li>
+	<li>ElementaryOS provides a much simpler GUI. However, they've written their own app store, created a consistent Human Interface Guidelines document for their platform, encourage and provide documentation for native development, support <i>actually paying developers of FOSS</i>, and are trying to adopt a way to bring this to other distros (search for "appcenter for everyone"). The curated experience, lack of desktop configurability, and overall UI is sometimes called very "Mac-like", but that's usually as a put down more than anything. The small team at Elementary is not only trying to make their OS better. They're encouraging native Linux Desktop development and encouraging users to pay devs for good stuff. These are significant additions, though less "program in your OS" and more "positive addition to the landscape of Desktop Linux".</li>
+	<li>System76's Pop!_OS (that hurt to type) is one of the few Ubuntu-based distros that doesn't stick only to LTS releases. Their additions are pretty straightforward: a Kernel that works bettery with their systems, a driver manager for their systems, useful tweaks to the GNOME UX via extensions they wrote, power profiles for laptops with hybrid Intel &nbsp; Nvidia GPUs, Coreboot firmware for their laptops (technically not part of the distro) and an updater for said firmware (actually part of the distro), and now with 20.04 a custom tiling window manager extension for GNOME. They also support Flatpaks and Elementary's app store program. Their repos contain newer version of handy developer tools, nice addons like Lutris for gamers, new versions of the Arduino IDE, and some other stuff I haven't used. They make what I like to think of as "Ubuntu for Human Beings". Their tweaks make Ubuntu a much nicer place to live for the average user, especially if that user runs a system76 laptop.</li>
+	<li>Zorin OS has <a href="https://zorinos.com/grid/">this badass looking systems management tool </a>. Haven't used it so that's all I know about it. It looks like they're more focused on the enterprise, which is cool. Not something we see a lot of desktop distros doing. They also request you pay for their "Ultimate" edition, which seems like a viable business model, I guess. Gets a pass from me.</li>
+	<li>KDE Neon - basically Kubuntu + Backports PPA on the LTS instead of latest, minus a bunch of packages. The "KDE Experience Distro". Basically their proving ground. Basically a tool they made for themselves. Ok! Kinda an "Ubuntu + PPA" situation, but basically meant as an internal testing too, but they were gracious enough to give it to the masses. Gets a pass.</li>
+	<li>Linux Lite, Peppermint OS, other "lightweight" Ubuntu-base distros: they fill a nice by being super lightweight, but that niche is also served better by things like Lubuntu/Xubuntu.</li>
+</ul>
+<p>
+Overall, the larger Ubuntu derivatives, while taking most (if not all) of their packages from Ubuntu proper, do actually seem to add some value. And the smaller ones, while probably not adding much outside of just how they're configured, they do offer value in the base configuration to their users. That's why the flavors exist - take a desktop environment, add some well-done configuration, set a custom theme, throw in some matching programs, and presto! you have yourself a "distro". When the alternative is Arch or bone-stock desktop environments, these smaller distros, based on a distro based on a distro, make sense.
+</p>
+<p>
+After all, Ubuntu's just buiding on top of Debian's solid foundation, and they all need Linux and GNU. They're all a derivative of something - and there's nothing wrong with that.
+</p>
+<small>Sun, 03 May 2020 11:33:27 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='new-laptop'>New Laptop</h2>
+<small>[<a href='#new-laptop'>link</a>&mdash;<a href='blog/new-laptop.html'>standalone</a>]</small>
+<p>
+After years of crappy craigslist machines and dying batteries, I finally decided to purchase myself a new laptop. (Yes, I did get a new-to-me T430 a few months ago, but that was free, and the battery doesn't work). I decided that since I was going to give money to a company, it should be a company that makes good things and cares about freedom. And, I couldn't buy a laptop and <i>not</i> have coreboot at this point.
+</p>
+<p>
+I bought a <a href="https://web.archive.org/web/20200323184510/https://system76.com/laptops/lemur">System76 Lemur Pro</a>. It is a lightweight 14-inch black laptop that is about the same size as my 12-inch X230. It has 8GB of RAM (with an extra slot available), a 10th-gen i5 U-series CPU, an Intel AC Wi-Fi card, and 2 NVMe drive bays. The embedded controller (the chip that handles keyboard and touchpad events to name a few) and the BIOS are all open source. They use Coreboot with UEFI.
+</p>
+<p>
+Details out of the way, here we go. First, I had to open it up and add my extra NVMe drive. There's 12 phillips screws on the bottom. No tricks, it just pops off. 12 screws is a lot but I won't be doing that often. Second, I plugged in its power adapter. There's a light next to the plug that glows orange when charging, and green when charged. It also blinks green when the laptop sleeps. It can also charge via USB-C.
+</p>
+<p>
+Opening the lid is not possible with one hand but the hinge is pleasant and the lid doesn't bounce much. The laptop has no logos internally, and the external logo is a sticker that I peeled off immediately, given it would probably have come off in my backpack. So, this is the matte-black no-branding laptop of my dreams.
+</p>
+<p>
+The display is the first thing anyone notices. The bezels are slim, there's a webcam/mics up top, and the display is a matte 1080p IPS panel. Perfect for the size. It's clear, sharp, and gets both really bright and dim.
+<p>
+The touchpad is a relatively decent touchpad. It tracks well and clicks from almost anywhere on the touchpad. It's almost as good as my 2012 Macbook. The keyboard is good, but has much less travel than I'm used to on a thinkpad or desktop mechanical keyboard. It's backlit with 5 levels of backlighting the lowest being very low, which is great. The keyboard does not have a caps lock indicator light, which is fine-ish (I either remap or don't use caps lock anyway).
+</p>
+<p>
+Given the port situation on many modern lapops I wasn't expecting Thinkpad-levels of connectivity, but it comes really close. No ethernet, but if you want that, System76 has a Galago Pro model for you. Otherwise the two models are quite similar (the Galago just has less battery and more ports).
+</p>
+<p>
+Pop!_OS, System76's operating system, is installed on the drive in OEM mode, and lets you install to the rest of the disk when you boot up. It thoughfully provides a recovery partition, so if you want to blow away your install and start fresh, you don't have to boot from USB. I first ran the installer in attempt to put it on the smaller, secondary disk, but it instead put it on the first disk (during install I selected the smaller one, but an 'lsblk' showed it had set up the install targets on the larger one). (Possibly human error?) I download the ISO from their site, installed it to my second 256GB disk, and on the main 500GB disk, I put Fedora (my OS of choice).
+</p>
+<p>
+Fedora works great on this machine. No complaints, no dmesg errors, no extra drivers, no weird fan noises. I run <a href="https://swaywm.org">the sway window manager</a> primarily (and GNOME3 when I need something more full-featured) - the only change over my previous install was I had to install the "light" package, which controls backlight a la xbacklight on xorg.
+</p>
+<p>
+Overall, this is a <i>fantastic</i> laptop on which to run GNU/Linux. It was a bit expensive, but I couldn't imagine putting money toward a better purpose - a small black brandless laptop running coreboot and Linux. Only thing it's missing is a trackpoint. It almost fills the Thinkpad-sized hole in my heart!
+</p>
+<small>Fri, 17 Apr 2020 14:41:38 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='automate-these-things'>Automate These Things</h2>
+<small>[<a href='#automate-these-things'>link</a>&mdash;<a href='blog/automate-these-things.html'>standalone</a>]</small>
+<br>
+Friction in daily life is not good. Automation alleviates some friction, reducing stress, and creating more time for leisure and creativity. Many things can be automated. I have some opinions on what should ( and should not) be automated.
+<br>
+Here are a bunch of tasks where I've attmpted to reduce friction by automation.
+<ul>
+	<li>Phone, text, email, and other alerts. I've set up filters, rules, and alerts that only really ping me when I want to be pinged.</li>
+	<li>News. My RSS reader (liferea) refreshes when I open it every morning, and I maintain a set of curated and low-volume feeds. I don't get caught up in infinite scroll and only see what I want.</li>
+	<li>Operating system updates. Follow <a href="https://www.michelebologna.net/2019/automatic-or-unattended-upgrades-in-opensuse-centos-and-fedora-debian-and-ubuntu/">this guide</a> and it's pretty simple. On my servers, unattended-upgrades takes care of security updates, letting me choose when to apply the "regular" updates. My laptop running Fedora automatically downloads updates with dnf-automatic and lets me choose when to install them. Both OSs are very stable and haven't really ever broken irreparably on me, so I don't have to think about my computers much. Whenever they ask me to update, I do it, and it never takes more than 5 minutes and a normal reboot. </li>
+	<li>Backups. Once configured, backups should run forever and be reliable. I run Syncthing and Duplicity separately and back up to two locations. One is stored on a RAID, which is backed up to cold storage quarterly. My "cold storage" backups are not automated, but those I like to do on purpose, and they are stored in a secure location, locked up.</li>
+	<li>Software builds in testing/non-production environments. If you want testbox.local to have the latest version of your app every single day without you having to do it, Jenkins the heck out of it!</li>
+	<li>Monitoring and alerting. Cacti and Twilio make a great combo. Grafana and Nagios are also good monitoring applications.</li>
+	<li>OS installation. Chef, Ansible, JuJu, and Kickstart all provide GREAT ways to get a new box up and running without having to manually install software, partition your disk, or set up your network adapters.</li>
+</ul>
+Of course, automating things is almost as important as what NOT to automate. Some things need human intervention and oversight, for now.
+<ul>
+	<li>Physical security. This includes your garage door. For obvious reasons, this shouldn't be a system that's easily fooled into unlocking itself while you're not at home. Presence detection via Bluetooth is sketchy and spoofable. If someone hacks your AD Domain Controller, you don't want a badge auto-provisioned and mailed to an address, and you don't want all your worker's badges not working if you screw up and delete an OU.</li>
+	<li>Cooking. <a href="https://www.theverge.com/2019/8/14/20802774/june-smart-oven-remote-preheat-update-user-error/">Don't play with fire</a>, kids!</li>
+	<li>Major software or operating system upgrades. Don't let your computers surprise you with a broken NTP service or 100% CPU utilization while you're on vacation.</li>
+	<li>Environmental changes. At my last job we had several air handlers that would rotate every Wednesday at 9AM. This frequently caused problems and interrupted someone's work day. It should have been a monthly (if that) process that was performed manually. Heating and cooling should operate within thresholds, but not make drastic changes without alerting you. A blown sensor could result in a 125F server room and you're none the wiser.</li>
+</ul>
+Of course, this non-exhaustive list is just my opinion based on experience. There are probably good arguments, and I'd love to hear them.
+<br>
+<small>Fri, 20 Mar 2020 16:42:42 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='toying-with-macos'>Toying with macOS</h2>
+<small>[<a href='#toying-with-macos'>link</a>&mdash;<a href='blog/toying-with-macos.html'>standalone</a>]</small>
+<h3>
+A mini-review of macOS from the perspective of a Linux user
+</h3>
+<br/>
+A few years ago when I switched to using Linux on the desktop full-time, it was definitely not as complete and usable a desktop computing experience as the Mac. Windows 10 was easily worse (in the early days; it's become a little better, if you use the LTSC version) and the Mac was fantastic. I started using Linux more seriously after macOS 10.10 (the one with the iOS 7-like blurry flat redesign came out) and switched to it full time a couple years later. 10.9 was peak macOS for me, and it just got harder for me to stomach after that. Maximizing got taken away; I discovered tiling window managers and loved them, and even Windows has that; more settings got jumbled for no reason; iCloud became practically manadtory or forced in half the apps, and I didn't want to use it; and obviously I got super silly paranoid.
+<br/>
+I've always kept a few spare laptops around (when I was using macOS full time, I kept a spare Windows machine for old games), and since 2017 the Mac has been in the pile of spares. I pulled it out since I'm going to be using a Mac for work soon, and wanted to see how it works nowadays.
+<br/>
+I would give kudos to Apple for supporting recent macOS versions on an almost 8-year-old machine, but I regularly use the latest versions of Fedora and Ubuntu on machines that are older than that, and they perform better, so that's moot. 
+<br/>
+It does perform surprisingly well on a standard 750GB HDD, and save for long boot times, operates as smoothly as it does on an SSD. It's very cool and quiet, has decent battery life, charges fast, doesn't stutter and operates well doing daily tasks. All the hardware works and it has a plethora of ports, a little LED battery meter on the case, and a DVD drive in a very compact package. It's not really all that impressive, since that's the pretty low bar I expect things to clear, but it gets the basics right.
+<br/>
+The GUI is fine. I really do like tiling and workspaces, and the Mac is okay at those. I have to use the trackpad instead of the keyboard, but I assume there are decent keyboard shortcuts I've not looked up for things like "go to workspace n" or "move application to workspace n". I hear it has picture-in-picture, but have not tried it yet. I wonder if I could do that with a terminal instead of a video. Overall, it's less configurable than GNOME3, even, and that's saying something. Every little app costs money (things that are just normal GNOME extensions or built-in features) and I don't want to pay for something that might not be good, or might be spyware.
+<br/>
+The worst part is the lack of package management. I rely HEAVILY on dnf/apt/flatpak/snap to do automatic updates for all my programs/system at once, and lacking a good package manager built-in is a huge flaw of the platform. I've installed <a href="https://brew.sh">Homebrew</a> since it's what I remember using prior, and it's still good. It'll take some getting used to. Nice to have an open-source way to install and update things like keepassxc, wireshark, ffmpeg, tmux, etc.
+<br/>
+The best part is that it's a Unix system (I know this!) and the terminal application is REALLY GOOD. They've switched to ZSH by default (seriously? Why?) but it's easy to switch back to bash or fish. I could probably install a plethora of ncurses apps on a VPS and live in an SSH connection and be perfectly happy with macOS.
+</br>
+Conclusion: I'm a Free Software diehard, so I'll keep using Ubuntu/Debian/Fedora forever, but macOS is good if you don't have the option to use Desktop Linux. Since I don't have to pay for the inevitable keyboard repair (it being a work computer), I guess I'll be content with macOS!
+</br>
+<small>Mon, 09 Mar 2020 16:48:10 -0700</small>
+</div>
+<div class='entry'>
+<h2 id='coreboot-on-the-t430'>Coreboot on the T430</h2>
+<small>[<a href='#coreboot-on-the-t430'>link</a>&mdash;<a href='blog/coreboot-on-the-t430.html'>standalone</a>]</small>
+<p>
+Traditional computer BIOS programs are either spyware, featurless, or horrifically out of date. A few problems are evident with these systems:
+<ul>
+	<li>The manufacturer never updates the BIOS and never cared about it.  Critical features are missing and bugs are present.</li>
+	<li>The manufacturer injects programs or other spyware into the BIOS to change your operating system.</li>
+	<li>The manufacturer's BIOS either has glaring security issues or requrires specific versions of Windows to update, therefore rendering it unsuitable for use.</li>
+</ul>
+</p>
+<p>
+In order to solve these problems, you need a different BIOS. The manufactureres like to prevent modifications, but since most chips can just be read/flashed externally, that's not a huge problem if you're willing to do a lot of work for your freedom and security.
+</p>
+<p>Coreboot is one of my favorite open soucre projects. It's a free replacement to commercial BIOS/UEFI systems. I've got it on my X220, X230 (courtesy of <a href="https://github.com/merge/skulls">the Skulls project</a>), and now the T430! In order to flash the T430, it needs to be totally taken apart. Since I just got a brand-new T430 and was going to repaste it and clean it anyway, I decided to flash Coreboot on it as well. In for a penny...</p>
+<p>
+Anyway, now I have a coreboot family. Yay!
+</p>
+<p>
+Special thanks to <a href="https://nm-projects.de/2017/08/flashing-coreboot-on-the-t430-with-a-raspberry-pi/">this blog bpost</a> and of course all the guides out there for the T420 and X230. Splitting the flash into 2 separate chips was the trickiest part, along with figuring out which way to align the clip. Your mileage may vary with all that. My chips were different from his.
+</p>
+<br/>
+<img style="width:90%; max-witdh:900px" src="../Files/coreboot-laptops.jpg"></img>
+<br/>
+<small>Wed, 04 Mar 2020 19:45:47 -0800</small>
+</div>
+<div class='entry'>
+<h2 id='software-projects'>Software Projects</h2>
+<small>[<a href='#software-projects'>link</a>&mdash;<a href='blog/software-projects.html'>standalone</a>]</small>
+<br/>
+Recently I have been working on a few software projects. Here is a summary of them.
+<br/>
+<ul>
+	<li>
+		<a href="https://gitlab.com/elagost/alephone-marathon-launcher">AlephOne Marathon Launcher</a>: remember Bungie's Marathon games? There's an open-source continuation <a href="https://alephone.lhowon.org/">located here</a> but it requires the game to be run from the command line. Obviously I'm not terminal-averse, but this was fun to code. I also made a <a href="https://launchpad.net/~adamthiede/+archive/ubuntu/alephone">PPA</a> for Ubuntu 18.04.
+	</li>
+	<li>
+		<a href="https://github.com/elagost/Link-Saver">Link Saver</a>: ever used Instapaper or Pocket? Basically a bookmark saver but you paste the URL in the terminal. It can save an offline file too. Pretty basic so far but I made it for me to use.
+	</li>
+	<li>
+		<a href="https://gitlab.com/elagost/linux-2fa">2-factor Auth Anywhere</a>: A portable set of ImageMagick scripts that basically took oathtool and put it into a little .jpg. I was working within the constraints of a) the device in question not having a real physical keyboard and b) the screen being low-res and small. It was more or less a fun exercise but nothing to take too seriously.
+	</li>
+	<li>
+		<a href="https://gitlab.com/elagost/sfetch">sfetch</a>: a neofetch-like prompt that is MUCH smaller and lighter-weight. Made since I have a lot of systems I SSH into on a regular basis, and it's nice to have a little stats output right when I log in. As said in the repo, neofetch was too heavy for my poor-man's server fleet of raspberry pi zeros. This works better.
+	</li>
+</ul>
+<br/>
+Mostly these are self-serving things that I made just to have fun!
+<br/>
+<small>Sat, 22 Feb 2020 05:32:00 -0800</small>
+</div>
+<div class='entry'>
+<h2 id='longterm-goals'>Long-Term Goals</h2>
+<small>[<a href='#longterm-goals'>link</a>&mdash;<a href='blog/longterm-goals.html'>standalone</a>]</small>
+We're all getting older. Me too - I got older again recently. What's the plan here?
+<br/>
+<br/>
+Most these days are just trying to make it through the day. Life's a chore and so much of it has to be spent on overhead, and at the end of it all, there's not much to show for it. So having a few things in mind to shoot for, to be always on the back burner, is critical - if you're not motivated and excited about making it through the day, what's the point?
+<br/>
+<br/>
+Here's a few of my back-burner perpetual goals:
+<br/>
+<ul>
+	<li>Always keep learning! If there's something that I encounter that I don't know, I'll take the time to learn it if it's going to be important. Even if it's not related to my work, it's more important to broaden my skillset. My wife teaches me various crocheting and sewing skills, I've forced myself to learn some networking principles, and I've been picking up a musical instrumet recently.</li>
+	<li>Constantly examine life for optimization. Even if I've been doing thigns a certain way for decades, if there's a better way that someone shows me, switch to that! In college I switched a few writing habits, and now I'm attempting to change up some driving habits to be safer on the road and put less wear on my vehicle.</li>
+	<li>Work outside the comfort zone. For me this primarliy means <i>talking to people</i> (oooo, scary!) and maintaining social relationships. I've historically been bad at this, so forcing myself to go have friends can be difficult, but it is ultimately rewarding, and the alternative is much worse!</li>
+</ul>
+<br/>
+My long-term plans are pretty hazy right now. I don't know what I'm going to be doing in two weeks and how things are going to end up. But as long as I keep learning, keep improving, and maintain my high-quality relationships with awesome people, I've got a feeling things are gonna work out great. Like my dad always used to say - "Attitude and Effort!"
+<br/>
+<br/>
+<small>Sat, 22 Feb 2020 05:14:34 -0800</small>
+</div>
+</body>
+</html>
+
