@@ -12,6 +12,21 @@
 <!-- LB -->
 
 <item>
+<title>Moralizing Software? Start at Home</title>
+<guid>https://adamthiede.com/blog.html#moralizing-software-start-at-home</guid>
+<pubDate>Mon, 18 Jan 2021 10:49:42 -0800</pubDate>
+<description><![CDATA[
+<p>
+Quick thought: if you want to stop using Gmail for vague moral reasons, think about what's going to have a greater cost/benefit ratio. If you want to change your software or network services setup for moral reasons ("Google/Facebook/$BIG_COMPANY is spying on me") then start with the things you use most often, and start with the hardware in your home. Get rid of the Amazon Echo and other "smart devices". Use Linux. Put your smartphone in the other room and turn it off when you're not using it. Use a password manager like KeePassXC and keep things offline on local storage instead of on the Internet. Encrypt your devices' storage. Don't send personal or sensitive communications over email, use Signal or Matrix or some other encrypted method.
+</p>
+<p>
+Swapping out Google for Fastmail or whoever is going to have such a small impact on your overall privacy, chances are you won't follow through with it, you won't move all your accounts over, and it'll be a headache. Do something that's going to have immediate, real effects. Ditching Gmail has far too low of a cost-benefit.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Protocols, Not Platforms</title>
 <guid>https://adamthiede.com/blog.html#protocols-not-platforms</guid>
 <pubDate>Mon, 18 Jan 2021 08:42:44 -0800</pubDate>
