@@ -12,6 +12,66 @@
 <!-- LB -->
 
 <item>
+<title>Protocols, Not Platforms</title>
+<guid>https://adamthiede.com/blog.html#protocols-not-platforms</guid>
+<pubDate>Mon, 18 Jan 2021 08:42:44 -0800</pubDate>
+<description><![CDATA[
+<p>
+Over the past year I've been asked by family members and friends about platforms, apps, and services. "Should I use this app?" "Is this social media site secure?" "What do you think of this email provider?"
+</p>
+
+<h4>These are the wrong questions to ask.</h4>
+
+<p>
+The reason these questions are being asked is that people are getting more concerned with security, privacy, and longevity of the systems that they use. If a system is not secure and private, they're afraid they can't express their opinions or talk candidly to friends and family via the service. They've also noticed that services they use go away sometimes, or are offline for long periods of time. People don't want to have to constantly switch from SMS to iMessage to WhatsApp to Viber to Telegram to Signal, because change is hard, and shifting your whole social group to use a different system is a very difficult long-term effort.
+</p>
+
+<p>
+The right question to ask is, <b>"What tools can we use that leverage open, extensible, secure, protocols, ensuring longevity and privacy?</b>
+</p>
+
+<p>
+To understand what I'm talking about, you need to think about <b>email</b>. This is the extensible open platform people have the most experience with. You can send an email from your @gmail.com account, via the iPhone's mail app, to your friend's @yahoo.com address, who checks his email in Microsoft Outlook on a Windows PC. Which app you use doesn't matter here - you could use any number of email programs ("clients") to interface with your account. Gmail and Yahoo mail are just two fish in the sea of email servers. Email the protocol has been around for decades, and will work for decades more, even if Gmail and Yahoo go away. You can even run an email server in your house on an old spare computer, or on a rented cloud virtual machine, for less than $5 a month. <b>This is the power of an extensible, open, decentralized protocol.</b>
+</p>
+
+<p>
+Focusing on protocols (the method and format of the data transmission) instead of platforms (who is holding and transmitting your data) puts the power in your hands. It also puts the responsibility in your hands. You can choose an email provider, or go about the herculean process to host email yourself. Hosting your data and services yourself requires a fair amount of knowledge, but it also makes you self-reliant, resilient to censorship, and insulated from the constant churn of platforms that exist, and then suddenly don't a few years later. Your server's downtime (for updates, etc.) happens on <b>your terms</b>, not Google's or Amazon's.
+</p>
+
+<p>
+Extensible, open software I recommend:
+<ul>
+<li><a href="https://matrix.org/">Matrix Protocol</a> for secure communication. Encryption built-in, many different clients available, servers are easy to host, and most importantly, it's open-source and respects your freedom.</li>
+<li><a href="https://xmpp.org/">XMPP/Jabber</a> is <i>the</i> universal messaging standard. You've probably used it before without knowing it. Layering <a href="https://conversations.im/omemo/">OMEMO</a> or OTR encryption on top of XMPP is like a better version of Signal. <a href="https://compliance.conversations.im/">Check here</a> for a list of servers that support all the appropriate extensions required to run a secure XMPP conversation, or just start your own.</li>
+<li><a href="https://activitypub.rocks/">ActivityPub Protocol</a> and its implementations <a href="https://joinmastodon.org/">Mastodon</a> and <a href="https://pleroma.social/">Pleroma</a>. Decentralized DIY social media. No algorithms, no censorship or oversight. Each server can choose its own rules.</li>
+<li><a href="https://joinpeertube.org/">PeerTube</a> is DIY YouTube. It also implements ActivityPub, so people can comment on videos with their Pleroma or Mastodon accounts.</li>
+<li><a href="https://nextcloud.com/">NextCloud</a> is DIY Dropbox, with integrated contacts/calendars. Calendar and Contact syncing is done over the open DAV protocols, <a href="https://tools.ietf.org/html/rfc4791">CalDAV</a> and <a href="https://tools.ietf.org/html/rfc6352">CardDAV</a>, and comes for free with many email setups.</li>
+<li><a href="mailinabox.email/">MailInABox</a> if you must self-host your own email. Easy to set up, and keep secure. Also sets up a small Nextcloud instance.</li>
+<li><a href="https://github.com/awesome-selfhosted/awesome-selfhosted">This list</a> contains more resources I didn't cover. Most of these things will integrate well with each other.</li>
+</ul>
+</p>
+
+<p>
+Signal had an outage the other day that lasted for over 24 hours. Messages were unreliable or didn't go through, and forget about calls. This happened because Signal is a single entity, and the only way you can use for Signal is through their single point of failure - them. Decentralized protocols federate the responsibility to users, so if your server is down, your parents can still talk to their friends on different servers.
+</p>
+
+<p>
+A couple guidelines to live by:
+<ul>
+<li>Open Source is a must.</li>
+<li>If it requires a smartphone app, it's not worth your time.</li>
+<li>Client and Server should have multiple implementations that run on many operating systems - you should be able to host the service, and interact with it, from any computer.</li>
+</ul>
+</p>
+
+<p>
+In a world where you can't trust surveillance-addicted megacorps to respect your privacy, and you can't trust that scrappy moralizing startups won't either fail or get acquired by the megacorps, the only reasonable choice is to trust individuals. The best individuals to trust are yourself, your family, and your friends - if every family hosted their own services, outages would be a thing of the past, privacy would be table stakes, surveillance would be much more difficult, and we'd all have control of our data. So do some research, and continue to ask the right questions.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>2020 Review</title>
 <guid>https://adamthiede.com/blog.html#2020-review</guid>
 <pubDate>Sun, 03 Jan 2021 07:47:31 -0800</pubDate>
