@@ -58,3 +58,7 @@ table, th, td, tr {
 img {
     max-width:100%;
 }
+.mono {
+    font-family:monospace;
+    font-size:1.5em;
+}

@@ -1,0 +1,54 @@
+<html>
+<!--
+5 June 1989 Tiananmen Square Tank Man
+动态网自由门 天安門 天安门 法輪功 李洪志 Free Tibet 六四天安門事件 The Tiananmen Square protests of 1989 天安門大屠殺 The Tiananmen Square Massacre 反右派鬥爭 The Anti-Rightist Struggle 大躍進政策 The Great Leap Forward 文化大革命 The Great Proletarian Cultural Revolution 人權 Human Rights 民運 Democratization 自由 Freedom 獨立 Independence 多黨制 Multi-party system 台灣 臺灣 Taiwan Formosa 中華民國 Republic of China 西藏 土伯特 唐古特 Tibet 達賴喇嘛 Dalai Lama 法輪功 Falun Dafa 新疆維吾爾自治區 The Xinjiang Uyghur Autonomous Region 諾貝爾和平獎 Nobel Peace Prize 劉暁波 Liu Xiaobo 民主 言論 思想 反共 反革命 抗議 運動 騷亂 暴亂 騷擾 擾亂 抗暴 平反 維權 示威游行 李洪志 法輪大法 大法弟子 強制斷種 強制堕胎 民族淨化 人體實驗 肅清 胡耀邦 趙紫陽 魏京生 王丹 還政於民 和平演變 激流中國 北京之春 大紀元時報 九評論共産黨 獨裁 專制 壓制 統一 監視 鎮壓 迫害 侵略 掠奪 破壞 拷問 屠殺 活摘器官 誘拐 買賣人口 遊進 走私 毒品 賣淫 春畫 賭博 六合彩 天安門 天安门 法輪功 李洪志 Winnie the Pooh 劉曉波动态网自由门 Wuhan Flu 武汉流感.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>How To Set Up Every Linux Distro</title>
+	<link rel="stylesheet" type="text/css" href="webstyle.css">
+	<body>
+		<H1><a href="https://adamthiede.com"> Adam Thiede </a></H1>
+		
+		<div class="bar"><a href="mailto:me@adamthiede.com">Email</a></div>
+		<!-- <div class="bar"><a href="./resume.html">Resume</a></div>
+		<div class="bar"><a target="_blank" href="https://www.linkedin.com/in/adamthiede">LinkedIn</a></div> -->
+		<div class="bar"><a href="./faq.html">About Me</a></div>
+		<div class="bar"><a href="./blog.html">Blog</a></div>
+		<div class="bar"><a href="./sw.html">Software</a></div>
+		<div class="bar"><a href="./articles.html">Articles</a></div>
+		<br/><br/>
+        <div class=tagline>
+
+<p>Things I do when I set up a new Linux box. Usually copied into automatic scripts.</p>
+
+<h3>Ubuntu</h3>
+<p class=mono>
+    sudo apt update<br>sudo apt dist-upgrade -y<br> sudo apt install vim tmux -y<br>sudo apt purge snapd -y<br>sudo apt autoremove --purge -y<br>sudo apt install flatpak -y<br>sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+</p>
+
+<h3>Debian</h3>
+<p class=mono>
+    sudo apt update<br>sudo apt dist-upgrade -y<br> sudo apt install vim tmux -y<br>sudo apt autoremove --purge -y<br>sudo apt install flatpak -y<br>sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+</p>
+
+<h3>Fedora</h3>
+<p class=mono>
+sudo dnf up -y<br>
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y<br>
+sudo dnf groupupdate core -y<br>
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y<br>
+sudo dnf groupupdate sound-and-video -y<br>
+sudo dnf install rpmfusion-free-release-tainted -y<br>
+sudo dnf install libdvdcss -y<br>
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo<br>
+sudo dnf in vim tmux toolbox -y
+</p>
+
+<h3>Arch</h3>
+<p class=mono>
+
+</p>
+
+</div>
+    </body>
+</html>
