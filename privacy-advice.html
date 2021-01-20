@@ -40,12 +40,16 @@
 
             <h3 id=IRL>Physical Security</h3>
             <p>The number one way to keep your data private is to keep it only in physical locations you know about, and keep those physical locations secure.</p>
+            <p>Keep your doors locked, set up an intrustion detection system, and don't allow anyone unsupervised on your computers or near your networking equipment. Ensure devices you purchase aren't tampered with - a good way to do that is buy devices in person. If you order a device online and you're being targeted, it is clear it's going to your address, and can be intercepted and tampered with in transit - you'd be none the wiser.</p>
+            <p>Don't leave sensitive devices alone. <a href="https://en.wikipedia.org/wiki/Evil_Maid_attack">Evil Maid attacks</a> are easy to pull off if you leave devices alone.</p>
+            <p>Consider using something like <a href="https://github.com/hephaest0s/usbkill">usbkill</a> to ensure your laptop is immediately powered off if a USB device (possibly one tethered to your wrist or belt) is removed or plugged in. This increases security to a paranoid level, but will help defend against attacks in the physical world.</p>
+            <p>Store data on an encrypted flash drives. Apricorn sells hardware-encryped disks with a hardware keypad on them.</p>
 
             <h3 id=Hardware>Hardware/Operating Systems</h3>
             <h4>Smartphones</h4>
             <p>The elephant in the room: smartphones. Everybody's got 'em, all the manufacturers prattle on about how theirs are the best for privacy and whatnot. In reality, there are only two ways to make a smartphone respect your privacy: somehow gain full control of the device, or throw it into the nearest large body of water.</p>
             <p>If you must use a smartphone and want "best-in-class" privacy setup on a tracking device you carry with you, you must ensure that the SIM card and battery are trivially removable, and that you control the entirity of the software stack. So far, only two devices in recent history meet these critera: the <a href="https://www.pine64.org/pinephone/">Pinephone</a> and <a href="https://puri.sm/products/librem-5/">Librem 5</a>. These devices, even if compromised, have hardware switches you can use to turn off wireless communication, microphones, and cameras, so they can be assuredly isolated.</p>
-            <p>The "sane" option is to use an inexpensive Android phone like a Nokia-brand device, and apply a few fixes to it. (Nokia has a track record of delivering relativly quick security updates for a long time, and they run Android One in some cases, so you can ensure your device won't be insecure after 6 months)
+            <p>The "sane" option is to use an inexpensive Android phone like a Samsung or Nokia device, and apply a few fixes to it. (Nokia has a track record of delivering relativly quick security updates for a long time, and they run Android One in some cases, so you can ensure your device won't be insecure after 6 months)
             <ul>
             <li>Go through the initial setup of Android disconnected from wifi or cell networks. Don't even put your SIM card in.</li>
             <li>Disable and uninstall all the apps you don't intend to use, and anything that's manufacturer-provided bloatware. <a href="https://gadgetstouse.com/blog/2020/07/10/how-to-uninstall-stock-apps-from-android-without-rooting/">Use adb from your PC to uninstall these packages.</a></li>
