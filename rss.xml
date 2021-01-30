@@ -12,6 +12,46 @@
 <!-- LB -->
 
 <item>
+<title>Modern Cars</title>
+<guid>https://adamthiede.com/blog.html#modern-cars</guid>
+<pubDate>Fri, 29 Jan 2021 18:26:00 -0800</pubDate>
+<description><![CDATA[
+<p>
+I went car shopping recently. In the latest episode of "they don't make 'em like they used to", I level complaints at modern automobiles.
+</p>
+
+<p>
+<ul>
+    <li>
+    Many cars have built-in touchscreens that replace functionality that used to be buttons and knobs. It is easier and safer to memorize where your buttons and knobs are, and not have to look at them to change volume, temperature, and other system features about your car. Cars like Teslas, where the entire control system is a big touchscreen, are more dangerous than my decade-old Toyota Camry - I know where all the knobs are, can find them by feel, and can adjust them without looking. (How is using a car touchscreen different than looking at your smartphone while driving, an activity illegal in many states?)
+    </li>
+    <li>
+    Newer cars often include computers with wireless connectivity. Obviously integrating a computer with opaque software that the user doesn't control is bad, but what's even worse is the security implications - often these systems ship with serious security vulnerabilities and never get fixed, allowing bad actors remote control of the vehicle or tracking of its location. The more complex the system, the more chances for exploitation.
+    </li>
+    <li>
+    Most vehicle's models are quite a bit larger than the same model that was shipping 10 or 15 years ago, with no increase in functionality.
+    </li>
+    <li>
+    Some new safety featues, like backup cameras or adaptive cruise control, are functional but not yet reliable, and are expensive to repair when damaged. It's a "false sense of security" thing. People are less likely to look around their car when they have a backup camera. You've also likely seen news of Tesla owners crashing their vehicles because "full self driving" features aren't exactly <i>full</i> self driving yet.
+    </li>
+    <li>
+    Personal complaint - CD drives are all but gone. You now have to look at a touchscreen to select music from an Internet service, or via smartphone integration. It's a global waste of energy and brings me back to the first point - it's easier to manipulate a CD case by feel than a touchscreen.
+    </li>
+</ul>
+</p>
+
+<p>
+Cars are more safe than ever. They're more energy efficient and have a bunch of great new features. But not all of the features are good, and we should be discerning about what we as consumers accept. More safety and security - fantastic! More Internet connectivity, "smart" features, and controls transformed from buttons into touchscreens - get it out of here!
+</p>
+
+<p>
+This edition of "things aren't like they used to be" brought to you by the 30-Year-Old Boomer Association of America.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Good Tools and Bad People</title>
 <guid>https://adamthiede.com/blog.html#good-tools-and-bad-people</guid>
 <pubDate>Mon, 25 Jan 2021 19:43:21 -0800</pubDate>
