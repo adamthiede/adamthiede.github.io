@@ -12,6 +12,21 @@
 <!-- LB -->
 
 <item>
+<title>Gemini on OpenBSD</title>
+<guid>https://adamthiede.com/blog.html#gemini-on-openbsd</guid>
+<pubDate>Wed, 03 Feb 2021 07:55:35 -0800</pubDate>
+<description><![CDATA[
+<p>
+I now have a <a href="https://gemini.circumlunar.space/">Gemini</a> server running on this system, thanks to <a href="https://tildegit.org/solene/vger">Vger</a>, a simple Gemini server written by <a href="https://dataswamp.org/~solene/">Solène Rapenne</a>. Instructions are provided in the repo. It was very easy to set up.
+</p>
+<p>
+Nothing much is there right now, but it'll become the new home for this blog eventually. Gemini is overall better than HTTP/HTML, and I'm going to focus on that going forward. <a href="gemini://adamthiede.com">Link to site</a>
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Modern Cars</title>
 <guid>https://adamthiede.com/blog.html#modern-cars</guid>
 <pubDate>Fri, 29 Jan 2021 18:26:00 -0800</pubDate>
