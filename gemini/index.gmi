@@ -1,0 +1,20 @@
+   _      _            _      ___ _ _       
+  /_\  __| |__ _ _ __ ( )___ / __(_) |_ ___ 
+ / _ \/ _` / _` | '  \|/(_-< \__ \ |  _/ -_)
+/_/ \_\__,_\__,_|_|_|_| /__/ |___/_|\__\___|
+
+#Hello User
+Welcome to Adam's gemini site
+
+=> https://adamthiede.com [My main HTML/HTTP site]
+
+List of a few other gemini related sites to get started
+
+=> https://github.com/makeworld-the-better-one/amfora [HTTP - Amfora, a gemini client]
+=> https://gemini.circumlunar.space/docs/faq.html [HTTP - Getting Started with Gemini ]
+=> gemini://makeworld.gq/amfora-wiki/ [Gemini - Amfora wiki]
+=> gemini://gus.guru [Gemini - GUS Gemini search engine]
+=> gemini://houston.coder.town [Gemini - Houston Gemini search engine]
+=> gemini://gemini.circumlunar.space/capcom/ [Gemini - CAPCOM, site aggregator]
+=> gemini://rawtext.club:1965/~sloum/spacewalk.gmi [Gemini - Spacewalk, site aggregator]
+=> gemini://drewdevault.com/ [Gemini - Drew DeVault's Site] 
