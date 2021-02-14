@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Rolling or Static</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>Rolling or Static</h1>
+<small>[<a href='../blog.html#rolling-or-static'>link</a>&mdash;<a href='rolling-or-static.html'>standalone</a>]</small>
+<p>
+Software updates happen. Your operating system and its programs get updates all the time, and you should install those updates. Sometimes they provide bug fixes, security patches, or new features. Sometimes these changes are "breaking changes", or paradigm shifts that break workflows or existing configurations.
+</p>
+<p><b>Rolling release</b> is a model that supposes you take all the updates as they come, immediately, with little modification. This is like installing a program (say, a specific release of Docker, LibreOffice, or GIMP) and keeping it updated regularly as the creator pushes out new releases. Simple enough to understand - you get the changes as they come and update frequently but on no particular schedule. Rolling releases fit with the saying "every update is a security update". When software interacts in interesting ways, sometimes a simple bug can turn into a massive security hole, so it is important to keep systems and software patched.
+</p>
+<p>
+A good example of a rolling release operating system is Arch Linux - packages arrive in the repositories as soon as they're released, and Arch doesn't have any particular release schedule. You just install once, and update forever. But you must update frequently or you'll be without security patches. Sometimes the software doesn't work too well together - it's not tested or specifically modified to integrate well with the rest of the system.
+</p>
+
+<p><b>Static release</b> is a model built for the enterprise, but beneficial to anyone who doesn't like surprises. You pick a base version of a program (LibreOffice 6.4 for example), and if there are any bug fixes or security patches that affect that particular version, you apply them. New versions come out, but being cautious, you save your major version upgrades for all your software for a specific interval. Example: every year in April, you go through the list of software you use, see if there are any new releases, and if those new versions have introduced breaking changes to your workflow. You then integrate the new software if you desire, apply fixes to the old software if you must keep that version, and carry on.
+</p>
+
+<p>
+Static release is a harder model to understand. It requires a lot of work. Thankfully many people do that work for you. If you use a Linux-based operating system, you can get a number of static release systems. Red Hat Enterprise Linux releases a new version of their operating system every 4 years or so. That release is supported for ten years. You can continue using the same stuff you were using in 2014 (RHEL7) with the same software it came with, only with regular security fixes "backported" to the versions that were chosen at the time of release. Specific versions are chosen and tested against each other to make sure they work well. They bundle an old version of the Linux kernel, old versions of desktop programs, and old versions of server software. But this means users and businesses don't get surprised by random changes, and can rely on the system being stable and secure for a long time. They can plan their own software or infrastrucutre around it, since it doesn't change out from under them. Some long-term support releases of operating systems, like Ubuntu, are more frequent - they release every 2 years on the dot, and enterprises (and stability-concerned users) can count on this schedule. Every 2 years in May or June they can upgrade to the new version, and plan to do all their troubleshooting then, as opposed to random times throughout the year, when they're trying to get work done.
+</p>
+
+<p>
+Some operating systems use a <b>Semi-rolling</b> model. Fedora, the "upstream" of RHEL (what RHEL is based on, before making significant changes) releases a new version every 6 months. These releases keep some desktop and server software at a single version for those six months, only applying bug fixes. But other software is updated as the updates come - the Linux kernel follows upstream releases closely, while GNOME, PHP, Python, gcc, and other programming tools and server software promise to only change every 6 months. This gets benefits of both sides - most of your stuff is as up to date as possible, but critical software doesn't change out from under you. You know every 6 months you'll have to examine the major upgrades for breaking changes, but the changes between bi-yearly release are usually minor. The reason for these cycles is so that the project can pick a date to do major changes and have milestones.
+</p>
+
+<p>
+Rolling release models are not for the faint of heart. They require constant vigilance to make sure upcoming changes don't break things. Every update has the potential to render your desktop or web server unusable. You don't get to pick when things break or when there are major changes. You must update freuquently and that requires a lot of extra CPU usage and data usage, so not great for metered networks.
+</p>
+
+<p>
+Static releases can be just as bad - old software won't work with new tools you want to use. When new hardware comes out, the old software won't support it, and you may have to wait months or years before the changes you're waiting for land in the operating system you're using. You get to choose when you do full release upgrades, but often times, it takes days or weeks to iron out all the things that have broken or changed releases. 2 to 5 years is a huge jump in version numbers and having been out of the loop will mean you have a lot of catching up to do.
+</p>
+
+<p>
+Both releases are valid models. Home users or enthusiasts are likely more interested in rolling models - newer software as it comes usually causes no issues, fixes bugs, and provides more up to date hardware support. Entereprises, developers, and cautious users stick to static releases - less surprise, nothing changing out from under you in the middle of a project, and a solid long-term support strategy. Semi-rolling, in my opinion, gives you the best of both worlds without the downsides. But in the end it's up to preferences, goals, and needs of the individual.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
