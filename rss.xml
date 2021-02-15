@@ -12,6 +12,38 @@
 <!-- LB -->
 
 <item>
+<title>Raspberry Pis and Spades</title>
+<guid>https://adamthiede.com/blog.html#raspberry-pis-and-spades</guid>
+<pubDate>Mon, 15 Feb 2021 13:39:43 -0800</pubDate>
+<description><![CDATA[
+<p>
+Raspberry Pis are great little computers. They work well, don't break the bank, and there's a lot of accessories and tutorials for beginners out there to get started. They can be a desktop, server, or portable system. There's no end to what you can do with them. People have used them for all sorts of things over the years.
+</p>
+
+<p>
+Recently the Raspberry Pi Foundation automatically, silently, added a Microsoft repo to the operating system the provide, Raspberry Pi OS. <a href="https://www.raspberrypi.org/blog/visual-studio-code-comes-to-raspberry-pi/">They're proud of the fact that VSCode is now available for the Pis</a>, but <a href="https://www.cyberciti.biz/linux-news/heads-up-microsoft-repo-secretly-installed-on-all-raspberry-pis-linux-os/">others were not so happy about it</a>, claiming it was a "secret" addition and it enables Microsoft telemetry. As always, <a href="https://arstechnica.com/gadgets/2021/02/raspberry-pi-os-added-a-microsoft-repo-no-its-not-an-evil-secret/">the truth is somewhere in the middle</a>, and it's kind of boring. Yes, they added a repo to Raspberry Pi OS. Yes, you can disable it pretty easily. No, Microsoft's repo isn't going to replace your network drivers with spyware (although the capability is now there). They should not have added it on "Lite" (no desktop, console-only) installations of the OS or on hardware like the Pi Zero, because they wouldn't be able to run it anyway.
+</p>
+
+<p>
+But let's call a spade a spade: the Raspberry Pi's website is all bout how you can use these computers to teach kids to code. They offer simple tools and tutorials to help get complete beginners started using computers. They're supposed to be easy coding/computer on-ramps for educational purposes. They're not meant to be cheap servers for experienced Linux users, which is how I see them most often used in my circles!
+</p>
+
+<p>
+There should be no anger here. Just a realization that we, the admins, the people who noticed the new repo, were never the target market for these devices. We've been skating by for a while using these things as cheap "lite" home servers, running pi-hole, VPNs, and media servers, many of us not realizing we were shoving a round peg into a square hole.
+</p>
+
+<p>
+The short-term solution for people like me is clear. If you must use a Raspberry Pi, at least don't use Raspberry Pi OS - it's <i>almost</i> Debian, but not quite. Debian does make <a href="https://raspi.debian.net/tested-images/">official images for the Raspberry Pis</a>, and <a href="https://ubuntu.com/raspberry-pi">do does Ubuntu</a>. Pick your poison. They both work great. Their policies are clear on what software they include. The Raspberry Pi images are supported in the same way their x86 OS is. Using Raspberry Pi OS and pretending it's Debian is clearly not going to work for much longer, for the people that just want Debian. 
+</p>
+
+<p>
+Long-term, if what we want is a server, let's use server hardware and server OSs. We should be buying NUCs, PCEngines boards, Pine64 Single-Board Computers, or building our own home servers - things that were created with "power users" in mind. Not toys built for kids. Personally I've transitioned running all my Pi's network-critical systems into containers or VMs on my NAS, and the Pi is now a toy, or a game server. I'm using it for fun, to play, and to learn. (It also now runs Ubuntu, because I can expect consistency there, not unexpected changes I don't appreciate just to make it easier for kids to use.) Raspberry Pis are great, but let's call a spade a spade. They're not for us, and never were. We shouldn't expect them to be.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Rolling or Static</title>
 <guid>https://adamthiede.com/blog.html#rolling-or-static</guid>
 <pubDate>Sun, 14 Feb 2021 06:18:42 -0800</pubDate>
