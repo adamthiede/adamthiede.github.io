@@ -12,6 +12,43 @@
 <!-- LB -->
 
 <item>
+<title>Days Off and Arch Installer</title>
+<guid>https://adamthiede.com/blog.html#days-off-and-arch-installer</guid>
+<pubDate>Fri, 16 Apr 2021 16:22:03 -0700</pubDate>
+<description><![CDATA[
+<p>
+I had a few days off to take a short vacation with my dad. It was a lovely time, most of it. Didn't get good sleep but it was worth it.
+</p>
+
+<p>
+Since I have an extra day off, I did some mulling over Arch Linux. There's a new official installer, and it's kind of neat. Does quite a bit wrong, but a few things right:
+<ul>
+<li>Does a bunch of boring stuff quickly and gets it out of the way</li>
+<li>Integrates drive encryption</li>
+<li>Offers to disable the root account and add a user to sudoers</li>
+<li>Offers a lot of flexibility of desktop and drive choices</li>
+<li>systemd-boot instead of grub by default</li>
+</ul>
+However it's not perfect. Even though there is an installer, it doesn't give you a "ready to go" system out of the box - you still have to know what to do, or read the wiki. Printing won't work unless you enable cups. The network is broken until you enable networkmanager. You should install a firewall and you probably don't need the gnome-extras packages.
+</p>
+
+<p>
+2 things:
+<ol>
+<li>
+systemd is truly eating everything. I do quite like systemd-networkd, systemd-resolvd, systemd-boot, though; they make everything easier and more consistent. Linux is <i>not</i> about choice, and Arch doesn't offer a non-systemd choice, but you do have the choice to use other network and boot managers. You truly can make systemd <i>just</i> an init system, but when it's good at other things too, why not?
+</li>
+<li>
+At critical moments in my life I've used Arch Linux on my primary machine, because I had the free time and I do love Arch. But when things break and I don't have time to fix them, I usually give up and use Fedora where I have no problems. It's like a slightly safer, slightly slower Arch that breaks <i>far</i> less frequently.
+</li>
+</ol>
+Anyway. Arch is cool, there's an installer now, and you probably still shouldn't use it if you don't have the free time for it being Arch every now and again. If you have a day off, though, and want to spend it tweaking Arch, have fun.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>A Short Review of CalyxOS</title>
 <guid>https://adamthiede.com/blog.html#a-short-review-of-calyxos</guid>
 <pubDate>Wed, 07 Apr 2021 07:54:55 -0700</pubDate>
