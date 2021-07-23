@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Linux on the Asus L210</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>Linux on the Asus L210</h1>
+<small>[<a href='../blog.html#linux-on-the-asus-l210'>link</a>&mdash;<a href='linux-on-the-asus-l210.html'>standalone</a>]</small>
+<p>I went through a bunch of pain at work, got paid overtime, and bought a new
+toy. That toy is the <a
+href="https://www.asus.com/us/Laptops/For-Home/Everyday-use/ASUS-L210/">Asus
+L210 laptop</a>. There's a pretty decent <a
+href="https://www.youtube.com/watch?v=m-aRPpiNxDA">video review here</a>, which
+describes feautures, specs, and performance.</p>
+
+<p>Two main reasons I bought this machine: size and silence.</p>
+
+<p><b>Size:</b> This machine is tiny. It has an 11" screen and reminds me a lot
+of my netbooks - a Dell Mini 9 and Acer Aspire One. In fact, it's a little
+bigger than the netbooks, but that just means it's got a wider keyboard, which
+is much more comfortable to type on. It is orders of magnitude thinner and
+lighter, making it a nice travel machine, and a great upgrade from the old
+32-bit systems.</p>
+
+<p><b>Silence:</b> No fan. No spinning hard drive. Low-power CPU and
+motherboard by Asus, so <i>almost</i> no coil whine. No matter what I do this
+machine won't make noise.</p>
+
+<p>I have to mention <b>upgradability</b> - usually you don't get that on these
+tiny budget machines.<br/> The Wi-Fi card is some Realtek piece of junk that's
+not in Linux yet (but does have <a
+href="https://github.com/tomaspinho/rtl8821ce">a driver you can manually
+install</a>). It is swappable and there doesn't appear to be a whitelist. I put
+in a several-year-old Intel card I had laying around and it works great. You
+can't swap the RAM or CPU or eMMC, but there is an NVMe slot. I left Windows 10
+on the internal eMMC, and put a WD Blue drive in the NVMe slot for a seamless
+dual-boot.</p>
+
+<p><b>Linux:</b> Fedora 34 works great. Arch and Ubuntu 20.04 live ISOs boot
+and function properly as well. The GPU has great hardware decoding capability
+so mpv and vlc will play back video without high CPU usage. The system
+sleeps/wakes great, headphones with an inline mic (TRRS) work well and the mic
+is detected, brightness is controllable, the hotkeys work great, and the system
+boots with the Fn-lock on - F keys are F keys, not media keys, but there is an
+indicator light and you can turn it off with Fn+Esc.</p>
+
+<p><b>Windows 10:</b> it came with Windows 10 in S mode and a whole ton of
+bloatware. I wiped and reinstalled with a clean, official Windows 10 Home
+download from Microsoft. It activated itself and installed all the updates and
+drivers just fine. It performs decently but not as well as Linux. Windows needs
+more than 4GB RAM. It plays Halo Combat Evolved at a high framerate though.</p>
+
+<p><b>BIOS:</b> The BIOS looks like a slightly stripped down version of an Asus
+motherboard BIOS. It's shockingly full featured and well designed for a cheap
+laptop. You can update the BIOS using a tool in the BIOS. The updates from
+Asus's website can be loaded from a FAT32 USB stick (or your ESP if you're
+feeling dangerous). This is a great feature for non-Windows users - no hard
+Windows requirement to update the BIOS. No LVFS, but you can't win 'em all.</p>
+
+<p><b>Hardware:</b> It's cheap but it all works. USB-C does not charge the
+laptop, nor will it oputput display. Bummer, but expected. The keyboard is not
+backlit, but superb for this size. The layout is as expected for laptops. The
+power button is above backspace like many modern machines, but it is a stiffer
+press than the rest of the keyboard. The trackpad has a numpad on it that only
+works in Windows. That's fine, a touch numpad totally misses the point anyway.
+The enter key has a yellow border on it. Reminds me of the old Thinkpad
+keyboards' blue enter key. The stock Wi-Fi chip issues aside, it only has one
+antenna, so Wi-Fi no matter what card you put in is going to be slow, but
+acceptable.<p>
+
+<p><b>Conclusion</b></p>
+
+<p>All in all, a great little machine for the money and surprisingly capable.
+If you spend a few bucks, you can get a Linux-compatible Wi-Fi card. And for
+$50 on top of that, a nice NVMe SSD. For around $300 total this is a fantastic
+portable computer to run Linux on. I recommend it if it's a companion to a more
+powerful desktop or server, where you can offload more resource-intensive
+tasks.</p>
+
+<p>I very much don't recommend this laptop if you're going to run Windows, or
+Linux with a more resource-heavy desktop environment, and a bunch of electron
+apps. 4GB RAM is just not enough, constantly swapping to the eMMC is going to
+make things perceptibly slow, and there's no upgradability. I run <a
+href="https://swaywm.org/">sway</a> with a lot of terminal/CLI programs, and
+that setup works very well, mainly because of its lightweight nature and low
+resource usage.</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
