@@ -36,7 +36,13 @@ scanning database functionality to their app in order to stay on the app store.
 </p>
 
 <p>
-Even worse, it's comically easy to defeat hash-based matching. Here's how!
+There's a laundry list of other professionals and their complaints <a
+href="https://appleprivacyletter.com/">laid out in this open letter</a>.
+</p>
+
+<p>
+The worst thing about this is that it's comically easy to defeat hash-based
+matching. Here's how!
 </p>
 
 <p class=mono>
@@ -77,6 +83,8 @@ help you do it.
 </p>
 ]]></description>
 </item>
+
+
 
 
 
