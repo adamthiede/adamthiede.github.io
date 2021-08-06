@@ -12,6 +12,74 @@
 <!-- LB -->
 
 <item>
+<title>How To Defeat Apple's Wrongthink Hash-Matching</title>
+<guid>https://adamthiede.com/blog.html#how-to-defeat-apples-wrongthink-hashmatching</guid>
+<pubDate>Fri, 06 Aug 2021 06:34:44 -0700</pubDate>
+<description><![CDATA[
+<p>
+Time to be scared, and time to make a change. Apple's just <a
+href="https://web.archive.org/web/20210806104403/https://www.apple.com/child-safety/">announced</a>
+they are going to plant a database of pattern-matches of child porn on your
+phone, and use that to scan all your photos to make sure you don't have child
+porn. Pretty neat, right? Anyone downloads child porn on their iPhone, it blurs
+it out, and the cops show up at their house in 15 minutes flat. Sounds like the
+right thing to do.
+</p>
+
+<p>
+Well, it's unfortunately not. You can't build a system like they have without
+now enabling governments to say "hey, also insert these hashes of VPN software
+or Tiananman Square Tank Man photos", and not being able to deny them, because
+of course Apple won't. This sets a precedent, too - trustworthy encrypted
+messaging programs like Signal may now also be strong-armed into adding this
+scanning database functionality to their app in order to stay on the app store.
+</p>
+
+<p>
+Even worse, it's comically easy to defeat hash-based matching. Here's how!
+</p>
+
+<p class=mono>
+$ md5sum image1.png<br/>
+e8d55c2ae485226ac88fa9520a6a787d  image1.png<br/>
+$ echo " " | tee image1.png<br/>
+$ md5sum image1.png<br/>
+26bc96b4f8d9cc070c5ea4df969a1152  image1.png<br/>
+</p>
+
+<p>
+An explanation - I took the unique hash of an image and altered it by adding a
+single space to the end of the data. You can add multiple spaces, or add some
+other data that doesn't matter to the structure of the image format you're not
+using, or open it in MS Paint and color a single pixel, or take a screenshot
+and share the screenshot.  There are so many different ways to alter the hash
+of an image, and many can be done without losing quality. I could even do this
+to my whole Pictures folder at once, using a simple one-liner:<br/>
+<span class=mono>find ~/Pictures -type f -iname '*.png' -iname '*.jpg' -exec
+echo ' ' | tee {} \;<span>
+</p>
+
+<p>
+How long until it's used for pirated music or old Game Boy ROMs? How about
+things like youtube-dl? How about VPN software or Tor Browser? Maybe a few
+years down the line, it scans for not-woke-enough memes. If you own guns it
+reports on you to Big Brother. If you go to Church, it tells you you're doing
+<b>wrongthink</b> and prevents you from getting directions to go there again.
+(They literally say <b>"at-risk thoughts and behavior"</b> in the screenshot at
+the bottom of their page.)
+</p>
+
+<p>
+Apple is an evil company doing evil things, and telling us to "think of the
+children!" You should throw your iPhone in a lake, buy a Pixel 4a or 3a in
+cash, install CalyxOS or GrapheneOS, and only use Free Software. Email me. I'll
+help you do it.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Long Term Fixes</title>
 <guid>https://adamthiede.com/blog.html#long-term-fixes</guid>
 <pubDate>Thu, 24 Jun 2021 10:55:20 -0700</pubDate>
