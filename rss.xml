@@ -42,7 +42,7 @@ Even worse, it's comically easy to defeat hash-based matching. Here's how!
 <p class=mono>
 $ md5sum image1.png<br/>
 e8d55c2ae485226ac88fa9520a6a787d  image1.png<br/>
-$ echo " " | tee image1.png<br/>
+$ echo " " | tee -a image1.png<br/>
 $ md5sum image1.png<br/>
 26bc96b4f8d9cc070c5ea4df969a1152  image1.png<br/>
 </p>
@@ -56,7 +56,7 @@ and share the screenshot.  There are so many different ways to alter the hash
 of an image, and many can be done without losing quality. I could even do this
 to my whole Pictures folder at once, using a simple one-liner:<br/>
 <span class=mono>find ~/Pictures -type f -iname '*.png' -iname '*.jpg' -exec
-echo ' ' | tee {} \;<span>
+echo ' ' | tee -a {} \;<span>
 </p>
 
 <p>
@@ -77,6 +77,8 @@ help you do it.
 </p>
 ]]></description>
 </item>
+
+
 
 <item>
 <title>Linux on the Asus L210</title>
