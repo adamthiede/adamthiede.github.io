@@ -18,11 +18,11 @@
 <p>
 Time to be scared, and time to make a change. Apple's just <a
 href="https://web.archive.org/web/20210806104403/https://www.apple.com/child-safety/">announced</a>
-they are going to plant a database of pattern-matches of child porn on your
-phone, and use that to scan all your photos to make sure you don't have child
-porn. Pretty neat, right? Anyone downloads child porn on their iPhone, it blurs
-it out, and the cops show up at their house in 15 minutes flat. Sounds like the
-right thing to do.
+they are going to plant a database of pattern-matches of child abuse material
+on your phone, and use that to scan all your photos to make sure you don't have
+any.  Pretty neat, right? Anyone downloads child abuse material on their
+iPhone, it blurs it out, and the cops show up at their house in 15 minutes
+flat. Sounds like the right thing to do.
 </p>
 
 <p>
@@ -37,6 +37,24 @@ scanning database functionality to their app in order to stay on the app store.
 <p>
 There's a laundry list of other professionals and their complaints <a
 href="https://appleprivacyletter.com/">laid out in this open letter</a>.
+</p>
+
+<p>
+Issuing a small update to this post, but leaving the original bits intact.
+<br/>
+Apparently they aren't using direct cryptographic hashing, but a different way
+to detect smaller patterns called <a
+href="https://en.wikipedia.org/wiki/Perceptual_hashing">perceptual hashing</a>.
+Apple's announcement has a link to a PDF full of technical details which
+mentions perceptual hashing by name (the actual announcment doesn't), and <a
+href="https://rentafounder.com/the-problem-with-perceptual-hashes/">this
+site</a> has a decent explanation of why it's also not that great.  My method
+below will not work to change perceptual hashes. But maybe rotating or flipping
+the image will? Changing the color profile? Applying a noise filter? Who knows.
+Probably pretty easy to automate those, too. Bad guys already know how to evade
+this stuff, and they're probably not storing their stash on iPhones. This is
+just going to wind up with regular folks getting false-positives. Anyway,
+update over.
 </p>
 
 <p>
@@ -80,7 +98,7 @@ children!" You should throw your iPhone in a lake, buy a Pixel 4a or 3a in
 cash, install CalyxOS or GrapheneOS, and only use Free Software. Email me. I'll
 help you do it.
 </p>
-<small>Fri, 06 Aug 2021 06:43:44 -0700</small>
+<small>Fri, 06 Aug 2021 17:02:25 -0700</small>
 </div>
 
 <div class='entry'>
