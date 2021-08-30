@@ -1,12 +1,44 @@
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #dddddd;
+        color: black;
+    }
+	.entry {
+		background-color:#eeeeee;
+		color:#252123;
+	}
+	a {
+		color:darkblue;
+		text-decoration:none;
+	}
+	.bar {
+		background:#cccccc;
+		border-color:#a1a1a1;
+	}
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222222;
+        color: white;
+    }
+	a:hover { color: lightblue; }
+	a {
+		color:lightblue;
+		text-decoration:none;
+	}
+	.entry {
+		color:#eeeeee;
+		background-color:#252123;
+	}
+	.bar {
+		background:#414141;
+		border-color:#646464;
+	}
+}
+
 html{
-	background:#222222;
-	color:#eeeeee;
 	font-family:Serif;
 	text-align:center;
-}
-a {
-	color:lightblue;
-	text-decoration:none;
 }
 .bar {
 	font-family:Serif;
@@ -15,11 +47,9 @@ a {
 	display:inline-block;
 	padding:5px;
 	border-radius:5px;
-	background:#414141;
 	text-align:center;
 	border-style:solid;
 	border-width:thin;
-	border-color:#646464;
 }
 .tagline{
 	text-align:left;
@@ -34,10 +64,6 @@ a {
 	max-width:1280px;
 	margin:0 auto;
 }
-.normal a{
-	text-decoration:underline;
-    color:yellow;
-}
 .homepage{
     text-align:left;
     max-width:768px;
@@ -48,10 +74,9 @@ a {
 }
 .callout {
     font-weight:bold;
-    color:yellow !important;
 }
 table, th, td, tr {
-    border: 1px solid white;
+    border: 1px solid;
     border-collapse: collapse;
     padding: 4px;
 }
