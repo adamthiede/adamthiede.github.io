@@ -2,15 +2,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title>VWUUG - Vancouver Washington Unix User Group</title>
 	<style>
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #dddddd;
+                color: black;
+            }
+        	.entry {
+        		background-color:#eeeeee;
+        		color:#252123;
+        	}
+            a { color:darkblue; }
+            a:hover { color:darkblue; }
+            .bar {
+                background:#ffffff
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222222;
+                color: white;
+            }
+        	a { color:yellow; }
+        	a:hover { color: yellow; }
+            .bar {
+                background:#414141
+            }
+        }
+
 		html{
-			background:#222222;
-			color:#eeeeee;
 			font-family:Serif;
 			text-align:center;
-		}
-		a {
-			color:yellow;
-			text-decoration:underline;
 		}
 		.bar {
 			font-family:Sans-Serif;
@@ -18,7 +39,6 @@
 			display:inline-block;
 			padding:5px;
 			border-radius:5px;
-			background:#414141;
 			text-align:center;
 			border-style:solid;
 			border-width:thin;
@@ -39,14 +59,17 @@
 	<body>
 		<H1><a href=""> vwuug - Vancouver Washington Unix User Group </a></H1>
 		<div class="bar"><a href="mailto:me@adamthiede.com">Email Me</a></div>
+		<div class="bar"><a href="schedule.html">Schedule</a></div>
 		<br/><br/>
-		<p>Unix User Group for Vancouver, Washington, USA</p>
+		<p>Unix/Linux User Group for Vancouver, Washington, USA</p>
 		<br/>
 		<p>I'm looking to bring together a group of like-minded individuals interested in the following: 
 <ul>
 <li>Free Software</li>
 <li>Open Source</li>
 <li>Linux, Unix, BSDs</li>
+<li>Self-Hosting</li>
+<li>system administration</li>
 <li>programming, scripting, hacking</li>
 <li>virtualization, networking</li>
 <li>devops, cloud</li>
@@ -55,33 +78,24 @@
 <p>If you'd like to sharpen your skills, help your community grow, and make a few friends, this group is for you.</p>
 <br/>
 
-		<p><b>I have no idea</b> how to start one of these things, so any help is appreciated. Please email me and and we can get started organizing.</p>
-		<p>Talk on Matrix: <a href=https://matrix.to/#/#vwuug:matrix.org?via=matrix.org">#vwuug:matrix.org</a></p>
+		<p><b>Scheduled Meetings:</b> 6-8PM on Wednesday and 6-8PM on Saturday (for now)</p>
+		<p>Video/audio chat on <a href="https://meet.jit.si/vwuugmeetup">jitsi</a> is optional.
+		These hours will change and meetings will likely be once or twice a month once I get more people's schedules figured out.</p>
+		<p>Talk on Matrix: <a href=https://matrix.to/#/#vwuug:libera.chat>#vwuug:libera.chat</a> (this room is bridged with IRC)</p>
+		<!--<p>Talk on Matrix: <a href=https://matrix.to/#/#vwuug:matrix.org?via=matrix.org">#vwuug:matrix.org</a></p>-->
 		<p>Talk on IRC:<a href="https://libera.chat">#vwuug on libera.chat</a></p>
 		<br/>
 		<img src=vwuug.png style="border-radius:15px;max-width:90%"></img>
 		<br/>
-		<br/>
-    	<p>
-        <b>Community service and outreach</b> should be an important aspect of
-        this group. While it would be great to talk amongst ourselves, making
-        our geographic region better by helping them with problems or
-        introducing them to new concepts is going to be another big focus of
-        this group.
-        </p>
-        <p>
-        Seminars, round-tables, town halls, whatever you want to call them - we
-        need a way to share our knowledge with the public so that they can
-        better understand the confusing landscape of modern technology
-        themselves, too.
-        </p>
-
+		<p>
+		I'm aware of <a href="http://pdxlinux.org/">PLUG</a> and am not trying
+to steal their thunder or members. This is targeted at Vancouver residents who want to stay on this side of the river for various reasons - travel time, parking, local support, etc.
+</p>
 <br/>
-        <p>
-        I'm going to start reaching out to places like the libraries and the
-        newspapers, to see if this is something they're interested in
-        promoting, or helping host.
-        </p>
-
+		<p>
+    Made for your benefit with 100%
+    <a target=_blank href="https://www.fsf.org/">Free Software</a>
+    by <a target=_blank href="https://adamthiede.com">Adam Thiede</a>.
+		</p>
 		</body>
 </html>
