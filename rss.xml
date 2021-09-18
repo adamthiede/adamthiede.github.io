@@ -48,15 +48,15 @@ few on the Internet in various form factors and have them in every laptop I
 care about. Every machine I repair for a friend gets checked, and if it's got
 the Holy Grail of Wi-Fi, I ask to trade them for an Intel or other one of my
 spare cards, and since they run Windows it's usually an upgrade for them.
-There is no Wi-Fi card that has worked better than the ath9k cards in terms of
-reliability, stability, connection speed, and versatility.  Sometimes Intel
-cards dump their firmware all over the floor and leave a mess in <span
-class=mono>dmesg</span> and a reboot is necessary to clean up. Newer Qualcomm
-Atheros cards (<span class=mono>ath10k</span>) or Realtek cards either take a
-long time to connect or are single-band cards that can only handle one
-connection at a time, and in Realtek's case, that's if there's a driver at all!
-Sometimes their cards are such obscure one-offs that they don't land in the
-Linux kernel at all.
+In my extensive laptop experience, there is no Wi-Fi card that has worked
+better than the <span class=mono>ath9k</span> cards in terms of reliability,
+stability, connection speed, and versatility.  Sometimes Intel cards dump their
+firmware all over the floor and leave a mess in <span class=mono>dmesg</span>
+and a reboot is necessary to clean up. Newer Qualcomm Atheros cards (<span
+class=mono>ath10k</span>) or Realtek cards either take a long time to connect
+or are single-band cards that can only handle one connection at a time, and in
+Realtek's case, that's if there's a driver at all!  Sometimes their cards are
+such obscure one-offs that they don't land in the Linux kernel at all.
 </p>
 
 <p>
@@ -67,6 +67,8 @@ bless your laptop with it to find out what you've been missing.
 </p>
 ]]></description>
 </item>
+
+
 
 
 <item>
