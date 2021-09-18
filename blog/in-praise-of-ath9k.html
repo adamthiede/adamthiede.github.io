@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>In Praise of ath9k</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>In Praise of ath9k</h1>
+<small>[<a href='../blog.html#in-praise-of-ath9k'>link</a>&mdash;<a href='in-praise-of-ath9k.html'>standalone</a>]</small>
+<p>
+Do you have a favorite <a
+href="https://en.wikipedia.org/wiki/Device_driver">device driver</a>? Or maybe
+a favorite pice of hardware? I do! My favorite hardware is the set of devices
+supported by Linux's <span class=mono><a
+href="https://wireless.wiki.kernel.org/en/users/Drivers/ath9k">ath9k</a></span>
+(or OpenBSD's <span class=mono><a
+href="https://man.openbsd.org/athn">athn</a></span> driver).
+</p>
+
+<p>
+The devices in question are all Qualcomm Atheros wireless cards. They were in
+vogue from about 2011-2014 and shipped in a lot of consumer hardware. Most
+higher end notebooks shipped with Intel Wi-Fi chips, and the lower end ones
+shipped with Realtek or Broadcom cards. Atheros has less market share than the
+larger players in the "laptop Wi-Fi chip" space. This makes it somewhat
+complicated to find these cards in a reliable way, especially given that they
+mostly shipped in the mini-PCIe form factor, not M.2/NGFF. Most laptops these
+days also expect the Wi-Fi and Bluetooth chipsets to be on the same card in a
+combo pack, and those are also difficult to obtain reliably, since older
+systems with these cards frequently had a separate bluetooth module. Not only
+that, if you do find one with Bluetooth, it's likely it's older, and won't have
+modern Bluetooth features. Most of these cards also only have 2.4GHz bands for
+Wi-Fi and won't see 5GHz networks.
+</p>
+
+<p>
+Despite the drawbacks, I go out of my way to find these cards. I've ordered a
+few on the Internet in various form factors and have them in every laptop I
+care about. Every machine I repair for a friend gets checked, and if it's got
+the Holy Grail of Wi-Fi, I ask to trade them for an Intel or other one of my
+spare cards, and since they run Windows it's usually an upgrade for them.
+In my extensive laptop experience, there is no Wi-Fi card that has worked
+better than the <span class=mono>ath9k</span> cards in terms of reliability,
+stability, connection speed, and versatility.  Sometimes Intel cards dump their
+firmware all over the floor and leave a mess in <span class=mono>dmesg</span>
+and a reboot is necessary to clean up. Newer Qualcomm Atheros cards (<span
+class=mono>ath10k</span>) or Realtek cards either take a long time to connect
+or are single-band cards that can only handle one connection at a time, and in
+Realtek's case, that's if there's a driver at all!  Sometimes their cards are
+such obscure one-offs that they don't land in the Linux kernel at all.
+</p>
+
+<p>
+In honor of this driver and these wonderful cards, these blob-free bastions of
+Freedom, <a href="https://ath9k.com">I made a website dedicated to these
+wireless cards and their driver</a>. Enjoy. Go get yourself an Atheros card and
+bless your laptop with it to find out what you've been missing.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
