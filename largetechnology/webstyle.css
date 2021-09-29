@@ -1,0 +1,118 @@
+/*
+ * Licensed under GPLv3
+ * https://www.gnu.org/licenses/gpl-3.0.en.html
+ */
+html{
+	background:lightgray;
+	color:black;
+	font-family:Serif;
+}
+a {
+	color:purple;
+	text-decoration:underline;
+}
+.bar {
+	font-family:Serif;
+    font-size:11pt;
+	font-weight:bold;
+	display:inline-block;
+	padding:5px;
+	border-radius:5px;
+	background:#414141;
+	text-align:center;
+	border-style:solid;
+	border-width:thin;
+	border-color:#646464;
+}
+
+/*Naviation elements*/
+.navul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+	/*border-radius:5px;*/
+	border-radius:3px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.navli {
+    float: left;
+}
+.navli.on{
+	background-color:purple;
+}
+.navli a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+	-o-transition:.125s;
+	-ms-transition:.125s;
+	-moz-transition:.125s;
+	-webkit-transition:.125s;
+	transition:.125s;
+}
+.navli a:hover {
+    background-color: purple;
+}
+.navlir{
+	float:right;
+	color:#ff00ff;
+}
+.navlir a{
+	/*color:#aa77ff;*/
+	color:yellow;
+}
+.navlir a:hover{
+	color:#fff;
+}
+
+
+
+.tagline{
+	text-align:left;
+	max-width:1024px;
+	margin:0 auto;
+}
+.tagline a{
+	text-decoration:underline;
+}
+.normal{
+	text-align:left;
+	max-width:1280px;
+	margin:0 auto;
+}
+.normal a{
+	text-decoration:underline;
+    color:yellow;
+}
+.homepage{
+    text-align:left;
+    max-width:768px;
+    margin:0 auto;
+}
+.homepage a{
+	text-decoration:underline;
+}
+.callout {
+    font-weight:bold;
+    color:yellow !important;
+}
+table, th, td, tr {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 4px;
+}
+img {
+    max-width:100%;
+}
+.mono {
+    font-family:monospace;
+    font-size:1.5em;
+}
+.credit {
+    font-size:.75em;
+    float:bottom;
+}

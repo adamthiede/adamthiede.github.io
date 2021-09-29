@@ -1,0 +1,21 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Goodbye, Big Tech!</title>
+	<link rel="stylesheet" type="text/css" href="webstyle.css">
+	<h1><a href="https://goodbyebig.tech">Goodbye, Big Tech</a></h1>
+	<h2>Hardware</h2>
+    <hr/>
+    <div class="navul">
+        <div class="navli on"><a href="Hardware.html">Hardware</a></div>
+        <div class="navli"><a href="Software.html">Software</a></div>
+        <div class="navli"><a href="Services.html">Services</a></div>
+        <div class="navli"><a href="Misc.html">Misc</a></div>
+    </div>
+    <hr/>
+    <h3>This page tells you what hardware to use to avoid control.</h3>
+	<body>
+        <p>
+        </p>
+	</body>
+	<br/><br/>
+</html>
