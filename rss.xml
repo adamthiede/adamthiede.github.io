@@ -12,6 +12,50 @@
 <!-- LB -->
 
 <item>
+<title>Why Use The Command Line?</title>
+<guid>https://adamthiede.com/blog.html#why-use-the-command-line</guid>
+<pubDate>Sun, 03 Oct 2021 05:35:24 -0700</pubDate>
+<description><![CDATA[
+<p>
+When modern, flexible, decent graphical interfaces exist, many people think
+there's little reason to use the command line; that it's difficult to use or
+obsolete. This couldn't be further from the truth. The command line is
+powerful, verbose, easy to understand, filled with help documents and
+tutorials, and conceptually incredibly simple. You ask, it answers. But the
+main reason to use it is because, most of the time, it's faster and easier than
+using a graphical interface.
+</p>
+
+<p>
+The command line is not always the easiest way to do things, especially for
+novices. But it is the <b>fastest</b> way to do <b>most</b> things, and the
+<b>only</b> way to do <b>some</b> things.
+</p>
+
+<p>
+Using the command line for touching up a photo isn't a great idea. If you have
+to print or change one document, sure, use the tools where you feel at home.
+But if you need to resize 100 photos, or print 100 documents, or make a small
+change to 100 text files? You bet you're gonna need the command line. That's
+robot work. Are you really gonna open and close 100 pictures in your image
+editor, or sift through your filesystem, looking for duplicate files to get
+back some space? The command line will rip through these tasks in a single
+second where a human would take hours to do it in a graphical interface. Make
+the computer automate it for you!
+</p>
+
+<p>
+It's important to know how to use good tool. <a
+href="https://ubuntu.com/tutorials/command-line-for-beginners">Read this
+tutorial</a> if you want to know more. If you have a command line you can
+interface with, you have infinite power at your fingertips. Have fun. Email me
+if you want help.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>In Praise of ath9k</title>
 <guid>https://adamthiede.com/blog.html#in-praise-of-ath9k</guid>
 <pubDate>Sat, 18 Sep 2021 14:49:22 -0700</pubDate>
