@@ -13,6 +13,148 @@
 
 <!-- LB -->
 <div class='entry'>
+<h2 id='moving-back-to-xmpp'>Moving Back to XMPP</h2>
+<small>[<a href='#moving-back-to-xmpp'>link</a>&mdash;<a href='blog/moving-back-to-xmpp.html'>standalone</a>]</small>
+<p>
+First, for the impatient,
+<b>from now on, please talk to me via XMPP</b> - my ID is either my personal email address, or me
+at this domain. Use <a href="https://conversations.im/">Conversations</a> on
+Android and <a href="https://gajim.org/">Gajim</a> or <a
+href="https://dino.im/">Dino</a> on GNU/Linux. For other OSs, look
+<a href="https://xmpp.org/getting-started/">here</a>.
+</p>
+
+<h3>History Time</h3>
+
+<p>
+Over the past several years I've somewhat aggressively pushed everyone in my
+life to use <a href="https://signal.org">Signal</a>, since it's generally the
+easiest to use messenger program that checks most of my boxes. It is encrypted,
+open source, cross-platform, and has clients for desktop computers. Despite my
+belief that the cracks are beginning to show, Signal remains a safe, secure
+messenger that is available to everyone with an Apple iPhone (with associated
+iCloud account) or a Google Android Product (with associated Google account).
+</p>
+
+<p>
+However, it doesn't fit the more important critera that I've been ignoring. The
+server is centralized, so I can't run my own if I so choose. The server
+software is <a href="https://community.signalusers.org/t/where-is-new-signal-server-code-why-not-share-signal/15068">only
+marginally open source</a> (for what I belive is
+<a href="https://signal.org/blog/help-us-test-payments-in-signal/">a stupid
+reason</a>). The Signal team is
+<a href="https://github.com/LibreSignal/LibreSignal/issues/37#issuecomment-217211165">
+openly hostile to third-party clients</a>,
+<a href="https://signal.org/blog/the-ecosystem-is-moving/">will not support
+decentralization</a>, the service requires a cell phone number for sign-up, and
+the desktop clients are dependent on the smartphone client. These are
+non-concerns for most people right now, but they always end up being the killer
+anti-features.
+</p>
+
+<p>
+When a platform is centralized and does not use open standards, it will go
+away, and it will hurt when it does. Remember AIM? ICQ? Google Talk? When these
+systems shut down, they <i>forced</i> you to move to a new platform, regardless
+of if you were ready or not. When Signal inevitably does something else to
+close their system down, bakes in some boneheaded cryptocurrency scheme, or
+decides to remove support for de-Googled Android custom ROMs, what then? Can we
+use an old client, move our server, all without effecting our contacts? No
+dice. When Signal says jump, the users' only option is "how high".
+</p>
+
+<p>
+If you wonder why I fret about chat client so much, it's because I want the
+primary way I communicate with friends and family to be safe, secure, and as
+personal as if we were face to face. I don't want anyone but me and the
+recipient to see the message. That's it. That's the one thing that's important.
+You have no idea how difficult it is to ensure that one requirement.
+</p>
+
+<h3>Personal Complaints</h3>
+
+<p>
+Besides the problems with the larger organization and system as a whole, I have
+personal issues with Signal.
+<ul>
+<li>They do not ship a decent desktop client. It's made of web junk and painful
+to run on my low-resource computers.</li>
+<li>Despite being made of web technologies, they do not ship a "web" client
+like WhatsApp or Telegram, which would mitigate the following issue:</li>
+<li>They only ship x86_64 builds of their desktop client, so users of the (now
+&gt;year-old) M1 Macbooks, or any Windows or Linux ARM devices cannot use the
+desktop client. This also means no Pinephone client.</li>
+<li>They do not officially support non-Debian Linux. Flatpaks and Snaps are
+unofficial builds by Internet randos. Building it from source is painful.</li>
+<li>It's not possible to register without a phone number.</li>
+<li>It's not possible to set up Signal on a new computer without "approving" it
+with the phone first. The desktop client can be used with the phone completely
+off, though.</li>
+<li>Installing Signal without identifying yourself to Apple or Google is possible
+but highly discouraged. The <a href="https://signal.org/android/apk/">Android
+standalone download</a> is literally labeled "Danger Zone". They also refuse to
+distribute Signal via F-Droid, the good Android app store.</li>
+</ul>
+In short, it's heavily smartphone-dependent, which means it's also heavily
+Apple and Google dependent. How they ship an encrypted messenger and laud the
+benefits of privacy - while simultaneously ensuring their customers also have
+to submit to surveillance by these 2 tech giants in order to user their product
+- baffles me.
+</p>
+
+<h3>Where Do We Go?</h3>
+
+<p>
+There's a lot pushing me away from Signal. The only thing keeping me there is
+the same thing that keeps people on Facebook - the network effect. If Signal
+were decentralized like email, I could choose my own clients, run my own
+server, and solve the problem for myself, without effecting others. This is why
+I must flee to a decentralized messenger on an open standard - the next time I
+have complaints about what my messaging client does, I can swap it out and my
+recipients aren't inconvenienced. This is why I'm not telling everyone to
+switch to Telegram or WhatsApp - they have all the same issues Signal does, and
+more.
+</p>
+
+<p>
+There are a bunch of options for decentralized, self-hosted messengers out
+there, but the one with staying power is <a href="https://xmpp.org/">XMPP</a>
+(aka "jabber"). It has served as the backbone for a bunch of proprietary
+messengers, like Cisco Jabber and Google Talk, so it's battle-tested. There are
+many different clients and servers for every platform under the sun, and many
+are lightweight and resource friendly. The reason I don't want to migrate to
+Matrix is that it's too new, the one (!) server implementation is a resource
+hog, and out of all the clients, the only generally competent one is written in
+Electron, for a matching waste of energy on your server and client.
+</p>
+
+<p>
+Using decentralized systems, or systems under your own control, mitigates
+the eventuality of proprietary or centralized systems turning sour. I'm running
+my own XMPP server on this webserver right now, using <a
+href="https://prosody.im/">prosody</a>. It is almost trivially easy to set up,
+can run on minimal system resources, and for extra security, SSL certs are free
+via LetsEncrypt. For those unwilling to go to the command line, <a
+href="https:///yunohost.org">YunoHost</a> bundles it in the default setup.
+</p>
+
+<p>
+Signal has been great. I've enjoyed using the program from its early days, but
+using what amounts to a proprietary system has restricted my freedoms long
+enough. I want to be able to run my own client. I want to be able to run my own
+server. I want to control my data. Signal affords me none of these freedoms.
+XMPP does. Some people see the availability of these choices as
+"fragmentation", but I see it as a good thing.  What I want out of a chat
+program may not be what you want, but at the very least, our different clients
+should speak the same language.
+</p>
+
+<p>
+I hope to see you there.
+</p>
+<small>Mon, 25 Oct 2021 19:34:04 -0700</small>
+</div>
+<div class='entry'>
 <h2 id='pinephone-october-2021'>Pinephone October 2021</h2>
 <small>[<a href='#pinephone-october-2021'>link</a>&mdash;<a href='blog/pinephone-october-2021.html'>standalone</a>]</small>
 <p>
