@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>A Note on VPNs</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>A Note on VPNs</h1>
+<small>[<a href='../blog.html#a-note-on-vpns'>link</a>&mdash;<a href='a-note-on-vpns.html'>standalone</a>]</small>
+<p>
+VPN (Virtual Private Network) technology was created for the purpose of bridging multiple networks together. It allows remote workers to work on a secure work network, enables access to resources behind firewall or NAT, and allows servers to talk to each other like they're in the same room, even if they're miles away from each other. It's not a technology most regular computer users should have to think about.
+</p>
+
+<p>
+If advertising has tricked you into thinking VPNs are cool, <a href="https://www.youtube.com/watch?v=WVDQEoe6ZWY">watch this video.</a>
+</p>
+
+<p>
+If you don't have time for that, here are some facts:
+<ul>
+<li>VPNs do not provide better encryption than HTTPS, so most of the time, using public WiFi isn't a problem, like it was a decade ago.</li>
+<li>Your browsing history still lives on your computer, which is likely already backdoored by MS/Apple/Google. VPNs do nothing to protect your browsing history.</li>
+<li>"No-log" VPN providers still log stuff if they're asked.</li>
+<li>You will still be tracked across the Internet if you log into anything like email or social media.</li>
+<li>You will still be tracked across the Internet by other means than your IP Address. Your IP is low on the totem pole of the <a href="https://www.amiunique.org/">long list of stuff</a> that is used to track specifically, uniquely, you.</li>
+<li>If you want to bypass geo-restricted content, use a proxy. This is better than funnelling ALL your traffic over the VPN's network. Just pass what you need through the tunnel. They're cheap to operate and cost less than a VPN.</li>
+<li>If you need a VPN for work, cool. Use it.</li>
+<li>If you VPN back to your home to access your home servers, that's a good use case.</li>
+<li>If you are concerned about your ISP seeing what you connect to, use an alternate DNS server.</li>
+<li>If you're even more concerned, use <a href="https://www.torproject.org/">Tor</a> (via Tor Browser) or a proxy.</li>
+<li>If your Internet activity is questionably legal or illegal, or your ISP is actively malicious, use Tor with bridges or a proxy.</li>
+<li>If you want to pirate stuff, think about your life for a bit.</li>
+</ul>
+</p>
+
+<p>
+There's almost no reason for most people to use a VPN. If you really think you need one, learn how to construct one <a href="https://notthebe.ee/raspi.html">in your home</a> or <a href="https://www.level1techs.com/video/self-hosted-vpn-wireguard-linode">in the cloud</a>. Congrats, you spent less money and made yourself smarter.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
