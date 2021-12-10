@@ -12,6 +12,28 @@
 <!-- LB -->
 
 <item>
+<title>New Article On Dumbphones</title>
+<guid>https://adamthiede.com/blog.html#new-article-on-dumbphones</guid>
+<pubDate>Thu, 09 Dec 2021 19:38:51 -0800</pubDate>
+<description><![CDATA[
+<p>
+New <a href="https://adamthiede.com/dumbphone-options.html">article about dumbphones</a>
+in the <a href="https://adamthiede.com/articles.html">articles</a> section.
+This is my least autistic ramble yet. I will update it if I get more info so
+keep on the lookout.
+</p>
+
+<p>
+You could just read it, but the article is about switching from smartphones to
+a "dumb" phone, how to do it well, and what not to do. I've heard a lot about
+how this is sometimes a more popular desire than getting a GrapheneOS-level
+secure, de-Googled smartphone, so figured I'd fill that need.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Help For Those Who Want It</title>
 <guid>https://adamthiede.com/blog.html#help-for-those-who-want-it</guid>
 <pubDate>Fri, 26 Nov 2021 07:11:41 -0800</pubDate>
