@@ -12,6 +12,50 @@
 <!-- LB -->
 
 <item>
+<title>Everything Works on the Pinephone</title>
+<guid>https://adamthiede.com/blog.html#everything-works-on-the-pinephone</guid>
+<pubDate>Sun, 19 Dec 2021 19:40:04 -0800</pubDate>
+<description><![CDATA[
+<h3>What happened?</h3>
+<p>
+As of today, I got phone calls, data, SMS, MMS, and reliable Internet
+communication working on the Pinephone. That means everything that one would
+reasonably expect a smartphone to do, this thing does it. (If you don't know
+what <a href="https://www.pine64.org/pinephone/">the Pinephone</a> is, it's a
+Desktop Linux computer in the size and shape of a smartphone.) <b>I am
+attempting to switch to using a Linux computer as my personal smartphone.</b>
+</p>
+
+<h3>Why should you care?</h3>
+<p>
+I've <a href="https://adamthiede.com/blog/moving-back-to-xmpp.html">
+explained my dissatisfaction with Signal</a> before so I won't rehash it,
+but as of today, <b>Signal is now a low-priority communication platform for
+me.</b> I will not be immediately responsive there as I have been in the past.
+</p>
+
+<h3>How can you get in touch with me?</h3>
+<p>
+If you want to get ahold of me:
+<ol>
+<li>Chat with XMPP - address is just my email address</li>
+<li>Email me</li>
+<li>Call me</li>
+<li>Matrix (email me if you are curious)</li>
+</ol>
+Do not send me SMS or MMS messages. Really. Don't. Email me instead.
+</p>
+
+<h3>Why?</h3>
+<p>
+I don't like smartphones. This "smartphone" device respects me. It lets me do
+what I want with it. It's as simple, or complicated, as I want it to be.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Old Laptop Hardware Rocks</title>
 <guid>https://adamthiede.com/blog.html#old-laptop-hardware-rocks</guid>
 <pubDate>Fri, 10 Dec 2021 19:48:55 -0800</pubDate>
