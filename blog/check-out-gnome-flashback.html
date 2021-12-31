@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Check Out GNOME Flashback</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>Check Out GNOME Flashback</h1>
+<small>[<a href='../blog.html#check-out-gnome-flashback'>link</a>&mdash;<a href='check-out-gnome-flashback.html'>standalone</a>]</small>
+<p>
+In the Linux/FOSS world, GNOME seems to be the target of a lot of ire, both
+with and without good reason. The people that work on GNOME stuff tend to be
+pretty opinionated and stubborn, but the stuff that they make is also some of
+the best Free Software around. The GNOME desktop environment works well, rarely
+had issues, and is quite user friendly.
+</p>
+
+<p>
+But we all know that GNOME is pretty good already (if not a bit resource
+heavy). Today, I want to talk about
+<a href="https://wiki.gnome.org/Projects/GnomeFlashback">GNOME Flashback</a>.
+The Flashback project is a tiny set of programs that you can install next to a
+traditional GNOME desktop that bring back the old look of GNOME 2. It's not
+like the GNOME Classic session which is just some GNOME 3 extensions - it's
+almost a totally different desktop environment, like MATE, but uses all the
+stuff you've already got installed on a traditional GNOME session. It's a grand
+total of 10 new packages on top of a Fedora Workstation install. It still uses
+GNOME control center and GNOME tweaks to change settings (like adding
+minimize/maximize buttons, and changing keyboard shortcuts) but otherwise
+behaves like a separate entity.
+</p>
+
+<p>
+You may know that
+<a href="https://adamthiede.com/blog/swaywm-on-opensuse-tumbleweed-is-easy.html">
+I use and enjoy sway</a>, a customizable tiling window manager, but that's
+certainly not for everyone, or even every application. I've spent a lot of time
+in my <span class=mono>~/.sway/config</span>, adding various programs to
+autostart and tuning settings. I and others have attempted to add a bunch of
+stuff to sway <a href="https://github.com/Madic-/Sway-DE/">to make it into a
+proper DE</a>, but that doesn't suit a lot of workflows or people. GNOME
+Flashback can get you most of the way there - it is very low on resource
+utilization, integrates well with GNOME services like keychain and polkit, so
+password saving and authentication prompts work well, and keyboard shortcuts
+are configurable through GNOME control center.
+</p>
+
+<div style="display:block;margin-left:auto;margin-right:auto;text-align:center">
+<p>
+<img style="max-width:80%" src=https://adamthiede.com/Files/flashback.png></img>
+</p>
+<p>
+GNOME Flashback Session, configured to my liking
+</p>
+</div>
+
+<p>
+The <a href="https://wiki.archlinux.org/title/GNOME/Flashback">Arch Wiki
+page</a> on GNOME Flashback is, of course, quite helpful. Initially figuring
+out the configuration of the panels (Super+Alt+Right-click?) isn't very
+discoverable, but that's about the only rough spot. I've configured it to be
+pretty close to what I consider ideal - some simple small menus, dmenu, and
+keyboard shortcuts. And, of course, Flashback is an Xorg session, so
+<a href="https://linuxreviews.org/HOWTO_fix_screen_tearing">fix screen
+tearing</a> on your computer first.
+</p>
+
+<p>
+I've really been liking GNOME Flashback for the past couple days. It's easy to
+install next to your existing GNOME setup, doesn't mess with the system like a
+different DE to a GNOME setup would, integrates very easily, and is easy pick
+up. If you use GNOME already, try it out; it's available in Debian, Fedora, and
+Arch. It's a classic, less flashy, lighter weight version of what you're
+already using.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
