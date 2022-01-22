@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Breaking Changes</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>Breaking Changes</h1>
+<small>[<a href='../blog.html#breaking-changes'>link</a>&mdash;<a href='breaking-changes.html'>standalone</a>]</small>
+<p>
+Breaking Changes are always interesting to deal with. Recently I've been trying
+to get a few bugs fixed in software I used, and build the resulting software.
+I use <a href="https://gitlab.gnome.org/World/podcasts">GNOME Podcasts</a> on
+my Pinephone, and it used to have a pretty annoying bug where it would download
+the album art every time you viewed the media widget in the notification panel
+or lock screen. This was the byproduct of several bugs, both in phosh, and in
+gnome-podcasts. The bugs have been fixed, but it's taking a while for them to
+move down the pipe from git master, to release, to distributions. Sometimes,
+you just have to take matters into your own hands.
+</p>
+
+<p>
+So a-building we will go. I really should get another Raspberry Pi to use as an
+arm64 build server, but until then I'll continue using the free ARM server on
+<a href="https://www.oracle.com/cloud/free/">Oracle Cloud's Free Tier</a>. I am
+not a fan of Oracle the company but they do offer a pretty nice set of
+resources for free, which includes ARM resources. (4 cores, 24 GB RAM,
+combine-able or divisible into up to 4 individual systems.) I've got the ARM
+resources set up just as one server with all the resources running Ubuntu.
+</p>
+
+<p>
+In order to get an interactive Arch setup, I run Docker on the system, managed
+with <a href="https://github.com/89luca89/distrobox">Distrobox</a>. I use the
+<a href="https://hub.docker.com/r/menci/archlinuxarm">menci/archlinuxarm</a>
+base image, and just exec into that. Distrobox automatically shares the home
+directory transparently with the container, so all the files I need are
+accesible both from the host system and the Arch Linux ARM container. The
+setup isn't automated or anything. I just write PKGBUILDs and run
+<span class=mono>makepkg</span>. Pretty primitive, but most of the software I
+am building has a pretty hacky, beta, manual setup anyway.
+</p>
+
+<p>
+Anyway, all this to say, Meson broke on everyone recently!
+(<a href="https://github.com/mesonbuild/meson/issues/9441">issue 1</a>,
+<a href="https://github.com/mesonbuild/meson/pull/9445">issue 2</a>)
+GNOME Podcasts, like pretty much all moder GNOME/Linux Desktop software, uses
+Meson. It's a system I've been meaning to learn for a while but have basically
+zero understanding of. Browsing the issues, I figured out that I needed to
+imitate some of the other projects, and remove some declarations Meson's Makefile
+equivalent in order to get GNOME Podcasts to build:
+</p>
+
+<p>
+<span class=mono>sed -e "s/i18n.merge_file (.*$/i18n.merge_file (/" -i
+podcasts-$pkgver/podcasts-gtk/resources/meson.build</span>
+</p>
+
+<p>
+And now I'm a happy GNOME Podcast listener. I learned a few new things from
+this experience. Upstream changes happen super fast; Arch Linux doesn't always
+have the latest stuff (glibc on Fedora is newer!); and when you're living on
+the bleeding edge of software releases, waiting on critical issues and hardware
+support, releases seem to come really slowly!
+</p>
+
+<p>
+FOSS is great because I could look at public code and public issues, figure out
+how to build my Podcast app myself, fix the build, install it, and use it.
+Thanks to all the GNOME and Meson people who figured this out before I did. I
+can't get over how cool it is to have a smartphone I can do this with.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
