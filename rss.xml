@@ -12,6 +12,72 @@
 <!-- LB -->
 
 <item>
+<title>Pinephone February 2022</title>
+<guid>https://adamthiede.com/blog.html#pinephone-february-2022</guid>
+<pubDate>Wed, 02 Feb 2022 18:08:39 -0800</pubDate>
+<description><![CDATA[
+<p>
+How's the Pinephone thing going? Glad you asked, nobody!
+</p>
+
+<p>
+I write this from convergence land. Recent updates have transformed this thing
+from "okay-ish" to "surprisingly usable"! My phone-computer is plugged into my
+monitor, and I am typing with external perhipherals. It's pretty sweet. There
+has been an enormous amount of work by many others (and a tiny amount by yours
+truly!) to get this thing to a workable state. I imagine the Librem 5 or
+Pinephone Pro would be even better, but this is what I've got. It's still
+incredible.
+</p>
+
+<p>
+My main SIM card lives in the Pinephone most of the time. I occasionally swap
+back to my Android device, but try to avoid using it otherwise. It is faster,
+has a working camera, calls sound clear due to HD Voice, and it can run Signal
+natively, but I don't like it nearly as much. The Pinephone is what I
+<i>want</i> to use.
+</p>
+
+<p>
+On a daily basis, the phone does very few things when undocked - it needs to do
+calls, messages, music, podcasts, and maybe some email? That's about it. When
+docked, I treat it like a full computer. The details of my personal software
+stack are as follows:
+<ul>
+<li>It runs PostmarketOS Edge with the Phosh UI. I've found this to be the most
+"feature complete" OS that requires the least amount of hackery on my part. I
+used to run Arch and that worked fine too, just a little less usable, and I had
+to compile a lot of packages and features that PostmarketOS just has
+natively.</li>
+<li>Chatty is for XMPP (with omemo) and SMS/MMS. It works well!</li>
+<li>Dino for XMPP as a secondary client.</li>
+<li>Geary and Evolution for email.</li>
+<li>NhekoReborn (Flatpak) for Matrix.</li>
+<li>KeepassXC with scale-to-fit for password management. It is far better than
+gnome-passwordsafe/"Secrets" due to the insanely high resource usage of the
+latter.</li>
+<li>GNOME Podcasts to listen to podcasts.</li>
+<li>Lollypop is for music.</li>
+<li>Signal-Desktop flatpak (built from <a href="https://gitlab.com/undef1/signal-desktop-builder">these excellent arm64 signal builds</a>).</li>
+</ul>
+</p>
+
+<p>
+The battery life isn't great. I await my keyboard case anxiously. It can't
+really do the whole "portable hotspot" thing, but that can be easy enough to
+figure out.
+</p>
+
+<p>
+I'm satisfied with this for now. It's not great but it is incredibly cool and
+useful having a full computer in my pocket. It's what I dreamed smartphones
+could be, but never were.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Breaking Changes</title>
 <guid>https://adamthiede.com/blog.html#breaking-changes</guid>
 <pubDate>Fri, 21 Jan 2022 19:48:26 -0800</pubDate>
