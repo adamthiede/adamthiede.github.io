@@ -12,6 +12,85 @@
 <!-- LB -->
 
 <item>
+<title>Linux Mobile Setup</title>
+<guid>https://adamthiede.com/blog.html#linux-mobile-setup</guid>
+<pubDate>Fri, 25 Feb 2022 17:54:44 -0800</pubDate>
+<description><![CDATA[
+<p>
+This is a current snapshot of how I set up my mobile Linux system (Pine64
+Pinephone, as of February 2022) for future reference and to help me collate all
+my information in one place. I usually forget something when I
+<a href="https://wiki.postmarketos.org/wiki/Upgrade_release">upgrade</a>
+or reinstall the device.
+</p>
+
+<p>
+I create my OS image with
+<a href="https://wiki.postmarketos.org/wiki/Pmbootstrap">pmbootstrap</a>.
+pmbootstrap offers a lot of choices. I choose edge, phosh, and set my locale to
+en_US.UTF-8, as God intended. I have a 2GB MicroSD card running
+<a href="https://github.com/dreemurrs-embedded/Jumpdrive/releases">JumpDrive</a>
+to install PostmarketOS to the eMMC of the Pinephone with
+<span class=mono>--sdcard=/dev/sda --fde</span>.
+</p>
+
+<p>
+After the system boots, I join it to the network, and install the following:
+<br/>
+<span class=mono>
+vim git htop rsync mpv ffmpeg urlscan newsboat phosh-antispam vvmplayer dino
+flatpak gnome-podcasts flatpak numberstation yad seahorse powersupply geary
+evolution foot dconf-editor yad
+</span>
+<br/>
+Next I add add flathub and <a href="https://elagost.com/flatpak">my repo</a>
+to flatpak remotes. I install my builds of Signal, Axolotl, and my Dice program
+(all detailed on my repo's site) and NhekoReborn, FluffyChat, KeePassXC, and
+Komikku. I install KeePassXC on from flatpak because it keeps QT libraries off
+the main system, and I'm installing them with NhekoReborn anyway.
+</p>
+
+<p>
+I run the restore outlined in the "upgrade" detailed above from my encrypted
+"backup" sdcard, which I regularly <span class=mono>rsync --delete</span>
+my home directory to.
+</p>
+
+<p>
+On PostmarketOS, I add the following cron entries:
+<span class=mono>
+<br/>
+<br/># daytime
+<br/>30 06 * * * /home/adam/bin/profile-swap restore
+<br/>30 07 * * * /home/adam/bin/themeswitch.sh light
+<br/># nighttime
+<br/>59 19 * * * /home/adam/bin/profile-swap store
+<br/>59 19 * * * /home/adam/bin/profile-swap silent
+<br/>30 19 * * * /home/adam/bin/themeswitch.sh dark
+<br/>
+</span>
+And speaking of cron, I use rc-update to add crond and waked to the default
+runlevel. Waked ensures the clock program will wake up the phone and sound the
+alarm when appropriate.
+</p>
+
+<p>
+The keyboard case is fun. It's kind of broken and not really ideal - I'd like
+to to be thinner and larger - but it's awesome to have when on the go. At home
+I mostly don't use it because I can't plug the phone into my dock when the case
+is attached - power from 2 sources at once is bad. When using the keyboard I
+change the scaling from 200% to 150% or 175%. Phosh doesn't work well in
+landscape at all.
+</p>
+
+<p>
+And that's about it. Future self, hope this helps.
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>Pinephone February 2022</title>
 <guid>https://adamthiede.com/blog.html#pinephone-february-2022</guid>
 <pubDate>Wed, 02 Feb 2022 18:08:39 -0800</pubDate>
