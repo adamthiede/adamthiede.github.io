@@ -71,32 +71,39 @@
             </p>
 
             <p>
-            A few problems arise from this behavior.
+            A few obvious problems arise from this behavior.
             <ol>
-                <li>
-                    Due to the rapidly shifting sands, projects need to be
-                    updated frequently to pull in new changes in dependencies.
-                    There are usually a <i>lot</i> of dependencies.
-                </li>
                 <li>
                     These modern programming languages themselves are also
                     frequently updated. Fedora - a rapid-release, cutting-edge
                     Linux operating system - is 2 versions behind in Go after
-                    only 6 months. Projects need to be frequently updated, both
-                    to use new language features and remove deprecated ones.
-                </li>
-                <li>
-                    Both of the rapid changes and issues with backwards
-                    compatibility mean that developers can't build old software
-                    with new versions of the language, and can't build new
-                    software with old versions of the language. This
-                    contributes to (1). See
-                    <a href="https://utcc.utoronto.ca/~cks/space/blog/web/FirefoxAndRustVersions">here</a> for another example.
+                    only 6 months.
                 </li>
                 <li>
                     Old, unmaintained projects grow stale quickly. Dependencies
                     are addressed by their URLs. They may change, go offline,
                     or become abandoned.
+                </li>
+                <li>
+                    Due to the rapidly shifting sands inherent to the sheer
+                    mass of dependencies most projects have (2), projects need
+                    to be updated frequently to pull in new changes in
+                    dependencies. There are usually a <i>lot</i> of
+                    dependencies. Both the project itself and its dependencies
+                    see much version churn to use new language features and
+                    remove deprecated ones. Dependencies adopt new features,
+                    projects must update language versions to use new
+                    dependency features, and therefore must cycle abandoned
+                    dependencies out or fork them, leading to more churn...
+                    <a href="https://xkcd.com/140/">It's a classic problem.</a>
+                </li>
+                <li>
+                    Both of the rapid changes and issues with backwards
+                    compatibility (1) mean that developers can't build old
+                    software with new versions of the language, and can't build
+                    new software with old versions of the language. This
+                    contributes to (3). See
+                    <a href="https://utcc.utoronto.ca/~cks/space/blog/web/FirefoxAndRustVersions">here</a> for another example.
                 </li>
             </ol>
             <span class=mono>go build</span> will build you a static binary
