@@ -1,0 +1,158 @@
+<html>
+<!--
+5 June 1989 Tiananmen Square Tank Man
+动态网自由门 天安門 天安门 法輪功 李洪志 Free Tibet 六四天安門事件 The Tiananmen Square protests of 1989 天安門大屠殺 The Tiananmen Square Massacre 反右派鬥爭 The Anti-Rightist Struggle 大躍進政策 The Great Leap Forward 文化大革命 The Great Proletarian Cultural Revolution 人權 Human Rights 民運 Democratization 自由 Freedom 獨立 Independence 多黨制 Multi-party system 台灣 臺灣 Taiwan Formosa 中華民國 Republic of China 西藏 土伯特 唐古特 Tibet 達賴喇嘛 Dalai Lama 法輪功 Falun Dafa 新疆維吾爾自治區 The Xinjiang Uyghur Autonomous Region 諾貝爾和平獎 Nobel Peace Prize 劉暁波 Liu Xiaobo 民主 言論 思想 反共 反革命 抗議 運動 騷亂 暴亂 騷擾 擾亂 抗暴 平反 維權 示威游行 李洪志 法輪大法 大法弟子 強制斷種 強制堕胎 民族淨化 人體實驗 肅清 胡耀邦 趙紫陽 魏京生 王丹 還政於民 和平演變 激流中國 北京之春 大紀元時報 九評論共産黨 獨裁 專制 壓制 統一 監視 鎮壓 迫害 侵略 掠奪 破壞 拷問 屠殺 活摘器官 誘拐 買賣人口 遊進 走私 毒品 賣淫 春畫 賭博 六合彩 天安門 天安门 法輪功 李洪志 Winnie the Pooh 劉曉波动态网自由门 Wuhan Flu 武汉流感.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Programming Language Package Managers</title>
+	<link rel="stylesheet" type="text/css" href="webstyle.css">
+	<body>
+		<H1><a href="https://adamthiede.com"> Adam Thiede </a></H1>
+		
+		<div class="bar"><a href="mailto:me@adamthiede.com">Email</a></div>
+		<div class="bar"><a href="./faq.html">About Me</a></div>
+		<div class="bar"><a href="./blogindex.html">Blog</a></div>
+		<div class="bar"><a href="./articles.html">Articles</a></div>
+		<br/><br/>
+        <div class=tagline>
+            <h2>Programming Language Package Managers</h2>
+            <p>
+            In the "old days", compiling software required a compiler. Building
+            a piece of open-source software required the source, compiler, and
+            the dependencies. All of these are usually available in traditional
+            formats, easy to build from source themselves, easy to find and
+            install from a package manager. Builds were accomplished with
+            <span class=mono>./configure; make; make install</span> - the tools
+            were easy to understand for developers and administrators alike.
+            A large portion of the software we still use works like this, since
+            it has been around for quite some time. But modern software turns
+            this on its head.
+            </p>
+
+            <h3>You can never step in the same river twice.</h3>
+
+            <p>
+            For modern JavaScript projects, it's expected that one's development
+            system has a persistent Internet connection to download dependencies
+            at build time. <a href="https://reactjs.org/docs/create-a-new-react-app.html">
+            Creating a new React.js project</a> requires a just-in-time Internet
+        download of 307 MB in the project directory, and 143 MB in <span class=mono>
+            ~/.npm</span> for just a single webpage.
+
+            Building <span class=mono><a href="https://github.com/hashicorp/terraform">
+            terraform</a></span>, the de-facto standard infrastructure-as-code
+            tool, requires a just-in-time Internet download of 2.9 GB in the
+            <span class=mono>~/go</span> directory to build the command-line
+            tool, without any of the modules. No, I'm not joking.
+
+            I could go on - Rust is the same way, and
+            <a href="https://lwn.net/SubscriberLink/889924/2b330ed9ea4a9e23/">
+            people are concerned about it</a> - but this is just the state of
+            modern programming. I'm going to pick a lot on Go specifically, but
+            it's not the only offender, just the one I'm most familiar with.
+            </p>
+
+            <p>
+            These practices encourage developers to effectively yank in
+            stack-overflow-tier code snippets (a la left-pad) for every bit of
+            trivial time-saving they can, ballooning their dependency list,
+            increasing the build time, download size, and thereby decreasing
+            the accessibility of their project. If every developer has to have
+            20 GB of spare disk and a super-fast, unmetered Internet connection
+            to even think about hacking on your project, you've left a lot of
+            potential contributors out in the cold. Not only that, every change
+            in every dependency has to be accounted for, so a project may end
+            up spending more time wrangling dependencies than actually writing
+            the project code. The resulting project's code will likely be
+            slower and larger than it needs to be (see "stack-overflow-tier
+            code snippets"). The developers creating it can get an MVP out of
+            the door a lot faster, sure, but it will be much lower quality
+            than it needs to be.
+            </p>
+
+            <p>
+            A few problems arise from this behavior.
+            <ol>
+                <li>
+                    Due to the rapidly shifting sands, projects need to be
+                    updated frequently to pull in new changes in dependencies.
+                    There are usually a <i>lot</i> of dependencies.
+                </li>
+                <li>
+                    These modern programming languages themselves are also
+                    frequently updated. Fedora - a rapid-release, cutting-edge
+                    Linux operating system - is 2 versions behind in Go after
+                    only 6 months. Projects need to be frequently updated, both
+                    to use new language features and remove deprecated ones.
+                </li>
+                <li>
+                    Both of the rapid changes and issues with backwards
+                    compatibility mean that developers can't build old software
+                    with new versions of the language, and can't build new
+                    software with old versions of the language. This
+                    contributes to (1). See
+                    <a href="https://utcc.utoronto.ca/~cks/space/blog/web/FirefoxAndRustVersions">here</a> for another example.
+                </li>
+                <li>
+                    Old, unmaintained projects grow stale quickly. Dependencies
+                    are addressed by their URLs. They may change, go offline,
+                    or become abandoned.
+                </li>
+            </ol>
+            <span class=mono>go build</span> will build you a static binary
+            that can theoretically be portable. But the problem is that the
+            code itself isn't portable. You can't build a 3-month-old Go
+            project because everything has changed. It's almost no better than
+            a proprietary piece of software, when having the source code
+            doesn't mean anything.
+            </p>
+
+            <p>
+            Free Software should be accessible to all users. Everyone should be
+            allowed to modify and rebuild the software as they like. In
+            practice, this new method doesn't afford most users these freedoms.
+            It's wrong to call that software Free (although these days most
+            people say "Open Source"). It's "source available", sure, but with
+            no promies that the long dependency tree is going to actually be
+            attainable and usable. 
+            </p>
+
+            <h3>Let he who is without sin cast the first stone:</h3>
+
+            <p>
+            To build Linux 5.17.3, you need a C compiler and a 123 MB tarball.
+            GCC is available as a default install on many operating systems,
+            and in the repos of any package manager.
+            </p>
+            <br/>
+
+            <p>
+            This modern workflow is not sustainable, practical development. The
+            breakneck pace of new shiny does make development faster, and it
+            does make it easier to be a developer, but it does not make for
+            better software. It makes for software the fails in unpredictable
+            ways. It makes for frustrations for package builders. The best way
+            to build software is to have clearly defined, mature, available
+            dependencies - SDL, GTK, and OpenSSL aren't going anywhere. And if
+            some cool new functionality is available in a third-party Go
+            package, developers should reimplement the parts they need
+            themselves, without dragging in the ball-and-chain and kitchen sink
+            from the Internet.
+            </p>
+
+            <hr/>
+
+            <p>
+            This rant was inspired by my trouble building Go software in
+            Fedora. <span class=mono>go2rpm</span> does help quite a bit, but
+            the way different programs are strucutred it works rather
+            infrequently. Most of the time I give up, and
+            <a href="https://lwn.net/Articles/842319/">vendor</a> dependencies
+            in my own personal rpm builds, because building all of the
+            individual dependencies at their specific versions is a ridiculous
+            mess.
+            </p>
+            
+        </div>
+    </body>
+</html>
