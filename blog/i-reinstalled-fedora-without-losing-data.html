@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>I Reinstalled Fedora Without Losing Data</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>I Reinstalled Fedora Without Losing Data</h1>
+<small>[<a href='../blog.html#i-reinstalled-fedora-without-losing-data'>link</a>&mdash;<a href='i-reinstalled-fedora-without-losing-data.html'>standalone</a>]</small>
+<p>
+Yesterday I broke NetworkManager, and was reminded of the power of a separate
+/home partition.
+</p>
+
+<p>
+It didn't recognize any devices - WiFi or ethernet. Reinstalling packages from
+downloads after wiping out configuration didn't seem to work either. I didn't
+want to spend much time figuring out why, because NetworkManager is a useful
+tool but highly complex house of cards, and because I'm a tired, busy man these
+days. I think it had something to do with rfkill, and the hardware WiFi switch
+on the computer.
+<p>
+
+<p>
+Fedora defaults to the following layout (since about 33?):
+<br/>
+<span class=mono>
+    /boot (1GB ext4)<br/>
+    /efi  (512MB fat32, if you are EFI)<br/>
+    /     (rest-of-disk BTRFS volume)<br/>
+    /home (rest-of-disk BTRFS subvolume)<br/>
+</span>
+<br/>
+And I used this to my advantage! <b>You can reinstall Fedora on / while leaving
+/home alone.</b>
+</p>
+
+<p>
+How I did it:<br/>
+In the Fedora installer, I did custom partitioning (but not 'advanced custom'),
+decrypted my volume, selected to reformat the primary volume as /, and then
+told it to mount my /home at /home, but not reformat it. I also chose to
+reformat /boot. (The computer in question is not EFI).
+</p>
+
+<p>
+I've never had to do this before, but knew it was theoretically possible. A
+quick <span class=mono>dnf list --installed &gt; packages.txt</span> before
+reinstall helped me get back up and running quickly. And of course I had a full
+backup of my data should everything have gone south. At the end of it all, I
+had reinstalled my OS, reinstalled all my preferred programs, and retained all
+my data. The whole process took about an hour. Some of my manual packages I
+will have to rebuild, but I expected that anyway, and should have just put them
+in <a href="https://copr.fedorainfracloud.org">copr</a> in the first place.
+</p>
+
+<p>
+Lessons here:
+<ol>
+    <li>Always install with a separate /home partition</li>
+    <li>Always keep install media around</li>
+    <li>Keep backups so you're not afraid to try something new</li>
+    <li>NetworkManager is great when it works but don't make it angry!</li>
+</ol>
+The end.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
