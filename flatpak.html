@@ -1,0 +1,88 @@
+<html>
+<style>
+       html {
+            font-family:sans-serif;
+        }
+        body {
+            max-width: 768px;
+            padding-left:2.5%;
+            padding-right:2.5%;
+            margin:auto
+        }
+        .mono {
+            font-family: "Source Code Pro", "Hack", monospace;
+            font-weight: normal;
+        }
+        @media (prefers-color-scheme: dark) {
+             html{
+                     max-width=500px;
+                     background: #1E1F21;
+                     color: #EEEFF1;
+                     font-family: sans-serif;
+             }
+             a {
+                     color: #BAD7FF;
+                     text-decoration:none;
+                     border-bottom:thin dotted;
+             }
+         }
+         
+         @media (prefers-color-scheme: light) {
+             html{
+                     max-width=500px;
+                     font-family: sans-serif;
+                     background: #EEEFF1;
+             }
+             a {
+                     text-decoration:none;
+                     border-bottom:thin dotted;
+             }
+         }
+        
+</style>
+	<title>Signal aarch64 Flatpak</title>
+	<body>
+		<br/>
+		<h2 style="text-align:center" >Signal Desktop Flatpak for aarch64/arm64</h2>
+        <p>The new (2022-06-16) repo is powered by <a href="https://gitlab.com/elagost/signal-desktop-builder/-/pipelines">Gitlab CI</a>. The .deb it is available as a build artifact.</p>
+        <p><a href="https://gitlab.com/elagost/signal-desktop-builder/-/commits/master"><img alt="pipeline status" src="https://gitlab.com/elagost/signal-desktop-builder/badges/master/pipeline.svg" /></a></p>
+        <h4>To migrate to the new repo: run <span class=mono>flatpak remote-delete signal-arm</span> and add the new one. You will keep your data.</h4>
+        <p><a href="signal.flatpakrepo">Flatpak Repo</a> signed by <a href="gitlab-runner-leb.gpg">gitlab-runner@leb gpg key</a>, FBEF43DC8C6BE9A7</p>
+		<h3>To install system wide:</h3>
+        <div class=mono>
+		<p>sudo flatpak remote-add --if-not-exists signal-arm https://elagost.com/flatpak/signal.flatpakrepo</p>
+		<p>sudo flatpak install signal-arm org.signal.Signal</p>
+        </div>
+		<h3>To install for your user:</h3>
+        <div class=mono>
+		<p>flatpak remote-add --user --if-not-exists signal-arm https://elagost.com/flatpak/signal.flatpakrepo</p>
+		<p>flatpak install --user signal-arm org.signal.Signal</p>
+        </div>
+        <h3>Testing Repo:</h3>
+        <p>CI publishes directly to this directory. I have it installed on my device, test new builds, and sync them to the normal repo upon success. This one will break and is mostly just for me.</p>
+        <div class=mono>
+		<p>sudo flatpak remote-add --if-not-exists signal-arm-testing https://elagost.com/flatpak/signal_testing.flatpakrepo</p>
+        </div>
+		<hr/>
+		<p>Tips:
+		<ul>
+		<li>You'll need <a href="https://flatpak.org/setup/Debian">Flathub repo</a> for the runtimes.</li>
+		<li>Signal will be blurry on phosh (pinephone, Librem 5) becacuse of scaling. On an external monitor it looks normal.</li>
+		<li>The conversations sidebar can be collapsed to just icons with a mouse, or with a very precise double-tap-drag. (This is hard to achieve; just use a mouse)</li>
+		<li>Use the View menu item to zoom out a few times. It makes Signal much less cramped.</li>
+		<li>Ctrl+Shift+c will close the current conversation and reduce idle CPU usage significantly.</li>
+		<li>Notification sounds and mic/camera usage can be enabled in settings.</li>
+		</ul>
+		<p>Having trouble? 
+		<ul>
+        <li>open an issue on the <a href="https://gitlab.com/undef1/signal-desktop-builder">upstream repo</a></li>
+        <li>open an issue on the <a href="https://gitlab.com/elagost/signal-desktop-builder">my repo</a> for packaging specific issues</li>
+		<li>message me on matrix @elagost:matrix.org</li>
+		</ul>
+		</p>
+        <p><a href="legacy.flatpakrepo">Legacy repo</a> was signed by <a href="pubkey.gpg">GPG key</a>: 02EDF57DA3FBD1CE me@adamthiede.com</p>
+		<hr/>
+
+<p>Maintained by <a href="https://adamthiede.com">Adam Thiede</a>. Hosted at <a href="https://openbsd.amsterdam/">OpenBSD Amsterdam</a>.</p>
+	</body>
+</html>
