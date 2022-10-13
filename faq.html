@@ -1,5 +1,11 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!--Yes, this page has some javascript on it!-->
+	<script>
+		window.addEventListener('load',() => {
+		document.getElementById('banners').style.display="none";
+	});
+	</script>
 	<title>Adam Thiede's Personal Website</title>
 	<link rel="stylesheet" type="text/css" href="webstyle.css">
 	<body>
@@ -93,9 +99,11 @@ A6: I have a recommended list of software <a href="sw.html">here.</a> Buy used h
 		<a href="https://copr.fedorainfracloud.org/coprs/adamthiede">Copr</a>
 		</p>
     <br/>
-    <p>I've created a few banners, too, becuase they were popular in Web 1.0, and things were better back then.</p>
+	<div id=banners>
+	<p>I've created a few banners, too, becuase they were popular in Web 1.0, and things were better back then. <b>If you can see these banners, you have JavaScript off. Keep it up!</b></p>
     <p>Large banner (240x60):<br/><img src=Files/banner.png></img></p>
     <p>Small banner (88x31):<br/><img src=Files/banner_small.png></img></p>
+	</div>
 	<br/>
 	<p>Hosted at <a href="https://openbsd.amsterdam/">OpenBSD Amsterdam</a>. Configuration <a href="https://git.sr.ht/~elagost/openbsd-conf">source</a> and <a href="http://oqptm57xf2g6mziwphlf7eqmkdg3ni6qneuuf3wbqzhdfcjufhumaxyd.onion/">inspiration</a>.</p>
 	</body>
