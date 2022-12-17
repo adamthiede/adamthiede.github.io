@@ -12,6 +12,114 @@
 <!-- LB -->
 
 <item>
+<title>2022 Report on the Pinephone</title>
+<guid>https://adamthiede.com/blog.html#2022-report-on-the-pinephone</guid>
+<pubDate>Fri, 16 Dec 2022 20:46:21 -0600</pubDate>
+<description><![CDATA[
+<p>
+"How do I call you with it?" "Can it do MMS yet?" "It just looks normal."
+</p>
+
+<p>
+In 2022 I used the Pinephone as my main cell phone for the whole year, with the
+exception of one month where I was moving cross-country and needed something a
+little less finicky. If you're not a "must consume product" smartphone addict,
+then this thing is pretty much as ready for daily usage as Android was a few
+years ago. I fiddle with it a lot because it's my nature but one doesn't need
+to really fiddle with it.
+</p>
+
+<p>
+On the functional side, I'm grateful that while the Pinephone looks like a
+smartphone, it has almost nothing in common with those things. Here's what it
+does well: It makes calls. It does SMS and MMS. It has an alarm clock and a
+camera for still images. You can play sounds out of its speaker, wired, or
+bluetooth headphones. Its battery lasts about 2 days if you're not constantly
+toying with it. It is a full Linux OS if you want to use that. But there's no
+"app store", no gamification of attention, and no proprietary software.
+</p>
+
+<p>
+I hopefully will not buy another phone, ever, that doesn't behave like the
+pinephone does. It's the platonic ideal of a smartphone. It's actually the
+thing most people say they want. It's cheap at $150 or $200, but unlike cheap
+Androids, it's not being subsidized by spying on you. It has hardware
+killswitches to cut power to various components. The manufacturer has low-cost
+replacemnt parts available. The phone uses a standard size commonly available
+replaceable battery. The software support cycle is effectively infinite. You
+can install anything you want on it. It'll work as long as the modem continues
+to be supported by carriers.
+</p>
+
+<p>
+But in spite of how much I like the simplicity and Linux Nerdery of the
+Pinephone, I'm beginning to think the dumbphone people are righter than I am.
+If I use the Pinephone around the uninitiated, it looks like a normal
+smartphone. When someone pulls out a flip phone, you know there has been a
+deliberate choice made to obtain one of those things instead of a cheap
+smartphone, which is the modern path of least resistance. On the Pinephone,
+there is an Internet browser, the screen is not black-and-white, and while the
+front-facing camera is pretty much useless, it still has one. The Pinephone is
+as much a resistance against modernism in technology as a flip phone, perhaps
+even more so, but it doesn't look like it, and it doesn't make anyone think
+about it when they see it.
+</p>
+
+<p>
+I lied a bit before: it <i>is</i> possible to use the Pinephone like a
+smartphone. It can be used to "doom scroll" through Facebook and play some
+mobile games. It is not good at playing videos, but it can be used to do that.
+Dumbphones can't do these things.<a href="#f1">^1</a> On most of them there is
+only the most basic of networking and they won't have the option to install
+extra software. The user doesn't have control, but the limitations of most of
+these things (especially the silly-expensive modern dumbphones, like the Light
+Phone) are in service of the well-being of the user. The Pinephone has no
+externally imposed limits, and that is also in service of the user. They're
+both serving the user in different and opposite ways.
+</p>
+
+<p>
+Honestly though the more informed I am about technology, the more disillusioned
+I become. Life's too short for smartphones. It's too short to worry intensely
+about what apps people are using - I am on record being highly concerned about
+how I do my communication, and I think that's unhealthy long term. Electronic
+communication should not be primary, it should be a catalyst to real-world
+communication. Smartphones should be avoided, and the dumbphone people are more
+correct than the Linux phone people (me included) are. Usually for some weird
+and kind of wrong reasons, but they're in the right place.
+</p>
+
+<p>
+Linux phones are great, because they give the user control, but in the end the
+user's power should be exercised to limit the capability of the device. In the
+realm of smartphones, the less it does for (and to) the user, the better. The
+world will improve the less people see these things used, and the less they are
+depended on, and that includes the Linux or de-Googled smartphones! Free they
+may be but they can't escape being smartphones and those who care should use
+them less.
+</p>
+
+<hr/>
+
+<p id=f1>1: I'm aware of flip phones that run KaiOS, which is kind of a
+pseudo-smartphone OS that includes smartphone features. Those don't count.</p>
+
+<details><summary>Some software details:</summary>
+<p>
+If you choose a Pinephone here's what I recommend.
+For minium fiddly-ness, I use <a href="https://postmarketos.org">postmarketOS</a>
+stable with Phosh,
+<a href="https://tow-boot.org/devices/pine64-pineA64.html">Tow-Boot</a>, and
+<a href="https://github.com/the-modem-distro/pinephone_modem_sdk">the FOSS modem firmware</a>.
+There are basically never problems with this stack, and all these are better
+than what comes standard.
+</p>
+</details>
+]]></description>
+</item>
+
+
+<item>
 <title>Christians Should Not Use Social Media</title>
 <guid>https://adamthiede.com/blog.html#christians-should-not-use-social-media</guid>
 <pubDate>Sun, 20 Nov 2022 16:37:27 -0600</pubDate>
