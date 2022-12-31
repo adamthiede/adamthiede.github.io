@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>This Week's Adventures</title>
+<link rel='stylesheet' type='text/css' href='../style.css'>
+<meta charset='utf-8'/>
+</head>
+<body>
+<h1>This Week's Adventures</h1>
+<small>[<a href='../blog.html#this-weeks-adventures'>link</a>&mdash;<a href='this-weeks-adventures.html'>standalone</a>]</small>
+<p>
+On December 20 I traveled to California to visit with my brother and parents.
+The plan was to fly back home with my own family on the 23rd. However,
+<a href="https://www.cbsnews.com/news/southwest-airlines-flights-cancellations-winter-storm/">
+	my airline had other ideas
+</a>. Southwest, and others, cancelled record amounts of flights, and after
+about six hours in the airport, I had to head back to where my parents and
+brother were staying, resigned to wait it out. Although a disappointing
+situation, I was far better off than most. Many were stuck in the airport for
+weeks, but since I had family close by, who had intened to stay there until the
+26th, I was fortunate. Flights for the 26th were booked and I had Christmas
+with one part of my family.
+</p>
+
+<p>
+On the 26th my parents drove back from California to their home. I rode with
+them to hitch a ride to a different airport where I had booked my latest flight
+home. On the way, I was notified my flight was cancelled, so I didn't even stop
+and just continued along driving with my parents the rest of the way to their
+house. Again, I am fortunate I had places to go throughout this whole ordeal.
+Praise God.
+</p>
+
+<p>
+Along the way I bought a Worst Buy Special <a
+href="https://www.bestbuy.com/site/hp-envy-2-in-1-13-3-touch-screen-laptop-intel-core-i7-8gb-memory-512gb-ssd-natural-silver/6505903.p?skuId=6505903">
+(a decidedly mediocre $650 laptop)</a> so I could work from my parents' house.
+I did not decide to bring any computers on this trip, to focus on time with my
+family, and that was a mistake! I could've just taken the week off, but many
+others already were under the premise I would be there, so I felt like I needed
+to make an effort. The laptop came with Windows 11. I attempted to immediately
+replace it with 10, but that didn't work. Once it's tricked into using a local
+account and all the preinstalled garbage (TikTok and Instagram and Netflix and
+Disney+, yes truly) is removed, Windows isn't too terrible. I know now I'd
+rather use it than macOS, despite the latter's Unix-like underpinnings. Windows
+11's terminal, chocolatey, and power toys made the experience less painful.
+</p>
+
+<p>
+Eventually I made it back home with this weird laptop in tow. I didn't attempt
+Linux on the road becuase it was an unknown, and sound didn't work on a Fedora
+live USB, so I wasn't going to chance anything. To run Linux on this laptop
+there are three four main caveats:
+<ol>
+	<li>Audio from the speakers does not work by default. Still looking. They
+		use <a href="https://www.sofproject.org/">
+			the SOF driver apparently</a>
+		so maybe there's hope!
+	</li>
+	<li>The laptop will not resume from suspend unless
+		<a href="https://wiki.archlinux.org/title/intel_graphics#Freeze_after_wake_from_sleep/suspend_with_Alder_Lake-P">
+			a custom kernel patch</a> is applied and the kernel is rebuilt. I'm
+		running this now. Works well but I wish it was configurable instead of
+		requiring a recompile.</li>
+	<li>The webcam does not work
+		<a href="https://www.phoronix.com/news/Greg-KH-No-ADL-Webcam-Laptop">(maybe related)</a>.
+	</li>
+	<li>The touchscreen doesn't work. I don't really care about this.</li>
+</ol>
+So that's what I'm working with. It's quite fast, the screen is nice, it's a
+good machine overall. Checks most of my boxes. I did not at all need another
+laptop but I'm not displeased with the form and function of it. The BIOS sucks
+and I'll likely need a FreeDOS stick or something to update it, since I think
+the whole "update BIOS from the BIOS" thing is reserved for the "business"
+lines for some reason. I hate proprietary firmware. Especially since it's the
+firmware's brokenness that necessitates the kernel patch.
+</p>
+
+<p>
+Because some flights got cancelled I ended up with a new laptop (that I may
+still attempt to return) and had to recompile Linux. The world's weird
+sometimes. Merry Christmas and Happy New Year.
+</p>
+<footer>by <strong><a href='https://adamthiede.com/'>Adam Thiede</a></strong></footer>
+</body>
+
+</html>
