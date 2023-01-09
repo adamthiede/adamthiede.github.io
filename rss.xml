@@ -12,6 +12,38 @@
 <!-- LB -->
 
 <item>
+<title>OpenBSD Wireguard</title>
+<guid>https://adamthiede.com/blog.html#openbsd-wireguard</guid>
+<pubDate>Mon, 09 Jan 2023 12:00:00 -0600</pubDate>
+<description><![CDATA[
+<p>
+I've been attempting to use OpenBSD both as my main server OS and main desktop
+OS for a number of years now. It's a coherent, understandable, simple system,
+and I really like it. There are plenty of issues it has that Linux does not,
+mostly due to the popularity differences, but many of these problems are
+trivial and easy enough to work around. (Some are not, like vmd not supporting
+multi-core virtual machines!) But one of the easier things is Wireguard.
+</p>
+
+<p>
+Wireguard is pretty popular, very simple to set up, and it's been in OpenBSD
+for a few years now, so it's pretty stable. I hand-rolled one server's setup
+not too long ago, but just now have put together some scripts for it.
+</p>
+
+<p>
+So anyway, to start the new year off right,
+<a href="https://git.sr.ht/~elagost/openbsd-wg">here's some shell scripts!</a>
+They aren't heavily tested but at least the new.sh script works great for me.
+Wireguard was the only thing I found on OpenBSD that wasn't super simple and
+understandable with only a single man page. (That's fair - it's not exactly
+part of the main code base!)
+</p>
+]]></description>
+</item>
+
+
+<item>
 <title>This Week's Adventures</title>
 <guid>https://adamthiede.com/blog.html#this-weeks-adventures</guid>
 <pubDate>Sat, 31 Dec 2022 14:46:26 -0600</pubDate>
