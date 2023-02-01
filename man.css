@@ -1,0 +1,58 @@
+@media (prefers-color-scheme: light) {
+    html{
+            max-width=500px;
+            font-family: sans-serif;
+            background: #EEEFF1;
+    }
+    a {
+            text-decoration:none;
+            border-bottom:thin dotted;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    html{
+            max-width=500px;
+            background: #1E1F21;
+            color: #EEEFF1;
+            font-family: sans-serif;
+    }
+    a {
+            color: #BAD7FF;
+            text-decoration:none;
+            border-bottom:thin dotted;
+    }
+}
+
+html{
+    max-width:1024px;
+	font-family:monospace;
+}
+.agrid {
+    display:grid;
+    column-gap:5px;
+}
+.gl {
+    grid-column-start:1;
+    grid-column-end:1;
+    float:left;
+    text-align:left;
+}
+.gc {
+    grid-column-start:2;
+    grid-column-end:2;
+    float:center;
+    text-align:center;
+}
+.gr {
+    grid-column-start:3;
+    grid-column-end:3;
+    float:right;
+    text-align:right;
+}
+.name {
+    font-weight:bold;
+}
+.desc {
+    margin-left:15%;
+    margin-right:5%;
+}
