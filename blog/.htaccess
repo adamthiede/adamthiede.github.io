@@ -1,94 +1,95 @@
 Options +Indexes
-AddDescription "Toying with macOS" "toying-with-macos.html" #Mon, 09 Mar 2020 16:48:10 -0700
-AddDescription "Automate These Things" "automate-these-things.html" #Fri, 20 Mar 2020 16:42:42 -0700
-AddDescription "New Laptop" "new-laptop.html" #Fri, 17 Apr 2020 14:38:40 -0700
-AddDescription "Ubuntu Derivatives" "ubuntu-derivatives.html" #Thu, 30 Apr 2020 19:55:47 -0700
-AddDescription "Port Forwarding and Dependencies" "port-forwarding-and-dependencies.html" #Thu, 07 May 2020 06:27:28 -0700
-AddDescription "How To Disable All Windows 10 Built-In Ads" "how-to-disable-all-windows-10-builtin-ads.html" #Sun, 10 May 2020 04:50:33 -0700
-AddDescription "Home Security Cameras" "home-security-cameras.html" #Mon, 18 May 2020 13:33:30 -0700
-AddDescription "Home Surveillance Tier List" "home-surveillance-tier-list.html" #Mon, 18 May 2020 13:36:52 -0700
-AddDescription "Secure Non Smart Phone" "secure-non-smart-phone.html" #Sat, 23 May 2020 16:09:37 -0700
-AddDescription "Everything Is A Million Miles Deep" "everything-is-a-million-miles-deep.html" #Fri, 29 May 2020 16:50:44 -0700
-AddDescription "Children and Modern Media" "children-and-modern-media.html" #Tue, 02 Jun 2020 12:40:27 -0700
-AddDescription "Web Server Video Streaming" "web-server-video-streaming.html" #Mon, 15 Jun 2020 19:14:11 -0700
-AddDescription "Like It's The 2000s" "like-its-the-2000s.html" #Mon, 15 Jun 2020 19:29:06 -0700
-AddDescription "OpenBSD Webserver Setup" "openbsd-webserver-setup.html" #Thu, 25 Jun 2020 09:53:35 -0700
-AddDescription "SwayWM on openSUSE Tumbleweed is Easy" "swaywm-on-opensuse-tumbleweed-is-easy.html" #Sun, 28 Jun 2020 07:24:38 -0700
-AddDescription "Why I Use Vim On The Desktop" "why-i-use-vim-on-the-desktop.html" #Wed, 01 Jul 2020 06:19:27 -0700
-AddDescription "RPM Packaging" "rpm-packaging.html" #Sat, 11 Jul 2020 07:22:31 -0700
-AddDescription "Simplicity Versus Power" "simplicity-versus-power.html" #Fri, 31 Jul 2020 16:15:52 -0700
-AddDescription "Good Beers" "good-beers.html" #Wed, 20 May 2020 19:49:28 -0700
-AddDescription "New PC Build" "new-pc-build.html" #Tue, 11 Aug 2020 06:41:32 -0700
-AddDescription "Building Businesses on Proprietary Platforms" "building-businesses-on-proprietary-platforms.html" #Wed, 12 Aug 2020 07:53:14 -0700
-AddDescription "Raspberry Pis and SD Cards" "raspberry-pis-and-sd-cards.html" #Thu, 03 Sep 2020 19:27:45 -0700
+AddDescription "Toying with macOS" "toying-with-macos.html" #Mon, 09 Mar 2020 12:00:00 -0700
+AddDescription "Automate These Things" "automate-these-things.html" #Fri, 20 Mar 2020 12:00:00 -0700
+AddDescription "New Laptop" "new-laptop.html" #Fri, 17 Apr 2020 12:00:00 -0700
+AddDescription "Ubuntu Derivatives" "ubuntu-derivatives.html" #Thu, 30 Apr 2020 12:00:00 -0700
+AddDescription "Port Forwarding and Dependencies" "port-forwarding-and-dependencies.html" #Thu, 07 May 2020 12:00:00 -0700
+AddDescription "How To Disable All Windows 10 Built-In Ads" "how-to-disable-all-windows-10-builtin-ads.html" #Sun, 10 May 2020 12:00:00 -0700
+AddDescription "Home Security Cameras" "home-security-cameras.html" #Mon, 18 May 2020 12:00:00 -0700
+AddDescription "Home Surveillance Tier List" "home-surveillance-tier-list.html" #Mon, 18 May 2020 12:00:00 -0700
+AddDescription "Secure Non Smart Phone" "secure-non-smart-phone.html" #Sat, 23 May 2020 12:00:00 -0700
+AddDescription "Everything Is A Million Miles Deep" "everything-is-a-million-miles-deep.html" #Fri, 29 May 2020 12:00:00 -0700
+AddDescription "Children and Modern Media" "children-and-modern-media.html" #Tue, 02 Jun 2020 12:00:00 -0700
+AddDescription "Web Server Video Streaming" "web-server-video-streaming.html" #Mon, 15 Jun 2020 12:00:00 -0700
+AddDescription "Like It's The 2000s" "like-its-the-2000s.html" #Mon, 15 Jun 2020 12:00:00 -0700
+AddDescription "OpenBSD Webserver Setup" "openbsd-webserver-setup.html" #Thu, 25 Jun 2020 12:00:00 -0700
+AddDescription "SwayWM on openSUSE Tumbleweed is Easy" "swaywm-on-opensuse-tumbleweed-is-easy.html" #Sun, 28 Jun 2020 12:00:00 -0700
+AddDescription "Why I Use Vim On The Desktop" "why-i-use-vim-on-the-desktop.html" #Wed, 01 Jul 2020 12:00:00 -0700
+AddDescription "RPM Packaging" "rpm-packaging.html" #Sat, 11 Jul 2020 12:00:00 -0700
+AddDescription "Simplicity Versus Power" "simplicity-versus-power.html" #Fri, 31 Jul 2020 12:00:00 -0700
+AddDescription "Good Beers" "good-beers.html" #Wed, 20 May 2020 12:00:00 -0700
+AddDescription "New PC Build" "new-pc-build.html" #Tue, 11 Aug 2020 12:00:00 -0700
+AddDescription "Building Businesses on Proprietary Platforms" "building-businesses-on-proprietary-platforms.html" #Wed, 12 Aug 2020 12:00:00 -0700
+AddDescription "Raspberry Pis and SD Cards" "raspberry-pis-and-sd-cards.html" #Thu, 03 Sep 2020 12:00:00 -0700
 AddDescription "Docker" "docker.html"
-AddDescription "" "containers.html" #Tue, 08 Sep 2020 19:07:52 -0700
-AddDescription "Give Me The Easy Button" "give-me-the-easy-button.html" #Wed, 16 Sep 2020 20:25:28 -0700
+AddDescription "" "containers.html" #Tue, 08 Sep 2020 12:00:00 -0700
+AddDescription "Give Me The Easy Button" "give-me-the-easy-button.html" #Wed, 16 Sep 2020 12:00:00 -0700
 AddDescription "Compartmentalization and Devices" "compartmentalization-and-devices.html"
-AddDescription "The Best Things We Get" "the-best-things-we-get.html" #Sun, 04 Oct 2020 19:15:19 -0700
-AddDescription "Filesystem Format Interoperability Guide" "filesystem-format-interoperability-guide.html" #Wed, 07 Oct 2020 19:21:31 -0700
-AddDescription "USB Type C On Everything" "usb-type-c-on-everything.html" #Mon, 12 Oct 2020 18:34:23 -0700
-AddDescription "Fedora 33" "fedora-33.html" #Tue, 27 Oct 2020 19:05:40 -0700
-AddDescription "PinePhone Operating Systems" "pinephone-operating-systems.html" #Wed, 04 Nov 2020 20:15:28 -0800
-AddDescription "Encrypted Mobian Install" "encrypted-mobian-install.html" #Fri, 06 Nov 2020 08:19:10 -0800
-AddDescription "Breaking Out" "breaking-out.html" #Tue, 10 Nov 2020 13:42:17 -0800
-AddDescription "Working From Home" "working-from-home.html" #Sat, 28 Nov 2020 19:00:50 -0800
-AddDescription "Recent Writing" "recent-writing.html" #Fri, 11 Dec 2020 17:59:02 -0800
+AddDescription "The Best Things We Get" "the-best-things-we-get.html" #Sun, 04 Oct 2020 12:00:00 -0700
+AddDescription "Filesystem Format Interoperability Guide" "filesystem-format-interoperability-guide.html" #Wed, 07 Oct 2020 12:00:00 -0700
+AddDescription "USB Type C On Everything" "usb-type-c-on-everything.html" #Mon, 12 Oct 2020 12:00:00 -0700
+AddDescription "Fedora 33" "fedora-33.html" #Tue, 27 Oct 2020 12:00:00 -0700
+AddDescription "PinePhone Operating Systems" "pinephone-operating-systems.html" #Wed, 04 Nov 2020 12:00:00 -0800
+AddDescription "Encrypted Mobian Install" "encrypted-mobian-install.html" #Fri, 06 Nov 2020 12:00:00 -0800
+AddDescription "Breaking Out" "breaking-out.html" #Tue, 10 Nov 2020 12:00:00 -0800
+AddDescription "Working From Home" "working-from-home.html" #Sat, 28 Nov 2020 12:00:00 -0800
+AddDescription "Recent Writing" "recent-writing.html" #Fri, 11 Dec 2020 12:00:00 -0800
 AddDescription "ApplianThe Pointlessness of ce Computer Hacking" "applianthe-pointlessness-of-ce-computer-hacking.html"
-AddDescription "Permissive Licenses" "permissive-licenses.html" #Thu, 17 Dec 2020 12:13:35 -0800
-AddDescription "Pointlessness of Appliance Computer Hacking" "pointlessness-of-appliance-computer-hacking.html" #Wed, 30 Dec 2020 07:28:30 -0800
-AddDescription "2020 Review" "2020-review.html" #Sun, 03 Jan 2021 07:47:31 -0800
-AddDescription "Protocols, Not Platforms" "protocols-not-platforms.html" #Mon, 18 Jan 2021 08:42:44 -0800
-AddDescription "Moralizing Software? Start at Home" "moralizing-software-start-at-home.html" #Mon, 18 Jan 2021 10:49:42 -0800
-AddDescription "Good Tools and Bad People" "good-tools-and-bad-people.html" #Mon, 25 Jan 2021 19:43:21 -0800
-AddDescription "Modern Cars" "modern-cars.html" #Fri, 29 Jan 2021 18:26:00 -0800
-AddDescription "Gemini on OpenBSD" "gemini-on-openbsd.html" #Wed, 03 Feb 2021 07:55:35 -0800
-AddDescription "Rolling or Static" "rolling-or-static.html" #Sun, 14 Feb 2021 06:18:42 -0800
-AddDescription "Raspberry Pis and Spades" "raspberry-pis-and-spades.html" #Mon, 15 Feb 2021 13:39:43 -0800
-AddDescription "Pragmatism" "pragmatism.html" #Sun, 14 Mar 2021 04:43:19 -0700
-AddDescription "Good Smart Home Article" "good-smart-home-article.html" #Wed, 31 Mar 2021 10:31:57 -0700
-AddDescription "A Short Review of CalyxOS" "a-short-review-of-calyxos.html" #Wed, 07 Apr 2021 07:54:55 -0700
-AddDescription "Days Off and Arch Installer" "days-off-and-arch-installer.html" #Fri, 16 Apr 2021 16:22:03 -0700
-AddDescription "Touch Bar" "touch-bar.html" #Sun, 18 Apr 2021 17:57:10 -0700
-AddDescription "Better Doesn't Mean Easy" "better-doesnt-mean-easy.html" #Wed, 19 May 2021 06:26:25 -0700
-AddDescription "Long Term Fixes" "long-term-fixes.html" #Thu, 24 Jun 2021 10:55:20 -0700
-AddDescription "Linux on the Asus L210" "linux-on-the-asus-l210.html" #Fri, 23 Jul 2021 07:55:38 -0700
-AddDescription "How To Defeat Apple's Wrongthink Hash-Matching" "how-to-defeat-apples-wrongthink-hashmatching.html" #Fri, 06 Aug 2021 06:34:44 -0700
-AddDescription "A Comparison That Struck Me" "a-comparison-that-struck-me.html" #Sat, 14 Aug 2021 10:13:10 -0700
-AddDescription "Discrete Tools" "discrete-tools.html" #Fri, 20 Aug 2021 06:41:02 -0700
-AddDescription "In Praise of ath9k" "in-praise-of-ath9k.html" #Sat, 18 Sep 2021 14:49:22 -0700
-AddDescription "Why Use The Command Line?" "why-use-the-command-line.html" #Sun, 03 Oct 2021 05:35:24 -0700
-AddDescription "People Want Crutches" "people-want-crutches.html" #Wed, 13 Oct 2021 20:11:02 -0700
-AddDescription "Pinephone October 2021" "pinephone-october-2021.html" #Thu, 21 Oct 2021 18:39:00 -0700
-AddDescription "Moving Back to XMPP" "moving-back-to-xmpp.html" #Mon, 25 Oct 2021 19:34:04 -0700
-AddDescription "A Note on VPNs" "a-note-on-vpns.html" #Sat, 06 Nov 2021 10:18:40 -0700
-AddDescription "Help For Those Who Want It" "help-for-those-who-want-it.html" #Fri, 26 Nov 2021 07:11:41 -0800
-AddDescription "New Article On Dumbphones" "new-article-on-dumbphones.html" #Thu, 09 Dec 2021 19:38:51 -0800
-AddDescription "Old Laptop Hardware Rocks" "old-laptop-hardware-rocks.html" #Fri, 10 Dec 2021 19:48:55 -0800
-AddDescription "Everything Works on the Pinephone" "everything-works-on-the-pinephone.html" #Sun, 19 Dec 2021 19:40:04 -0800
-AddDescription "Check Out GNOME Flashback" "check-out-gnome-flashback.html" #Thu, 30 Dec 2021 17:33:48 -0800
-AddDescription "Better Might Not Be Ready" "better-might-not-be-ready.html" #Tue, 04 Jan 2022 18:19:47 -0800
-AddDescription "Breaking Changes" "breaking-changes.html" #Fri, 21 Jan 2022 19:48:26 -0800
-AddDescription "Pinephone February 2022" "pinephone-february-2022.html" #Wed, 02 Feb 2022 18:08:39 -0800
-AddDescription "Linux Mobile Setup" "linux-mobile-setup.html" #Fri, 25 Feb 2022 17:54:44 -0800
-AddDescription "When Normal is Not Normal" "when-normal-is-not-normal.html" #Thu, 17 Mar 2022 06:49:35 -0700
-AddDescription "Responsibility, Availability, and Free Software" "responsibility-availability-and-free-software.html" #Sat, 09 Apr 2022 12:19:30 -0500
-AddDescription "I Reinstalled Fedora Without Losing Data" "i-reinstalled-fedora-without-losing-data.html" #Fri, 29 Apr 2022 06:34:49 -0500
-AddDescription "Why I Write Off Certain Types Of Music" "why-i-write-off-certain-types-of-music.html" #Sat, 21 May 2022 20:07:29 -0500
-AddDescription "SXMO - Peak Linux User" "sxmo-peak-linux-user.html" #Thu, 26 May 2022 19:34:18 -0500
-AddDescription "Ownership" "ownership.html" #Thu, 09 Jun 2022 20:00:28 -0500
-AddDescription "Revisiting" "revisiting.html" #Thu, 16 Jun 2022 19:46:55 -0500
-AddDescription "On Freedom" "on-freedom.html" #Sun, 31 Jul 2022 08:13:24 -0500
-AddDescription "Gemini Time!" "gemini-time.html" #Sat, 13 Aug 2022 11:31:48 -0500
-AddDescription "It Keeps Happening" "it-keeps-happening.html" #Sun, 21 Aug 2022 07:00:36 -0500
-AddDescription "Star Wars Article" "star-wars-article.html" #Sun, 04 Sep 2022 20:03:55 -0500
-AddDescription "Simple Computing" "simple-computing.html" #Sat, 10 Sep 2022 20:42:43 -0500
-AddDescription "Short Smartphone Rant" "short-smartphone-rant.html" #Wed, 28 Sep 2022 11:36:26 -0500
+AddDescription "Permissive Licenses" "permissive-licenses.html" #Thu, 17 Dec 2020 12:00:00 -0800
+AddDescription "Pointlessness of Appliance Computer Hacking" "pointlessness-of-appliance-computer-hacking.html" #Wed, 30 Dec 2020 12:00:00 -0800
+AddDescription "2020 Review" "2020-review.html" #Sun, 03 Jan 2021 12:00:00 -0800
+AddDescription "Protocols, Not Platforms" "protocols-not-platforms.html" #Mon, 18 Jan 2021 12:00:00 -0800
+AddDescription "Moralizing Software? Start at Home" "moralizing-software-start-at-home.html" #Mon, 18 Jan 2021 12:00:00 -0800
+AddDescription "Good Tools and Bad People" "good-tools-and-bad-people.html" #Mon, 25 Jan 2021 12:00:00 -0800
+AddDescription "Modern Cars" "modern-cars.html" #Fri, 29 Jan 2021 12:00:00 -0800
+AddDescription "Gemini on OpenBSD" "gemini-on-openbsd.html" #Wed, 03 Feb 2021 12:00:00 -0800
+AddDescription "Rolling or Static" "rolling-or-static.html" #Sun, 14 Feb 2021 12:00:00 -0800
+AddDescription "Raspberry Pis and Spades" "raspberry-pis-and-spades.html" #Mon, 15 Feb 2021 12:00:00 -0800
+AddDescription "Pragmatism" "pragmatism.html" #Sun, 14 Mar 2021 12:00:00 -0700
+AddDescription "Good Smart Home Article" "good-smart-home-article.html" #Wed, 31 Mar 2021 12:00:00 -0700
+AddDescription "A Short Review of CalyxOS" "a-short-review-of-calyxos.html" #Wed, 07 Apr 2021 12:00:00 -0700
+AddDescription "Days Off and Arch Installer" "days-off-and-arch-installer.html" #Fri, 16 Apr 2021 12:00:00 -0700
+AddDescription "Touch Bar" "touch-bar.html" #Sun, 18 Apr 2021 12:00:00 -0700
+AddDescription "Better Doesn't Mean Easy" "better-doesnt-mean-easy.html" #Wed, 19 May 2021 12:00:00 -0700
+AddDescription "Long Term Fixes" "long-term-fixes.html" #Thu, 24 Jun 2021 12:00:00 -0700
+AddDescription "Linux on the Asus L210" "linux-on-the-asus-l210.html" #Fri, 23 Jul 2021 12:00:00 -0700
+AddDescription "How To Defeat Apple's Wrongthink Hash-Matching" "how-to-defeat-apples-wrongthink-hashmatching.html" #Fri, 06 Aug 2021 12:00:00 -0700
+AddDescription "A Comparison That Struck Me" "a-comparison-that-struck-me.html" #Sat, 14 Aug 2021 12:00:00 -0700
+AddDescription "Discrete Tools" "discrete-tools.html" #Fri, 20 Aug 2021 12:00:00 -0700
+AddDescription "In Praise of ath9k" "in-praise-of-ath9k.html" #Sat, 18 Sep 2021 12:00:00 -0700
+AddDescription "Why Use The Command Line?" "why-use-the-command-line.html" #Sun, 03 Oct 2021 12:00:00 -0700
+AddDescription "People Want Crutches" "people-want-crutches.html" #Wed, 13 Oct 2021 12:00:00 -0700
+AddDescription "Pinephone October 2021" "pinephone-october-2021.html" #Thu, 21 Oct 2021 12:00:00 -0700
+AddDescription "Moving Back to XMPP" "moving-back-to-xmpp.html" #Mon, 25 Oct 2021 12:00:00 -0700
+AddDescription "A Note on VPNs" "a-note-on-vpns.html" #Sat, 06 Nov 2021 12:00:00 -0700
+AddDescription "Help For Those Who Want It" "help-for-those-who-want-it.html" #Fri, 26 Nov 2021 12:00:00 -0800
+AddDescription "New Article On Dumbphones" "new-article-on-dumbphones.html" #Thu, 09 Dec 2021 12:00:00 -0800
+AddDescription "Old Laptop Hardware Rocks" "old-laptop-hardware-rocks.html" #Fri, 10 Dec 2021 12:00:00 -0800
+AddDescription "Everything Works on the Pinephone" "everything-works-on-the-pinephone.html" #Sun, 19 Dec 2021 12:00:00 -0800
+AddDescription "Check Out GNOME Flashback" "check-out-gnome-flashback.html" #Thu, 30 Dec 2021 12:00:00 -0800
+AddDescription "Better Might Not Be Ready" "better-might-not-be-ready.html" #Tue, 04 Jan 2022 12:00:00 -0800
+AddDescription "Breaking Changes" "breaking-changes.html" #Fri, 21 Jan 2022 12:00:00 -0800
+AddDescription "Pinephone February 2022" "pinephone-february-2022.html" #Wed, 02 Feb 2022 12:00:00 -0800
+AddDescription "Linux Mobile Setup" "linux-mobile-setup.html" #Fri, 25 Feb 2022 12:00:00 -0800
+AddDescription "When Normal is Not Normal" "when-normal-is-not-normal.html" #Thu, 17 Mar 2022 12:00:00 -0700
+AddDescription "Responsibility, Availability, and Free Software" "responsibility-availability-and-free-software.html" #Sat, 09 Apr 2022 12:00:00 -0500
+AddDescription "I Reinstalled Fedora Without Losing Data" "i-reinstalled-fedora-without-losing-data.html" #Fri, 29 Apr 2022 12:00:00 -0500
+AddDescription "Why I Write Off Certain Types Of Music" "why-i-write-off-certain-types-of-music.html" #Sat, 21 May 2022 12:00:00 -0500
+AddDescription "SXMO - Peak Linux User" "sxmo-peak-linux-user.html" #Thu, 26 May 2022 12:00:00 -0500
+AddDescription "Ownership" "ownership.html" #Thu, 09 Jun 2022 12:00:00 -0500
+AddDescription "Revisiting" "revisiting.html" #Thu, 16 Jun 2022 12:00:00 -0500
+AddDescription "On Freedom" "on-freedom.html" #Sun, 31 Jul 2022 12:00:00 -0500
+AddDescription "Gemini Time!" "gemini-time.html" #Sat, 13 Aug 2022 12:00:00 -0500
+AddDescription "It Keeps Happening" "it-keeps-happening.html" #Sun, 21 Aug 2022 12:00:00 -0500
+AddDescription "Star Wars Article" "star-wars-article.html" #Sun, 04 Sep 2022 12:00:00 -0500
+AddDescription "Simple Computing" "simple-computing.html" #Sat, 10 Sep 2022 12:00:00 -0500
+AddDescription "Short Smartphone Rant" "short-smartphone-rant.html" #Wed, 28 Sep 2022 12:00:00 -0500
 AddDescription "No Signal" ".html"
-AddDescription "No Signal" "no-signal.html" #Mon, 07 Nov 2022 16:21:00 -0600
-AddDescription "Christians Should Not Use Social Media" "christians-should-not-use-social-media.html" #Sun, 20 Nov 2022 16:37:27 -0600
-AddDescription "2022 Report on the Pinephone" "2022-report-on-the-pinephone.html" #Fri, 16 Dec 2022 20:46:21 -0600
+AddDescription "No Signal" "no-signal.html" #Mon, 07 Nov 2022 12:00:00 -0600
+AddDescription "Christians Should Not Use Social Media" "christians-should-not-use-social-media.html" #Sun, 20 Nov 2022 12:00:00 -0600
+AddDescription "2022 Report on the Pinephone" "2022-report-on-the-pinephone.html" #Fri, 16 Dec 2022 12:00:00 -0600
 AddDescription "You Can (Not) Be Home For Christmas" "you-can-not-be-home-for-christmas.html"
-AddDescription "This Week's Adventures" "this-weeks-adventures.html" #Sat, 31 Dec 2022 14:46:26 -0600
+AddDescription "This Week's Adventures" "this-weeks-adventures.html" #Sat, 31 Dec 2022 12:00:00 -0600
 AddDescription "OpenBSD Wireguard" "openbsd-wireguard.html" #Mon, 09 Jan 2023 12:00:00 -0600
 AddDescription "Turning The Cheek and Tech Independence" "turning-the-cheek-and-tech-independence.html" #Wed, 15 Feb 2023 12:00:00 -0600
+AddDescription "What I've Been Up To" "what-ive-been-up-to.html"
